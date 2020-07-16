@@ -1,0 +1,56 @@
+// utility mixins
+// these weren't big enough to have their own file
+
+.colorize(@background; @contrast-standard: 7;) {
+    background-color: @background;
+    .contrast-text-against(@background; @contrast-standard;);
+    .contrast-border-against(@background; @contrast-standard;);
+}
+
+// utility classes
+// these have corresponding mixins
+
+.hide, .hidden { display: none !important;}
+
+.clearfix {
+  clear: both;
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+.action,
+.reaction,
+.alternate,
+.info, 
+.warning, 
+.accent, 
+.success, 
+.failure, 
+.highlight {
+  .has(padding);
+}
+
+@semantic-link-cr: 4.5;
+
+.action a { .color-text(@info, @action, @semantic-link-cr);}
+.reaction a { .color-text(@info, @reaction, @semantic-link-cr);}
+.alternate a { .color-text(@info, @alternate, @semantic-link-cr);}
+.info a { .color-text(@info, @info, @semantic-link-cr);}
+.warning a { .color-text(@info, @warning, @semantic-link-cr);}
+.accent a { .color-text(@info, @accent, @semantic-link-cr);}
+.success a { .color-text(@info, @success, @semantic-link-cr);}
+.failure a { .color-text(@info, @failure, @semantic-link-cr);}
+
+.action { .colorize(@action);}
+.reaction { .colorize(@reaction);}
+.alternate { .colorize(@alternate);}
+.info { .colorize(@info);}
+.warning { .colorize(@warning);}
+.accent { .colorize(@accent);}
+.success { .colorize(@success);}
+.failure { .colorize(@failure);}
+.highlight { .colorize(@highlight);}
+

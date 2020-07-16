@@ -1,0 +1,11 @@
+// has is syntactic sugar for indicating an element
+// "has" a default attribute by intent
+// any valid CSS property will work
+
+.has(@attribute) when (@attribute = color) {
+    .contrast-text-against(@background);
+}
+
+.has(@attribute) when (default()) {
+    @{attribute}: @@attribute;
+}

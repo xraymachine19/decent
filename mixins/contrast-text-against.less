@@ -1,0 +1,59 @@
+@import (reference) "set-contrast-ratio";
+@import (reference) "set-tone";
+
+.contrast-text-against(@color: @background; @contrast-standard: 7; @mode: auto;) {
+    // adds tone to background color until contrast standard is met
+	// uses result as text color
+
+	@start: 25%;
+    @iterations: 15;
+    
+    // this expression describes the contrasting color that will be used for text
+	@contrast: mix(@tone, @color, @start + @index*5);
+    @index: 1;
+
+    // these settings will get PERFECT contrast ratio results, or pretty close
+    // uncomment them here to override the above, but beware huge compile times
+    // @start: 0;
+    // @iterations: 1000;
+    // @contrast: mix(@tone, @color, @start + @index*.1);
+
+
+    // tone is the color mixed into the background to lighten or darken the text
+    
+    .tone(@color) when (@mode = tint) { @tone: white;}
+
+	.tone(@color) when (@mode = shade) { @tone: black;}
+
+	.tone(@color) when (default()) { .set-tone(@color);}
+
+    // this iterator does the work of finding the contrastful text
+    .contrast-text(@contrast-ratio, @tone, @index)
+       when (@contrast-ratio < @contrast-standard) 
+		and (@index < @iterations) { 
+        // this sets a new @contrast-ratio
+        .set-contrast-ratio(@color, @contrast); 
+        // this runs the next iteration
+		.contrast-text(@contrast-ratio; @tone; @index + 1);
+	}
+
+    // the actual CSS output for this whole mixin is this one line
+	.contrast-text(@contrast-ratio, @tone, @index) when (default()) {
+        color: @contrast;
+        
+        // debug contrast-ratio
+
+        // &:after {
+        //     @content: @contrast-ratio;
+        //     content: "@{content}";
+        // }
+    }
+    
+    // this works like .set-tone if no mode is specified
+    .tone(@color);
+    
+    // output the text color rule
+    .contrast-text(1, @tone, 1);
+    
+    
+}

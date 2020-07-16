@@ -1,0 +1,31 @@
+// always results in white text
+// darkens given background when needed to meet contrast standard
+
+.invert-text-against(@color; @contrast-standard: 7; @button: false;) {
+
+	@iterations: 10;
+
+	.set-contrast-ratio(@color, white);
+	.darken-bg(@color, @contrast-ratio, 1);
+
+	.darken-bg(@bg-color, @contrast-ratio, @index)
+	   when (@contrast-ratio < 4.5)
+		and (@index < @iterations) {
+		@new-bg-color: darken(@bg-color, 5% + @index);
+		.set-contrast-ratio(white, @new-bg-color);
+		.darken-bg(@new-bg-color, @contrast-ratio, @index + 1);
+	}
+
+	.darken-bg(@bg-color, @contrast-ratio, @index) when (default()) {
+  background-color: @bg-color;
+	color: white;
+
+		& when (@button = true) {
+			// button option lets us handle active state here when we know the color
+			&:active {
+        background-color: darken(@bg-color, 5%);        
+				// color: mix(@bg-color, black, 5%);
+			}
+		}
+	}
+}

@@ -1,0 +1,280 @@
+// does some faux-color-wheel-spinning through
+// the turbo palette to find new colors
+// @offset changes alt-base and accent-base
+
+// this sets these variables:
+// @action-base 
+// @reaction-base 
+// @alt-base 
+// @accent-base
+
+.set-color-bases(@base-color, 128); // TODO: rectify '128' with reality
+// .set-grays(@base-color);
+.set-action();
+.set-reaction();
+.set-warning();
+.set-info();
+.set-success();
+.set-failure();
+.set-accent();
+.set-alternate();
+.set-highlight();
+
+.set-color-bases(@color: @rep-color, @number) {
+
+	@offset: 32;
+
+	@action-base: @color;
+
+	.set-bases();
+
+	.set-bases() when (@number >= 192) {
+		@reaction-base: extract(@turbo, @number - 128);
+		@alt-base: extract(@turbo, @number - @offset*2);
+		@accent-base: extract(@turbo, @number - @offset);
+	}
+
+	.set-bases() when (@number > 128) and (@number < 192) {
+		@reaction-base: extract(@turbo, @number - 128);
+		@alt-base: extract(@turbo, @number - @offset*2);
+		@accent-base: extract(@turbo, @number - @offset);
+	}
+
+	.set-bases() when (@number > 64) and (@number <= 128) {
+		@reaction-base: extract(@turbo, @number + 128);
+		@alt-base: extract(@turbo, @number + @offset*2);
+		@accent-base: extract(@turbo, @number + @offset);
+	}
+
+	.set-bases() when (@number <= 64) {
+		@reaction-base: extract(@turbo, @number + 128);
+		@alt-base: extract(@turbo, @number + @offset*2);
+		@accent-base: extract(@turbo, @number + @offset);
+
+	}
+}
+
+.set-action() {
+	// action means "do something," it's great for submit buttons
+	// it's usually pretty close to the base color 
+
+	.set-lumafix(@action-base);
+	@action: @lumafix;
+}
+
+.set-reaction() {
+	// reaction is for responding, usually after an action
+	// a good second step or confirmation color 
+	// reaction is typically close to being a complement of action 
+
+	.set-lumafix(@reaction-base);
+	@reaction: @lumafix;
+}
+
+.set-alternate() {
+	// alternate is meant to be an alternate color to action and reaction
+	// it can sometimes make a good stand-in for other colors in the scheme 
+
+	.set-alternate-final() {
+		.set-lumafix(@alt-base);
+		@alternate: @lumafix;
+	}
+	.set-alternate-final();
+}
+
+.set-info() {
+	// info is a light blue or teal 
+	// it indicates innocuous, low-urgency information
+
+	@info-base: extract(@turbo, 64);
+
+	.set-info-final() {
+		.set-lumafix(@info-base, @base-color, 50%);
+		@info:@lumafix;
+	}
+
+	.set-info-final();
+}
+
+.set-warning() {
+	// warning is a high urgency version of its pairing, info
+	// its orange/yellow is a complement to info's teal/blue
+	// remember: warning comes before the failure, failure after
+
+	@orange: extract(@turbo, 172);
+	@yellow: extract(@turbo, 152);
+
+	.set-distance-action() {
+		.set-distance(@orange, @action-base);
+		@distance-action: @distance;
+	}
+
+	.set-distance-reaction() {
+		.set-distance(@orange, @reaction-base);
+		@distance-reaction: @distance;
+	}
+
+	.set-warning-base() when (@distance-action < 70) or (@distance-reaction < 70) {
+		@warning-base: @yellow;
+	}
+
+	.set-warning-base() when (default()) {
+		@warning-base: @orange;
+	}
+
+	.set-warning-final() when (luma(@base-color) > 56%) {
+		.set-lumafix(@warning-base);
+		@warning:softlight(mix(@lumafix, @warning-base, 70%), @warning-base);
+	}
+
+	.set-warning-final() when (luma(@base-color) <= 56%) and (luma(@base-color) > 32%) {
+		.set-lumafix(@warning-base);
+		@warning:overlay(mix(@lumafix, @warning-base, 70%), @warning-base);
+	}
+
+	.set-warning-final() when (luma(@base-color) <= 32%) and (luma(@base-color) > 16%) {
+		.set-lumafix(@warning-base);
+		@warning:overlay(mix(@lumafix, @warning-base, 60%), @warning-base);
+	}
+
+	.set-warning-final() when (default()) {
+		.set-lumafix(@warning-base);
+		@warning:overlay(mix(@lumafix, @warning-base, 50%), white);
+	}
+
+	.set-distance-action();
+	.set-distance-reaction();
+	.set-warning-base();
+	.set-warning-final();
+}
+
+.set-success() {
+	// success indicates that an action worked or a positive response came through
+	// its green tells users they're good to go 
+
+	@green: extract(@turbo, 105);
+	@lightgreen: extract(@turbo, 130);
+
+	.set-distance-action() {
+		.set-distance(@green, @action-base);
+		@distance-action: @distance;
+	}
+
+	.set-distance-reaction() {
+		.set-distance(@green, @reaction-base);
+		@distance-reaction: @distance;
+	}
+
+	.set-success-base() when (@distance-action < 150) or (@distance-reaction < 150) {
+		@success-base: @lightgreen;
+	}
+
+	.set-success-base() when (default()) {
+		@success-base: @green;
+	}
+
+	.set-success-final() {
+		.set-lumafix(@success-base);
+		@success:mix(@lumafix, @success-base, 20%);
+	}
+
+	.set-distance-action();
+	.set-distance-reaction();
+
+	.set-success-base();
+
+	.set-success-final();
+}
+
+.set-failure() {
+	// success's opposite and complement, failure's red tells the user something is wrong 
+	// good for negative server responses, missing info, or drawing attention to faults
+
+	@red: extract(@turbo, 225);
+	@darkred: extract(@turbo, 240);
+
+	.set-distance-action() {
+		.set-distance(@red, @action-base);
+		@distance-action: @distance;
+	}
+
+	.set-distance-reaction() {
+		.set-distance(@red, @reaction-base);
+		@distance-reaction: @distance;
+	}
+
+	.set-failure-base() when (@distance-action < 100) or (@distance-reaction < 100) {
+		@failure-base: @darkred;
+	}
+
+	.set-failure-base() when (default()) {
+		@failure-base: @red;
+	}
+
+	.set-failure-final() when (luma(@base-color) > 50%) {
+		.set-lumafix(@failure-base, @base-color, 75%);
+		@failure: @lumafix;
+	}
+
+	.set-failure-final() when (default()) {
+		.set-lumafix(@failure-base, @base-color, 25%);
+		@failure: @lumafix;
+	}
+
+	.set-distance-action();
+	.set-distance-reaction();
+
+	.set-failure-base();
+
+	.set-failure-final();
+}
+
+.set-highlight() {
+	// highlight is a bright color meant to evoke a highlighter and print text
+	// depending on the base color, it can be cyan, magenta or yellow
+
+	@yellow: extract(@turbo, 152);
+	@cyan: extract(@turbo, 73);
+	@magenta: mix(extract(@turbo, 222), magenta, 60%);
+
+	.set-highlight-base() when (red(@base-color) > 85) {
+		@highlight-base: @yellow;
+	}
+
+	.set-highlight-base() when (red(@base-color) > 170) {
+		@highlight-base: @cyan;
+	}
+
+	.set-highlight-base() when (default()) {
+		@highlight-base: @magenta;
+	}
+
+	.set-highlight-final() when (luma(@base-color) > 50%) {
+		.set-lumafix(@highlight-base, @base-color, 33%);
+		@highlight:overlay(@lumafix, white);
+	}
+
+	.set-highlight-final() when (luma(@base-color) > 90%) {
+		.set-lumafix(@highlight-base, @base-color, 25%);
+		@highlight:overlay(@lumafix, white);
+	}
+
+	.set-highlight-final() when (default()) {
+		.set-lumafix(@highlight-base,  @base-color, 50%);
+		@highlight:overlay(@lumafix, white);
+	}
+
+	.set-highlight-base();
+	.set-highlight-final();
+}
+
+.set-accent() {
+	// accent is meant to be used sparingly with @action, @reaction and @alternate 
+	// its extra saturation and lightness is good for drawing attention or balancing designs
+
+	.set-accent-final() {
+		.set-lumafix(@accent-base);
+		@accent:lighten(saturate(mix(@lumafix, @accent-base, 20%), 10%), 5%);
+	}
+	.set-accent-final();
+}
