@@ -52,25 +52,36 @@
 	@action: @lumafix;
 }
 
+.set-action() when (@base-color = white) { @action: white;}
+.set-action() when (@base-color = black) { @action: black;}
+
 .set-reaction() {
 	// reaction is for responding, usually after an action
 	// a good second step or confirmation color 
 	// reaction is typically close to being a complement of action 
 
-	.set-lumafix(@reaction-base);
-	@reaction: @lumafix;
+	.set-lumafix(@reaction-base; @strength: 67%;);
+    @reaction: @lumafix;
 }
+
+.set-reaction() when (@base-color = white) { @reaction: black;}
+.set-reaction() when (@base-color = black) { @reaction: white;}
 
 .set-alternate() {
 	// alternate is meant to be an alternate color to action and reaction
 	// it can sometimes make a good stand-in for other colors in the scheme 
 
-	.set-alternate-final() {
-		.set-lumafix(@alt-base);
-		@alternate: @lumafix;
-	}
-	.set-alternate-final();
+    .set-alternate-final() {
+        .set-lumafix(@alt-base; @strength: 67%;);
+        @alternate: @lumafix;
+        
+        
+    }
+    .set-alternate-final();
 }
+
+.set-alternate() when (@base-color = white) or (@base-color = black) { @alternate: average(white, black);}
+
 
 .set-info() {
 	// info is a light blue or teal 
