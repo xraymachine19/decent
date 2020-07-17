@@ -10,7 +10,7 @@
     // line-height: @line-height*1.25;
     vertical-align: middle;
     .default(padding);
-    border: 1px solid transparent;
+    border: @border-width @border-style transparent;
     border-radius: @border-radius/2;
     
     touch-action: manipulation;
@@ -31,6 +31,10 @@
     &:disabled {
       .button-color(@gray-lighter) !important;
       opacity: .5;
+    }
+
+    &:focus {
+      outline: none;
     }
 });
   
@@ -55,6 +59,15 @@
 .button-color(@color) {
     @button-bg: @color;
     .invert-text-against(@button-bg; 3; true);
+    .set-tone(@button-bg);
+
+    &:active {
+        background: mix(@button-bg, @tone, 12.5%);
+    }
+
+    &:focus {
+      // border-color: @highlight; // TODO: something to better highlight focus state
+    }
 }
 
 .button-color(@color) when (@color = @highlight)
@@ -63,8 +76,4 @@
                         or (@color = @info) {
     @button-bg: @color;
     .colorize(@button-bg; 4.5);
-
-    &:active {
-        background: darken(@button-bg, 12.5%);
-    }
 }

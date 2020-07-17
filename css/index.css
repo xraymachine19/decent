@@ -167,6 +167,55 @@ span.failure,
 span.highlight {
   padding: 0.18em 0 0.22em 0;
 }
+mark {
+  background-color: #ff2b99 !important;
+  color: #000000 !important;
+}
+mark.action,
+mark.reaction,
+mark.info,
+mark.warning,
+mark.success,
+mark.failure,
+mark.highlight {
+  padding: 0.18em 0 0.22em 0;
+}
+mark.action {
+  background-color: #5d2372 !important;
+  color: #e7deea !important;
+}
+mark.reaction {
+  background-color: #467014 !important;
+  color: #ffffff !important;
+}
+mark.alternate {
+  background-color: #12627c !important;
+  color: #ffffff !important;
+}
+mark.info {
+  background-color: #18789b !important;
+  color: #ffffff !important;
+}
+mark.warning {
+  background-color: #ffe639 !important;
+  color: #403a0e !important;
+}
+mark.accent {
+  background-color: #466ae0 !important;
+  color: #ffffff !important;
+}
+mark.success {
+  background-color: #3ed267 !important;
+  color: #09200f !important;
+}
+mark.failure {
+  background-color: #b42903 !important;
+  color: #ffffff !important;
+}
+mark.highlight {
+  background-color: #ff2b99 !important;
+  color: #000000 !important;
+}
 button,
 .button,
 input[type="button"],
@@ -180,7 +229,7 @@ input[type="submit"] {
   text-align: center;
   vertical-align: middle;
   padding: 0.8rem;
-  border: 1px solid transparent;
+  border: 4px solid transparent;
   border-radius: 0.5em;
   touch-action: manipulation;
   cursor: pointer;
@@ -202,6 +251,13 @@ input[type="reset"]:active,
 input[type="submit"]:active {
   background-color: #4d1d5e;
 }
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background: #ebe3ed;
+}
 button.action,
 .button.action,
 input[type="button"].action,
@@ -216,6 +272,13 @@ input[type="button"].action:active,
 input[type="reset"].action:active,
 input[type="submit"].action:active {
   background-color: #4d1d5e;
+}
+button.action:active,
+.button.action:active,
+input[type="button"].action:active,
+input[type="reset"].action:active,
+input[type="submit"].action:active {
+  background: #ebe3ed;
 }
 button.reaction,
 .button.reaction,
@@ -232,6 +295,13 @@ input[type="reset"].reaction:active,
 input[type="submit"].reaction:active {
   background-color: #385a10;
 }
+button.reaction:active,
+.button.reaction:active,
+input[type="button"].reaction:active,
+input[type="reset"].reaction:active,
+input[type="submit"].reaction:active {
+  background: #e8ede2;
+}
 button.alternate,
 .button.alternate,
 input[type="button"].alternate,
@@ -246,6 +316,13 @@ input[type="button"].alternate:active,
 input[type="reset"].alternate:active,
 input[type="submit"].alternate:active {
   background-color: #0e5066;
+}
+button.alternate:active,
+.button.alternate:active,
+input[type="button"].alternate:active,
+input[type="reset"].alternate:active,
+input[type="submit"].alternate:active {
+  background: #e1ebef;
 }
 button.info,
 .button.info,
@@ -268,7 +345,7 @@ button.info:active,
 input[type="button"].info:active,
 input[type="reset"].info:active,
 input[type="submit"].info:active {
-  background: #104e64;
+  background: #e2eef3;
 }
 button.warning,
 .button.warning,
@@ -292,7 +369,7 @@ button.warning:active,
 input[type="button"].warning:active,
 input[type="reset"].warning:active,
 input[type="submit"].warning:active {
-  background: #f8d900;
+  background: #201d07;
 }
 button.accent,
 .button.accent,
@@ -315,7 +392,7 @@ button.accent:active,
 input[type="button"].accent:active,
 input[type="reset"].accent:active,
 input[type="submit"].accent:active {
-  background: #2148c6;
+  background: #e8ecfb;
 }
 button.success,
 .button.success,
@@ -332,6 +409,13 @@ input[type="reset"].success:active,
 input[type="submit"].success:active {
   background-color: #1a7232;
 }
+button.success:active,
+.button.success:active,
+input[type="button"].success:active,
+input[type="reset"].success:active,
+input[type="submit"].success:active {
+  background: #081a0d;
+}
 button.failure,
 .button.failure,
 input[type="button"].failure,
@@ -346,6 +430,13 @@ input[type="button"].failure:active,
 input[type="reset"].failure:active,
 input[type="submit"].failure:active {
   background-color: #9b2303;
+}
+button.failure:active,
+.button.failure:active,
+input[type="button"].failure:active,
+input[type="reset"].failure:active,
+input[type="submit"].failure:active {
+  background: #f6e4e0;
 }
 button.highlight,
 .button.highlight,
@@ -369,7 +460,7 @@ button.highlight:active,
 input[type="button"].highlight:active,
 input[type="reset"].highlight:active,
 input[type="submit"].highlight:active {
-  background: #ea007a;
+  background: #200513;
 }
 @media screen and (min-width: 35.6rem) {
   button,
@@ -395,6 +486,20 @@ input[type="button"]:disabled:active,
 input[type="reset"]:disabled:active,
 input[type="submit"]:disabled:active {
   background-color: #656565 !important;
+}
+button:disabled:active,
+.button:disabled:active,
+input[type="button"]:disabled:active,
+input[type="reset"]:disabled:active,
+input[type="submit"]:disabled:active {
+  background: #151515 !important;
+}
+button:focus,
+.button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  outline: none;
 }
 .hide,
 .hidden {

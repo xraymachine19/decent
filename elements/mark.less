@@ -1,0 +1,33 @@
+mark {
+    .mark-color(@highlight);
+
+    .semantic-classes({
+      padding: .18em 0 .22em 0;
+    });
+
+    .make-marks-for(@semantic-colors);
+  }
+  
+  .mark-color(@color) {
+    .colorize(@color) !important;
+  }
+  
+  .make-marks-for(@colors) {
+    // takes a list
+    // makes classes for everything in the list
+    // list must be variable names, not variables
+  
+    @length: length(@colors);
+  
+    .make-mark();
+  
+    .make-mark(@index:1) when (@index <= @length) {
+      @color-name: extract(@colors, @index);
+      @color: @@color-name;
+  
+      &.@{color-name} { .mark-color(@color);}
+  
+      .make-mark(@index + 1);
+    }
+  }
+  
