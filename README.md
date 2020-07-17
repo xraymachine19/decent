@@ -14,3 +14,26 @@ A Less library for smarter component styling
 ## Compiling the Less
 
 1. Run 'lessc index.less css/index.css'.
+
+
+# Core ideas
+
+### Semantic colors
+
+Decent uses very few classes. Semantic classes, one of the few exceptions, come with an inherent color association.
+
+    Palette colors
+    - **action**: A version of the base color
+    - **reaction**: A complement to action
+    - **alternate**: A CMYK print-style highlight color
+
+    Informational colors
+    - **info**: An info-conveying blue
+    - **warning**: An urgent info-conveying orange
+    - **accent**: An attention-drawing but neutral color
+
+    Transactional colors
+    - **action**: A reassuring green
+    - **reaction**: An alarming red
+    - **highlight**: A CMYK print-style highlight color
+

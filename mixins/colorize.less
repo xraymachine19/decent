@@ -1,0 +1,10 @@
+// makes any element into the given color
+
+.colorize(@background; @contrast-standard: 7;) {
+    background-color: @background;
+    .contrast-text-against(@background; @contrast-standard;);
+
+    .set-tone(@background);
+    & when (@tone = black) { .contrast-border-against(@background; @contrast-standard;);}
+    & when (@tone = white) { border: none;}
+}
