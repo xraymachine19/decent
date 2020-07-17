@@ -19,7 +19,8 @@ form,
 hr,
 main,
 section,
-table {
+table,
+button {
   margin: 0;
   padding: 0;
   max-width: 55rem;
@@ -32,7 +33,7 @@ body {
   background-position: 5px center;
   font-size: 20px;
   font-size: calc((100vw - 1.6rem)/26.5);
-  font-weight: bold;
+  font-weight: normal;
   line-height: calc((2)*(100vw - 1.6rem)/26.5);
   margin: 0;
   padding: 0;
@@ -67,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 4rem;
+  font-size: 4.4rem;
   font-size: calc((100vw - 1.6rem)/100);
   font-weight: bold;
   margin-top: 2rem;
@@ -157,13 +158,22 @@ ul {
   margin-left: 0.8rem;
   margin-bottom: 0.8rem;
 }
+span.action,
+span.reaction,
+span.info,
+span.warning,
+span.success,
+span.failure,
+span.highlight {
+  padding: 0.18em 0 0.22em 0;
+}
 button,
 .button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   font-family: inherit;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 0.8rem;
   display: inline-block;
   width: 100%;
@@ -398,74 +408,527 @@ input[type="submit"]:disabled:active {
   clear: both;
   content: "";
 }
-.action,
-.reaction,
-.alternate,
-.info,
-.warning,
-.accent,
-.success,
-.failure,
-.highlight {
-  padding: 0.8rem;
+b.action,
+big.action,
+i.action,
+small.action,
+tt.action,
+abbr.action,
+acronym.action,
+cite.action,
+code.action,
+em.action,
+strong.action,
+a.action,
+br.action,
+img.action,
+map.action,
+object.action,
+span.action,
+sub.action,
+sup.action,
+input.action,
+label.action,
+select.action,
+textarea.action {
+  color: #5a226f;
 }
-.action a {
-  color: #80b5c8;
+b.reaction,
+big.reaction,
+i.reaction,
+small.reaction,
+tt.reaction,
+abbr.reaction,
+acronym.reaction,
+cite.reaction,
+code.reaction,
+em.reaction,
+strong.reaction,
+a.reaction,
+br.reaction,
+img.reaction,
+map.reaction,
+object.reaction,
+span.reaction,
+sub.reaction,
+sup.reaction,
+input.reaction,
+label.reaction,
+select.reaction,
+textarea.reaction {
+  color: #446d13;
 }
-.reaction a {
-  color: #dcebf0;
+b.alternate,
+big.alternate,
+i.alternate,
+small.alternate,
+tt.alternate,
+abbr.alternate,
+acronym.alternate,
+cite.alternate,
+code.alternate,
+em.alternate,
+strong.alternate,
+a.alternate,
+br.alternate,
+img.alternate,
+map.alternate,
+object.alternate,
+span.alternate,
+sub.alternate,
+sup.alternate,
+input.alternate,
+label.alternate,
+select.alternate,
+textarea.alternate {
+  color: #115f79;
 }
-.alternate a {
-  color: #c0dae4;
+b.info,
+big.info,
+i.info,
+small.info,
+tt.info,
+abbr.info,
+acronym.info,
+cite.info,
+code.info,
+em.info,
+strong.info,
+a.info,
+br.info,
+img.info,
+map.info,
+object.info,
+span.info,
+sub.info,
+sup.info,
+input.info,
+label.info,
+select.info,
+textarea.info {
+  color: #187598;
 }
-.info a {
-  color: #f3f8fa;
+b.warning,
+big.warning,
+i.warning,
+small.warning,
+tt.warning,
+abbr.warning,
+acronym.warning,
+cite.warning,
+code.warning,
+em.warning,
+strong.warning,
+a.warning,
+br.warning,
+img.warning,
+map.warning,
+object.warning,
+span.warning,
+sub.warning,
+sup.warning,
+input.warning,
+label.warning,
+select.warning,
+textarea.warning {
+  color: #796d1b;
 }
-.warning a {
-  color: #156988;
+b.accent,
+big.accent,
+i.accent,
+small.accent,
+tt.accent,
+abbr.accent,
+acronym.accent,
+cite.accent,
+code.accent,
+em.accent,
+strong.accent,
+a.accent,
+br.accent,
+img.accent,
+map.accent,
+object.accent,
+span.accent,
+sub.accent,
+sup.accent,
+input.accent,
+label.accent,
+select.accent,
+textarea.accent {
+  color: #4468db;
 }
-.accent a {
-  color: #ffffff;
+b.success,
+big.success,
+i.success,
+small.success,
+tt.success,
+abbr.success,
+acronym.success,
+cite.success,
+code.success,
+em.success,
+strong.success,
+a.success,
+br.success,
+img.success,
+map.success,
+object.success,
+span.success,
+sub.success,
+sup.success,
+input.success,
+label.success,
+select.success,
+textarea.success {
+  color: #257e3e;
 }
-.success a {
-  color: #0f4b61;
+b.failure,
+big.failure,
+i.failure,
+small.failure,
+tt.failure,
+abbr.failure,
+acronym.failure,
+cite.failure,
+code.failure,
+em.failure,
+strong.failure,
+a.failure,
+br.failure,
+img.failure,
+map.failure,
+object.failure,
+span.failure,
+sub.failure,
+sup.failure,
+input.failure,
+label.failure,
+select.failure,
+textarea.failure {
+  color: #af2803;
 }
-.failure a {
-  color: #cbe1e9;
+b.highlight,
+big.highlight,
+i.highlight,
+small.highlight,
+tt.highlight,
+abbr.highlight,
+acronym.highlight,
+cite.highlight,
+code.highlight,
+em.highlight,
+strong.highlight,
+a.highlight,
+br.highlight,
+img.highlight,
+map.highlight,
+object.highlight,
+span.highlight,
+sub.highlight,
+sup.highlight,
+input.highlight,
+label.highlight,
+select.highlight,
+textarea.highlight {
+  color: #d2247e;
 }
-.action {
+p.action,
+ol.action,
+ul.action,
+pre.action,
+address.action,
+blockquote.action,
+dl.action,
+div.action,
+fieldset.action,
+form.action,
+hr.action,
+main.action,
+section.action,
+table.action,
+button.action {
   background-color: #5d2372;
   color: #e7deea;
 }
-.reaction {
+p.reaction,
+ol.reaction,
+ul.reaction,
+pre.reaction,
+address.reaction,
+blockquote.reaction,
+dl.reaction,
+div.reaction,
+fieldset.reaction,
+form.reaction,
+hr.reaction,
+main.reaction,
+section.reaction,
+table.reaction,
+button.reaction {
   background-color: #467014;
   color: #ffffff;
 }
-.alternate {
+p.alternate,
+ol.alternate,
+ul.alternate,
+pre.alternate,
+address.alternate,
+blockquote.alternate,
+dl.alternate,
+div.alternate,
+fieldset.alternate,
+form.alternate,
+hr.alternate,
+main.alternate,
+section.alternate,
+table.alternate,
+button.alternate {
   background-color: #12627c;
   color: #ffffff;
 }
-.info {
+p.info,
+ol.info,
+ul.info,
+pre.info,
+address.info,
+blockquote.info,
+dl.info,
+div.info,
+fieldset.info,
+form.info,
+hr.info,
+main.info,
+section.info,
+table.info,
+button.info {
   background-color: #18789b;
   color: #ffffff;
 }
-.warning {
+p.warning,
+ol.warning,
+ul.warning,
+pre.warning,
+address.warning,
+blockquote.warning,
+dl.warning,
+div.warning,
+fieldset.warning,
+form.warning,
+hr.warning,
+main.warning,
+section.warning,
+table.warning,
+button.warning {
   background-color: #ffe639;
   color: #403a0e;
 }
-.accent {
+p.accent,
+ol.accent,
+ul.accent,
+pre.accent,
+address.accent,
+blockquote.accent,
+dl.accent,
+div.accent,
+fieldset.accent,
+form.accent,
+hr.accent,
+main.accent,
+section.accent,
+table.accent,
+button.accent {
   background-color: #466ae0;
   color: #ffffff;
 }
-.success {
+p.success,
+ol.success,
+ul.success,
+pre.success,
+address.success,
+blockquote.success,
+dl.success,
+div.success,
+fieldset.success,
+form.success,
+hr.success,
+main.success,
+section.success,
+table.success,
+button.success {
   background-color: #3ed267;
   color: #09200f;
 }
-.failure {
+p.failure,
+ol.failure,
+ul.failure,
+pre.failure,
+address.failure,
+blockquote.failure,
+dl.failure,
+div.failure,
+fieldset.failure,
+form.failure,
+hr.failure,
+main.failure,
+section.failure,
+table.failure,
+button.failure {
   background-color: #b42903;
   color: #ffffff;
 }
-.highlight {
+p.highlight,
+ol.highlight,
+ul.highlight,
+pre.highlight,
+address.highlight,
+blockquote.highlight,
+dl.highlight,
+div.highlight,
+fieldset.highlight,
+form.highlight,
+hr.highlight,
+main.highlight,
+section.highlight,
+table.highlight,
+button.highlight {
   background-color: #ff2b99;
   color: #000000;
+}
+p.action,
+ol.action,
+ul.action,
+pre.action,
+address.action,
+blockquote.action,
+dl.action,
+div.action,
+fieldset.action,
+form.action,
+hr.action,
+main.action,
+section.action,
+table.action,
+button.action,
+p.reaction,
+ol.reaction,
+ul.reaction,
+pre.reaction,
+address.reaction,
+blockquote.reaction,
+dl.reaction,
+div.reaction,
+fieldset.reaction,
+form.reaction,
+hr.reaction,
+main.reaction,
+section.reaction,
+table.reaction,
+button.reaction,
+p.alternate,
+ol.alternate,
+ul.alternate,
+pre.alternate,
+address.alternate,
+blockquote.alternate,
+dl.alternate,
+div.alternate,
+fieldset.alternate,
+form.alternate,
+hr.alternate,
+main.alternate,
+section.alternate,
+table.alternate,
+button.alternate,
+p.info,
+ol.info,
+ul.info,
+pre.info,
+address.info,
+blockquote.info,
+dl.info,
+div.info,
+fieldset.info,
+form.info,
+hr.info,
+main.info,
+section.info,
+table.info,
+button.info,
+p.warning,
+ol.warning,
+ul.warning,
+pre.warning,
+address.warning,
+blockquote.warning,
+dl.warning,
+div.warning,
+fieldset.warning,
+form.warning,
+hr.warning,
+main.warning,
+section.warning,
+table.warning,
+button.warning,
+p.accent,
+ol.accent,
+ul.accent,
+pre.accent,
+address.accent,
+blockquote.accent,
+dl.accent,
+div.accent,
+fieldset.accent,
+form.accent,
+hr.accent,
+main.accent,
+section.accent,
+table.accent,
+button.accent,
+p.success,
+ol.success,
+ul.success,
+pre.success,
+address.success,
+blockquote.success,
+dl.success,
+div.success,
+fieldset.success,
+form.success,
+hr.success,
+main.success,
+section.success,
+table.success,
+button.success,
+p.failure,
+ol.failure,
+ul.failure,
+pre.failure,
+address.failure,
+blockquote.failure,
+dl.failure,
+div.failure,
+fieldset.failure,
+form.failure,
+hr.failure,
+main.failure,
+section.failure,
+table.failure,
+button.failure,
+p.highlight,
+ol.highlight,
+ul.highlight,
+pre.highlight,
+address.highlight,
+blockquote.highlight,
+dl.highlight,
+div.highlight,
+fieldset.highlight,
+form.highlight,
+hr.highlight,
+main.highlight,
+section.highlight,
+table.highlight,
+button.highlight {
+  padding: 0.8rem;
 }

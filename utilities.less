@@ -19,36 +19,41 @@
   }
 }
 
-.action,
-.reaction,
-.alternate,
-.info, 
-.warning, 
-.accent, 
-.success, 
-.failure, 
-.highlight {
-  .default(padding);
-}
-
 @semantic-link-cr: 4.5; // contrast-ratio for semantic links to meet
 
-.action a { .color-text(@info, @action, @semantic-link-cr);}
-.reaction a { .color-text(@info, @reaction, @semantic-link-cr);}
-.alternate a { .color-text(@info, @alternate, @semantic-link-cr);}
-.info a { .color-text(@info, @info, @semantic-link-cr);}
-.warning a { .color-text(@info, @warning, @semantic-link-cr);}
-.accent a { .color-text(@info, @accent, @semantic-link-cr);}
-.success a { .color-text(@info, @success, @semantic-link-cr);}
-.failure a { .color-text(@info, @failure, @semantic-link-cr);}
 
-.action { .colorize(@action);}
-.reaction { .colorize(@reaction);}
-.alternate { .colorize(@alternate);}
-.info { .colorize(@info);}
-.warning { .colorize(@warning);}
-.accent { .colorize(@accent);}
-.success { .colorize(@success);}
-.failure { .colorize(@failure);}
-.highlight { .colorize(@highlight);}
+.inline-elements({
+  &.action { .color-text(@action);}
+  &.reaction { .color-text(@reaction);}
+  &.alternate { .color-text(@alternate);}
+  &.info { .color-text(@info);}
+  &.warning { .color-text(@warning);}
+  &.accent { .color-text(@accent);}
+  &.success { .color-text(@success);}
+  &.failure { .color-text(@failure);}
+  &.highlight { .color-text(@highlight);}
+});
 
+.block-level-elements({
+  &.action { .colorize(@action);}
+  &.reaction { .colorize(@reaction);}
+  &.alternate { .colorize(@alternate);}
+  &.info { .colorize(@info);}
+  &.warning { .colorize(@warning);}
+  &.accent { .colorize(@accent);}
+  &.success { .colorize(@success);}
+  &.failure { .colorize(@failure);}
+  &.highlight { .colorize(@highlight);}
+
+  &.action,
+  &.reaction,
+  &.alternate,
+  &.info, 
+  &.warning, 
+  &.accent, 
+  &.success, 
+  &.failure, 
+  &.highlight {
+    .default(padding);
+  }
+});
