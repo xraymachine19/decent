@@ -22,18 +22,30 @@ A Less library for smarter component styling
 
 Decent uses very few classes. Semantic classes, one of the few exceptions, come with an inherent color association.
 
-    Palette colors
-    - **action**: A version of the base color
-    - **reaction**: A complement to action
-    - **alternate**: A CMYK print-style highlight color
+Palette colors
+- **action**: A version of the base color
+- **reaction**: A complement to action
+- **alternate**: A CMYK print-style highlight color
 
-    Informational colors
-    - **info**: An info-conveying blue
-    - **warning**: An urgent info-conveying orange
-    - **accent**: An attention-drawing but neutral color
+Informational colors
+- **info**: An info-conveying blue
+- **warning**: An urgent info-conveying orange
+- **accent**: An attention-drawing but neutral color
 
-    Transactional colors
-    - **action**: A reassuring green
-    - **reaction**: An alarming red
-    - **highlight**: A CMYK print-style highlight color
+Transactional colors
+- **action**: A reassuring green
+- **reaction**: An alarming red
+- **highlight**: A CMYK print-style highlight color
 
+
+### Accessbility
+
+Decent achieves accessibility in a few ways.
+
+Color contrast
+- Mixins ensure developers meet WCAG standards
+- Mixins ensure design consistency
+
+Lean performance
+- Decent allows for a leaner DOM, which makes everything (CSS, JS) faster
+- Decent itself compiles quickly, picking the right colors out of millions in seconds
