@@ -1,0 +1,70 @@
+.button-elements({
+    font-family: inherit;
+    .has(font-size);
+    // font-size: 125%;
+    .has(margin-bottom);
+  
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    // line-height: @line-height*1.25;
+    vertical-align: middle;
+    .has(padding);
+    border: 1px solid transparent;
+    border-radius: @border-radius/2;
+    
+    touch-action: manipulation;
+    cursor: pointer;
+    
+    background-image: none;
+    outline: none;
+    white-space: nowrap;
+    text-decoration: none;
+    .button-color(@action);
+    .make-buttons-for(@semantic-colors);
+    .no-user-select();
+
+    .on-tablet({
+      width: auto;
+    });
+  
+    &:disabled {
+      .button-color(@gray-lighter) !important;
+      opacity: .5;
+    }
+});
+  
+.make-buttons-for(@colors) {
+    // make buttons for a list of color variable names
+    // buttons will use variable names as class names
+  
+    @length: length(@colors);
+  
+    .make-button();
+  
+    .make-button(@index:1) when (@index <= @length) {
+      @color-name: extract(@colors, @index);
+      @color: @@color-name;
+  
+      &.@{color-name} { .button-color(@color);}
+  
+      .make-button(@index + 1);
+    }
+}
+  
+.button-color(@color) {
+    @button-bg: @color;
+    .invert-text-against(@button-bg; 3; true);
+}
+
+.button-color(@color) when (@color = @highlight)
+                        or (@color = @accent)
+                        or (@color = @warning)
+                        or (@color = @info) {
+    @button-bg: @color;
+    .colorize(@button-bg; 4.5);
+
+    &:active {
+        background: darken(@button-bg, 12.5%);
+    }
+}

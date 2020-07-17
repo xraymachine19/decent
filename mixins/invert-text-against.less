@@ -21,10 +21,9 @@
 	color: white;
 
 		& when (@button = true) {
-			// button option lets us handle active state here when we know the color
+            // button option lets us handle active state here when we know the color
 			&:active {
-        background-color: darken(@bg-color, 5%);        
-				// color: mix(@bg-color, black, 5%);
+                background-color: darken(@bg-color, 5%);        
 			}
 		}
 	}

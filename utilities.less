@@ -1,14 +1,12 @@
-// utility mixins
-// these weren't big enough to have their own file
-
-.colorize(@background; @contrast-standard: 7;) {
-    background-color: @background;
-    .contrast-text-against(@background; @contrast-standard;);
-    .contrast-border-against(@background; @contrast-standard;);
-}
-
 // utility classes
 // these have corresponding mixins
+
+.no-user-select() {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 
 .hide, .hidden { display: none !important;}
 
@@ -33,7 +31,7 @@
   .has(padding);
 }
 
-@semantic-link-cr: 4.5;
+@semantic-link-cr: 4.5; // contrast-ratio for semantic links to meet
 
 .action a { .color-text(@info, @action, @semantic-link-cr);}
 .reaction a { .color-text(@info, @reaction, @semantic-link-cr);}
