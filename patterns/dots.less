@@ -1,7 +1,7 @@
 .dots(@base: @base-color; @scale: 1;) {
     @font-size: 20px;
     .set-tone(@base);
-    @c-color: darken(@base-color, 10%);
+    @c-color: mix(@base, @tone, 50%);
     @fg-base: @c-color;
     @bg-base: @base;
   

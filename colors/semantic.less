@@ -1,15 +1,5 @@
-// does some faux-color-wheel-spinning through
-// the turbo palette to find new colors
-// @offset changes alt-base and accent-base
-
-// this sets these variables:
-// @action-base 
-// @reaction-base 
-// @alt-base 
-// @accent-base
-
-.set-color-bases(@base-color, 128); // TODO: rectify '128' with reality
-// .set-grays(@base-color);
+.set-rep-color(@base-color; @turbo;);
+.set-color-bases();
 .set-action();
 .set-reaction();
 .set-warning();
@@ -20,7 +10,7 @@
 .set-alternate();
 .set-highlight();
 
-.set-color-bases(@color: @rep-color, @number) {
+.set-color-bases(@color: @rep-color, @number: @rep-color-number) {
 
 	@offset: 32;
 
