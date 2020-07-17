@@ -15,7 +15,7 @@
     @bg-blue: round(blue(@bg-base));
     @bg: ~"rgb(@{bg-red},@{bg-green},@{bg-blue})";
   
-    @width: 10;
+    @width: 10px;
     @height: @width;
     @pattern-dots:~"%3Csvg xmlns='http://www.w3.org/2000/svg' width='@{width}' height='@{width}'%3E %3Crect width='@{width}' height='@{width}' fill='@{bg}'/%3E %3Crect width='1' height='1' fill='@{fg}'/%3E %3C/svg%3E";
     background-image: url("data:image/svg+xml,@{pattern-dots}");

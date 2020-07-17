@@ -1,3 +1,12 @@
 main {
+    @background: white;
+
+    .has(padding);
+
     margin: 0 auto;
+    max-width: @max-width*2;
+    background-color: @background;
+    .contrast-text-against(@background);
+    border: 1px solid @background;
+    .contrast-border-against(@background);
 }

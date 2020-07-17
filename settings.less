@@ -3,11 +3,13 @@
 
 // css attribute defaults
 @background: @gray-light;
-@line-height: @font-size*2;
+@line-height: @font-size*@golden-ratio;
 @border-radius: 1em;
 @font-size: 2rem;
 
-@monospace: true;
+@monospace: false;
+@serif: false;
+@sans-serif: true;
 
 @border-width: 10px;
 @border-style: dashed;
@@ -21,10 +23,9 @@
 @nav-background: mix(#111, @base-color, 95%);
 
 // layout settings
-@character-limit: 44; // an estimate
-// @text-measure: floor(1.61*@character-limit);
-@text-measure: @character-limit + 12;
-@padding: 2rem;
+// TODO: make this its own file
+@text-measure: 55; // an estimate
+@padding: .8rem;
 @margin: @padding;
 @max-width: @text-measure * 1rem;
 @margin-bottom: @margin;
