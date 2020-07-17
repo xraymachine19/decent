@@ -25,9 +25,9 @@ table {
   max-width: 55rem;
 }
 body {
-  background-color: #f1fef3;
-  color: #3c3f3d;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10px' height='10px'%3E %3Crect width='10px' height='10px' fill='rgb(241,254,243)'/%3E %3Crect width='1' height='1' fill='rgb(121,127,121)'/%3E %3C/svg%3E");
+  background-color: #474157;
+  color: #edecee;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10px' height='10px'%3E %3Crect width='10px' height='10px' fill='rgb(71,65,87)'/%3E %3Crect width='1' height='1' fill='rgb(163,160,171)'/%3E %3C/svg%3E");
   background-size: 40px, 40px;
   background-position: 5px center;
   font-size: 20px;
@@ -176,71 +176,76 @@ ol {
   padding: 0.8rem;
 }
 .action a {
-  color: #4a6e7b;
+  color: #5795ac;
 }
 .reaction a {
-  color: #344d56;
+  color: #d1e2e8;
 }
 .alternate a {
-  color: #476975;
+  color: #97bdcb;
 }
 .info a {
-  color: #3b5862;
+  color: #dce9ee;
 }
 .warning a {
-  color: #476975;
+  color: #166a89;
 }
 .accent a {
-  color: #476975;
+  color: #010507;
 }
 .success a {
-  color: #43636f;
+  color: #0f475b;
 }
 .failure a {
-  color: #38535c;
+  color: #bfd7df;
 }
 .action {
-  background-color: #e6fee9;
-  color: #39403a;
-  border-color: #39403a;
+  border: none;
+  background-color: #231844;
+  color: #bdbac7;
+  border-color: #bdbac7;
 }
 .reaction {
-  background-color: #e7b4ab;
-  color: #2e2422;
-  border-color: #2e2422;
+  border: none;
+  background-color: #496712;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .alternate {
-  background-color: #fde6b9;
-  color: #3f392e;
-  border-color: #3f392e;
+  border: none;
+  background-color: #0b4c53;
+  color: #e7edee;
+  border-color: #e7edee;
 }
 .info {
-  background-color: #95dcf6;
-  color: #1e2c31;
-  border-color: #1e2c31;
+  border: none;
+  background-color: #176d8c;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .warning {
-  background-color: #feeda4;
-  color: #403b29;
-  border-color: #403b29;
+  background-color: #ffff53;
+  color: #404015;
+  border-color: #404015;
 }
 .accent {
-  background-color: #d5fd63;
-  color: #353f19;
-  border-color: #353f19;
+  background-color: #4372e0;
+  color: #000000;
+  border-color: #000000;
 }
 .success {
-  background-color: #b2fc55;
-  color: #2d3f15;
-  border-color: #2d3f15;
+  background-color: #3ecb64;
+  color: #091e0f;
+  border-color: #091e0f;
 }
 .failure {
-  background-color: #eac5c0;
-  color: #2f2726;
-  border-color: #2f2726;
+  border: none;
+  background-color: #a72603;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .highlight {
-  background-color: #9affff;
-  color: #274040;
-  border-color: #274040;
+  background-color: #ff2582;
+  color: #000000;
+  border-color: #000000;
 }

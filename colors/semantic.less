@@ -139,7 +139,7 @@
 	}
 
 	.set-warning-final() when (default()) {
-		.set-lumafix(@warning-base);
+		.set-lumafix(@warning-base; @strength: 50%;);
 		@warning:overlay(mix(@lumafix, @warning-base, 50%), white);
 	}
 
