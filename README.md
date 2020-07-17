@@ -15,10 +15,45 @@ A Less library for smarter component styling
 
 1. Run 'lessc index.less css/index.css'.
 
+---
 
 # Core ideas
 
-### Semantic colors
+## Accessbility
+
+Decent aims to preserve and emphasize accessibility.
+
+### Color contrast
+- Mixins ensure developers meet WCAG standards
+- Mixins ensure design consistency
+
+### Lean performance
+- Decent allows for a leaner DOM, which makes everything (CSS, JS) faster
+- Decent itself compiles quickly, picking the right colors out of millions in seconds
+
+## Environment
+
+Decent is a fuller coding environment for Less.
+
+### HTML & CSS concepts
+- All HTML elements have a file
+- All CSS properties have a variable
+
+### Richer mixins
+- Each mixin has its own file
+- Mixins use import statements to list dependencies
+
+## Design fundamentals
+
+Decent gives designers fundamental tools for building UIs.
+
+### Typography
+
+### Color
+
+### Patterns
+
+## Semantic colors
 
 Decent uses very few classes. Semantic classes, one of the few exceptions, come with an inherent color association.
 
@@ -36,16 +71,3 @@ Transactional colors
 - **action**: A reassuring green
 - **reaction**: An alarming red
 - **highlight**: A CMYK print-style highlight color
-
-
-### Accessbility
-
-Decent achieves accessibility in a few ways.
-
-Color contrast
-- Mixins ensure developers meet WCAG standards
-- Mixins ensure design consistency
-
-Lean performance
-- Decent allows for a leaner DOM, which makes everything (CSS, JS) faster
-- Decent itself compiles quickly, picking the right colors out of millions in seconds
