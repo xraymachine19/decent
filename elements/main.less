@@ -6,7 +6,7 @@ main {
     margin: 0 auto;
     margin-bottom: @gutter;
     background-color: @background;
-    .contrast-text-against(@background);
+    .contrast(@background);
     border: 1px solid @background;
-    .contrast-border-against(@background);
+    .contrast(@background; @property: border-color;);
 }

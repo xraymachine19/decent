@@ -25,9 +25,9 @@ table {
   max-width: 55rem;
 }
 body {
-  background-color: #5fa898;
-  color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10px' height='10px'%3E %3Crect width='10px' height='10px' fill='rgb(95,168,152)'/%3E %3Crect width='1' height='1' fill='rgb(48,84,76)'/%3E %3C/svg%3E");
+  background-color: #684b73;
+  color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10px' height='10px'%3E %3Crect width='10px' height='10px' fill='rgb(104,75,115)'/%3E %3Crect width='1' height='1' fill='rgb(180,165,185)'/%3E %3C/svg%3E");
   background-size: 40px, 40px;
   background-position: 5px center;
   font-size: 20px;
@@ -178,7 +178,7 @@ input[type="submit"] {
   outline: none;
   white-space: nowrap;
   text-decoration: none;
-  background-color: #0b6753;
+  background-color: #5d2372;
   color: white;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -190,14 +190,14 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background-color: #095041;
+  background-color: #4d1d5e;
 }
 button.action,
 .button.action,
 input[type="button"].action,
 input[type="reset"].action,
 input[type="submit"].action {
-  background-color: #0b6753;
+  background-color: #5d2372;
   color: white;
 }
 button.action:active,
@@ -205,14 +205,14 @@ button.action:active,
 input[type="button"].action:active,
 input[type="reset"].action:active,
 input[type="submit"].action:active {
-  background-color: #095041;
+  background-color: #4d1d5e;
 }
 button.reaction,
 .button.reaction,
 input[type="button"].reaction,
 input[type="reset"].reaction,
 input[type="submit"].reaction {
-  background-color: #d0450e;
+  background-color: #467014;
   color: white;
 }
 button.reaction:active,
@@ -220,14 +220,14 @@ button.reaction:active,
 input[type="button"].reaction:active,
 input[type="reset"].reaction:active,
 input[type="submit"].reaction:active {
-  background-color: #b83d0d;
+  background-color: #385a10;
 }
 button.alternate,
 .button.alternate,
 input[type="button"].alternate,
 input[type="reset"].alternate,
 input[type="submit"].alternate {
-  background-color: #6e7914;
+  background-color: #12627c;
   color: white;
 }
 button.alternate:active,
@@ -235,86 +235,84 @@ button.alternate:active,
 input[type="button"].alternate:active,
 input[type="reset"].alternate:active,
 input[type="submit"].alternate:active {
-  background-color: #5a6310;
+  background-color: #0e5066;
 }
 button.info,
 .button.info,
 input[type="button"].info,
 input[type="reset"].info,
 input[type="submit"].info {
-  background-color: #167ea4;
   color: white;
-  background-color: #1eabde;
-  color: #093343;
+  background-color: #18789b;
+  color: #ffffff;
 }
 button.info:active,
 .button.info:active,
 input[type="button"].info:active,
 input[type="reset"].info:active,
 input[type="submit"].info:active {
-  background-color: #136d8d;
+  background-color: #156785;
 }
 button.info:active,
 .button.info:active,
 input[type="button"].info:active,
 input[type="reset"].info:active,
 input[type="submit"].info:active {
-  background: #1680a6;
+  background: #104e64;
 }
 button.warning,
 .button.warning,
 input[type="button"].warning,
 input[type="reset"].warning,
 input[type="submit"].warning {
-  background-color: #6d5401;
+  background-color: #6c5e00;
   color: white;
-  background-color: #fec509;
-  color: #594503;
+  background-color: #ffe639;
+  color: #665c17;
 }
 button.warning:active,
 .button.warning:active,
 input[type="button"].warning:active,
 input[type="reset"].warning:active,
 input[type="submit"].warning:active {
-  background-color: #534000;
+  background-color: #524800;
 }
 button.warning:active,
 .button.warning:active,
 input[type="button"].warning:active,
 input[type="reset"].warning:active,
 input[type="submit"].warning:active {
-  background: #c69801;
+  background: #f8d900;
 }
 button.accent,
 .button.accent,
 input[type="button"].accent,
 input[type="reset"].accent,
 input[type="submit"].accent {
-  background-color: #1b7e05;
   color: white;
-  background-color: #75f956;
-  color: #29571e;
+  background-color: #466ae0;
+  color: #ffffff;
 }
 button.accent:active,
 .button.accent:active,
 input[type="button"].accent:active,
 input[type="reset"].accent:active,
 input[type="submit"].accent:active {
-  background-color: #166604;
+  background-color: #3059dd;
 }
 button.accent:active,
 .button.accent:active,
 input[type="button"].accent:active,
 input[type="reset"].accent:active,
 input[type="submit"].accent:active {
-  background: #42f718;
+  background: #2148c6;
 }
 button.success,
 .button.success,
 input[type="button"].success,
 input[type="reset"].success,
 input[type="submit"].success {
-  background-color: #46740c;
+  background-color: #1f863b;
   color: white;
 }
 button.success:active,
@@ -322,14 +320,14 @@ button.success:active,
 input[type="button"].success:active,
 input[type="reset"].success:active,
 input[type="submit"].success:active {
-  background-color: #385d09;
+  background-color: #1a7232;
 }
 button.failure,
 .button.failure,
 input[type="button"].failure,
 input[type="reset"].failure,
 input[type="submit"].failure {
-  background-color: #c12b17;
+  background-color: #b42903;
   color: white;
 }
 button.failure:active,
@@ -337,31 +335,31 @@ button.failure:active,
 input[type="button"].failure:active,
 input[type="reset"].failure:active,
 input[type="submit"].failure:active {
-  background-color: #aa2614;
+  background-color: #9b2303;
 }
 button.highlight,
 .button.highlight,
 input[type="button"].highlight,
 input[type="reset"].highlight,
 input[type="submit"].highlight {
-  background-color: #474700;
+  background-color: #bf0063;
   color: white;
-  background-color: #ffff4c;
-  color: #66661e;
+  background-color: #ff2b99;
+  color: #33091f;
 }
 button.highlight:active,
 .button.highlight:active,
 input[type="button"].highlight:active,
 input[type="reset"].highlight:active,
 input[type="submit"].highlight:active {
-  background-color: #2d2d00;
+  background-color: #a60056;
 }
 button.highlight:active,
 .button.highlight:active,
 input[type="button"].highlight:active,
 input[type="reset"].highlight:active,
 input[type="submit"].highlight:active {
-  background: #ffff0c;
+  background: #ea007a;
 }
 @media screen and (min-width: 35.6rem) {
   button,
@@ -377,7 +375,7 @@ button:disabled,
 input[type="button"]:disabled,
 input[type="reset"]:disabled,
 input[type="submit"]:disabled {
-  background-color: #5d5d5d !important;
+  background-color: #727272 !important;
   color: white !important;
   opacity: 0.5;
 }
@@ -386,7 +384,7 @@ button:disabled:active,
 input[type="button"]:disabled:active,
 input[type="reset"]:disabled:active,
 input[type="submit"]:disabled:active {
-  background-color: #515151 !important;
+  background-color: #656565 !important;
 }
 .hide,
 .hidden {
@@ -412,62 +410,62 @@ input[type="submit"]:disabled:active {
   padding: 0.8rem;
 }
 .action a {
-  color: #072632;
+  color: #80b5c8;
 }
 .reaction a {
-  color: #072b38;
+  color: #dcebf0;
 }
 .alternate a {
-  color: #0a3c4e;
+  color: #c0dae4;
 }
 .info a {
-  color: #0a3848;
+  color: #f3f8fa;
 }
 .warning a {
-  color: #105a75;
+  color: #156988;
 }
 .accent a {
-  color: #116280;
+  color: #ffffff;
 }
 .success a {
-  color: #105e7a;
+  color: #0f4b61;
 }
 .failure a {
-  color: #ccecf8;
+  color: #cbe1e9;
 }
 .action {
-  background-color: #12a384;
-  color: #000000;
+  background-color: #5d2372;
+  color: #e7deea;
 }
 .reaction {
-  background-color: #f16730;
-  color: #000000;
+  background-color: #467014;
+  color: #ffffff;
 }
 .alternate {
-  background-color: #a2b21e;
-  color: #101203;
+  background-color: #12627c;
+  color: #ffffff;
 }
 .info {
-  background-color: #1eabde;
-  color: #01090b;
+  background-color: #18789b;
+  color: #ffffff;
 }
 .warning {
-  background-color: #fec509;
-  color: #332702;
+  background-color: #ffe639;
+  color: #403a0e;
 }
 .accent {
-  background-color: #75f956;
-  color: #1d3e15;
+  background-color: #466ae0;
+  color: #ffffff;
 }
 .success {
-  background-color: #98ea2f;
-  color: #263a0c;
+  background-color: #3ed267;
+  color: #09200f;
 }
 .failure {
-  background-color: #c12b17;
+  background-color: #b42903;
   color: #ffffff;
 }
 .highlight {
-  background-color: #ffff4c;
-  color: #404013;
+  background-color: #ff2b99;
+  color: #000000;
 }
