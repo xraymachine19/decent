@@ -9,4 +9,10 @@ main {
     .contrast(@background);
     border: 1px solid @background;
     .contrast(@background; @property: border-color;);
+    width: 100%;
+    max-width: none;
+
+    > * {
+        margin: 0 auto;
+    }
 }

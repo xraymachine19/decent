@@ -1,26 +1,27 @@
 .button-elements({
+    .default(margin-bottom);
+    .default(border);
+    .default(border-radius);
+  
+    display: inline-block;
+    .button-color(@action);
     font-family: inherit;
     font-size: 125%; 
-    .default(margin-bottom);
-  
     width: 100%;
     line-height: @line-height*2;
     text-align: center;
     vertical-align: middle;
-    border: @border-width @border-style transparent;
-    border-radius: @border-radius/2;
-    
-    touch-action: manipulation;
-    cursor: pointer;
-    
     background-image: none;
     outline: none;
+    border: none;
     white-space: nowrap;
     text-decoration: none;
-    .button-color(@action);
-    .make-buttons-for(@semantic-colors);
-    .no-user-select();
+    touch-action: manipulation;
+    cursor: pointer;
+    .no-user-select;
 
+    .make-buttons-for(@semantic-colors);
+    
     .on-tablet({
       width: auto;
     });
@@ -49,6 +50,27 @@
     }
 }
 
+.button-borders(@color) {
+  .set-border-color() {
+    .set-lumafix(@color; @gray; 25%;);
+    border-color: @lumafix;
+  }
+
+  .set-border-top-color() {
+    .set-lumafix(@color; @gray-lighter; 25%;);
+    border-top-color: @lumafix;
+  }
+
+  .set-border-bottom-color() {
+    .set-lumafix(@color; @gray-dark; 25%;);
+    border-bottom-color: @lumafix;
+  }
+
+  .set-border-color();
+  .set-border-top-color();
+  .set-border-bottom-color();
+}
+
 .button-color(@color; @contrast-standard: 4.5;) 
                       when (@color = @highlight)
                         or (@color = @accent)
@@ -57,16 +79,18 @@
     @button-bg: @color;
     .set-tone(@button-bg);
     .colorize(@button-bg; @contrast-standard);
+    .button-borders(@button-bg);
 
     &:active {
       @active-bg: mix(@button-bg, @tone, 80%);
-      .colorize(@active-bg; @contrast-standard*1.5);
+      background-color: @active-bg;
     }
 }
 
 .button-color(@color; @contrast-standard: 3;) when (default()) {
   @button-bg: @color;
   .invert-text-against(@button-bg; @contrast-standard;);
+  .button-borders(@button-bg);
 
   &:active {
     .invert-text-against(@button-bg; @contrast-standard*1.5;);
