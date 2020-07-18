@@ -19,11 +19,16 @@ form,
 hr,
 main,
 section,
-table,
-button {
+table {
   margin: 0;
   padding: 0;
   max-width: 62rem;
+}
+.no-user-select {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .hide,
 .hidden {
@@ -39,6 +44,7 @@ button {
 }
 b.action,
 big.action,
+button.action,
 i.action,
 small.action,
 tt.action,
@@ -60,10 +66,11 @@ input.action,
 label.action,
 select.action,
 textarea.action {
-  color: #d03d3b;
+  color: #084b64;
 }
 b.reaction,
 big.reaction,
+button.reaction,
 i.reaction,
 small.reaction,
 tt.reaction,
@@ -85,10 +92,11 @@ input.reaction,
 label.reaction,
 select.reaction,
 textarea.reaction {
-  color: #477f0f;
+  color: #9c4c0d;
 }
 b.alternate,
 big.alternate,
+button.alternate,
 i.alternate,
 small.alternate,
 tt.alternate,
@@ -110,10 +118,11 @@ input.alternate,
 label.alternate,
 select.alternate,
 textarea.alternate {
-  color: #b3560b;
+  color: #4a8013;
 }
 b.info,
 big.info,
+button.info,
 i.info,
 small.info,
 tt.info,
@@ -135,10 +144,11 @@ input.info,
 label.info,
 select.info,
 textarea.info {
-  color: #167ca1;
+  color: #187da1;
 }
 b.warning,
 big.warning,
+button.warning,
 i.warning,
 small.warning,
 tt.warning,
@@ -160,10 +170,11 @@ input.warning,
 label.warning,
 select.warning,
 textarea.warning {
-  color: #8b6806;
+  color: #73711a;
 }
 b.accent,
 big.accent,
+button.accent,
 i.accent,
 small.accent,
 tt.accent,
@@ -185,10 +196,11 @@ input.accent,
 label.accent,
 select.accent,
 textarea.accent {
-  color: #d72f00;
+  color: #157f52;
 }
 b.success,
 big.success,
+button.success,
 i.success,
 small.success,
 tt.success,
@@ -210,10 +222,11 @@ input.success,
 label.success,
 select.success,
 textarea.success {
-  color: #227e3c;
+  color: #247d3c;
 }
 b.failure,
 big.failure,
+button.failure,
 i.failure,
 small.failure,
 tt.failure,
@@ -235,10 +248,11 @@ input.failure,
 label.failure,
 select.failure,
 textarea.failure {
-  color: #d5360b;
+  color: #ba2a04;
 }
 b.highlight,
 big.highlight,
+button.highlight,
 i.highlight,
 small.highlight,
 tt.highlight,
@@ -260,7 +274,7 @@ input.highlight,
 label.highlight,
 select.highlight,
 textarea.highlight {
-  color: #177979;
+  color: #cc268a;
 }
 p.action,
 ol.action,
@@ -275,10 +289,9 @@ form.action,
 hr.action,
 main.action,
 section.action,
-table.action,
-button.action {
-  background-color: #fc4a47;
-  color: #000000;
+table.action {
+  background-color: #094d66;
+  color: #e6edf0;
 }
 p.reaction,
 ol.reaction,
@@ -293,10 +306,9 @@ form.reaction,
 hr.reaction,
 main.reaction,
 section.reaction,
-table.reaction,
-button.reaction {
-  background-color: #66b515;
-  color: #050901;
+table.reaction {
+  background-color: #a04e0d;
+  color: #ffffff;
 }
 p.alternate,
 ol.alternate,
@@ -311,9 +323,8 @@ form.alternate,
 hr.alternate,
 main.alternate,
 section.alternate,
-table.alternate,
-button.alternate {
-  background-color: #e06b0e;
+table.alternate {
+  background-color: #508a15;
   color: #000000;
 }
 p.info,
@@ -329,9 +340,8 @@ form.info,
 hr.info,
 main.info,
 section.info,
-table.info,
-button.info {
-  background-color: #1da5d6;
+table.info {
+  background-color: #1983aa;
   color: #000000;
 }
 p.warning,
@@ -347,10 +357,9 @@ form.warning,
 hr.warning,
 main.warning,
 section.warning,
-table.warning,
-button.warning {
-  background-color: #fdbd0b;
-  color: #332602;
+table.warning {
+  background-color: #fffc3a;
+  color: #403f0e;
 }
 p.accent,
 ol.accent,
@@ -365,10 +374,9 @@ form.accent,
 hr.accent,
 main.accent,
 section.accent,
-table.accent,
-button.accent {
-  background-color: #fd3700;
-  color: #000000;
+table.accent {
+  background-color: #26e796;
+  color: #082e1e;
 }
 p.success,
 ol.success,
@@ -383,10 +391,9 @@ form.success,
 hr.success,
 main.success,
 section.success,
-table.success,
-button.success {
-  background-color: #3fe66c;
-  color: #0d2e16;
+table.success {
+  background-color: #3ed969;
+  color: #0c2b15;
 }
 p.failure,
 ol.failure,
@@ -401,9 +408,8 @@ form.failure,
 hr.failure,
 main.failure,
 section.failure,
-table.failure,
-button.failure {
-  background-color: #db370b;
+table.failure {
+  background-color: #be2b04;
   color: #ffffff;
 }
 p.highlight,
@@ -419,10 +425,9 @@ form.highlight,
 hr.highlight,
 main.highlight,
 section.highlight,
-table.highlight,
-button.highlight {
-  background-color: #30ffff;
-  color: #0c4040;
+table.highlight {
+  background-color: #ff30ac;
+  color: #000000;
 }
 p.action,
 ol.action,
@@ -438,7 +443,6 @@ hr.action,
 main.action,
 section.action,
 table.action,
-button.action,
 p.reaction,
 ol.reaction,
 ul.reaction,
@@ -453,7 +457,6 @@ hr.reaction,
 main.reaction,
 section.reaction,
 table.reaction,
-button.reaction,
 p.alternate,
 ol.alternate,
 ul.alternate,
@@ -468,7 +471,6 @@ hr.alternate,
 main.alternate,
 section.alternate,
 table.alternate,
-button.alternate,
 p.info,
 ol.info,
 ul.info,
@@ -483,7 +485,6 @@ hr.info,
 main.info,
 section.info,
 table.info,
-button.info,
 p.warning,
 ol.warning,
 ul.warning,
@@ -498,7 +499,6 @@ hr.warning,
 main.warning,
 section.warning,
 table.warning,
-button.warning,
 p.accent,
 ol.accent,
 ul.accent,
@@ -513,7 +513,6 @@ hr.accent,
 main.accent,
 section.accent,
 table.accent,
-button.accent,
 p.success,
 ol.success,
 ul.success,
@@ -528,7 +527,6 @@ hr.success,
 main.success,
 section.success,
 table.success,
-button.success,
 p.failure,
 ol.failure,
 ul.failure,
@@ -543,7 +541,6 @@ hr.failure,
 main.failure,
 section.failure,
 table.failure,
-button.failure,
 p.highlight,
 ol.highlight,
 ul.highlight,
@@ -557,14 +554,13 @@ form.highlight,
 hr.highlight,
 main.highlight,
 section.highlight,
-table.highlight,
-button.highlight {
+table.highlight {
   padding: 1.5rem;
 }
 body {
-  background-color: #dc8382;
-  color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10px' height='10px'%3E %3Crect width='10px' height='10px' fill='rgb(220,131,130)'/%3E %3Crect width='1' height='1' fill='rgb(110,66,65)'/%3E %3C/svg%3E");
+  background-color: #456773;
+  color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10px' height='10px'%3E %3Crect width='10px' height='10px' fill='rgb(69,103,115)'/%3E %3Crect width='1' height='1' fill='rgb(162,179,185)'/%3E %3C/svg%3E");
   background-size: 40px, 40px;
   background-position: 5px center;
   font-size: 20px;
@@ -577,7 +573,7 @@ body {
   overflow-x: hidden;
   width: auto;
   -webkit-overflow-scrolling: touch;
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
 }
 @media screen and (min-width: 41rem) {
   body {
@@ -712,8 +708,8 @@ span.highlight {
 }
 mark,
 b {
-  background-color: #30ffff !important;
-  color: #0c4040 !important;
+  background-color: #ff30ac !important;
+  color: #000000 !important;
 }
 mark.action,
 mark.reaction,
@@ -733,48 +729,48 @@ b.highlight {
 }
 mark.action,
 b.action {
-  background-color: #fc4a47 !important;
-  color: #000000 !important;
+  background-color: #094d66 !important;
+  color: #e6edf0 !important;
 }
 mark.reaction,
 b.reaction {
-  background-color: #66b515 !important;
-  color: #050901 !important;
+  background-color: #a04e0d !important;
+  color: #ffffff !important;
 }
 mark.alternate,
 b.alternate {
-  background-color: #e06b0e !important;
+  background-color: #508a15 !important;
   color: #000000 !important;
 }
 mark.info,
 b.info {
-  background-color: #1da5d6 !important;
+  background-color: #1983aa !important;
   color: #000000 !important;
 }
 mark.warning,
 b.warning {
-  background-color: #fdbd0b !important;
-  color: #332602 !important;
+  background-color: #fffc3a !important;
+  color: #403f0e !important;
 }
 mark.accent,
 b.accent {
-  background-color: #fd3700 !important;
-  color: #000000 !important;
+  background-color: #26e796 !important;
+  color: #082e1e !important;
 }
 mark.success,
 b.success {
-  background-color: #3fe66c !important;
-  color: #0d2e16 !important;
+  background-color: #3ed969 !important;
+  color: #0c2b15 !important;
 }
 mark.failure,
 b.failure {
-  background-color: #db370b !important;
+  background-color: #be2b04 !important;
   color: #ffffff !important;
 }
 mark.highlight,
 b.highlight {
-  background-color: #30ffff !important;
-  color: #0c4040 !important;
+  background-color: #ff30ac !important;
+  color: #000000 !important;
 }
 b {
   padding: 0.18em 0 0.22em 0 !important;
@@ -787,10 +783,9 @@ input[type="submit"] {
   font-family: inherit;
   font-size: 125%;
   margin-bottom: 1.5rem;
-  display: inline-block;
   width: 100%;
+  line-height: 4.854rem;
   text-align: center;
-  line-height: 3.03375rem;
   vertical-align: middle;
   border: 4px solid transparent;
   border-radius: 0.5rem;
@@ -800,42 +795,164 @@ input[type="submit"] {
   outline: none;
   white-space: nowrap;
   text-decoration: none;
+  background-color: #094d66;
+  color: white;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: #094d66;
+  color: white;
+}
+button.action,
+.button.action,
+input[type="button"].action,
+input[type="reset"].action,
+input[type="submit"].action {
+  background-color: #094d66;
+  color: white;
+}
+button.action:active,
+.button.action:active,
+input[type="button"].action:active,
+input[type="reset"].action:active,
+input[type="submit"].action:active {
+  background-color: #094d66;
+  color: white;
+}
+button.reaction,
+.button.reaction,
+input[type="button"].reaction,
+input[type="reset"].reaction,
+input[type="submit"].reaction {
+  background-color: #a04e0d;
+  color: white;
+}
+button.reaction:active,
+.button.reaction:active,
+input[type="button"].reaction:active,
+input[type="reset"].reaction:active,
+input[type="submit"].reaction:active {
+  background-color: #a04e0d;
+  color: white;
+}
+button.alternate,
+.button.alternate,
+input[type="button"].alternate,
+input[type="reset"].alternate,
+input[type="submit"].alternate {
+  background-color: #508a15;
+  color: white;
+}
+button.alternate:active,
+.button.alternate:active,
+input[type="button"].alternate:active,
+input[type="reset"].alternate:active,
+input[type="submit"].alternate:active {
+  background-color: #417011;
+  color: white;
 }
 button.info,
 .button.info,
 input[type="button"].info,
 input[type="reset"].info,
 input[type="submit"].info {
-  background-color: #1da5d6;
-  color: #072936;
+  background-color: #1983aa;
+  color: #010708;
+}
+button.info:active,
+.button.info:active,
+input[type="button"].info:active,
+input[type="reset"].info:active,
+input[type="submit"].info:active {
+  background-color: #146988;
+  color: #ffffff;
 }
 button.warning,
 .button.warning,
 input[type="button"].warning,
 input[type="reset"].warning,
 input[type="submit"].warning {
-  background-color: #fdbd0b;
-  color: #584204;
+  background-color: #fffc3a;
+  color: #666517;
+}
+button.warning:active,
+.button.warning:active,
+input[type="button"].warning:active,
+input[type="reset"].warning:active,
+input[type="submit"].warning:active {
+  background-color: #ccc92e;
+  color: #292809;
 }
 button.accent,
 .button.accent,
 input[type="button"].accent,
 input[type="reset"].accent,
 input[type="submit"].accent {
-  background-color: #fd3700;
-  color: #330b00;
+  background-color: #26e796;
+  color: #0d5134;
+}
+button.accent:active,
+.button.accent:active,
+input[type="button"].accent:active,
+input[type="reset"].accent:active,
+input[type="submit"].accent:active {
+  background-color: #1eb978;
+  color: #03120c;
+}
+button.success,
+.button.success,
+input[type="button"].success,
+input[type="reset"].success,
+input[type="submit"].success {
+  background-color: #1c903c;
+  color: white;
+}
+button.success:active,
+.button.success:active,
+input[type="button"].success:active,
+input[type="reset"].success:active,
+input[type="submit"].success:active {
+  background-color: #156a2c;
+  color: white;
+}
+button.failure,
+.button.failure,
+input[type="button"].failure,
+input[type="reset"].failure,
+input[type="submit"].failure {
+  background-color: #be2b04;
+  color: white;
+}
+button.failure:active,
+.button.failure:active,
+input[type="button"].failure:active,
+input[type="reset"].failure:active,
+input[type="submit"].failure:active {
+  background-color: #be2b04;
+  color: white;
 }
 button.highlight,
 .button.highlight,
 input[type="button"].highlight,
 input[type="reset"].highlight,
 input[type="submit"].highlight {
-  background-color: #30ffff;
-  color: #136666;
+  background-color: #ff30ac;
+  color: #330a22;
+}
+button.highlight:active,
+.button.highlight:active,
+input[type="button"].highlight:active,
+input[type="reset"].highlight:active,
+input[type="submit"].highlight:active {
+  background-color: #cc268a;
+  color: #ffffff;
 }
 @media screen and (min-width: 41rem) {
   button,
@@ -851,5 +968,15 @@ button:disabled,
 input[type="button"]:disabled,
 input[type="reset"]:disabled,
 input[type="submit"]:disabled {
+  background-color: #929292 !important;
+  color: white !important;
   opacity: 0.5;
+}
+button:disabled:active,
+.button:disabled:active,
+input[type="button"]:disabled:active,
+input[type="reset"]:disabled:active,
+input[type="submit"]:disabled:active {
+  background-color: #676767 !important;
+  color: white !important;
 }

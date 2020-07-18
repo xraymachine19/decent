@@ -1,5 +1,5 @@
 // basics
-@base-color: rgb(209, 104, 104);
+@base-color: rgb(58, 85, 95);
 @debug: false;
 
 // css attribute defaults
@@ -10,13 +10,12 @@
 @font-size: 1.5rem;
 
 @monospace: false;
-@serif: true;
-@sans-serif: false;
+@serif: false;
+@sans-serif: true;
 
 @border-width: 4px;
 @border-style: solid;
 @border-color: @info;
-@border: @border-width @border-style @border-color;
 @golden-ratio: 1.618;
 
 // nav settings
@@ -37,6 +36,7 @@
 @aside-width: 36rem;
 
 // breakpoints (used in targets.less)
+// the .625 offsets the 62.5% font-size setting in reset
 @large-phone:   floor(@aside-width*.625) + @gutter; 
 @tablet:        floor(@column-width*.625) + @gutter;
 @desktop:       floor(@page-width*.625) + @gutter;

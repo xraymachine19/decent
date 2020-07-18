@@ -3,10 +3,9 @@
     font-size: 125%; 
     .default(margin-bottom);
   
-    display: inline-block;
     width: 100%;
+    line-height: @line-height*2;
     text-align: center;
-    line-height: @line-height*1.25;
     vertical-align: middle;
     border: @border-width @border-style transparent;
     border-radius: @border-radius/2;
@@ -49,21 +48,27 @@
       .make-button(@index + 1);
     }
 }
-  
-.button-color(@color; @contrast-standard;) {
-    @button-bg: @color;
-    .invert-text-against(@button-bg; @contrast-standard; true);
-    .set-tone(@base-color);
 
-    &:active {
-        background: mix(@button-bg, @tone, 88.5%) !important;
-    }
-}
-
-.button-color(@color) when (@color = @highlight)
+.button-color(@color; @contrast-standard: 4.5;) 
+                      when (@color = @highlight)
                         or (@color = @accent)
                         or (@color = @warning)
                         or (@color = @info) {
     @button-bg: @color;
-    .colorize(@button-bg; 4.5);
+    .set-tone(@button-bg);
+    .colorize(@button-bg; @contrast-standard);
+
+    &:active {
+      @active-bg: mix(@button-bg, @tone, 80%);
+      .colorize(@active-bg; @contrast-standard*1.5);
+    }
+}
+
+.button-color(@color; @contrast-standard: 3;) when (default()) {
+  @button-bg: @color;
+  .invert-text-against(@button-bg; @contrast-standard;);
+
+  &:active {
+    .invert-text-against(@button-bg; @contrast-standard*1.5;);
+  }
 }

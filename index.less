@@ -1,4 +1,5 @@
 // environment
+// all of these files only output variables/mixins for the environment, no CSS rules
 
 @import (reference) "properties";
 @import (reference) "settings";
@@ -11,9 +12,10 @@
 @import (reference) "mixins/mixins";
 
 // css output
+// edit these files directly to change the appearance of HTML elements
 
 @import "reset";
-@import "utilities"; // not sure what to put here
+@import "utilities";
 
 @import "elements/body";
 @import "elements/main";
@@ -28,3 +30,5 @@
 @import "elements/mark";
 @import "elements/b";
 @import "elements/button";
+
+// add any other Less/CSS here
