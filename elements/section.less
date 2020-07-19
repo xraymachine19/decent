@@ -1,3 +1,10 @@
 section {
     .default(padding);
+    .default(box-shadow);
+
+    .colorize(@main-background);
+
+    .set-lumafix(@background; @gray-darker;);
+    border: 1px solid @lumafix;
+    margin-bottom: @gutter;
 }

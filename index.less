@@ -37,3 +37,12 @@
 @import "elements/blockquote";
 
 // add any other Less/CSS here
+
+.less_logo {
+    @logo: data-uri("less_logo.png");
+
+    display: block;
+    width: image-width("less_logo.png");
+    height: image-height("less_logo.png");
+    background: @logo;
+}

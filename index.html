@@ -6,7 +6,7 @@
 
   <title>Testing grounds for decent.less</title>
   <meta name="description" content="Testing grounds for decent.less">
-  <meta name="author" content="SitePoint">
+  <meta name="author" content="Rex Riepe">
 
   <link rel="stylesheet" href="css/index.css?v=1.0">
   <!-- <script src="js/scripts.js"></script> -->
@@ -23,6 +23,20 @@
       </ul>
     </nav>
     <main>
+      <section>
+        <h1>Decent isn't <b class="failure">another component library</b>, it's a tool for making your own component library.</h1>
+      
+        <p class="feature">Built for the <strong class="success">decent</strong>ralized web, Decent makes using your own stuff easier than using Bigcorp's latest focus-group-approved blues and design-by-committee checkboxes.</p>
+
+        <p class="text-center">
+          Start your UI revolution here: <button>Get the code</button>
+        </p>
+
+        <p>
+          <a href="http://www.lesscss.org" >Powered by Less <div class="less_logo"></div></a>
+        </p>
+      
+      </section>
         <section id="readme">
             <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="decentless_0"></a>decent.less</h1>
 <p class="has-line-data" data-line-start="2" data-line-end="3">A Less library for smarter component styling</p>
@@ -62,334 +76,72 @@
             <button class="failure">Failure</button>
             <button class="highlight">Highlight</button>
         </section>
-    <section id="text">
-        <header><h1>Text</h1></header>
-        <article id="text__headings">
-          <header>
-            <h1>Headings</h1>
-          </header>
-          <div>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__paragraphs">
-          <header><h1>Paragraphs</h1></header>
-          <div>
-            <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A <span class="info">paragraph</span> consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__blockquotes">
-          <header><h1>Blockquotes</h1></header>
-          <div>
-            <blockquote>
-              <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
-              <p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
-              <cite><a href="#!">Said no one, ever.</a></cite>
-            </blockquote>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__lists">
-          <header><h1>Lists</h1></header>
-          <div>
-            <h3>Definition list</h3>
-            <dl>
-              <dt>Definition List Title</dt>
-              <dd>This is a definition list division.</dd>
-            </dl>
-            <h3>Ordered List</h3>
-            <ol>
-              <li>List Item 1</li>
-              <li>List Item 2</li>
-              <li>List Item 3</li>
-            </ol>
-            <h3>Unordered List</h3>
-            <ul>
-              <li>List Item 1</li>
-              <li>List Item 2</li>
-              <li>List Item 3</li>
-            </ul>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__hr">
-          <header><h1>Horizontal rules</h1></header>
-          <div>
-            <hr>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__tables">
-          <header><h1>Tabular data</h1></header>
-          <table>
-            <caption>Table Caption</caption>
-            <thead>
-              <tr>
-                <th>Table Heading 1</th>
-                <th>Table Heading 2</th>
-                <th>Table Heading 3</th>
-                <th>Table Heading 4</th>
-                <th>Table Heading 5</th>
-              </tr>
-            </thead>
-            <tfoot>
-              <tr>
-                <th>Table Footer 1</th>
-                <th>Table Footer 2</th>
-                <th>Table Footer 3</th>
-                <th>Table Footer 4</th>
-                <th>Table Footer 5</th>
-              </tr>
-            </tfoot>
-            <tbody>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-            </tbody>
-          </table>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__code">
-          <header><h1>Code</h1></header>
-          <div>
-            <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
-            <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
-            <p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp></p>
-            <h2>Pre-formatted text</h2>
-            <pre>P R E F O R M A T T E D T E X T
-! " # $ % &amp; ' ( ) * + , - . /
-0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-@ A B C D E F G H I J K L M N O
-P Q R S T U V W X Y Z [ \ ] ^ _
-` a b c d e f g h i j k l m n o
-p q r s t u v w x y z { | } ~ </pre>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__inline">
-          <header><h1>Inline elements</h1></header>
-          <div>
-            <p><a href="#!">This is a text link</a>.</p>
-            <p><strong>Strong is used to indicate strong importance.</strong></p>
-            <p><em>This text has added emphasis.</em></p>
-            <p>The <b>b element</b> is stylistically different text from normal text, without any special importance.</p>
-            <p>The <i>i element</i> is text that is offset from the normal text.</p>
-            <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.</p>
-            <p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
-            <p><s>This text has a strikethrough</s>.</p>
-            <p>Superscript<sup>®</sup>.</p>
-            <p>Subscript for things like H<sub>2</sub>O.</p>
-            <p><small>This small text is small for for fine print, etc.</small></p>
-            <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
-            <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q></p>
-            <p><cite>This is a citation.</cite></p>
-            <p>The <dfn>dfn element</dfn> indicates a definition.</p>
-            <p>The <mark>mark element</mark> indicates a highlight.</p>
-            <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
-            <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        <article id="text__comments">
-          <header><h1>HTML Comments</h1></header>
-          <div>
-            <p>There is comment here: <!--This comment should not be displayed--></p>
-            <p>There is a comment spanning multiple tags and lines below here.</p>
-            <!--<p><a href="#!">This is a text link. But it should not be displayed in a comment</a>.</p>
-            <p><strong>Strong is used to indicate strong importance. But, it should not be displayed in a comment</strong></p>
-            <p><em>This text has added emphasis. But, it should not be displayed in a comment</em></p>-->
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-      </section>
-      <section id="embedded">
-        <header><h1>Embedded content</h1></header>
-        <article id="embedded__images">
-          <header><h2>Images</h2></header>
-          <div>
-            <h3>No <code>&lt;figure&gt;</code> element</h3>
-            <p><img src="http://placekitten.com/480/480" alt="Image alt text"></p>
-            <h3>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h3>
-            <figure><img src="http://placekitten.com/420/420" alt="Image alt text"></figure>
-            <h3>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h3>
-            <figure>
-              <img src="http://placekitten.com/420/420" alt="Image alt text">
-              <figcaption>Here is a caption for this image.</figcaption>
-            </figure>
-          </div>
-          <footer><p><a href="#top">[Top]</a></p></footer>
-        </article>
-        
-      </section>
-      <section id="forms">
-        <header><h1>Form elements</h1></header>
-        <form>
-          <fieldset id="forms__input">
-            <legend>Input fields</legend>
-            <p>
-              <label for="input__text">Text Input</label>
-              <input id="input__text" type="text" placeholder="Text Input">
-            </p>
-            <p>
-              <label for="input__password">Password</label>
-              <input id="input__password" type="password" placeholder="Type your Password">
-            </p>
-            <p>
-              <label for="input__webaddress">Web Address</label>
-              <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
-            </p>
-            <p>
-              <label for="input__emailaddress">Email Address</label>
-              <input id="input__emailaddress" type="email" placeholder="name@email.com">
-            </p>
-            <p>
-              <label for="input__phone">Phone Number</label>
-              <input id="input__phone" type="tel" placeholder="(999) 999-9999">
-            </p>
-            <p>
-              <label for="input__search">Search</label>
-              <input id="input__search" type="search" placeholder="Enter Search Term">
-            </p>
-            <p>
-              <label for="input__text2">Number Input</label>
-              <input id="input__text2" type="number" placeholder="Enter a Number">
-            </p>
-            <p>
-              <label for="input__text3" class="error">Error</label>
-              <input id="input__text3" class="is-error" type="text" placeholder="Text Input">
-            </p>
-            <p>
-              <label for="input__text4" class="valid">Valid</label>
-              <input id="input__text4" class="is-valid" type="text" placeholder="Text Input">
-            </p>
-          </fieldset>
-          <p><a href="#top">[Top]</a></p>
-          <fieldset id="forms__select">
-            <legend>Select menus</legend>
-            <p>
-              <label for="select">Select</label>
-              <select id="select">
-                <optgroup label="Option Group">
-                  <option>Option One</option>
-                  <option>Option Two</option>
-                  <option>Option Three</option>
-                </optgroup>
-              </select>
-            </p>
-          </fieldset>
-          <p><a href="#top">[Top]</a></p>
-          <fieldset id="forms__checkbox">
-            <legend>Checkboxes</legend>
-            <ul class="list list--bare">
-              <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
-              <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
-              <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
-            </ul>
-          </fieldset>
-          <p><a href="#top">[Top]</a></p>
-          <fieldset id="forms__radio">
-            <legend>Radio buttons</legend>
-            <ul class="list list--bare">
-              <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"> Option 1</label></li>
-              <li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio"> Option 2</label></li>
-              <li><label for="radio3"><input id="radio3" name="radio" type="radio" class="radio"> Option 3</label></li>
-            </ul>
-          </fieldset>
-          <p><a href="#top">[Top]</a></p>
-          <fieldset id="forms__textareas">
-            <legend>Textareas</legend>
-            <p>
-              <label for="textarea">Textarea</label>
-              <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-            </p>
-          </fieldset>
-          <p><a href="#top">[Top]</a></p>
-          <fieldset id="forms__html5">
-            <legend>HTML5 inputs</legend>
-            <p>
-              <label for="ic">Color input</label>
-              <input type="color" id="ic" value="#000000">
-            </p>
-            <p>
-              <label for="in">Number input</label>
-              <input type="number" id="in" min="0" max="10" value="5">
-            </p>
-            <p>
-              <label for="ir">Range input</label>
-              <input type="range" id="ir" value="10">
-            </p>
-            <p>
-              <label for="idd">Date input</label>
-              <input type="date" id="idd" value="1970-01-01">
-            </p>
-            <p>
-              <label for="idm">Month input</label>
-              <input type="month" id="idm" value="1970-01">
-            </p>
-            <p>
-              <label for="idw">Week input</label>
-              <input type="week" id="idw" value="1970-W01">
-            </p>
-            <p>
-              <label for="idt">Datetime input</label>
-              <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
-            </p>
-            <p>
-              <label for="idtl">Datetime-local input</label>
-              <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
-            </p>
-          </fieldset>
-          <p><a href="#top">[Top]</a></p>
-          <fieldset id="forms__action">
-            <legend>Action buttons</legend>
-            <p>
-              <input type="submit" value="<input type=submit>">
-              <input type="button" value="<input type=button>">
-              <input type="reset" value="<input type=reset>">
-              <input type="submit" value="<input disabled>" disabled>
-            </p>
-            <p>
-              <button type="submit">&lt;button type=submit&gt;</button>
-              <button type="button">&lt;button type=button&gt;</button>
-              <button type="reset">&lt;button type=reset&gt;</button>
-              <button type="button" disabled>&lt;button disabled&gt;</button>
-            </p>
-          </fieldset>
-          <p><a href="#top">[Top]</a></p>
-        </form>
-      </section>
+        <section>
+          <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="decentless_0"></a>decent.less</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">A Less library for smarter component styling</p>
+<h2 class="code-line" data-line-start=5 data-line-end=6 ><a id="Setup_and_testing_5"></a>Setup and testing</h2>
+<ol>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Run ‘python -m SimpleHTTPServer’ in the decent directory.</li>
+<li class="has-line-data" data-line-start="8" data-line-end="9">Follow the directions there (or just go to localhost:8000)</li>
+<li class="has-line-data" data-line-start="9" data-line-end="10">Edit index.html or the less, then refresh to test stuff.</li>
+<li class="has-line-data" data-line-start="10" data-line-end="11">index.html isn’t the public splash page for github but you can put that kinda content there if you’d like. It’s really just a scratchpad. Test-style setups (gray-scale contrasting table for example) are good here too.</li>
+</ol>
+<h2 class="code-line" data-line-start=13 data-line-end=14 ><a id="Compiling_the_Less_13"></a>Compiling the Less</h2>
+<ol>
+<li class="has-line-data" data-line-start="15" data-line-end="17">Run ‘lessc index.less css/index.css’.</li>
+</ol>
+<hr>
+<h1 class="code-line" data-line-start=19 data-line-end=20 ><a id="Core_ideas_19"></a>Core ideas</h1>
+<h2 class="code-line" data-line-start=21 data-line-end=22 ><a id="Accessbility_21"></a>Accessbility</h2>
+<p class="has-line-data" data-line-start="23" data-line-end="24">Decent aims to preserve and emphasize accessibility.</p>
+<h3 class="code-line" data-line-start=25 data-line-end=26 ><a id="Color_contrast_25"></a>Color contrast</h3>
+<ul>
+<li class="has-line-data" data-line-start="26" data-line-end="27">Mixins ensure developers meet WCAG standards</li>
+<li class="has-line-data" data-line-start="27" data-line-end="29">Mixins ensure design consistency</li>
+</ul>
+<h3 class="code-line" data-line-start=29 data-line-end=30 ><a id="Lean_performance_29"></a>Lean performance</h3>
+<ul>
+<li class="has-line-data" data-line-start="30" data-line-end="31">Decent allows for a leaner DOM, which makes everything (CSS, JS) faster</li>
+<li class="has-line-data" data-line-start="31" data-line-end="33">Decent itself compiles quickly, picking the right colors out of millions in seconds</li>
+</ul>
+<h2 class="code-line" data-line-start=33 data-line-end=34 ><a id="Environment_33"></a>Environment</h2>
+<p class="has-line-data" data-line-start="35" data-line-end="36">Decent is a fuller coding environment for Less.</p>
+<h3 class="code-line" data-line-start=37 data-line-end=38 ><a id="HTML__CSS_concepts_37"></a>HTML &amp; CSS concepts</h3>
+<ul>
+<li class="has-line-data" data-line-start="38" data-line-end="39">All HTML elements have a file</li>
+<li class="has-line-data" data-line-start="39" data-line-end="41">All CSS properties have a variable</li>
+</ul>
+<h3 class="code-line" data-line-start=41 data-line-end=42 ><a id="Richer_mixins_41"></a>Richer mixins</h3>
+<ul>
+<li class="has-line-data" data-line-start="42" data-line-end="43">Each mixin has its own file</li>
+<li class="has-line-data" data-line-start="43" data-line-end="45">Mixins use import statements to list dependencies</li>
+</ul>
+<h2 class="code-line" data-line-start=45 data-line-end=46 ><a id="Design_fundamentals_45"></a>Design fundamentals</h2>
+<p class="has-line-data" data-line-start="47" data-line-end="48">Decent gives designers fundamental tools for building UIs.</p>
+<h3 class="code-line" data-line-start=49 data-line-end=50 ><a id="Typography_49"></a>Typography</h3>
+<h3 class="code-line" data-line-start=51 data-line-end=52 ><a id="Color_51"></a>Color</h3>
+<h3 class="code-line" data-line-start=53 data-line-end=54 ><a id="Patterns_53"></a>Patterns</h3>
+<h2 class="code-line" data-line-start=55 data-line-end=56 ><a id="Semantic_colors_55"></a>Semantic colors</h2>
+<p class="has-line-data" data-line-start="57" data-line-end="58">Decent uses very few classes. Semantic classes, one of the few exceptions, come with an inherent color association.</p>
+<p class="has-line-data" data-line-start="59" data-line-end="60">Palette colors</p>
+<ul>
+<li class="has-line-data" data-line-start="60" data-line-end="61"><strong>action</strong>: A version of the base color</li>
+<li class="has-line-data" data-line-start="61" data-line-end="62"><strong>reaction</strong>: A complement to action</li>
+<li class="has-line-data" data-line-start="62" data-line-end="64"><strong>alternate</strong>: A CMYK print-style highlight color</li>
+</ul>
+<p class="has-line-data" data-line-start="64" data-line-end="65">Informational colors</p>
+<ul>
+<li class="has-line-data" data-line-start="65" data-line-end="66"><strong>info</strong>: An info-conveying blue</li>
+<li class="has-line-data" data-line-start="66" data-line-end="67"><strong>warning</strong>: An urgent info-conveying orange</li>
+<li class="has-line-data" data-line-start="67" data-line-end="69"><strong>accent</strong>: An attention-drawing but neutral color</li>
+</ul>
+<p class="has-line-data" data-line-start="69" data-line-end="70">Transactional colors</p>
+<ul>
+<li class="has-line-data" data-line-start="70" data-line-end="71"><strong>action</strong>: A reassuring green</li>
+<li class="has-line-data" data-line-start="71" data-line-end="72"><strong>reaction</strong>: An alarming red</li>
+<li class="has-line-data" data-line-start="72" data-line-end="73"><strong>highlight</strong>: A CMYK print-style highlight color</li>
+</ul>
+        </section>
     </main>
     
 

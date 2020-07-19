@@ -9,7 +9,7 @@
     .button-color(@action);
     // padding: 0 .5rem .25rem .5rem;
     // font-family: inherit;
-    font-size: 115%; 
+    font-size: 100%; 
     width: 100%;
     .default(padding-left);
     .default(padding-right);
@@ -31,10 +31,7 @@
       @list: transparent 0%, transparent 0%, rgba(red(@ambient), green(@ambient), blue(@ambient), .75) 1%, transparent 82%;
       background-image: svg-gradient(to bottom, @list);
       box-shadow: 0 1px 2px rgba(red(@gray-darker), green(@gray-darker), blue(@gray-darker), .5);
-
     }
-
-
 
     @list: transparent 0%, transparent 0%, rgba(red(@ambient), green(@ambient), blue(@ambient), .5) 1%, transparent 62%;
     background-image: svg-gradient(to bottom, @list);
