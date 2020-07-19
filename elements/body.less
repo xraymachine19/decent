@@ -12,14 +12,14 @@ body {
     .contrast(@background);
     // .blueprint(@background);
     // .honeycomb(@background);
-    .dots(@background; @scale: 4;);
+    .dots(@background; @scale: 2;);
     font-size: @font-size;
     font-size: ~"calc((100vw - @{gutter})/@{body-char})";
     font-weight: normal;
     line-height: ~"calc((2)*(100vw - @{gutter})/@{body-char})";
     margin: 0;
     padding: 0;
-    padding-top: @nav-height;
+    padding-top: @nav-height + @padding;
     overflow-x: hidden;
     width: auto;
     -webkit-overflow-scrolling: touch;

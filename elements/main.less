@@ -1,16 +1,20 @@
 main {
     @background: white;
 
-    .default(padding);
+    padding: @padding/2;
 
     margin: 0 auto;
     margin-bottom: @gutter;
     background-color: @background;
     .contrast(@background);
     width: 100%;
-    max-width: none;
+    max-width: @page-width;
 
-    > * {
-        margin: 0 auto;
-    }
+    .on-tablet({
+        .default(padding);
+    });
+
+    // > * {
+    //     margin: 0 auto;
+    // }
 }

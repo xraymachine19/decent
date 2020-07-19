@@ -17,3 +17,13 @@
     content: "";
   }
 }
+
+// semantic color classes
+
+.inline-elements({
+  each(@semantic-colors, { &.@{value} { .color-text(@@value);};});
+});
+
+.block-level-elements({
+  each(@semantic-colors, { &.@{value} { .colorize(@@value);};});
+});

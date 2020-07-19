@@ -1,24 +1,25 @@
 // basics
-@base-color: rgb(0, 187, 255);
+@base-color: rgb(116, 122, 108);
 @debug: false;
 
 // css attribute defaults
-@background: average(@gray-light, @action);
+@background: average(@action, @gray-darker);
 @main-background: white; // background of 'main' element
 @line-height: @font-size*@golden-ratio;
 @border-radius: 1rem;
-@font-size: 1.5rem;
+@font-size: 2rem;
 
 @monospace: false;
 @serif: false;
 @sans-serif: true;
 
+@ambient: mix(white, @highlight, 98%); // ambient light of project
 @golden-ratio: 1.618;
 
 // nav settings
 @nav-height: 5rem;
 @sticky-nav: true;
-@nav-background: mix(#111, @base-color, 95%);
+@nav-background: @action;
 
 // layout settings
 // TODO: make this its own file

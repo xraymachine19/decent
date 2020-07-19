@@ -1,13 +1,17 @@
 code {
+    @code-background: @gray-dark;
+    @code-contrast-standard: 4.5;
+
     font-family: @font-family-monospace;
-    .colorize(@gray-darker; 12;);
+    .colorize(@code-background; @code-contrast-standard;);
     padding: .2em 1ch;
 
     .make-classes-for(@color-list) {
         each(@color-list, {
             @color: @@value;
             &.@{value}, & .@{value} {
-                .color-text(@color; @gray-darker; 12;);
+                .color-text(@color; @code-background; @code-contrast-standard;);
+                background: @code-background;
             }
         });
     }
