@@ -55,8 +55,6 @@ main {
   margin-bottom: 3rem;
   background-color: white;
   color: #404040;
-  border: 1px solid white;
-  border-color: #404040;
   width: 100%;
   max-width: none;
 }
@@ -150,7 +148,6 @@ h6 {
 }
 p {
   margin-bottom: 1em;
-  border: 1px solid transparent;
 }
 a {
   color: #175971;
@@ -489,30 +486,30 @@ input[type="submit"]:disabled:active {
 pre {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background-color: #0c0f10;
-  color: #aaabab;
+  color: #dadbdb;
   padding: 1.5rem;
 }
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background-color: #0c0f10;
-  color: #aaabab;
+  color: #dadbdb;
   padding: 0.2em 1ch;
 }
 code.action,
 code .action {
-  color: #3dbfef;
+  color: #8dd9f5;
 }
 code.reaction,
 code .reaction {
-  color: #fc9441;
+  color: #fdc394;
 }
 code.alternate,
 code .alternate {
-  color: #73c91b;
+  color: #a9de73;
 }
 code.info,
 code .info {
-  color: #36bdee;
+  color: #8edaf5;
 }
 code.warning,
 code .warning {
@@ -528,7 +525,7 @@ code .success {
 }
 code.failure,
 code .failure {
-  color: #e7856a;
+  color: #f4c9bd;
 }
 code.highlight,
 code .highlight {

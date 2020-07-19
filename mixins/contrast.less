@@ -46,6 +46,7 @@
 	.apply-contrast(@contrast-ratio, @tone, @index) when (default()) {
         @{property}: @contrast;
 
+        // show which elements didn't make the contrast standard (in debug)
         & when (@contrast-ratio < @contrast-standard) 
            and (@debug = true) 
            and (@property = color) {
