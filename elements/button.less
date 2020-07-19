@@ -27,17 +27,23 @@
     border: 1px solid transparent;
     .make-buttons-for(@semantic-colors);
 
+    &.focus {
+      @list: transparent 0%, transparent 0%, rgba(red(@ambient), green(@ambient), blue(@ambient), .75) 1%, transparent 82%;
+      background-image: svg-gradient(to bottom, @list);
+      box-shadow: 0 1px 2px rgba(red(@gray-darker), green(@gray-darker), blue(@gray-darker), .5);
+
+    }
 
 
-    @list: transparent 0%, transparent 1%, rgba(red(@ambient), green(@ambient), blue(@ambient), .6) 1%, transparent 62%;
+
+    @list: transparent 0%, transparent 0%, rgba(red(@ambient), green(@ambient), blue(@ambient), .5) 1%, transparent 62%;
     background-image: svg-gradient(to bottom, @list);
     background-repeat: repeat-x;
 
     &:active {
-      @list: transparent 0%, transparent 1%, rgba(red(@ambient), green(@ambient), blue(@ambient), .3) 1%, transparent 62%;
+      @list: transparent 0%, transparent 0%, rgba(red(@ambient), green(@ambient), blue(@ambient), .25) 1%, transparent 40%;
       background-image: svg-gradient(to bottom, @list);
-      box-shadow: 0 1px 2px rgba(red(@gray), green(@gray), blue(@gray), .5);
-
+      box-shadow: 0 1px 1px rgba(red(@gray), green(@gray), blue(@gray), .5);
     }
 
     .on-tablet({
@@ -71,29 +77,52 @@
   .set-border-color();
 }
 
-.button-color(@color; @contrast-standard: 4.5;) 
-                      when (@color = @highlight)
-                        or (@color = @accent)
-                        or (@color = @warning)
-                        or (@color = @info) {
+.button-color(@color; @contrast-standard: 9;) {
     @button-bg: @color;
     .colorize(@button-bg; @contrast-standard);
     .button-borders(@button-bg);
 
+    & when (luma(@color) < 10%) {
+      color: white;
+    }
+
+    &:focus {
+      background-color: lighten(@button-bg, 16%);
+    }
+
     &:active {
       @active-bg: darken(@button-bg, 16%);
       background-color: @active-bg;
+      border-color: @active-bg;
       .colorize(@button-bg; @contrast-standard*.8);
     }
 }
 
-.button-color(@color; @contrast-standard: 3;) when (default()) {
-  @button-bg: @color;
-  .invert-text-against(@button-bg; @contrast-standard;);
-  .button-borders(@button-bg);
+// .button-color(@color; @contrast-standard: 3;) when (default()) {
+//   @button-bg: @color;
+//   .invert-text-against(@button-bg; @contrast-standard;);
+//   .button-borders(@button-bg);
 
-  &:active {
-    .invert-text-against(@button-bg; @contrast-standard*1.6;);
-    color: mix(@button-bg, white, 16%);
+//   &:focus {
+//     // background-color: lighten(@button-bg, 16%);
+//     .invert-text-against(@button-bg; @contrast-standard*.8;);
+//   }
+
+//   &:active {
+//     .invert-text-against(@button-bg; @contrast-standard*1.2;);
+//     border-color: darken(@button-bg, 16%);
+//     color: mix(@button-bg, white, 16%);
+//   }
+// }
+
+.button-elements({
+ 
+  &:focus {outline:none;}
+  &::-moz-focus-inner {border:0;}
+
+  &:focus {
+    &:extend(button.focus);
   }
-}
+});
+
+

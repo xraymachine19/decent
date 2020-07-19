@@ -9,8 +9,6 @@ nav {
       right: 0;
       height: @nav-height;
       background: @nav-background;
-      @list: rgba(red(@ambient), green(@ambient), blue(@ambient), .3) 0%, transparent 15%;
-      background-image: svg-gradient(to bottom, @list);
       z-index: 201;
       .set-lumafix(@nav-background; @gray-darker;);
       border-bottom: 1px solid @lumafix;
@@ -222,6 +220,7 @@ nav {
     top: 0; left: 0;
     // margin-left: -50%;
     height: @nav-height;
+    max-width: none;
     
     // width: 100%;
     border-radius: 0;
@@ -230,15 +229,16 @@ nav {
     .colorize(@nav-background);
   
     .on-tablet({
-        padding: 0;
-      width: @column-width;
-      margin-left: -@column-width/2;
+      width: 100%;
+      margin-left: -100%/2;
       top: 0; left: 50%;
       bottom: auto;
       max-width: ~"calc(100vw - @{padding})";
+      
     });
   
     .on-desktop({
+        padding: 0;
       // padding: 0 ~"calc((100vw - @{page-width})/2)";
       width: @page-width;
       margin-left: -@page-width/2;
@@ -259,15 +259,16 @@ nav {
         
   
         a {
-          display: inline;
+          display: block;
+          height: 4rem;
           color: inherit;
           padding-left: @padding;
           padding-right: @padding;
           background: darken(@nav-background, 5%);
-          margin: @padding/2;
-          line-height: 5rem - @padding !important;
+          margin: @padding/4;
+          line-height: 4rem;
           .default(border-radius);
-          box-shadow: inset @box-shadow;
+          // box-shadow: inset @box-shadow;
         }
       }
     }
@@ -284,6 +285,8 @@ nav {
       float: left;
       width: auto !important;
       font-weight: bold;
+      text-transform: lowercase;
+      letter-spacing: 2px !important;
       height: @nav-height !important;
       line-height: @nav-height !important;
       margin-top: 0 !important;
