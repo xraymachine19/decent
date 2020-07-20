@@ -6,14 +6,16 @@
     .default(box-shadow);
   
     display: inline;
-    // .button-color(@action);
+    .button-color(@action);
     // padding: 0 .5rem .25rem .5rem;
     // font-family: inherit;
     font-size: 100%; 
     width: 100%;
-    .default(padding-left);
-    .default(padding-right);
-    line-height: @line-height*2;
+    // .default(padding-left);
+    // .default(padding-right);
+    // .default(padding);
+    padding: @padding @golden-ratio*@padding;
+    line-height: @line-height*@golden-ratio;
     text-align: center;
     vertical-align: middle;
     background-image: none;
@@ -27,8 +29,41 @@
     border: 1px solid transparent;
     .make-buttons-for(@semantic-colors);
 
+
+    // TODO: better font conventions
+    & when (@serif = true) {
+      font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    }
+
+    & when (@sans-serif = true) {
+        font-family:  "Helvetica Neue",
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Oxygen-Sans,
+                Ubuntu,
+                Cantarell,
+                sans-serif;
+    }
+
+    & when (@monospace = true) {
+        font-family:
+          "SFMono-Regular",
+          Consolas,
+          "Liberation Mono",
+          Menlo,
+          Courier,
+          monospace;
+    }
+
     .on-tablet({
       width: auto;
+      margin-right: @padding;
+
+      &:last-child {
+        margin-right: 0;
+      }
     });
 });
   
@@ -50,26 +85,19 @@
     }
 }
 
-.button-borders(@color) {
-  .set-border-color() {
-    .set-lumafix(@color; @gray-darker; 40%;);
-    border-color: @lumafix;
-  }
-  .set-border-color();
-}
-
-.button-color(@color; @contrast-standard: 9;) {
+.button-color(@color; @cr: 9;) {
     @button-bg: @color;
 
     & when (@color = @highlight) 
         or (@color = @warning) 
         or (@color = @accent)
         or (@color = @info) {
-      .colorize(@button-bg; @contrast-standard);
+      .colorize(@button-bg; @cr;);
+      .contrast(@button-bg; @cr/3; border-color; shade;);
       &:active {
-        @active-bg: darken(@button-bg, 16%);
-        border-color: @active-bg;
-        .colorize(@button-bg; @contrast-standard*.8);
+        .colorize(@button-bg; @cr*.6);
+        .contrast(@button-bg; @cr/3*.6; border-color; shade;);
+        transform: scale(.98);
       }
       &:focus {
         background-color: lighten(@button-bg, 16%);
@@ -81,14 +109,17 @@
         or (@color = @alternate)
         or (@color = @success)
         or (@color = @failure) {
-          .invert-text-against(@button-bg; @contrast-standard/2;);
+          .invert-text-against(@button-bg; @cr/2;);
+          .contrast(@button-bg; @cr*2; border-color; shade;);
           &:active {
-            @active-bg: darken(@button-bg, 16%);
-            border-color: @active-bg;
-            .invert-text-against(@button-bg; @contrast-standard*.8);
+            .invert-text-against(@button-bg; @cr*.6);
+            .contrast(@button-bg; @cr*2*.8; border-color; shade;);
+            transform: scale(.98);
           }
           &:focus {
-            .invert-text-against(lighten(@button-bg, 16%); @contrast-standard/3;);
+            .invert-text-against(@button-bg; @cr/3.5;);
+            .set-lumafix(@button-bg, @gray-light);
+            background-color: @lumafix;
           }
     }
 
@@ -104,22 +135,22 @@
     @s3: rgba(red(@shadow-base), green(@shadow-base), blue(@shadow-base), .05);
 
     @list: @medium 0%, transparent 50%, transparent 80%, @s2 100%;
-    background-image: svg-gradient(to bottom, @list);
+    // background-image: svg-gradient(to bottom, @list);
     background-repeat: repeat-x;
 
     &:focus {
       @list: @strong 0%, transparent 50%, @s3 100%;
-      background-image: svg-gradient(to bottom, @list);
+      // background-image: svg-gradient(to bottom, @list);
       box-shadow: 0 1px 2px rgba(red(@gray-darker), green(@gray-darker), blue(@gray-darker), .5);
     }
 
     &:active {
       @list: @weak 0%, transparent 55%, @s1 100%;
-      background-image: svg-gradient(to bottom, @list);
+      // background-image: svg-gradient(to bottom, @list);
       box-shadow: 0 1px 1px rgba(red(@gray), green(@gray), blue(@gray), .5);
     }
 
-    .button-borders(@button-bg);
+    // .button-borders(@button-bg);
 
     & when (luma(@color) < 10%) {
       color: white;

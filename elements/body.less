@@ -12,7 +12,7 @@ body {
     .contrast(@background);
     // .blueprint(@background);
     // .honeycomb(@background);
-    .dots(@background; @scale: 2;);
+    .jigsaw(@background);
     background-attachment: fixed;
     font-size: @font-size;
     font-size: ~"calc((100vw - @{gutter})/@{body-char})";
@@ -20,7 +20,7 @@ body {
     line-height: ~"calc((2)*(100vw - @{gutter})/@{body-char})";
     margin: 0;
     padding: 0;
-    padding-top: @nav-height + @padding;
+    padding-top: @nav-height + @gutter;
     overflow-x: hidden;
     width: auto;
     -webkit-overflow-scrolling: touch;

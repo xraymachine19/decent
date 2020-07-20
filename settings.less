@@ -1,13 +1,13 @@
 // basics
-@base-color: rgb(238, 32, 204);
+@base-color: rgb(58, 59, 117);
 @debug: false;
 
 // css attribute defaults
-@background: average(@action, @gray-darker);
+@background-color: average(@action, @gray-darker);
 @main-background: white; // background of 'main' element
 @line-height: @font-size*@golden-ratio;
-@border-radius: 1rem;
-@font-size: 2rem;
+@border-radius: 4px;
+@font-size: 16px;
 
 @monospace: false;
 @serif: false;
@@ -24,9 +24,9 @@
 
 // layout settings
 // TODO: make this its own file
-@text-measure: 62; // an estimate
+@text-measure: 80; // an estimate
 @text-padding: .18em 0 .22em 0;
-@padding: 1.5rem;
+@padding: 1rem;
 @margin: @padding;
 @max-width: @text-measure * 1rem;
 @margin-bottom: @margin;

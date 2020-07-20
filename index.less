@@ -9,6 +9,7 @@
 @import (reference) "colors/grays";
 @import (reference) "colors/turbo";
 @import (reference) "patterns/dots"; // TODO: add more patterns, pattern pattern
+@import (reference) "patterns/jigsaw"; 
 @import (reference) "mixins/mixins";
 
 // css output
@@ -38,11 +39,19 @@
 
 // add any other Less/CSS here
 
-.less_logo {
-    @logo: data-uri("less_logo.png");
+// .less_logo {
+//     @logo: data-uri("less_logo.png");
 
-    display: block;
-    width: image-width("less_logo.png");
-    height: image-height("less_logo.png");
-    background: @logo;
+//     display: block;
+//     width: image-width("less_logo.png")/4;
+//     height: image-height("less_logo.png")/4;
+//     background: @logo;
+//     background-size: 100% 100%;
+//     margin: 0 auto;
+//     text-indent: -9999px;
+// }
+
+.powered-by {
+    font-size: 90%;
+    text-decoration: none;
 }

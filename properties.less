@@ -3,25 +3,25 @@
 @test: 'test';
 
 // Animation Properties
-@animation: @test; // Specifies the keyframe-based animations.
-@animation-delay: @test; // Specifies when the animation will start.
-@animation-direction: @test; // Specifies whether the animation should play in reverse on alternate cycles or not.
-@animation-duration: @test; // Specifies the number of seconds or milliseconds an animation should take to complete one cycle.
-@animation-fill-mode: @test; // Specifies how a CSS animation should apply styles to its target before and after it is executing.
-@animation-iteration-count: @test; // Specifies the number of times an animation cycle should be played before stopping.
-@animation-name: @test; // Specifies the name of @keyframes defined animations that should be applied to the selected element.
-@animation-play-state: @test; // Specifies whether the animation is running or paused.
-@animation-timing-function: @test; // Specifies how a CSS animation should progress over the duration of each cycle.
+// @animation: @test; // Specifies the keyframe-based animations.
+// @animation-delay: @test; // Specifies when the animation will start.
+// @animation-direction: @test; // Specifies whether the animation should play in reverse on alternate cycles or not.
+// @animation-duration: @test; // Specifies the number of seconds or milliseconds an animation should take to complete one cycle.
+// @animation-fill-mode: @test; // Specifies how a CSS animation should apply styles to its target before and after it is executing.
+// @animation-iteration-count: @test; // Specifies the number of times an animation cycle should be played before stopping.
+// @animation-name: @test; // Specifies the name of @keyframes defined animations that should be applied to the selected element.
+// @animation-play-state: @test; // Specifies whether the animation is running or paused.
+// @animation-timing-function: @test; // Specifies how a CSS animation should progress over the duration of each cycle.
 
 // Background Properties
-@background: @test; // Defines a variety of background properties within one declaration.
-@background-attachment: @test; // Specify whether the background image is fixed in the viewport or scrolls.
-@background-clip: @test; // Specifies the painting area of the background.
-@background-color: @test; // Defines an element's background color.
-@background-image: @test; // Defines an element's background image.
-@background-origin: @test; // Specifies the positioning area of the background images.
-@background-position: @test; // Defines the origin of a background image.
-@background-repeat: @test; // Specify whether/how the background image is tiled.
+@background: @background-color; // Defines a variety of background properties within one declaration.
+@background-attachment: scroll; // Specify whether the background image is fixed in the viewport or scrolls.
+@background-clip: border-box; // Specifies the painting area of the background.
+@background-color: overlay(@action, @gray-dark); // Defines an element's background color.
+@background-image: none; // Defines an element's background image.
+@background-origin: padding-box; // Specifies the positioning area of the background images.
+@background-position: 0% 0%; // Defines the origin of a background image.
+@background-repeat: no-repeat; // Specify whether/how the background image is tiled.
 @background-size: @test; // Specifies the size of the background images.
 
 // Border Properties
@@ -33,9 +33,9 @@
 @border-bottom-style: @border-style; // Sets the style of the bottom border of an element.
 @border-bottom-width: @border-width; // Sets the width of the bottom border of an element.
 @border-color: transparent; // Sets the color of the border on all the four sides of an element.
-@border-image: @test; // Specifies how an image is to be used in place of the border styles.
-@border-image-outset: @test; // Specifies the amount by which the border image area extends beyond the border box.
-@border-image-repeat: @test; // Specifies whether the image-border should be repeated, rounded or stretched.
+@border-image: none; // Specifies how an image is to be used in place of the border styles.
+@border-image-outset: 0; // Specifies the amount by which the border image area extends beyond the border box.
+@border-image-repeat: stretch; // Specifies whether the image-border should be repeated, rounded or stretched.
 @border-image-slice: @test; // Specifies the inward offsets of the image-border.
 @border-image-source: @test; // Specifies the location of the image to be used as a border.
 @border-image-width: @test; // Specifies the width of the image-border.
