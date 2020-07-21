@@ -1,39 +1,11 @@
 p {
     margin-bottom: 1em;
 
-    @handle-base: @gray;
-    @rim-base: @gray-dark;
-    @glass-base: average(@info, @main-background);
-
-    @handle-color: ~"rgb(@{r1}, @{g1}, @{b1})";
-    @rim-color: ~"rgb(@{r2}, @{g2}, @{b2})";
-    @glass-color: ~"rgb(@{r3}, @{g3}, @{b3})";
-
-    @icon-search: ~"%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%3E%3Cpath%20d%3D%22M3.499%2038.5c-.534%200-1.036-.208-1.414-.585s-.585-.88-.585-1.414.208-1.036.585-1.414l18.233-17.382%201.983%201.985L4.904%2037.923a1.979%201.979%200%2001-1.405.577z%22%20fill%3D%22@{handle-color}%22%2F%3E%3Cpath%20d%3D%22M20.31%2018.405l1.293%201.294L4.559%2037.561a1.49%201.49%200%2001-1.06.439c-.4%200-.777-.156-1.06-.439-.584-.584-.584-1.535-.017-2.103L20.31%2018.405m.017-1.398L1.732%2034.734a2.499%202.499%200%20000%203.534A2.49%202.49%200%20003.499%2039a2.49%202.49%200%20001.767-.732L23%2019.683l-2.673-2.676z%22%20fill%3D%22@{rim-color}%22%2F%3E%3Cg%3E%3Cpath%20d%3D%22M26%2026.5c-6.893%200-12.5-5.607-12.5-12.5S19.107%201.5%2026%201.5%2038.5%207.107%2038.5%2014%2032.893%2026.5%2026%2026.5z%22%20fill%3D%22@{glass-color}%22%2F%3E%3Cpath%20d%3D%22M26%202c6.617%200%2012%205.383%2012%2012s-5.383%2012-12%2012-12-5.383-12-12S19.383%202%2026%202m0-1c-7.18%200-13%205.82-13%2013s5.82%2013%2013%2013%2013-5.82%2013-13S33.18%201%2026%201z%22%20fill%3D%22@{rim-color}%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
-
-    // background: url("data:image/svg+xml;charset=UTF-8,@{icon-search}");
-
-
-    @r1: red(@handle-base);
-    @g1: green(@handle-base);
-    @b1: blue(@handle-base);
-
-    @r2: red(@rim-base);
-    @g2: green(@rim-base);
-    @b2: blue(@rim-base);
-
-    @r3: red(@glass-base);
-    @g3: green(@glass-base);
-    @b3: blue(@glass-base);
-
-    // @test5:~"rgb(@{r},@{g},@{b})";
-    // background: data-uri('image/svg+xml;charset=UTF-8', 'SVG/Search-40.svg');
-
-    each(@semantic-colors, {
-        @color: @@value;
-        &.@{value} {
-            .set-lumafix(@color, @gray-dark);
-            border: 1px solid @lumafix;
-        }
-    });
+    // each(@semantic-colors, {
+    //     @color: @@value;
+    //     &.@{value} {
+    //         .set-lumafix(darken(@color, 5%); @strength: 50%;);
+    //         border: 1px solid @lumafix;
+    //     }
+    // });
 }

@@ -255,18 +255,18 @@ nav {
         float:left;
         list-style: none;
         margin: 0;
-        height: 5rem;
+        height: @nav-height;
         
   
         a {
           display: block;
-          height: 4rem;
+          height: auto;
           color: inherit;
           padding-left: @padding;
           padding-right: @padding;
           background: darken(@nav-background, 5%);
           margin: @padding/4;
-          line-height: 4rem;
+          line-height: @nav-height - 1;
           .default(border-radius);
           // box-shadow: inset @box-shadow;
         }

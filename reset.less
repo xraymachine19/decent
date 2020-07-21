@@ -1,23 +1,13 @@
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-.inline-elements({
-    margin: 0;
-    padding: 0;
-    .default(max-width);
-});
-
-.block-level-elements({
+* {
     margin: 0;
     padding: 0;
     .default(max-width);
 
-    .semantic-classes({
-        .default(padding);
-    });
-});
+    &, &:before, &:after {
+        .default(box-sizing);
+    }
+}
+
+html, body {
+    max-width: none;
+}

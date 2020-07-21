@@ -2,9 +2,18 @@ section {
     // .default(padding);
     .default(box-shadow);
 
-    padding: @padding*2;
+    padding: @padding/2;
     .colorize(@main-background);
-    .set-lumafix(@background; @gray-darker;);
-    border: 1px solid @lumafix;
+    .set-lumafix(@main-background; @gray-darker;);
+    border: 0 solid @lumafix;
     margin-bottom: @gutter;
+
+    .on-large-phone({
+        padding: @padding;
+    });
+
+    .on-tablet({
+        border-width: 1px;
+        padding: @padding*2;
+    });
 }

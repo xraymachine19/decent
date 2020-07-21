@@ -1,56 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 55rem;
+}
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
+html,
+body {
+  max-width: none;
 }
-b,
-big,
-button,
-i,
-small,
-tt,
-abbr,
-acronym,
-cite,
-code,
-em,
-strong,
-a,
-br,
-img,
-map,
-object,
-span,
-sub,
-sup,
-input,
-label,
-select,
-textarea {
-  margin: 0;
-  padding: 0;
-  max-width: 80rem;
+b.action,
+big.action,
+button.action,
+i.action,
+small.action,
+tt.action,
+abbr.action,
+acronym.action,
+cite.action,
+code.action,
+em.action,
+strong.action,
+a.action,
+br.action,
+img.action,
+map.action,
+object.action,
+span.action,
+sub.action,
+sup.action,
+input.action,
+label.action,
+select.action,
+textarea.action {
+  color: #82700c;
 }
-p,
-ol,
-ul,
-pre,
-address,
-blockquote,
-dl,
-div,
-fieldset,
-form,
-hr,
-main,
-section,
-table {
-  margin: 0;
-  padding: 0;
-  max-width: 80rem;
+b.reaction,
+big.reaction,
+button.reaction,
+i.reaction,
+small.reaction,
+tt.reaction,
+abbr.reaction,
+acronym.reaction,
+cite.reaction,
+code.reaction,
+em.reaction,
+strong.reaction,
+a.reaction,
+br.reaction,
+img.reaction,
+map.reaction,
+object.reaction,
+span.reaction,
+sub.reaction,
+sup.reaction,
+input.reaction,
+label.reaction,
+select.reaction,
+textarea.reaction {
+  color: #586cb7;
+}
+b.alternate,
+big.alternate,
+button.alternate,
+i.alternate,
+small.alternate,
+tt.alternate,
+abbr.alternate,
+acronym.alternate,
+cite.alternate,
+code.alternate,
+em.alternate,
+strong.alternate,
+a.alternate,
+br.alternate,
+img.alternate,
+map.alternate,
+object.alternate,
+span.alternate,
+sub.alternate,
+sup.alternate,
+input.alternate,
+label.alternate,
+select.alternate,
+textarea.alternate {
+  color: #108151;
+}
+b.info,
+big.info,
+button.info,
+i.info,
+small.info,
+tt.info,
+abbr.info,
+acronym.info,
+cite.info,
+code.info,
+em.info,
+strong.info,
+a.info,
+br.info,
+img.info,
+map.info,
+object.info,
+span.info,
+sub.info,
+sup.info,
+input.info,
+label.info,
+select.info,
+textarea.info {
+  color: #15789c;
+}
+b.warning,
+big.warning,
+button.warning,
+i.warning,
+small.warning,
+tt.warning,
+abbr.warning,
+acronym.warning,
+cite.warning,
+code.warning,
+em.warning,
+strong.warning,
+a.warning,
+br.warning,
+img.warning,
+map.warning,
+object.warning,
+span.warning,
+sub.warning,
+sup.warning,
+input.warning,
+label.warning,
+select.warning,
+textarea.warning {
+  color: #8b6b06;
+}
+b.accent,
+big.accent,
+button.accent,
+i.accent,
+small.accent,
+tt.accent,
+abbr.accent,
+acronym.accent,
+cite.accent,
+code.accent,
+em.accent,
+strong.accent,
+a.accent,
+br.accent,
+img.accent,
+map.accent,
+object.accent,
+span.accent,
+sub.accent,
+sup.accent,
+input.accent,
+label.accent,
+select.accent,
+textarea.accent {
+  color: #4d7a1f;
+}
+b.success,
+big.success,
+button.success,
+i.success,
+small.success,
+tt.success,
+abbr.success,
+acronym.success,
+cite.success,
+code.success,
+em.success,
+strong.success,
+a.success,
+br.success,
+img.success,
+map.success,
+object.success,
+span.success,
+sub.success,
+sup.success,
+input.success,
+label.success,
+select.success,
+textarea.success {
+  color: #227e3c;
+}
+b.failure,
+big.failure,
+button.failure,
+i.failure,
+small.failure,
+tt.failure,
+abbr.failure,
+acronym.failure,
+cite.failure,
+code.failure,
+em.failure,
+strong.failure,
+a.failure,
+br.failure,
+img.failure,
+map.failure,
+object.failure,
+span.failure,
+sub.failure,
+sup.failure,
+input.failure,
+label.failure,
+select.failure,
+textarea.failure {
+  color: #d03c15;
+}
+b.highlight,
+big.highlight,
+button.highlight,
+i.highlight,
+small.highlight,
+tt.highlight,
+abbr.highlight,
+acronym.highlight,
+cite.highlight,
+code.highlight,
+em.highlight,
+strong.highlight,
+a.highlight,
+br.highlight,
+img.highlight,
+map.highlight,
+object.highlight,
+span.highlight,
+sub.highlight,
+sup.highlight,
+input.highlight,
+label.highlight,
+select.highlight,
+textarea.highlight {
+  color: #737322;
+}
+p.action,
+ol.action,
+ul.action,
+pre.action,
+address.action,
+blockquote.action,
+dl.action,
+div.action,
+fieldset.action,
+form.action,
+hr.action,
+main.action,
+section.action,
+table.action {
+  background-color: #a38c10;
+  color: #000000;
+}
+p.reaction,
+ol.reaction,
+ul.reaction,
+pre.reaction,
+address.reaction,
+blockquote.reaction,
+dl.reaction,
+div.reaction,
+fieldset.reaction,
+form.reaction,
+hr.reaction,
+main.reaction,
+section.reaction,
+table.reaction {
+  background-color: #6e87e4;
+  color: #000000;
+}
+p.alternate,
+ol.alternate,
+ul.alternate,
+pre.alternate,
+address.alternate,
+blockquote.alternate,
+dl.alternate,
+div.alternate,
+fieldset.alternate,
+form.alternate,
+hr.alternate,
+main.alternate,
+section.alternate,
+table.alternate {
+  background-color: #16b874;
+  color: #010906;
+}
+p.info,
+ol.info,
+ul.info,
+pre.info,
+address.info,
+blockquote.info,
+dl.info,
+div.info,
+fieldset.info,
+form.info,
+hr.info,
+main.info,
+section.info,
+table.info {
+  background-color: #1eabde;
+  color: #01090b;
+}
+p.warning,
+ol.warning,
+ul.warning,
+pre.warning,
+address.warning,
+blockquote.warning,
+dl.warning,
+div.warning,
+fieldset.warning,
+form.warning,
+hr.warning,
+main.warning,
+section.warning,
+table.warning {
+  background-color: #fdc20b;
+  color: #332702;
+}
+p.accent,
+ol.accent,
+ul.accent,
+pre.accent,
+address.accent,
+blockquote.accent,
+dl.accent,
+div.accent,
+fieldset.accent,
+form.accent,
+hr.accent,
+main.accent,
+section.accent,
+table.accent {
+  background-color: #9af43f;
+  color: #263d10;
+}
+p.success,
+ol.success,
+ul.success,
+pre.success,
+address.success,
+blockquote.success,
+dl.success,
+div.success,
+fieldset.success,
+form.success,
+hr.success,
+main.success,
+section.success,
+table.success {
+  background-color: #3fe66c;
+  color: #0d2e16;
+}
+p.failure,
+ol.failure,
+ul.failure,
+pre.failure,
+address.failure,
+blockquote.failure,
+dl.failure,
+div.failure,
+fieldset.failure,
+form.failure,
+hr.failure,
+main.failure,
+section.failure,
+table.failure {
+  background-color: #db3f16;
+  color: #000000;
+}
+p.highlight,
+ol.highlight,
+ul.highlight,
+pre.highlight,
+address.highlight,
+blockquote.highlight,
+dl.highlight,
+div.highlight,
+fieldset.highlight,
+form.highlight,
+hr.highlight,
+main.highlight,
+section.highlight,
+table.highlight {
+  background-color: #ffff4c;
+  color: #404013;
 }
 p.action,
 ol.action,
@@ -206,416 +553,28 @@ table.highlight {
   clear: both;
   content: "";
 }
-b.action,
-big.action,
-button.action,
-i.action,
-small.action,
-tt.action,
-abbr.action,
-acronym.action,
-cite.action,
-code.action,
-em.action,
-strong.action,
-a.action,
-br.action,
-img.action,
-map.action,
-object.action,
-span.action,
-sub.action,
-sup.action,
-input.action,
-label.action,
-select.action,
-textarea.action {
-  color: #30327c;
-}
-b.reaction,
-big.reaction,
-button.reaction,
-i.reaction,
-small.reaction,
-tt.reaction,
-abbr.reaction,
-acronym.reaction,
-cite.reaction,
-code.reaction,
-em.reaction,
-strong.reaction,
-a.reaction,
-br.reaction,
-img.reaction,
-map.reaction,
-object.reaction,
-span.reaction,
-sub.reaction,
-sup.reaction,
-input.reaction,
-label.reaction,
-select.reaction,
-textarea.reaction {
-  color: #5e6c14;
-}
-b.alternate,
-big.alternate,
-button.alternate,
-i.alternate,
-small.alternate,
-tt.alternate,
-abbr.alternate,
-acronym.alternate,
-cite.alternate,
-code.alternate,
-em.alternate,
-strong.alternate,
-a.alternate,
-br.alternate,
-img.alternate,
-map.alternate,
-object.alternate,
-span.alternate,
-sub.alternate,
-sup.alternate,
-input.alternate,
-label.alternate,
-select.alternate,
-textarea.alternate {
-  color: #0c7365;
-}
-b.info,
-big.info,
-button.info,
-i.info,
-small.info,
-tt.info,
-abbr.info,
-acronym.info,
-cite.info,
-code.info,
-em.info,
-strong.info,
-a.info,
-br.info,
-img.info,
-map.info,
-object.info,
-span.info,
-sub.info,
-sup.info,
-input.info,
-label.info,
-select.info,
-textarea.info {
-  color: #187598;
-}
-b.warning,
-big.warning,
-button.warning,
-i.warning,
-small.warning,
-tt.warning,
-abbr.warning,
-acronym.warning,
-cite.warning,
-code.warning,
-em.warning,
-strong.warning,
-a.warning,
-br.warning,
-img.warning,
-map.warning,
-object.warning,
-span.warning,
-sub.warning,
-sup.warning,
-input.warning,
-label.warning,
-select.warning,
-textarea.warning {
-  color: #796d1b;
-}
-b.accent,
-big.accent,
-button.accent,
-i.accent,
-small.accent,
-tt.accent,
-abbr.accent,
-acronym.accent,
-cite.accent,
-code.accent,
-em.accent,
-strong.accent,
-a.accent,
-br.accent,
-img.accent,
-map.accent,
-object.accent,
-span.accent,
-sub.accent,
-sup.accent,
-input.accent,
-label.accent,
-select.accent,
-textarea.accent {
-  color: #3371c0;
-}
-b.success,
-big.success,
-button.success,
-i.success,
-small.success,
-tt.success,
-abbr.success,
-acronym.success,
-cite.success,
-code.success,
-em.success,
-strong.success,
-a.success,
-br.success,
-img.success,
-map.success,
-object.success,
-span.success,
-sub.success,
-sup.success,
-input.success,
-label.success,
-select.success,
-textarea.success {
-  color: #257e3e;
-}
-b.failure,
-big.failure,
-button.failure,
-i.failure,
-small.failure,
-tt.failure,
-abbr.failure,
-acronym.failure,
-cite.failure,
-code.failure,
-em.failure,
-strong.failure,
-a.failure,
-br.failure,
-img.failure,
-map.failure,
-object.failure,
-span.failure,
-sub.failure,
-sup.failure,
-input.failure,
-label.failure,
-select.failure,
-textarea.failure {
-  color: #b52903;
-}
-b.highlight,
-big.highlight,
-button.highlight,
-i.highlight,
-small.highlight,
-tt.highlight,
-abbr.highlight,
-acronym.highlight,
-cite.highlight,
-code.highlight,
-em.highlight,
-strong.highlight,
-a.highlight,
-br.highlight,
-img.highlight,
-map.highlight,
-object.highlight,
-span.highlight,
-sub.highlight,
-sup.highlight,
-input.highlight,
-label.highlight,
-select.highlight,
-textarea.highlight {
-  color: #d2247e;
-}
-p.action,
-ol.action,
-ul.action,
-pre.action,
-address.action,
-blockquote.action,
-dl.action,
-div.action,
-fieldset.action,
-form.action,
-hr.action,
-main.action,
-section.action,
-table.action {
-  background-color: #31337f;
-  color: #e0e0ec;
-}
-p.reaction,
-ol.reaction,
-ul.reaction,
-pre.reaction,
-address.reaction,
-blockquote.reaction,
-dl.reaction,
-div.reaction,
-fieldset.reaction,
-form.reaction,
-hr.reaction,
-main.reaction,
-section.reaction,
-table.reaction {
-  background-color: #606f14;
-  color: #ffffff;
-}
-p.alternate,
-ol.alternate,
-ul.alternate,
-pre.alternate,
-address.alternate,
-blockquote.alternate,
-dl.alternate,
-div.alternate,
-fieldset.alternate,
-form.alternate,
-hr.alternate,
-main.alternate,
-section.alternate,
-table.alternate {
-  background-color: #0c7668;
-  color: #ffffff;
-}
-p.info,
-ol.info,
-ul.info,
-pre.info,
-address.info,
-blockquote.info,
-dl.info,
-div.info,
-fieldset.info,
-form.info,
-hr.info,
-main.info,
-section.info,
-table.info {
-  background-color: #18789b;
-  color: #ffffff;
-}
-p.warning,
-ol.warning,
-ul.warning,
-pre.warning,
-address.warning,
-blockquote.warning,
-dl.warning,
-div.warning,
-fieldset.warning,
-form.warning,
-hr.warning,
-main.warning,
-section.warning,
-table.warning {
-  background-color: #ffe639;
-  color: #403a0e;
-}
-p.accent,
-ol.accent,
-ul.accent,
-pre.accent,
-address.accent,
-blockquote.accent,
-dl.accent,
-div.accent,
-fieldset.accent,
-form.accent,
-hr.accent,
-main.accent,
-section.accent,
-table.accent {
-  background-color: #408df0;
-  color: #000000;
-}
-p.success,
-ol.success,
-ul.success,
-pre.success,
-address.success,
-blockquote.success,
-dl.success,
-div.success,
-fieldset.success,
-form.success,
-hr.success,
-main.success,
-section.success,
-table.success {
-  background-color: #3ed267;
-  color: #09200f;
-}
-p.failure,
-ol.failure,
-ul.failure,
-pre.failure,
-address.failure,
-blockquote.failure,
-dl.failure,
-div.failure,
-fieldset.failure,
-form.failure,
-hr.failure,
-main.failure,
-section.failure,
-table.failure {
-  background-color: #b92a04;
-  color: #ffffff;
-}
-p.highlight,
-ol.highlight,
-ul.highlight,
-pre.highlight,
-address.highlight,
-blockquote.highlight,
-dl.highlight,
-div.highlight,
-fieldset.highlight,
-form.highlight,
-hr.highlight,
-main.highlight,
-section.highlight,
-table.highlight {
-  background-color: #ff2b99;
-  color: #000000;
-}
 body {
-  background-color: #191a40;
-  color: #babac6;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192px' height='192px' viewBox='0 0 192 192'%3E%3Cpath fill='rgb(34,35,71)' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: #54480a;
+  color: #eeede7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192px' height='192px' viewBox='0 0 192 192'%3E%3Cpath fill='rgb(90,80,20)' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
   background-size: 192px, 192px;
   background-position: center center;
   background-attachment: fixed;
-  font-size: 20px;
-  font-size: calc((100vw - 2rem)/26.5);
-  font-weight: normal;
-  line-height: calc((2)*(100vw - 2rem)/26.5);
-  margin: 0;
-  padding: 0;
-  padding-top: 7rem;
-  overflow-x: hidden;
-  width: auto;
+  padding-top: 5rem;
   -webkit-overflow-scrolling: touch;
   font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  line-height: 25.888px;
 }
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 38rem) {
+  body {
+    font-size: 18px;
+    line-height: 29.124px;
+  }
+}
+@media screen and (min-width: 57rem) {
   body {
     font-size: 20px;
-    font-weight: normal;
     line-height: 32.36px;
   }
 }
@@ -624,7 +583,7 @@ main {
   margin-bottom: 2rem;
   width: 100%;
 }
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 57rem) {
 }
 nav:after {
   display: block;
@@ -633,11 +592,11 @@ nav:after {
   top: 0;
   left: 0;
   right: 0;
-  height: 5rem;
-  background: #31337f;
+  height: 3rem;
+  background: #16b874;
   z-index: 201;
   border-bottom: 1px solid #000000;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px rgba(4, 4, 4, 0.5);
 }
 nav h1,
 nav ul {
@@ -648,13 +607,13 @@ nav ul {
 #short_links_inline {
   position: relative;
   transform: translate(0, -2100%);
-  width: 118rem;
+  width: 93rem;
   max-width: 100%;
-  min-height: 5rem;
+  min-height: 3rem;
   z-index: -300;
-  background-color: #191a40;
-  color: #babac6;
-  margin-top: 5rem;
+  background-color: #54480a;
+  color: #eeede7;
+  margin-top: 3rem;
   padding: 1rem;
   transition: transform 0.2s ease-out;
 }
@@ -678,15 +637,15 @@ nav ul {
   padding-left: 1.5rem;
   padding-top: 0;
   margin-bottom: 0.5rem;
-  background-color: #191a40;
-  color: #babac6;
+  background-color: #54480a;
+  color: #eeede7;
 }
 #short_links li,
 #short_links_inline li {
   margin-bottom: 0;
   padding: 0;
 }
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 57rem) {
   #short_links li,
   #short_links_inline li {
     width: auto;
@@ -697,30 +656,30 @@ nav ul {
 #short_links a,
 #short_links_inline a {
   line-height: 40px;
-  color: #d1d1d9;
+  color: #ffffff;
 }
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 57rem) {
   #short_links a,
   #short_links_inline a {
     width: auto;
     padding: 0 1rem;
-    height: 5rem;
+    height: 3rem;
     display: inline-block;
     line-height: 5rem;
-    color: #f5f5f9;
+    color: #000000;
   }
   #short_links a:active,
   #short_links_inline a:active {
-    background-color: #0c7668;
-    color: #ffffff;
+    background-color: #16b874;
+    color: #010906;
   }
 }
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 57rem) {
   #short_links,
   #short_links_inline {
     transform: none;
-    color: #f5f5f9;
-    background: #31337f;
+    color: #000000;
+    background: #16b874;
     width: auto;
     margin-top: 0;
     padding: 0;
@@ -728,7 +687,7 @@ nav ul {
     right: 0;
     position: absolute;
     z-index: 2000;
-    line-height: 25.888px;
+    line-height: 32.36px;
   }
 }
 #short_links_inline {
@@ -746,10 +705,10 @@ nav ul {
   width: 33.3%;
   max-width: 33.3%;
 }
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 95rem) {
   #short_links_inline {
     padding: 1rem;
-    border-radius: 4px;
+    border-radius: 8px;
   }
 }
 #hamburger_input {
@@ -768,9 +727,9 @@ nav ul {
   z-index: 300;
 }
 #hamburger_button_container:active {
-  background: #46488c;
+  background: #14a568;
 }
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 57rem) {
   #hamburger_button_container {
     display: none;
   }
@@ -779,28 +738,28 @@ nav ul {
   position: relative;
   display: block;
   width: 3rem;
-  height: 3.5rem;
-  margin-top: 0.7rem;
-  background: #eaebf2;
+  height: 1.5rem;
+  margin-top: 0.3rem;
+  background: #02120c;
   pointer-events: none;
 }
 #hamburger_button:before {
   display: block;
   content: "";
   width: 100%;
-  height: 0.7rem;
+  height: 0.3rem;
   position: absolute;
-  top: 0.7rem;
-  background: #31337f;
+  top: 0.3rem;
+  background: #16b874;
 }
 #hamburger_button:after {
   display: block;
   content: "";
   width: 100%;
-  height: 0.7rem;
+  height: 0.3rem;
   position: absolute;
-  top: 2.1rem;
-  background: #31337f;
+  top: 0.9rem;
+  background: #16b874;
 }
 nav {
   width: 100%;
@@ -812,17 +771,17 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  height: 5rem;
+  height: 3rem;
   max-width: none;
   border-radius: 0;
-  background-color: #31337f;
-  color: #e0e0ec;
+  background-color: #16b874;
+  color: #010906;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 57rem) {
   nav {
     width: 100%;
     margin-left: -50%;
@@ -832,16 +791,16 @@ nav {
     max-width: calc(100vw - 1rem);
   }
 }
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 95rem) {
   nav {
     padding: 0;
-    width: 118rem;
-    margin-left: -59rem;
+    width: 93rem;
+    margin-left: -46.5rem;
   }
 }
 nav > ul {
   float: right;
-  line-height: 5rem;
+  line-height: 3rem;
   padding-left: 0;
   margin-bottom: 0 !important;
 }
@@ -849,18 +808,18 @@ nav > ul > li {
   float: left;
   list-style: none;
   margin: 0;
-  height: 5rem;
+  height: 3rem;
 }
 nav > ul > li a {
   display: block;
-  height: 4rem;
+  height: auto;
   color: inherit;
   padding-left: 1rem;
   padding-right: 1rem;
-  background: #2a2c6d;
+  background: #14a166;
   margin: 0.25rem;
-  line-height: 4rem;
-  border-radius: 4px;
+  line-height: 2rem;
+  border-radius: 8px;
 }
 nav a {
   text-decoration: none;
@@ -873,31 +832,42 @@ nav h1 {
   font-weight: bold;
   text-transform: lowercase;
   letter-spacing: 2px !important;
-  height: 5rem !important;
-  line-height: 5rem !important;
+  height: 3rem !important;
+  line-height: 3rem !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding: 0;
   color: inherit;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 nav h1 a {
   display: inline-block;
   padding: 0 0.5rem;
-  color: #ffffff !important;
-  line-height: 5rem !important;
+  color: #000000 !important;
+  line-height: 3rem !important;
 }
 nav h1 a:active {
-  background-color: #0c7668 !important;
-  color: #ffffff !important;
+  background-color: #16b874 !important;
+  color: #010906 !important;
 }
 section {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+  box-shadow: 0 1px 2px rgba(4, 4, 4, 0.5);
+  padding: 0.5rem;
   background-color: white;
   color: #404040;
-  border: 1px solid #000000;
+  border: 0 solid #000000;
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 38rem) {
+  section {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 57rem) {
+  section {
+    border-width: 1px;
+    padding: 2rem;
+  }
 }
 h1,
 h2,
@@ -906,14 +876,12 @@ h4,
 h5,
 h6,
 nav h1 {
-  font-size: 32px;
-  font-size: calc((100vw - 2rem)/100);
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 4rem;
   letter-spacing: -0.025em;
   color: inherit;
-  max-width: 80rem;
+  max-width: 55rem;
   width: 100%;
 }
 p + h1,
@@ -933,98 +901,44 @@ h6:first-child {
   margin-top: 1rem;
 }
 h1 {
-  font-size: calc((100vw - 2rem)/9);
-  line-height: calc((8/7)*(100vw - 2rem)/9);
+  font-size: 3em;
+  line-height: 1.26;
 }
 h2 {
-  font-size: calc((100vw - 2rem)/10.625);
-  line-height: calc((7/6)*(100vw - 2rem)/10.625);
+  font-size: 3em;
+  line-height: 1.05;
 }
 h3 {
-  font-size: calc((100vw - 2rem)/12.625);
-  line-height: calc((6/5)*(100vw - 2rem)/12.625);
+  font-size: 2.5em;
+  line-height: 0.84;
 }
 h4 {
-  font-size: calc((100vw - 2rem)/14);
-  line-height: calc((5/4)*(100vw - 2rem)/14);
+  font-size: 2em;
+  line-height: 0.63;
 }
 h5 {
-  font-size: calc((100vw - 2rem)/16.5);
-  line-height: calc((4/3)*(100vw - 2rem)/16.5);
+  font-size: 1.5em;
+  line-height: 0.525;
 }
 h6,
 nav h1 {
-  font-size: calc((100vw - 2rem)/18);
-  line-height: calc((3/2)*(100vw - 2rem)/18);
-}
-@media screen and (min-width: 52rem) {
-  h1 {
-    font-size: 6rem;
-    line-height: 8rem;
-  }
-  h2 {
-    font-size: 5rem;
-    line-height: 7rem;
-  }
-  h3 {
-    font-size: 4rem;
-    line-height: 6rem;
-  }
-  h4 {
-    font-size: 3rem;
-    line-height: 5rem;
-  }
-  h5 {
-    font-size: 2.5rem;
-    line-height: 4rem;
-  }
-  h6,
-  nav h1 {
-    font-size: 2rem;
-    line-height: 3rem;
-  }
+  font-size: 1em;
+  line-height: 0.42;
 }
 p {
   margin-bottom: 1em;
 }
-p.action {
-  border: 1px solid #18193d;
-}
-p.reaction {
-  border: 1px solid #1d2206;
-}
-p.alternate {
-  border: 1px solid #04231f;
-}
-p.info {
-  border: 1px solid #051a22;
-}
-p.warning {
-  border: 1px solid #060500;
-}
-p.accent {
-  border: 1px solid #052044;
-}
-p.success {
-  border: 1px solid #08210e;
-}
-p.failure {
-  border: 1px solid #300b01;
-}
-p.highlight {
-  border: 1px solid #420022;
-}
 a {
-  color: #125a75;
+  color: #105a75;
 }
 form {
   padding: 1rem;
 }
 input {
-  line-height: 25.888px;
+  line-height: 32.36px;
 }
 input:focus {
-  border-color: #31337f;
+  border-color: #a38c10;
 }
 fieldset {
   border: none;
@@ -1050,23 +964,22 @@ input[type="reset"],
 input[type="submit"] {
   margin-bottom: 1rem;
   border: 1 solid transparent;
-  border-radius: 4px;
-  font-size: 16px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  font-size: 20px;
+  box-shadow: 0 1px 2px rgba(4, 4, 4, 0.5);
   display: inline;
-  background-color: #31337f;
-  border-color: #000000;
-  background-repeat: repeat-x;
+  background-color: #87740d;
   color: white;
+  border-color: #413806;
   font-size: 100%;
   width: 100%;
+  padding: 0.18em 0.3236em 0.22em 0.3236em;
   padding: 1rem 1.618rem;
-  line-height: 41.886784px;
+  line-height: 1;
   text-align: center;
   vertical-align: middle;
   background-image: none;
   outline: none;
-  border: none;
   white-space: nowrap;
   text-decoration: none;
   touch-action: manipulation;
@@ -1076,421 +989,289 @@ input[type="submit"] {
   -webkit-user-select: none;
   -ms-user-select: none;
   border: 1px solid transparent;
+  transform: scale(1);
+  transition: 0.08s linear;
   font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
 }
+button:focus,
+.button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  background-color: #a38c10;
+  color: white;
+  background-color: #b49c11;
+  border-color: #594d09;
+}
 button:active,
 .button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background-color: #31337f;
+  background-color: #66580a;
   color: white;
   border-color: #000000;
-  transform: scale(0.98);
-}
-button:focus,
-.button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  background-color: #31337f;
-  color: white;
-  background-color: #888ad1;
-}
-button:focus,
-.button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-button:active,
-.button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
 }
 button.action,
 .button.action,
 input[type="button"].action,
 input[type="reset"].action,
 input[type="submit"].action {
-  background-color: #31337f;
-  border-color: #000000;
-  background-repeat: repeat-x;
+  background-color: #87740d;
   color: white;
-}
-button.action:active,
-.button.action:active,
-input[type="button"].action:active,
-input[type="reset"].action:active,
-input[type="submit"].action:active {
-  background-color: #31337f;
-  color: white;
-  border-color: #000000;
-  transform: scale(0.98);
+  border-color: #413806;
 }
 button.action:focus,
 .button.action:focus,
 input[type="button"].action:focus,
 input[type="reset"].action:focus,
 input[type="submit"].action:focus {
-  background-color: #31337f;
+  background-color: #a38c10;
   color: white;
-  background-color: #888ad1;
-}
-button.action:focus,
-.button.action:focus,
-input[type="button"].action:focus,
-input[type="reset"].action:focus,
-input[type="submit"].action:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #b49c11;
+  border-color: #594d09;
 }
 button.action:active,
 .button.action:active,
 input[type="button"].action:active,
 input[type="reset"].action:active,
 input[type="submit"].action:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #66580a;
+  color: white;
+  border-color: #000000;
 }
 button.reaction,
 .button.reaction,
 input[type="button"].reaction,
 input[type="reset"].reaction,
 input[type="submit"].reaction {
-  background-color: #606f14;
+  background-color: #3659da;
   color: white;
-  border-color: #000000;
-  background-repeat: repeat-x;
-}
-button.reaction:active,
-.button.reaction:active,
-input[type="button"].reaction:active,
-input[type="reset"].reaction:active,
-input[type="submit"].reaction:active {
-  background-color: #606f14;
-  color: white;
-  border-color: #000000;
-  transform: scale(0.98);
+  border-color: #2c365b;
 }
 button.reaction:focus,
 .button.reaction:focus,
 input[type="button"].reaction:focus,
 input[type="reset"].reaction:focus,
 input[type="submit"].reaction:focus {
-  background-color: #606f14;
+  background-color: #6e87e4;
   color: white;
-  background-color: #879c1d;
-}
-button.reaction:focus,
-.button.reaction:focus,
-input[type="button"].reaction:focus,
-input[type="reset"].reaction:focus,
-input[type="submit"].reaction:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #879be9;
+  border-color: #3d4a7e;
 }
 button.reaction:active,
 .button.reaction:active,
 input[type="button"].reaction:active,
 input[type="reset"].reaction:active,
 input[type="submit"].reaction:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #3659da;
+  color: white;
+  border-color: #000000;
 }
 button.alternate,
 .button.alternate,
 input[type="button"].alternate,
 input[type="reset"].alternate,
 input[type="submit"].alternate {
-  background-color: #0c7668;
+  background-color: #0f7d4f;
   color: white;
-  border-color: #000000;
-  background-repeat: repeat-x;
-}
-button.alternate:active,
-.button.alternate:active,
-input[type="button"].alternate:active,
-input[type="reset"].alternate:active,
-input[type="submit"].alternate:active {
-  background-color: #0c7668;
-  color: white;
-  border-color: #000000;
-  transform: scale(0.98);
+  border-color: #0a5334;
 }
 button.alternate:focus,
 .button.alternate:focus,
 input[type="button"].alternate:focus,
 input[type="reset"].alternate:focus,
 input[type="submit"].alternate:focus {
-  background-color: #0c7668;
+  background-color: #16b874;
   color: white;
-  background-color: #11a693;
-}
-button.alternate:focus,
-.button.alternate:focus,
-input[type="button"].alternate:focus,
-input[type="reset"].alternate:focus,
-input[type="submit"].alternate:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #16b371;
+  border-color: #0c6540;
 }
 button.alternate:active,
 .button.alternate:active,
 input[type="button"].alternate:active,
 input[type="reset"].alternate:active,
 input[type="submit"].alternate:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #0b5838;
+  color: white;
+  border-color: #000000;
 }
 button.info,
 .button.info,
 input[type="button"].info,
 input[type="reset"].info,
 input[type="submit"].info {
-  background-color: #18789b;
-  color: #ffffff;
-  border-color: #07242f;
-  background-repeat: repeat-x;
-}
-button.info:active,
-.button.info:active,
-input[type="button"].info:active,
-input[type="reset"].info:active,
-input[type="submit"].info:active {
-  background-color: #18789b;
-  color: #ffffff;
-  border-color: #0e485d;
-  transform: scale(0.98);
+  background-color: #1eabde;
+  color: #000000;
+  border-color: #105e7a;
 }
 button.info:focus,
 .button.info:focus,
 input[type="button"].info:focus,
 input[type="reset"].info:focus,
 input[type="submit"].info:focus {
-  background-color: #28adde;
-}
-button.info:focus,
-.button.info:focus,
-input[type="button"].info:focus,
-input[type="reset"].info:focus,
-input[type="submit"].info:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #64c6ea;
+  border-color: #1680a7;
 }
 button.info:active,
 .button.info:active,
 input[type="button"].info:active,
 input[type="reset"].info:active,
 input[type="submit"].info:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #1782a8;
+  color: #000000;
+  border-color: #136f91;
 }
 button.warning,
 .button.warning,
 input[type="button"].warning,
 input[type="reset"].warning,
 input[type="submit"].warning {
-  background-color: #ffe639;
-  color: #332e0b;
-  border-color: #80731c;
-  background-repeat: repeat-x;
-}
-button.warning:active,
-.button.warning:active,
-input[type="button"].warning:active,
-input[type="reset"].warning:active,
-input[type="submit"].warning:active {
-  background-color: #ffe639;
-  color: #4d4511;
-  border-color: #b3a128;
-  transform: scale(0.98);
+  background-color: #fdc20b;
+  color: #261d02;
+  border-color: #987406;
 }
 button.warning:focus,
 .button.warning:focus,
 input[type="button"].warning:focus,
 input[type="reset"].warning:focus,
 input[type="submit"].warning:focus {
-  background-color: #fff08a;
-}
-button.warning:focus,
-.button.warning:focus,
-input[type="button"].warning:focus,
-input[type="reset"].warning:focus,
-input[type="submit"].warning:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #fed65c;
+  border-color: #be9208;
 }
 button.warning:active,
 .button.warning:active,
 input[type="button"].warning:active,
 input[type="reset"].warning:active,
 input[type="submit"].warning:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #c99901;
+  color: #281f00;
+  border-color: #a57e07;
 }
 button.accent,
 .button.accent,
 input[type="button"].accent,
 input[type="reset"].accent,
 input[type="submit"].accent {
-  background-color: #408df0;
-  color: #000000;
-  border-color: #1a3860;
-  background-repeat: repeat-x;
-}
-button.accent:active,
-.button.accent:active,
-input[type="button"].accent:active,
-input[type="reset"].accent:active,
-input[type="submit"].accent:active {
-  background-color: #408df0;
-  color: #060e18;
-  border-color: #2a5b9c;
-  transform: scale(0.98);
+  background-color: #9af43f;
+  color: #172509;
+  border-color: #5c9326;
 }
 button.accent:focus,
 .button.accent:focus,
 input[type="button"].accent:focus,
 input[type="reset"].accent:focus,
 input[type="submit"].accent:focus {
-  background-color: #8cbaf6;
-}
-button.accent:focus,
-.button.accent:focus,
-input[type="button"].accent:focus,
-input[type="reset"].accent:focus,
-input[type="submit"].accent:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #c3f98c;
+  border-color: #73b72f;
 }
 button.accent:active,
 .button.accent:active,
 input[type="button"].accent:active,
 input[type="reset"].accent:active,
 input[type="submit"].accent:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #7be90d;
+  color: #254604;
+  border-color: #6cab2c;
 }
 button.success,
 .button.success,
 input[type="button"].success,
 input[type="reset"].success,
 input[type="submit"].success {
-  background-color: #1f863b;
+  background-color: #107b2d;
   color: white;
-  border-color: #000000;
-  background-repeat: repeat-x;
-}
-button.success:active,
-.button.success:active,
-input[type="button"].success:active,
-input[type="reset"].success:active,
-input[type="submit"].success:active {
-  background-color: #16612b;
-  color: white;
-  border-color: #000000;
-  transform: scale(0.98);
+  border-color: #1f7336;
 }
 button.success:focus,
 .button.success:focus,
 input[type="button"].success:focus,
 input[type="reset"].success:focus,
 input[type="submit"].success:focus {
-  background-color: #27a84a;
+  background-color: #16a43c;
   color: white;
-  background-color: #229341;
-}
-button.success:focus,
-.button.success:focus,
-input[type="button"].success:focus,
-input[type="reset"].success:focus,
-input[type="submit"].success:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #21be4c;
+  border-color: #268a41;
 }
 button.success:active,
 .button.success:active,
 input[type="button"].success:active,
 input[type="reset"].success:active,
 input[type="submit"].success:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #0a4e1d;
+  color: white;
+  border-color: #000000;
 }
 button.failure,
 .button.failure,
 input[type="button"].failure,
 input[type="reset"].failure,
 input[type="submit"].failure {
-  background-color: #b92a04;
+  background-color: #bf3713;
   color: white;
-  border-color: #000000;
-  background-repeat: repeat-x;
-}
-button.failure:active,
-.button.failure:active,
-input[type="button"].failure:active,
-input[type="reset"].failure:active,
-input[type="submit"].failure:active {
-  background-color: #b92a04;
-  color: white;
-  border-color: #000000;
-  transform: scale(0.98);
+  border-color: #4d1608;
 }
 button.failure:focus,
 .button.failure:focus,
 input[type="button"].failure:focus,
 input[type="reset"].failure:focus,
 input[type="submit"].failure:focus {
-  background-color: #b92a04;
+  background-color: #db3f16;
   color: white;
-  background-color: #fb4d1e;
-}
-button.failure:focus,
-.button.failure:focus,
-input[type="button"].failure:focus,
-input[type="reset"].failure:focus,
-input[type="submit"].failure:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #eb7a5b;
+  border-color: #6d200b;
 }
 button.failure:active,
 .button.failure:active,
 input[type="button"].failure:active,
 input[type="reset"].failure:active,
 input[type="submit"].failure:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
+  background-color: #bf3713;
+  color: white;
+  border-color: #000000;
 }
 button.highlight,
 .button.highlight,
 input[type="button"].highlight,
 input[type="reset"].highlight,
 input[type="submit"].highlight {
-  background-color: #ff2b99;
-  color: #000000;
-  border-color: #66113d;
-  background-repeat: repeat-x;
+  background-color: #ffff4c;
+  color: #33330f;
+  border-color: #99992d;
+}
+button.highlight:focus,
+.button.highlight:focus,
+input[type="button"].highlight:focus,
+input[type="reset"].highlight:focus,
+input[type="submit"].highlight:focus {
+  background-color: #ffff9d;
+  border-color: #bfbf39;
 }
 button.highlight:active,
 .button.highlight:active,
 input[type="button"].highlight:active,
 input[type="reset"].highlight:active,
 input[type="submit"].highlight:active {
-  background-color: #ff2b99;
-  color: #0d0208;
-  border-color: #a61c63;
+  background-color: #ffff0f;
+  color: #595905;
+  border-color: #b3b335;
+}
+button:focus,
+.button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  box-shadow: 0 1px 2px rgba(4, 4, 4, 0.5);
+}
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
   transform: scale(0.98);
+  box-shadow: 0 1px 1px rgba(4, 4, 4, 0.25);
 }
-button.highlight:focus,
-.button.highlight:focus,
-input[type="button"].highlight:focus,
-input[type="reset"].highlight:focus,
-input[type="submit"].highlight:focus {
-  background-color: #ff7dc0;
-}
-button.highlight:focus,
-.button.highlight:focus,
-input[type="button"].highlight:focus,
-input[type="reset"].highlight:focus,
-input[type="submit"].highlight:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-button.highlight:active,
-.button.highlight:active,
-input[type="button"].highlight:active,
-input[type="reset"].highlight:active,
-input[type="submit"].highlight:active {
-  box-shadow: 0 1px 1px rgba(86, 86, 86, 0.5);
-}
-@media screen and (min-width: 52rem) {
+@media screen and (min-width: 57rem) {
   button,
   .button,
   input[type="button"],
@@ -1523,60 +1304,65 @@ input[type="submit"]::-moz-focus-inner {
 }
 pre {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  background-color: #000000;
+  background-color: #040404;
   color: #d9d9d9;
   padding: 1rem;
 }
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  background-color: #232323;
-  color: #9c9c9c;
+  background-color: #383838;
+  color: #afafaf;
   padding: 0.2em 1ch;
 }
 code.action,
 code .action {
-  color: #8e8fb9;
-  background: #232323;
+  color: #b5a33f;
+  background: #383838;
 }
 code.reaction,
 code .reaction {
-  color: #88934f;
-  background: #232323;
+  color: #8b9fea;
+  background: #383838;
 }
 code.alternate,
 code .alternate {
-  color: #4f9c92;
-  background: #232323;
+  color: #1cb977;
+  background: #383838;
 }
 code.info,
 code .info {
-  color: #4c97b2;
-  background: #232323;
+  color: #29afe0;
+  background: #383838;
 }
 code.warning,
 code .warning {
-  color: #ffe73e;
-  background: #232323;
+  color: #fdc411;
+  background: #383838;
 }
 code.accent,
 code .accent {
-  color: #4590f1;
-  background: #232323;
+  color: #9cf443;
+  background: #383838;
 }
 code.success,
 code .success {
-  color: #43d46a;
-  background: #232323;
+  color: #43e670;
+  background: #383838;
 }
 code.failure,
 code .failure {
-  color: #d2745c;
-  background: #232323;
+  color: #e98c73;
+  background: #383838;
 }
 code.highlight,
 code .highlight {
-  color: #ff319c;
-  background: #232323;
+  color: #ffff50;
+  background: #383838;
+}
+.less_logo {
+  display: block;
+  max-width: 132px;
+  margin: 0 auto;
 }
 .powered-by {
   font-size: 90%;
