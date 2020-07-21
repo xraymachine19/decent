@@ -97,16 +97,22 @@
   .contrast(@color; @cr/3; border-color; shade;);
 
   & when (@button-tone = white) {
-    .colorize(@color; @cr; @mode: tint;);
+    // .colorize(@color; @cr; @mode: tint;);
+    color: white;
+    background: @color;
 
     &:focus {
-      .contrast-fill(@color; 1.6; @mode: tint;);
-      .colorize(@fill; @cr; @mode: tint;);
+      .contrast-fill(@color; 1.5; @mode: tint;);
+      //.colorize(@fill; @cr; @mode: tint;);
+      color: white;
+      background: @fill;
     }
 
     &:active {
       .contrast-fill(@color; 1.15; @mode: shade;);
-      .colorize(@fill; @cr; @mode: tint;);
+      //.colorize(@fill; @cr; @mode: tint;);
+      color: white;
+      background: @fill;
     }
   }
 

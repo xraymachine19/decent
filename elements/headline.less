@@ -1,23 +1,12 @@
-@h1-base: 6;
-@h2-base: 5;
-@h3-base: 4;
-@h4-base: 3;
-@h5-base: 2.5;
-@h6-base: 2;
-
 .headline-elements({
   font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
   letter-spacing: -.025em;
   color: inherit;
-  //.contrast-text-against(@background; @contrast-standard: 4.5;);
   
-  // line-height: 10rem;
-
   max-width: @max-width;
   width: 100%;
-  // .clearfix();
 
   p + & {
     margin-top: 1.5em;
@@ -28,14 +17,15 @@
   }
 });
 
-.headline-size(@size; @height;) {
+.headline-size(@size;) {
   font-size: @size;
-  line-height: @height*.42;
+  @height: unit(@size)*.38;
+  line-height: @height;
 }
 
-h1 { .headline-size(3em; 3;)}
-h2 { .headline-size(3em; 2.5;)}
-h3 { .headline-size(2.5em; 2;)}
-h4 { .headline-size(2em; 1.5;)}
-h5 { .headline-size(1.5em; 1.25;)}
-h6 { .headline-size(1em; 1;)}
+h1 { .headline-size(3em)}
+h2 { .headline-size(2.4em)}
+h3 { .headline-size(1.8em)}
+h4 { .headline-size(1.2em)}
+h5 { .headline-size(1.1em)}
+h6 { .headline-size(1em)}
