@@ -1,22 +1,18 @@
 .button-elements({
+    .default(padding);
     .default(margin-bottom);
     .default(border);
     .default(border-radius);
     .default(font-size);
     .default(box-shadow);
+
+    @button-default: average(@main-background, @gray-lighter);
   
     display: inline;
-    .button-color(@action);
-    // padding: 0 .5rem .25rem .5rem;
-    // font-family: inherit;
-    font-size: 100%; 
+    .set-average(@semantic-colors);
+    .button-color(@average);
     width: 100%;
-    // .default(padding-left);
-    // .default(padding-right);
-    // .default(padding);
-    padding: @text-padding;
-    padding: @padding @padding*@golden-ratio;
-    line-height: 1;
+    // line-height: 1;
     text-align: center;
     vertical-align: middle;
     background-image: none;
@@ -26,10 +22,9 @@
     touch-action: manipulation;
     cursor: pointer;
     .no-user-select;
-    border: 1px solid transparent;
+    border: 1px solid @gray-dark;
     transform: scale(1);
     transition: .08s linear;
-    .make-buttons-for(@semantic-colors);
 
     &:focus {
       box-shadow: 0 1px 2px rgba(red(@gray-darker), green(@gray-darker), blue(@gray-darker), .5);
@@ -69,76 +64,72 @@
 
     .on-tablet({
       width: auto;
-      margin-right: @padding;
+      margin-right: 1ch;
 
       &:last-child {
         margin-right: 0;
       }
     });
+
+    each(@semantic-color-names, {
+      @color: @@value;
+      &.@{value} { .button-color(@color);}
+    });
 });
-  
-.make-buttons-for(@colors) {
-    // make buttons for a list of color variable names
-    // buttons will use variable names as class names
-  
-    @length: length(@colors);
-  
-    .make-button();
-  
-    .make-button(@index:1) when (@index <= @length) {
-      @color-name: extract(@colors, @index);
-      @color: @@color-name;
-  
-      &.@{color-name} { .button-color(@color);}
-  
-      .make-button(@index + 1);
-    }
-}
 
 .button-color(@color; @cr: 9;) {
-    @button-bg: @color;
 
-    & when (@color = @highlight) 
-        or (@color = @warning) 
-        or (@color = @accent)
-        or (@color = @info) {
-      .colorize(@button-bg; @cr;);
-      .contrast(@button-bg; @cr/4; border-color; shade;);
-      &:focus {
-        background-color: lighten(@button-bg, 16%);
-        .contrast(@button-bg; @cr/6; border-color; shade;);
+  .set-button-tone(@button-bg) {
+    .set-contrast-ratio(@button-bg, white);
+
+    .set() when (@contrast-ratio >= 3.3) {
+      @button-tone: white;
+    }
+
+    .set() when (@contrast-ratio < 3.3) {
+      @button-tone: black;
+    }
+
+    .set();
+  }
+  
+  .set-button-tone(@color);
+  .contrast(@color; @cr/3; border-color; shade;);
+
+  & when (@button-tone = white) {
+    .colorize(@color; @cr; @mode: tint;);
+
+    &:focus {
+      .contrast-fill(@color; 1.6; @mode: tint;);
+      .colorize(@fill; @cr; @mode: tint;);
+    }
+
+    &:active {
+      .contrast-fill(@color; 1.15; @mode: shade;);
+      .colorize(@fill; @cr; @mode: tint;);
+    }
+  }
+
+  & when (@button-tone = black) {
+    .colorize(@color; @cr; @mode: shade;);
+
+    &:focus {
+      .contrast-fill(@color; 1.6; @mode: tint;);
+      & when (luma(@fill) > 94%) {
+        @darker: average(@color, @fill);
+        .colorize(@darker; @cr; @mode: shade;);
       }
-      &:active {
-        .set-lumafix(@button-bg; @gray;);
-        .colorize(darken(@button-bg, 12%); @cr*.6);
-        .contrast(@button-bg; @cr/3*.6; border-color; shade;);
-      }
-    }
 
-    & when (@color = @action) 
-        or (@color = @reaction) 
-        or (@color = @alternate)
-        or (@color = @success)
-        or (@color = @failure) {
-          .invert-text-against(@button-bg; @cr/2;);
-          .contrast(@button-bg; @cr/3; border-color; shade;);
-          &:focus {
-            .invert-text-against(@button-bg; @cr/4;);
-            .set-lumafix(@button-bg; @gray-light; @strength: 75%;);
-            background-color: @lumafix;
-            .contrast(@button-bg; @cr/4; border-color; shade;);
-          }
-          &:active {
-            .invert-text-against(@button-bg; @cr*.6);
-            .contrast(@button-bg; @cr*2*.8; border-color; shade;);
-          }
+      & when (luma(@fill) <= 94%) {
+        .colorize(@fill; @cr; @mode: shade;);
+      }  
     }
-
-    // .button-borders(@button-bg);
-
-    & when (luma(@color) < 10%) {
-      color: white;
+  
+    &:active {
+      .contrast-fill(@color; 1.15; @mode: shade;);
+      .colorize(@fill; @cr; @mode: shade;);
     }
+  }
 }
 
 .button-elements({

@@ -1,11 +1,9 @@
 .jigsaw(@base: @base-color; @scale: 1;) {
     @font-size: 20px;
 
-    .set-tone(@base);
-    @c-color: mix(@base, @tone, 50%);
-    @fg-base: @c-color;
-    .contrast-fill(@base; 1.1;);
+    .contrast-fill(@base; 1.2;);
     @bg-base: @fill;
+    @fg-base: @base;
   
     @fg-red: round(red(@fg-base));
     @fg-green: round(green(@fg-base));

@@ -2,11 +2,12 @@
 // these rules generate a lot of CSS but cover tons of HTML edge cases
 
 .inline-elements({
-  each(@semantic-colors, { &.@{value} { .color-text(@@value);};});
+  .default(max-width);
+  each(@semantic-color-names, { &.@{value} { .color-text(@@value);};});
 });
 
 .block-level-elements({
-  each(@semantic-colors, { &.@{value} { .colorize(@@value);};});
+  each(@semantic-color-names, { &.@{value} { .colorize(@@value);};});
 
   .semantic-classes({
       .default(padding);
