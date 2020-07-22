@@ -1,8 +1,14 @@
 textarea {
     .default(font-size);
     .default(line-height);
-    .default(padding);
     .default(font-family);
     .default(margin-bottom);
-    .contrast(@main-background);
+    .default(border);
+    .default(border-radius);
+    .default(padding);
+    .contrast(@main-background; 9;);
+
+    &:focus {
+        box-shadow: 0 0 2px @highlight;
+    }
 }

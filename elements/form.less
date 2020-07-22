@@ -3,8 +3,16 @@ form {
 }
 
 input {
+    .default(font-family);
+    .default(font-size);
     .default(line-height);
+    .default(border);
+    .default(border-radius);
+
+    .contrast(@main-background; 9;);
+    padding: @padding;
+
     &:focus {
-        border-color: @action;
+        box-shadow: 0 0 2px @highlight;
     }
 }
