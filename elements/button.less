@@ -100,7 +100,6 @@
     // .colorize(@color; @cr; @mode: tint;);
     color: white;
     background: @color;
-    .pattern(charlie-brown; @color;);
 
     &:focus {
       .contrast-fill(@color; 1.5; @mode: tint;);
@@ -125,13 +124,11 @@
       & when (luma(@fill) > 94%) {
         @darker: average(@color, @fill);
         .colorize(@darker; @cr; @mode: shade;);
-        .pattern(charlie-brown; @color;);
         
       }
 
       & when (luma(@fill) <= 94%) {
         .colorize(@fill; @cr; @mode: shade;);
-        .pattern(charlie-brown; @color;);
       }  
     }
   
