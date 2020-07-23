@@ -1,7 +1,7 @@
 body {
     background-color: @background;
     .contrast(@background);
-    .pattern(bamboo);
+    // .pattern(bamboo);
     background-attachment: fixed;
     padding-top: @nav-height + @gutter;
     -webkit-overflow-scrolling: touch;
@@ -31,16 +31,5 @@ body {
       .default(font-size);
       .default(line-height);
     });
-
-    &:after {
-      .default(padding);
-      width: 100px;
-      .set-rep-color(blue; @turbo;);
-      border: 1px solid black;
-      
-      @content: @rep-color-number;
-      content: "@{content}";
-      .colorize(@rep-color);
-    }
   }
   

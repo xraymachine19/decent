@@ -10,7 +10,7 @@
 @import (reference) "colors/turbo";
 // TODO: add some sort of color palette feature
 @import "icons";
-@import (reference) "patterns"; 
+// @import (reference) "patterns"; 
 @import (reference) "mixins/mixins";
 
 // css output
@@ -72,7 +72,7 @@
 }
 
 .icon {
-    @width: 32px;
+    @width: @line-height;
     @spacer: 222px;
 
     float: left;
@@ -83,7 +83,9 @@
     padding: @padding;
     margin: @padding;
     margin-right: @spacer;
+    background: transparent;
     background-repeat: no-repeat;
+    color: @action;
 
     &:after {
         width: @spacer;
