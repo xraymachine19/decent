@@ -8,6 +8,8 @@
 @import (reference) "colors/semantic";
 @import (reference) "colors/grays";
 @import (reference) "colors/turbo";
+// TODO: add some sort of color palette feature
+@import "icons";
 @import (reference) "patterns"; 
 @import (reference) "mixins/mixins";
 
@@ -36,6 +38,7 @@
 @import "elements/code";
 @import "elements/blockquote";
 @import "elements/textarea";
+// TODO: support all HTML elements
 
 // add any other Less/CSS here
 
@@ -65,5 +68,32 @@
         @color: mix(@base-color, @tone, 75%);
         .colorize(@color);
         padding: @text-padding;
+    }
+}
+
+.icon {
+    @width: 32px;
+    @spacer: 222px;
+
+    float: left;
+    display: block;
+    position: relative;
+    width: @width;
+    height: @width;
+    padding: @padding;
+    margin: @padding;
+    margin-right: @spacer;
+    background-repeat: no-repeat;
+
+    &:after {
+        width: @spacer;
+        font-size: 85%;
+        position: absolute;
+        bottom: 0;
+        left: @width + 10px;
+    }
+
+    &:last-child {
+        .clearfix();
     }
 }

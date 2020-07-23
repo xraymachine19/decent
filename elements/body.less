@@ -31,5 +31,16 @@ body {
       .default(font-size);
       .default(line-height);
     });
+
+    &:after {
+      .default(padding);
+      width: 100px;
+      .set-rep-color(blue; @turbo;);
+      border: 1px solid black;
+      
+      @content: @rep-color-number;
+      content: "@{content}";
+      .colorize(@rep-color);
+    }
   }
   
