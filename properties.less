@@ -1,4 +1,8 @@
-// this is mostly a concept file
+// All CSS properties have a corresponding variable here
+// Use with '.default(property-name)' to invoke default properties
+
+// eg '.default(padding);' is equivalent to 'padding: @padding;'
+
 
 @test: 'test';
 
@@ -22,7 +26,7 @@
 @background-origin: padding-box; // Specifies the positioning area of the background images.
 @background-position: 0% 0%; // Defines the origin of a background image.
 @background-repeat: no-repeat; // Specify whether/how the background image is tiled.
-@background-size: @test; // Specifies the size of the background images.
+@background-size: auto; // Specifies the size of the background images.
 
 // Border Properties
 @border: @border-width @border-style @border-color; // Sets the width, style, and color for all four sides of an element's border.
@@ -36,9 +40,9 @@
 @border-image: none; // Specifies how an image is to be used in place of the border styles.
 @border-image-outset: 0; // Specifies the amount by which the border image area extends beyond the border box.
 @border-image-repeat: stretch; // Specifies whether the image-border should be repeated, rounded or stretched.
-@border-image-slice: @test; // Specifies the inward offsets of the image-border.
-@border-image-source: @test; // Specifies the location of the image to be used as a border.
-@border-image-width: @test; // Specifies the width of the image-border.
+@border-image-slice: 100%; // Specifies the inward offsets of the image-border.
+@border-image-source: none; // Specifies the location of the image to be used as a border.
+@border-image-width: 1; // Specifies the width of the image-border.
 @border-left: @border; // Sets the width, style, and color of the left border of an element.
 @border-left-color: @border-color; // Sets the color of the left border of an element.
 @border-left-style: @border-style; // Sets the style of the left border of an element.
@@ -59,52 +63,52 @@
 
 // Color Properties
 
-@color: @test; // Specify the color of the text of an element.
-@opacity: @test; // Specifies the transparency of an element.
+@color: @base-color; // Specify the color of the text of an element.
+@opacity: 1; // Specifies the transparency of an element.
 
 // Dimension Properties
-@height: @test; // Specify the height of an element.
-@max-height: @test; // Specify the maximum height of an element.
-@max-width: @test; // Specify the maximum width of an element.
-@min-height: @test; // Specify the minimum height of an element.
-@min-width: @test; // Specify the minimum width of an element.
-@width: @test; // Specify the width of an element.
+@height: auto; // Specify the height of an element.
+@max-height: none; // Specify the maximum height of an element.
+@max-width: none; // Specify the maximum width of an element.
+@min-height: 0; // Specify the minimum height of an element.
+@min-width: 0; // Specify the minimum width of an element.
+@width: auto; // Specify the width of an element.
 
 // Generated Content Properties
-@content: @test; // Inserts generated content.
-@quotes: @test; // Specifies quotation marks for embedded quotations.
-@counter-reset: @test; // Creates or resets one or more counters.
-@counter-increment: @test; // Increments one or more counter values.
+@content: normal; // Inserts generated content.
+@quotes: inherit; // Specifies quotation marks for embedded quotations.
+@counter-reset: none; // Creates or resets one or more counters.
+@counter-increment: none; // Increments one or more counter values.
 
 // Flexible Box Layout
-@align-content: @test; // Specifies the alignment of flexible container's items within the flex container.
-@align-items: @test; // Specifies the default alignment for items within the flex container.
-@align-self: @test; // Specifies the alignment for selected items within the flex container.
-@flex: @test; // Specifies the components of a flexible length.
-@flex-basis: @test; // Specifies the initial main size of the flex item.
-@flex-direction: @test; // Specifies the direction of the flexible items.
-@flex-flow: @test; // A shorthand property for the flex-direction and the flex-wrap properties.
-@flex-grow: @test; // Specifies how the flex item will grow relative to the other items inside the flex container.
-@flex-shrink: @test; // Specifies how the flex item will shrink relative to the other items inside the flex container.
-@flex-wrap: @test; // Specifies whether the flexible items should wrap or not.
-@justify-content: @test; // Specifies how flex items are aligned along the main axis of the flex container after any flexible lengths and auto margins have been resolved.
-@order: @test; // Specifies the order in which a flex items are displayed and laid out within a flex container.
+@align-content: stretch; // Specifies the alignment of flexible container's items within the flex container.
+@align-items: stretch; // Specifies the default alignment for items within the flex container.
+@align-self: auto; // Specifies the alignment for selected items within the flex container.
+@flex: 0 1 auto; // Specifies the components of a flexible length.
+@flex-basis: auto; // Specifies the initial main size of the flex item.
+@flex-direction: row; // Specifies the direction of the flexible items.
+@flex-flow: row nowrap; // A shorthand property for the flex-direction and the flex-wrap properties.
+@flex-grow: 0; // Specifies how the flex item will grow relative to the other items inside the flex container.
+@flex-shrink: 1; // Specifies how the flex item will shrink relative to the other items inside the flex container.
+@flex-wrap: nowrap; // Specifies whether the flexible items should wrap or not.
+@justify-content: flex-start; // Specifies how flex items are aligned along the main axis of the flex container after any flexible lengths and auto margins have been resolved.
+@order: 0; // Specifies the order in which a flex items are displayed and laid out within a flex container.
 
 // Font Properties
-@font: @test; // Defines a variety of font properties within one declaration.
+@font: @font-style @font-variant @font-weight @font-size @font-family; // Defines a variety of font properties within one declaration.
 @font-family: @font-family-sans-serif; // Defines a list of fonts for element.
-@font-size: @test; // Defines the font size for the text.
-@font-size-adjust: @test; // Preserves the readability of text when font fallback occurs.
-@font-stretch: @test; // Selects a normal, condensed, or expanded face from a font.
-@font-style: @test; // Defines the font style for the text.
-@font-variant: @test; // Specify the font variant.
-@font-weight: @test; // Specify the font weight of the text.
+@font-size: 20px; // Defines the font size for the text.
+@font-size-adjust: none; // Preserves the readability of text when font fallback occurs.
+@font-stretch: normal; // Selects a normal, condensed, or expanded face from a font.
+@font-style: normal; // Defines the font style for the text.
+@font-variant: normal; // Specify the font variant.
+@font-weight: normal; // Specify the font weight of the text.
 
 // List Properties
-@list-style: @test; // Defines the display style for a list and list elements.
-@list-style-image: @test; // Specifies the image to be used as a list-item marker.
-@list-style-position: @test; // Specifies the position of the list-item marker.
-@list-style-type: @test; // Specifies the marker style for a list-item.
+@list-style: @list-style-type @list-style-position @list-style-image; // Defines the display style for a list and list elements.
+@list-style-image: none; // Specifies the image to be used as a list-item marker.
+@list-style-position: outside; // Specifies the position of the list-item marker.
+@list-style-type: disc; // Specifies the marker style for a list-item.
 
 //Margin Properties
 @margin: 1em; // Sets the margin on all four sides of the element.
@@ -114,23 +118,23 @@
 @margin-top: @margin; // Sets the top margin of the element.
 
 //Multi-column Layout Properties
-@column-count: @test; // Specifies the number of columns in a multi-column element.
-@column-fill: @test; // Specifies how columns will be filled.
-@column-gap: @test; // Specifies the gap between the columns in a multi-column element.
-@column-rule: @test; // Specifies a straight line, or "rule", to be drawn between each column in a multi-column element.
-@column-rule-color: @test; // Specifies the color of the rules drawn between columns in a multi-column layout.
-@column-rule-style: @test; // Specifies the style of the rule drawn between the columns in a multi-column layout.
-@column-rule-width: @test; // Specifies the width of the rule drawn between the columns in a multi-column layout.
-@column-span: @test; // Specifies how many columns an element spans across in a multi-column layout.
-@column-width: @test; // Specifies the optimal width of the columns in a multi-column element.
-@columns: @test; // A shorthand property for setting column-width and column-count properties.
+@column-count: auto; // Specifies the number of columns in a multi-column element.
+@column-fill: balance; // Specifies how columns will be filled.
+@column-gap: @margin; // Specifies the gap between the columns in a multi-column element.
+@column-rule: @column-rule-width @column-rule-style @column-rule-color; // Specifies a straight line, or "rule", to be drawn between each column in a multi-column element.
+@column-rule-color: @border-color; // Specifies the color of the rules drawn between columns in a multi-column layout.
+@column-rule-style: @border-style; // Specifies the style of the rule drawn between the columns in a multi-column layout.
+@column-rule-width: @border-width; // Specifies the width of the rule drawn between the columns in a multi-column layout.
+@column-span: none; // Specifies how many columns an element spans across in a multi-column layout.
+@column-width: auto; // Specifies the optimal width of the columns in a multi-column element.
+@columns: @column-width @column-count; // A shorthand property for setting column-width and column-count properties.
 
 // Outline Properties
-@outline: @test; // Sets the width, style, and color for all four sides of an element's outline.
-@outline-color: @test; // Sets the color of the outline.
-@outline-offset: @test; // Set the space between an outline and the border edge of an element.
-@outline-style: @test; // Sets a style for an outline.
-@outline-width: @test; // Sets the width of the outline.
+@outline: @outline-width @outline-style @outline-color; // Sets the width, style, and color for all four sides of an element's outline.
+@outline-color: @border-color; // Sets the color of the outline.
+@outline-offset: 0; // Set the space between an outline and the border edge of an element.
+@outline-style: @border-style; // Sets a style for an outline.
+@outline-width: @border-width; // Sets the width of the outline.
 
 // Padding Properties
 @padding: 1rem; // Sets the padding on all four sides of the element.
@@ -140,9 +144,9 @@
 @padding-top: @padding; // Sets the padding to the top side of an element.
 
 //Print Properties
-@page-break-after: @test; // Insert a page breaks after an element.
-@page-break-before: @test; // Insert a page breaks before an element.
-@page-break-inside: @test; // Insert a page breaks inside an element.
+@page-break-after: auto; // Insert a page breaks after an element.
+@page-break-before: auto; // Insert a page breaks before an element.
+@page-break-inside: auto; // Insert a page breaks inside an element.
 
 //Table Properties
 @border-collapse: @test; // Specifies whether table cell borders are connected or separated.

@@ -1,7 +1,22 @@
 body {
     background-color: @background;
     .contrast(@background);
-    .pattern(bamboo);
+
+    & when (@randomness = true) {
+      .set-pattern() {
+        @var: `Math.random()`;
+        @length: length(@patterns-all);
+        @random: floor(@var*@length);
+        .pattern(extract(@patterns-all, @random));
+      }
+      .set-pattern();
+    }
+
+    & when (@randomness = false) {
+      .pattern(bamboo);
+    }
+
+    
     background-attachment: fixed;
     padding-top: @nav-height + @gutter;
     -webkit-overflow-scrolling: touch;
