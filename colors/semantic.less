@@ -25,24 +25,28 @@
 	.set-bases() when (@number >= 192) {
 		@reaction-base: extract(@turbo, @number - 128);
 		@alt-base: extract(@turbo, @number - @offset*2);
+		@alt-alt: extract(@turbo, 256 - @number + @offset*2);
 		@accent-base: extract(@turbo, @number - @offset);
 	}
 
 	.set-bases() when (@number > 128) and (@number < 192) {
 		@reaction-base: extract(@turbo, @number - 128);
 		@alt-base: extract(@turbo, @number - @offset*2);
+		@alt-alt: extract(@turbo, @number + @offset*2);
 		@accent-base: extract(@turbo, @number - @offset);
 	}
 
 	.set-bases() when (@number > 64) and (@number <= 128) {
 		@reaction-base: extract(@turbo, @number + 128);
 		@alt-base: extract(@turbo, @number + @offset*2);
+		@alt-alt: extract(@turbo, @number - @offset*2);
 		@accent-base: extract(@turbo, @number + @offset);
 	}
 
 	.set-bases() when (@number <= 64) {
 		@reaction-base: extract(@turbo, @number + 128);
 		@alt-base: extract(@turbo, @number + @offset*2);
+		@alt-alt: extract(@turbo, 256 + @number - @offset*2);
 		@accent-base: extract(@turbo, @number + @offset);
 
 	}
@@ -75,13 +79,49 @@
 	// alternate is meant to be an alternate color to action and reaction
 	// it can sometimes make a good stand-in for other colors in the scheme 
 
-    .set-alternate-final() {
-        .set-lumafix(@alt-base; @strength: 67%;);
-        @alternate: @lumafix;
+    // .set-alternate-final() {
+    //     .set-lumafix(@alt-base; @strength: 67%;);
+    //     @alternate: @lumafix;
         
         
-    }
-    .set-alternate-final();
+    // }
+	// .set-alternate-final();
+
+
+	.set-distance-info() {
+		.set-distance(@alt-base, @info-base);
+		@distance-info: @distance;
+	}
+
+	.set-distance-accent() {
+		.set-distance(@alt-base, @accent-base);
+		@distance-accent: @distance;
+	}
+
+	.set-alternate-base() when (@distance-info < 70) or (@distance-accent < 70) {
+		@alternate-base: @alt-alt;
+		@alternate-was-alternate: true;
+	}
+
+	.set-alternate-base() when (default()) {
+		@alternate-base: @alt-base;
+		@alternate-was-alternate: false;
+	}
+
+	// .set-alternate-final() when (@alternate-was-alternate = true) {
+	// 	.set-lumafix(@alternate-base; @strength: 5%;);
+	// 	@alternate: mix(@alternate-base, @lumafix, 5%);
+	// }
+
+	.set-alternate-final() when (default()) {
+		.set-lumafix(@alternate-base; @strength: 67%;);
+		@alternate: @lumafix;
+	}
+
+	.set-distance-info();
+	.set-distance-accent();
+	.set-alternate-base();
+	.set-alternate-final();
 }
 
 .set-alternate() when (@base-color = white) or (@base-color = black) { @alternate: average(white, black);}
@@ -209,12 +249,12 @@
 	}
 
 	.set-failure-final() when (luma(@base-color) > 50%) {
-		.set-lumafix(@failure-base, @base-color, 75%);
+		.set-lumafix(@failure-base, @base-color, 60%);
 		@failure: @lumafix;
 	}
 
 	.set-failure-final() when (default()) {
-		.set-lumafix(@failure-base, @base-color, 25%);
+		.set-lumafix(@failure-base, @base-color, 30%);
 		@failure: @lumafix;
 	}
 
