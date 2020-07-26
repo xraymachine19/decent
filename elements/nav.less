@@ -133,7 +133,7 @@ nav {
 
   > ul {
     float: right;
-    line-height: @height;
+    line-height: @nav-height;
     padding-left: 0;
     margin-bottom: 0 !important;
     
@@ -146,16 +146,21 @@ nav {
       
 
       a {
+        &:extend(.button all);
+        .button-color(darken(@nav-background, 10%)) !important;
         display: block;
+        font-size: 18px !important;
         height: auto;
         color: inherit;
-        padding-left: @padding;
-        padding-right: @padding;
+        padding: .25rem .62rem !important;
         background: darken(@nav-background, 5%);
-        margin: @padding/4;
-        line-height: @nav-height - 1;
+        margin: 0 @padding/4 !important;
+        line-height: @padding*4;
         .default(border-radius);
-        // box-shadow: inset @box-shadow;
+        position: relative;
+        top: -2px;
+        box-shadow: inset @box-shadow !important;
+        border-width: 0 !important;
       }
     }
   }
@@ -179,12 +184,6 @@ nav {
     margin-bottom: 0 !important;
     padding: 0;
     color: inherit;
-
-    a {
-      display:inline-block;
-      padding: 0 @padding/2;
-      line-height: @nav-height !important;
-    }
   }
 
   .no-user-select();

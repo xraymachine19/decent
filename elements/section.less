@@ -3,9 +3,16 @@ section {
 
     padding: @padding/2;
     .colorize(@main-background);
-    .set-lumafix(@main-background; @gray-darker;);
-    border: 0 solid @lumafix;
+    .set-lumafix(@main-background; @gray-lighter;);
+    .colorize(@lumafix);
+    border: 0 solid @gray-dark;
     margin-bottom: @gutter;
+
+
+    @mix-base: 96%;
+    @add-base: luma(@base-color)/25;
+    @bg: lighten(black, (@mix-base + @add-base));
+    .colorize(@bg);
 
     .on-large-phone({
         padding: @padding;
