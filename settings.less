@@ -44,13 +44,12 @@
 
 .random-base-color();
 
-// @base-color: rgb(164, 187, 176); // @action and @info are very close in this scheme
 @debug: false;
 @randomness: true;
 
 // css attribute defaults
 @background-color: average(@action, @gray-darker);
-@main-background: white; // background of 'main' element
+@main-background: lighten(black, (98% + luma(@base-color)/50)); // background of 'main' element
 @line-height: @font-size*@golden-ratio;
 @border-radius: 8px;
 // @font-size: 20px;
@@ -63,8 +62,9 @@
 @sans-serif: true;
 
 // design variables
-@ambient: overlay(white, @highlight);
+@ambient: overlay(@gray-lighter, @base-color);
 @golden-ratio: 1.618;
+@highlight-mode: auto; // auto or a color, eg. cyan, yellow, magenta
 
 // nav settings
 @nav-height: 3rem;

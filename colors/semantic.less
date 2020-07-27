@@ -5,9 +5,9 @@
 .set-info();
 .set-success();
 .set-failure();
+.set-highlight();
 .set-accent();
 .set-alternate();
-.set-highlight();
 .set-default();
 
 .set-color-bases(@color: @base-color;) {
@@ -25,28 +25,24 @@
 	.set-bases() when (@number >= 192) {
 		@reaction-base: extract(@turbo, @number - 128);
 		@alt-base: extract(@turbo, @number - @offset*2);
-		@alt-alt: extract(@turbo, 256 - @number + @offset*2);
 		@accent-base: extract(@turbo, @number - @offset);
 	}
 
 	.set-bases() when (@number > 128) and (@number < 192) {
 		@reaction-base: extract(@turbo, @number - 128);
 		@alt-base: extract(@turbo, @number - @offset*2);
-		@alt-alt: extract(@turbo, @number + @offset*2);
 		@accent-base: extract(@turbo, @number - @offset);
 	}
 
 	.set-bases() when (@number > 64) and (@number <= 128) {
 		@reaction-base: extract(@turbo, @number + 128);
 		@alt-base: extract(@turbo, @number + @offset*2);
-		@alt-alt: extract(@turbo, @number - @offset*2);
 		@accent-base: extract(@turbo, @number + @offset);
 	}
 
 	.set-bases() when (@number <= 64) {
 		@reaction-base: extract(@turbo, @number + 128);
 		@alt-base: extract(@turbo, @number + @offset*2);
-		@alt-alt: extract(@turbo, 256 + @number - @offset*2);
 		@accent-base: extract(@turbo, @number + @offset);
 
 	}
@@ -76,17 +72,10 @@
 .set-reaction() when (@base-color = black) { @reaction: white;}
 
 .set-alternate() {
-	// alternate is meant to be an alternate color to action and reaction
-	// it can sometimes make a good stand-in for other colors in the scheme 
 
-    // .set-alternate-final() {
-    //     .set-lumafix(@alt-base; @strength: 67%;);
-    //     @alternate: @lumafix;
-        
-        
-    // }
-	// .set-alternate-final();
-
+	.set-lumafix(@alt-alt-base; @strength: 50%);
+	@alt-alt-base: spin(@alt-base, 180);
+	@alt-alt: @lumafix;
 
 	.set-distance-info() {
 		.set-distance(@alt-base, @info-base);
@@ -98,22 +87,17 @@
 		@distance-accent: @distance;
 	}
 
-	.set-alternate-base() when (@distance-info < 70) or (@distance-accent < 70) {
-		@alternate-base: @alt-alt;
-		@alternate-was-alternate: true;
-	}
-
-	.set-alternate-base() when (default()) {
+	.set-alternate-base() {
 		@alternate-base: @alt-base;
 		@alternate-was-alternate: false;
 	}
 
-	// .set-alternate-final() when (@alternate-was-alternate = true) {
-	// 	.set-lumafix(@alternate-base; @strength: 5%;);
-	// 	@alternate: mix(@alternate-base, @lumafix, 5%);
-	// }
+	.set-alternate-base() when (@distance-info < 100) or (@distance-accent < 100) {
+		@alternate-base: @alt-alt;
+		@alternate-was-alternate: true;
+	}
 
-	.set-alternate-final() when (default()) {
+	.set-alternate-final() {
 		.set-lumafix(@alternate-base; @strength: 67%;);
 		@alternate: @lumafix;
 	}
@@ -176,7 +160,7 @@
 
 	.set-warning-final() when (default()) {
 		.set-lumafix(@warning-base; @strength: 15%;);
-		@warning: mix(@warning-base, @lumafix, 15%);
+		@warning: @lumafix;
 	}
 
 	.set-distance-action();
@@ -202,7 +186,7 @@
 		@distance-reaction: @distance;
 	}
 
-	.set-success-base() when (@distance-action < 150) or (@distance-reaction < 150) {
+	.set-success-base() when (@distance-action < 100) or (@distance-reaction < 100) {
 		@success-base: @lightgreen;
 	}
 
@@ -211,8 +195,8 @@
 	}
 
 	.set-success-final() {
-		.set-lumafix(@success-base);
-		@success:mix(@lumafix, @success-base, 20%);
+		.set-lumafix(@success-base, @strength: 20%);
+		@success: @lumafix;
 	}
 
 	.set-distance-action();
@@ -270,6 +254,12 @@
 	// highlight is a bright color meant to evoke a highlighter and print text
 	// depending on the base color, it can be cyan, magenta or yellow
 
+	// implicitly supports an "auto" feature in @highlight-color
+
+	.set-highlight-base() when (red(@base-color) > 0) {
+		@highlight-base: cyan;
+	}
+
 	.set-highlight-base() when (red(@base-color) > 85) {
 		@highlight-base: magenta;
 	}
@@ -278,13 +268,13 @@
 		@highlight-base: yellow;
 	}
 
-	.set-highlight-base() when (default()) {
-		@highlight-base: cyan;
+	.set-highlight-base() when (isColor(@highlight-mode)) {
+		@highlight-base: @highlight-mode;
 	}
 
 	.set-highlight-final() {
-		.set-lumafix(@highlight-base,  @base-color, luma(@base-color)/2);
-		@highlight:overlay(@lumafix, white);
+		.set-lumafix(@highlight-base,  @base-color, luma(@base-color));
+		@highlight: @lumafix;
 	}
 
 	.set-highlight-base();
@@ -295,11 +285,51 @@
 	// accent is meant to be used sparingly with @action, @reaction and @alternate 
 	// its extra saturation and lightness is good for drawing attention or balancing designs
 
-	.set-accent-final() {
-		.set-lumafix(@accent-base);
-		@accent:lighten(saturate(mix(@lumafix, @accent-base, 20%), 10%), 5%);
+	// .set-accent-final() {
+	// 	.set-lumafix(@accent-base);
+	// 	@accent:lighten(saturate(mix(@lumafix, @accent-base, 20%), 10%), 5%);
+	// }
+	// .set-accent-final();
+
+
+	.set-lumafix(@alt-acc-base; @strength: 50%);
+	@alt-acc-base: spin(@accent-base, 180);
+	@alt-acc: @lumafix;
+
+	.set-distance-warning() {
+		.set-distance(@accent-base, @warning-base);
+		@distance-warning: @distance;
 	}
+
+	.set-distance-highlight() {
+		.set-distance(@accent-base, @highlight-base);
+		@distance-highlight: @distance;
+	}
+
+	.set-new-accent-base() {
+		@new-accent-base: @accent-base;
+		@accent-was-alternate: false;
+	}
+
+	.set-new-accent-base() when (@distance-warning < 150) or (@distance-highlight < 150) {
+		@new-accent-base: @alt-acc;
+		@accent-was-alternate: true;
+	}
+
+	.set-accent-final() {
+		@bright-accent-base:lighten(saturate(mix(@lumafix, @new-accent-base, 20%), 10%), 10%);
+		.set-lumafix(@bright-accent-base; @strength: 20%;);
+		@accent: @lumafix;
+	}
+
+	.set-distance-warning();
+	.set-distance-highlight();
+	.set-new-accent-base();
 	.set-accent-final();
+
+
+
+
 }
 
 .set-default() {
