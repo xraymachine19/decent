@@ -1,4 +1,5 @@
 .headline-elements({
+  .default(font-family);
   font-weight: bold;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -19,13 +20,13 @@
 
 .headline-size(@size;) {
   font-size: @size;
-  @height: unit(@size)*.38;
+  @height: unit(@size)*.5;
   line-height: @height;
 }
 
-h1 { .headline-size(3em)}
-h2 { .headline-size(2.4em)}
-h3 { .headline-size(1.8em)}
+h1 { .headline-size(2.6em)}
+h2 { .headline-size(1.8em)}
+h3 { .headline-size(1.4em)}
 h4 { .headline-size(1.2em)}
 h5 { .headline-size(1.1em)}
 h6 { .headline-size(1em)}

@@ -1,38 +1,43 @@
 .set-grays();
 .set-grays(@color: @base-color) {
-    @gray-base: mix(desaturate(@color, 80%), #515151, 75%);
-    @gray-step: 20%;
-  
-    @gray-bases:  @gray-lightest-base,
-                  @gray-lighter-base,
-                  @gray-light-base,
-                  @gray-base,
-                  @gray-dark-base,
-                  @gray-darker-base,
-                  @gray-darkest-base,
-                  darken(@gray-darkest-base, 3%); // placeholder for overflow
-  
-    @gray-light-base:             lighten(@gray-base; @gray-step);
-    @gray-lighter-base:           lighten(@gray-base; @gray-step*2);
-    @gray-lightest-base:          lighten(@gray-base; @gray-step*4);
-  
-    @gray-dark-base:              darken(@gray-base; @gray-step);
-    @gray-darker-base:            darken(@gray-base; @gray-step*2);
-    @gray-darkest-base:           darken(@gray-base; @gray-step*4);
-  
-    .set-gray-shift() when (default()) {
-      @gray-shift: 2;
-      // partially deprecated feature
-      // different gray bases can still be used to tweak
-    }
-  
-    .set-gray-shift();
-  
-    @gray-lighter:      extract(@gray-bases; 0 + @gray-shift);
-    @gray-light:        extract(@gray-bases; 1 + @gray-shift);
-    @gray-medium:       extract(@gray-bases; 2 + @gray-shift);
-    @gray:              extract(@gray-bases; 2 + @gray-shift);
-    @gray-dark:         extract(@gray-bases; 3 + @gray-shift);
-    @gray-darker:       extract(@gray-bases; 4 + @gray-shift);
+  @gray-base: desaturate(@color, 90%);
+  @gray-medium: @gray-base;
+  @gray: @gray-base;
+
+  .set-gray-lighter() {
+    .set-contrast-ratio(@gray-base, white);
+    .contrast-fill(@gray-base; @contrast-ratio*.88; @mode: tint;);
+    @gray-lighter: @fill;
   }
-  
+
+  .set-gray-darker() {
+    .set-contrast-ratio(@gray-base, black);
+    .contrast-fill(@gray-base; @contrast-ratio*.64; @mode: shade;);
+    @gray-darker: @fill;
+  }
+
+  .set-gray-light() {
+    @gray-light: average(@gray-base, @gray-lighter);
+  }
+
+  .set-gray-dark() {
+    @gray-dark: average(@gray-base, @gray-darker);
+  }
+
+  .set-gray-lighter();
+  .set-gray-light();
+  .set-gray-darker();
+  .set-gray-dark();
+
+  @grey-lighter: @gray-lighter;
+  @grey-light: @gray-light;
+  @grey-medium: @gray-medium;
+  @grey: @gray;
+  @grey-dark: @gray-dark;
+  @grey-darker: @gray-darker;
+}
+
+each(@gray-names, {
+  @color: @@value;
+  .@{value} { padding: 1rem;}
+});

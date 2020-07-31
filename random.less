@@ -1,0 +1,67 @@
+.random-fontfamily() when (@randomness = true) {
+    
+    @potentials:    @font-family-serif,
+                    @font-family-sans-serif,
+                    @font-family-monospace;
+
+    @length: length(@potentials);
+
+    @random: `Math.random()`;
+    @ff: floor(@length*@random);
+    @font-family-random: extract(@potentials, @ff);
+}
+
+
+.random-background() when (@randomness = true) {
+    
+    @potentials: @action, @reaction, average(@action, @gray-darker), @gray-darker, @gray-lighter,
+     @info, @accent, average(@reaction, @gray-darker), average(@alternate, @gray-darker), @alternate
+    @highlight, @action, @action, @action, @action;
+
+    @length: length(@potentials);
+
+    @random: `Math.random()`;
+    @bg: floor(@length*@random);
+    @background-random: extract(@potentials, @bg);
+}
+
+
+.random-base-color() when (@randomness = true) {
+    @randomColor: `Math.floor(Math.random()*16777215).toString(16)`;
+    @escape: e(@randomColor);
+    @base-color: color('#@{escape}');
+}
+
+.set-random-color() {
+    @randomColor: `Math.floor(Math.random()*16777215).toString(16)`;
+    @escape: e(@randomColor);
+    @random-color: color('#@{escape}');
+}
+
+.random-padding() when (@randomness = true) {
+    @randomColor: `Math.random()`;
+    @plusPadding: @randomColor*15px;
+    @basePadding: 5px;
+    @padding: @plusPadding + @basePadding;
+}
+
+.random-margin() when (@randomness = true) {
+    @randomColor: `Math.random()`;
+    @plusMargin: @randomColor*30px;
+    @baseMargin: 10px;
+    @margin: @plusMargin + @baseMargin;
+}
+
+.random-textmeasure() when (@randomness = true) {
+    @randomColor: `Math.random()`;
+    @plustextmeasure: @randomColor*20;
+    @basetextmeasure: 40;
+    @text-measure: @plustextmeasure + @basetextmeasure;
+}
+
+.random-fontsize() when (@randomness = true) {
+    @randomfontsize: `Math.random()`;
+    @plusfontsize: floor(@randomfontsize*10);
+    @basefontsize: 16;
+    @font-size-random: @basefontsize + @plusfontsize;
+}

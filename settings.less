@@ -1,59 +1,14 @@
 // basics
-.random-base-color() when (@randomness = true) {
-    @randomColor: `Math.floor(Math.random()*16777215).toString(16)`;
-    @escape: e(@randomColor);
-    @base-color: color('#@{escape}');
-}
-
-.random-padding() when (@randomness = true) {
-    @randomColor: `Math.random()`;
-    @plusPadding: @randomColor*15px;
-    @basePadding: 5px;
-    @padding: @plusPadding + @basePadding;
-}
-
-.random-margin() when (@randomness = true) {
-    @randomColor: `Math.random()`;
-    @plusMargin: @randomColor*30px;
-    @baseMargin: 10px;
-    @margin: @plusMargin + @baseMargin;
-}
-
-.random-textmeasure() when (@randomness = true) {
-    @randomColor: `Math.random()`;
-    @plustextmeasure: @randomColor*20;
-    @basetextmeasure: 40;
-    @text-measure: @plustextmeasure + @basetextmeasure;
-}
-
-.random-fontsize() when (@randomness = true) {
-    @randomfontsize: `Math.random()`;
-    @plusfontsize: floor(@randomfontsize*10);
-    @basefontsize: 15;
-    @font-size-random: @basefontsize + @plusfontsize;
-}
-
-.random-padding();
-// .random-margin();
-.random-textmeasure();
-.random-fontsize();
-
-.random-base-color() when (default()) {
-    @base-color: tan;
-}
-
-.random-base-color();
 
 @debug: false;
 @randomness: true;
 
+.set-random-color();
+@base-color: @random-color;
+
 // css attribute defaults
-@background-color: average(@action, @gray-darker);
 @main-background: lighten(black, (98% + luma(@base-color)/50)); // background of 'main' element
-@line-height: @font-size*@golden-ratio;
-@border-radius: 8px;
-// @font-size: 20px;
-@font-size: @font-size-random*1px;
+
 
 // font stack settings TODO: better fonts 
 // TODO: headline font settings
@@ -62,26 +17,20 @@
 @sans-serif: true;
 
 // design variables
-@ambient: overlay(@gray-lighter, @base-color);
+@contrast-standard: 4.5; // 4.5 is level II, 7 is level III per WCAG standards for body text
+@ambient: overlay(@base-color, white);
 @golden-ratio: 1.618;
-@highlight-mode: auto; // auto or a color, eg. cyan, yellow, magenta
-
-// nav settings
-@nav-height: 3rem;
-@sticky-nav: true;
-@nav-background: @action;
+@shadow-color: @gray-darker;
+@pi: 3.14159;
+@highlight-mode: auto; // auto or a bright color, eg. cyan, yellow, magenta
 
 // layout settings
 // TODO: make this its own file
-// @text-measure: 55; // an estimate
+@text-measure: 55; // an estimate
 @text-padding: .18em .2em*@golden-ratio .22em .2em*@golden-ratio;
-// @padding: 1rem;
-@margin: @padding*@golden-ratio;
-@max-width: @text-measure * 1rem;
-@margin-bottom: @margin;
 @column-width: @max-width;
 @gutter: @margin*@golden-ratio;
-@page-width: @column-width + @gutter + @aside-width;
+@page-width: @column-width + @gutter + @aside-width; // TODO: deprecate old layout vars
 @aside-width: 36rem;
 
 // TODO: animation settings/defaults
@@ -105,21 +54,33 @@
 
 // fonts are here for right now
 
-@font-family-monospace: "SFMono-Regular",
-Consolas,
-"Liberation Mono",
-Menlo,
-Courier,
-monospace;
+@font-family-monospace: 
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
 
-@font-family-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+@font-family-serif: 
+    Constantia, 
+    "Lucida Bright", 
+    Lucidabright, 
+    "Lucida Serif", 
+    Lucida, 
+    "DejaVu Serif", 
+    "Bitstream Vera Serif", 
+    "Liberation Serif", 
+    Georgia,
+    serif;
 
-@font-family-sans-serif:  "Helvetica Neue",
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Oxygen-Sans,
-                Ubuntu,
-                Cantarell,
-                sans-serif;
+@font-family-sans-serif:  
+    "Helvetica Neue",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    sans-serif;

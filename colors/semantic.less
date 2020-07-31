@@ -115,14 +115,50 @@
 	// info is a light blue or teal 
 	// it indicates innocuous, low-urgency information
 
-	@info-base: extract(@turbo, 64);
+	// @info-base: extract(@turbo, 64);
 
-	.set-info-final() {
-		.set-lumafix(@info-base, @base-color, 50%);
-		@info:@lumafix;
+	// .set-info-final() {
+	// 	.set-lumafix(@info-base, @base-color, 50%);
+	// 	@info:@lumafix;
+	// }
+
+	// .set-info-final();
+
+
+	@blue: extract(@turbo, 64);
+	@teal: extract(@turbo, 74);
+
+	.set-distance-action() {
+		.set-distance(@blue, @action-base);
+		@distance-action: @distance;
 	}
 
+	.set-distance-accent() {
+		.set-distance(@blue, @accent-base);
+		@distance-accent: @distance;
+	}
+
+	.set-info-base() when (@distance-action < 100) or (@distance-accent < 100) {
+		@info-base: @teal;
+		@info-was-teal: true;
+	}
+
+	.set-info-base() when (default()) {
+		@info-base: @blue;
+		@info-was-teal: false;
+	}
+
+	.set-info-final() {
+		.set-lumafix(@info-base; @strength: 15%;);
+		@info: @lumafix;
+	}
+
+	.set-distance-action();
+	.set-distance-accent();
+	.set-info-base();
 	.set-info-final();
+
+
 }
 
 .set-warning() {
@@ -159,7 +195,7 @@
 	}
 
 	.set-warning-final() when (default()) {
-		.set-lumafix(@warning-base; @strength: 15%;);
+		.set-lumafix(@warning-base; @strength: 10%;);
 		@warning: @lumafix;
 	}
 
@@ -257,15 +293,15 @@
 	// implicitly supports an "auto" feature in @highlight-color
 
 	.set-highlight-base() when (red(@base-color) > 0) {
-		@highlight-base: cyan;
-	}
-
-	.set-highlight-base() when (red(@base-color) > 85) {
 		@highlight-base: magenta;
 	}
 
+	.set-highlight-base() when (red(@base-color) > 85) {
+		@highlight-base: cyan;
+	}
+
 	.set-highlight-base() when (red(@base-color) > 170) {
-		@highlight-base: yellow;
+		@highlight-base: #ffff00;
 	}
 
 	.set-highlight-base() when (isColor(@highlight-mode)) {
@@ -273,7 +309,7 @@
 	}
 
 	.set-highlight-final() {
-		.set-lumafix(@highlight-base,  @base-color, luma(@base-color));
+		.set-lumafix(@highlight-base, white, 50% + luma(@base-color)*.35);
 		@highlight: @lumafix;
 	}
 
@@ -284,13 +320,6 @@
 .set-accent() {
 	// accent is meant to be used sparingly with @action, @reaction and @alternate 
 	// its extra saturation and lightness is good for drawing attention or balancing designs
-
-	// .set-accent-final() {
-	// 	.set-lumafix(@accent-base);
-	// 	@accent:lighten(saturate(mix(@lumafix, @accent-base, 20%), 10%), 5%);
-	// }
-	// .set-accent-final();
-
 
 	.set-lumafix(@alt-acc-base; @strength: 50%);
 	@alt-acc-base: spin(@accent-base, 180);
@@ -317,7 +346,7 @@
 	}
 
 	.set-accent-final() {
-		@bright-accent-base:lighten(saturate(mix(@lumafix, @new-accent-base, 20%), 10%), 10%);
+		@bright-accent-base:lighten(saturate(mix(@lumafix, @new-accent-base, 20%), 20%), 10%);
 		.set-lumafix(@bright-accent-base; @strength: 20%;);
 		@accent: @lumafix;
 	}

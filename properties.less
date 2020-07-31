@@ -36,7 +36,7 @@
 @border-bottom-right-radius: @border-radius; // Defines the shape of the bottom-right border corner of an element.
 @border-bottom-style: @border-style; // Sets the style of the bottom border of an element.
 @border-bottom-width: @border-width; // Sets the width of the bottom border of an element.
-@border-color: @gray-light; // Sets the color of the border on all the four sides of an element.
+@border-color: @gray-medium; // Sets the color of the border on all the four sides of an element.
 @border-image: none; // Specifies how an image is to be used in place of the border styles.
 @border-image-outset: 0; // Specifies the amount by which the border image area extends beyond the border box.
 @border-image-repeat: stretch; // Specifies whether the image-border should be repeated, rounded or stretched.
@@ -47,7 +47,7 @@
 @border-left-color: @border-color; // Sets the color of the left border of an element.
 @border-left-style: @border-style; // Sets the style of the left border of an element.
 @border-left-width: @border-width; // Sets the width of the left border of an element.
-@border-radius: @padding; // Defines the shape of the border corners of an element.
+@border-radius: @padding / @golden-ratio; // Defines the shape of the border corners of an element.
 @border-right: @border; // Sets the width, style, and color of the right border of an element.
 @border-right-color: @border-color; // Sets the color of the right border of an element.
 @border-right-style: @border-style; // Sets the style of the right border of an element.
@@ -69,7 +69,7 @@
 // Dimension Properties
 @height: auto; // Specify the height of an element.
 @max-height: none; // Specify the maximum height of an element.
-@max-width: none; // Specify the maximum width of an element.
+@max-width: @text-measure * 1rem; // Specify the maximum width of an element.
 @min-height: 0; // Specify the minimum height of an element.
 @min-width: 0; // Specify the minimum width of an element.
 @width: auto; // Specify the width of an element.
@@ -169,7 +169,7 @@
 @text-overflow: @test; // Specifies how the text content will be displayed, when it overflows the block containers.
 @text-shadow: @test; // Applies one or more shadows to the text content of an element.
 @text-transform: @test; // Transforms the case of the text.
-@line-height: @test; // Sets the height between lines of text.
+@line-height: @font-size * @golden-ratio; // Sets the height between lines of text.
 @vertical-align: @test; // Sets the vertical positioning of an element relative to the current text baseline.
 @letter-spacing: @test; // Sets the extra spacing between letters.
 @word-spacing: @test; // Sets the spacing between words.
@@ -193,21 +193,21 @@
 @transition-timing-function: @test; // Specifies the speed curve of the transition effect.
 
 // Visual formatting Properties
-@display: @test; // Specifies how an element is displayed onscreen.
-@position: @test; // Specifies how an element is positioned.
-@top: @test; // Specify the location of the top edge of the positioned element.
-@right: @test; // Specify the location of the right edge of the positioned element.
-@bottom: @test; // Specify the location of the bottom edge of the positioned element.
-@left: @test; // Specify the location of the left edge of the positioned element.
-@float: @test; // Specifies whether or not a box should float.
-@clear: @test; // Specifies the placement of an element in relation to floating elements.
-@z-index: @test; // Specifies a layering or stacking order for positioned elements.
-@overflow: @test; // Specifies the treatment of content that overflows the element's box.
-@overflow-x: @test; // Specifies how to manage the content when it overflows the width of the element's content area.
-@overflow-y: @test; // Specifies how to manage the content when it overflows the height of the element's content area.
-@resize: @test; // Specifies whether or not an element is resizable by the user.
-@clip: @test; // Defines the clipping region.
-@visibility: @test; // Specifies whether or not an element is visible.
-@cursor: @test; // Specify the type of cursor.
-@box-shadow: 0 1px 2px rgba(red(@gray-darker), green(@gray-darker), blue(@gray-darker), .5); // Applies one or more drop-shadows to the element's box.
+@display: inline; // Specifies how an element is displayed onscreen.
+@position: relative; // Specifies how an element is positioned.
+@top: auto; // Specify the location of the top edge of the positioned element.
+@right: auto; // Specify the location of the right edge of the positioned element.
+@bottom: auto; // Specify the location of the bottom edge of the positioned element.
+@left: auto; // Specify the location of the left edge of the positioned element.
+@float: left; // Specifies whether or not a box should float.
+@clear: both; // Specifies the placement of an element in relation to floating elements.
+@z-index: 10; // Specifies a layering or stacking order for positioned elements.
+@overflow: show; // Specifies the treatment of content that overflows the element's box.
+@overflow-x: show; // Specifies how to manage the content when it overflows the width of the element's content area.
+@overflow-y: show; // Specifies how to manage the content when it overflows the height of the element's content area.
+@resize: none; // Specifies whether or not an element is resizable by the user.
+@clip: auto; // Defines the clipping region.
+@visibility: visible; // Specifies whether or not an element is visible.
+@cursor: pointer; // Specify the type of cursor.
+@box-shadow: 0 1px 2px fade(@shadow-color, 25%); // Applies one or more drop-shadows to the element's box.
 @box-sizing: border-box; // Alter the default CSS box model.

@@ -2,7 +2,7 @@
 // any valid CSS property will work
 
 .default(@attribute) when (@attribute = color) {
-    .contrast(@background);
+    .contrast(@attribute; @background-color;);
 }
 
 .default(@attribute) when (default()) {

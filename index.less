@@ -3,15 +3,19 @@
 
 @import (reference) "properties";
 @import (reference) "settings";
+
 @import (reference) "viewports";
 @import (reference) "targets";
+@import (reference) "random";
 @import (reference) "colors/grays";
-@import "colors/semantic";
+@import (reference) "colors/semantic";
 @import (reference) "colors/turbo";
+
 // TODO: add some sort of color palette feature
 @import "icons";
 @import (reference) "patterns"; 
 @import (reference) "mixins/mixins";
+
 
 // css output
 // edit these files directly to change the appearance of HTML elements
@@ -62,6 +66,26 @@
 
 // add any other Less/CSS here
 
+
+.color-palette div {
+    // color palette
+    float: left;
+
+    @size: @gutter;
+
+    width: @size;
+    height: @size;
+    margin-right: @padding;
+    margin-bottom: @padding;
+
+    overflow: hidden;
+    color: transparent !important;
+
+    &:last-child {
+        .clearfix();
+    }
+}
+
 .less_logo {
     // @logo: data-uri("less_logo.png");
 
@@ -76,7 +100,16 @@
 .powered-by {
     font-size: 90%;
     text-decoration: none;
+    margin-right: 12px;
 }
+
+.logo {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    max-width: floor(@aside-width/2);
+    max-width: image-width("less_logo.png")/4;
+  }
 
 .pattern-example {
     width: 100%;
@@ -122,3 +155,12 @@
 
 
 #icon_library { display: none;}
+
+
+each(@gray-names, {
+    @color: @@value;
+
+    .@{value} {
+        .colorize(@color);
+    }
+});

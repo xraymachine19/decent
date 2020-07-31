@@ -7,6 +7,8 @@
 });
 
 .block-level-elements({
+  margin-bottom: @margin;
+
   each(@semantic-color-names, { &.@{value} { .colorize(@@value);};});
 
   .semantic-classes({
@@ -17,10 +19,21 @@
 
 // utility classes
 
+.dropcap {
+  &:first-letter {
+    float: left;
+    font-size: 360%;
+    line-height: 2;
+    padding-top: .125em;
+    padding-right: .15em;
+    padding-left: .125em;
+  }
+}
+
 .feature {
   padding: @padding*2;
-  font-size: 150%;
-  line-height: 1.5;
+  font-size: @golden-ratio*100%;
+  line-height: @golden-ratio;
 }
 
 .text-center {
