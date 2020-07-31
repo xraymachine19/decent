@@ -38,16 +38,12 @@
     // tone is the color mixed into the background to lighten or darken the text
     
     .tone(@compare) when (@mode = tint) 
-                    or (@mode = white) 
-                    or (@mode = light) 
                     or (@mode = lighten)    
                     { 
                         @tone: white;
                     }
 
     .tone(@compare) when (@mode = shade) 
-                    or (@mode = black) 
-                    or (@mode = dark) 
                     or (@mode = darken)    
                     { 
                         @tone: black;
@@ -55,8 +51,8 @@
 
     .tone(@compare) when (default()) { .set-tone(@compare);}
 
-    .set-contrast-ceiling(@compare);
-    .set-contrast-floor(@compare);
+    // .set-contrast-ceiling(@compare);
+    // .set-contrast-floor(@compare);
 
     // this iterator does the work of finding the contrastful text
     .apply-contrast(@contrast-ratio, @tone, @index)

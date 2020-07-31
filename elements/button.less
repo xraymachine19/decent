@@ -80,6 +80,26 @@
 .button-color(@color) {
   .contrast(color, @color);
   background: @color;
+
+  @property: color; 
+        @compare: @main-background; 
+        @standard: 7;        
+        @mode: auto;
+
+  .set-contrast-ceiling(@color);
+
+  .color() when (@contrast-ceiling > 3) {
+    color: white;
+    background: @color;
+  }
+
+  .color() when (default()) {
+    .contrast(color; @color; 4.5; shade;);
+    background: @color;
+  }
+
+  .color();
+
 }
 
 // .button-elements({

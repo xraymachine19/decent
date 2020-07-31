@@ -91,13 +91,40 @@ each(@patterns-all, {
     // this outputs everything in an escaped SVG format
     // .invoke-pattern(@value);
     // this is just for the demo site
-    // .@{value} {
-    //     .pattern(@value; @default;);
+    .@{value} {
 
-    //     &:after {
-    //         content: "@{value}";
-    //     }
-    // }
+        .set-color-random() {
+            @potentials:    @action,
+                            @reaction,
+                            @alternate,
+                            @accent,
+                            @info,
+                            @highlight,
+                            @ambient,
+                            @gray,
+                            @gray-lighter,
+                            @gray-darker,
+                            @failure,
+                            @success,
+                            @warning,
+                            @default,
+                            @background-color;
+
+            @length: length(@potentials);
+
+            @random: `Math.random()`;
+            @sc: ceil(@length*@random);
+            @color-random: extract(@potentials, @sc);
+        }
+
+        .set-color-random();
+
+        .pattern(@value; @color-random;);
+
+        &:after {
+            content: "@{value}";
+        }
+    }
 });
 
 .invoke-pattern(@pattern-name) {
@@ -203,6 +230,5 @@ each(@patterns-all, {
 
     background-color: @base;
     background-image: url("data:image/svg+xml,@{pattern}");
-    background-position: center center;
-    background-size: 2 2;
+    background-size: @gutter @gutter;
 }
