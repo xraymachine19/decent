@@ -1,0 +1,138 @@
+// even more named colors
+// these work like semantic colors, but without the semantic meaning 
+
+@extended-colors: @red, @orangered, @orange, @yellow, @olive, @green, @teal, @blue, @indigo, @violet, @purple, @pink, @white, @black, @brown;
+@extended-color-names: ~"red", ~"orange", ~"yellow", ~"green", ~"blue";
+@extended-color-names: e(red), e(orange), e(yellow), e(#008000), e(blue);
+@extended-color-names: var-red, var-orangered, var-orange, var-yellow, var-olive, var-green, var-teal, var-blue, var-indigo, var-violet, var-purple, var-pink, var-white, var-black, var-brown;
+
+@base: @base-color;
+@color-strength: 15% + .1*luma(@base);
+
+.set-extended-colors();
+
+.set-extended-colors() {
+    .set-red();
+    .set-orangered();
+    .set-orange();
+    .set-yellow();
+    .set-olive();
+    .set-green();
+    .set-teal();
+    .set-blue();
+    .set-indigo();
+    .set-violet();
+    .set-purple();
+    .set-pink();
+    .set-white();
+    .set-black();
+    .set-brown();
+}
+
+.set-red() {
+    @base: red;
+    // .set-rep-color(red, @turbo);
+    .set-lumafix(@base; @strength: @color-strength;);
+    @red: @lumafix;
+    @var-red: @lumafix;
+}
+
+.set-orangered() {
+    @base: orangered;
+    .set-rep-color(orangered, @turbo);
+    .set-lumafix(@rep-color; @strength: @color-strength;);
+    @orangered: @lumafix;
+    @var-orangered: @lumafix;
+}
+
+.set-orange() {
+    @base: orange;
+    .set-rep-color(orange, @turbo);
+    .set-lumafix(@rep-color; @strength: @color-strength/2;);
+    @orange: @lumafix;
+    @var-orange: @lumafix;
+}
+
+.set-yellow() {
+    @base: yellow;
+    // .set-rep-color(yellow, @turbo);
+    .set-lumafix(@base; @strength: @color-strength;);
+    @yellow: @lumafix;
+    @var-yellow: @lumafix;
+}
+
+.set-olive() {
+    @base: olive;
+    .set-rep-color(olive, @turbo);
+    .set-lumafix(@rep-color; @strength: @color-strength;);
+    @olive: @lumafix;
+    @var-olive: @lumafix;
+}
+
+.set-green() {
+    @base: green;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @green: @lumafix;
+    @var-green: @lumafix;
+}
+
+.set-teal() {
+    @base: teal;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @blue: @lumafix;
+    @var-teal: @lumafix;
+}
+
+.set-blue() {
+    @base: blue;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @blue: @lumafix;
+    @var-blue: @lumafix;
+}
+
+.set-indigo() {
+    @base: indigo;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @indigo: @lumafix;
+    @var-indigo: @lumafix;
+}
+
+.set-violet() {
+    @base: violet;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @violet: @lumafix;
+    @var-violet: @lumafix;
+}
+
+.set-pink() {
+    @base: pink;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @pink: @lumafix;
+    @var-pink: @lumafix;
+}
+
+.set-purple() {
+    @base: purple;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @purple: @lumafix;
+    @var-purple: @lumafix;
+}
+
+.set-white() {
+    @mix: average(white, @gray-lighter);
+    @white: @mix;
+    @var-white: @mix;
+}
+
+.set-black() {
+    @mix: average(black, @gray-darker);
+    @black: @mix;
+    @var-black: @mix;
+}
+
+.set-brown() {
+    @base: brown;
+    .set-lumafix(@base; @strength: @color-strength;);
+    @brown: @lumafix;
+    @var-brown: @lumafix;
+}
