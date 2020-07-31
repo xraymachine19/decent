@@ -10,6 +10,17 @@
   margin-bottom: @margin;
 
   each(@semantic-color-names, { &.@{value} { .colorize(@@value);};});
+  
+  each(@extended-color-names, { 
+    @replace: replace(e(@value), "var-", "");
+    &.@{replace} { 
+      .colorize(@@value);
+
+      &:before {
+        content: "@{replace}";
+      }
+    };
+  });
 
   .semantic-classes({
       .default(padding);

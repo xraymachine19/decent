@@ -86,20 +86,21 @@
         @standard: 7;        
         @mode: auto;
 
+  // use white text unless the contrast would be too low
+
   .set-contrast-ceiling(@color);
 
   .color() when (@contrast-ceiling > 3) {
     color: white;
-    background: @color;
   }
 
   .color() when (default()) {
     .contrast(color; @color; 4.5; shade;);
-    background: @color;
   }
 
   .color();
-
+  background-color: @color;
+  .contrast(border-color; @color; 1.5; shade;);
 }
 
 // .button-elements({

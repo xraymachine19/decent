@@ -4,6 +4,7 @@ section {
     padding: @padding/2;
     .colorize(@main-background);
     border: 0 solid @gray-dark;
+    .contrast(border-color; average(@main-background, @background); 1.5;);
     margin-bottom: @gutter;
 
     .on-large-phone({

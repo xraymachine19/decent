@@ -100,15 +100,12 @@ each(@patterns-all, {
                             @accent,
                             @info,
                             @highlight,
-                            @ambient,
-                            @gray,
-                            @gray-lighter,
-                            @gray-darker,
                             @failure,
                             @success,
                             @warning,
                             @default,
-                            @background-color;
+                            @red, @orange, @yellow, @green, @blue, @purple, @brown,
+                            @pink, @teal, @olive, @orangered, @violet, @indigo;
 
             @length: length(@potentials);
 
@@ -122,7 +119,7 @@ each(@patterns-all, {
         .pattern(@value; @color-random;);
 
         &:after {
-            content: "@{value}";
+            content: ".pattern(@{value});";
         }
     }
 });
@@ -230,5 +227,4 @@ each(@patterns-all, {
 
     background-color: @base;
     background-image: url("data:image/svg+xml,@{pattern}");
-    background-size: @gutter @gutter;
 }
