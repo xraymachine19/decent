@@ -301,7 +301,7 @@
 	}
 
 	.set-highlight-base() when (red(@base-color) > 170) {
-		@highlight-base: #ffff00;
+		@highlight-base: yellow;
 	}
 
 	.set-highlight-base() when (isColor(@highlight-mode)) {
@@ -309,7 +309,7 @@
 	}
 
 	.set-highlight-final() {
-		.set-lumafix(@highlight-base, white, 50% + luma(@base-color)*.35);
+		.set-lumafix(@highlight-base, @strength: 33% + luma(@base-color)*.33);
 		@highlight: @lumafix;
 	}
 

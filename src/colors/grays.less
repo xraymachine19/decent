@@ -1,3 +1,5 @@
+@gray-names: gray-lighter, gray-light, gray-medium, gray-dark, gray-darker;
+
 .set-grays();
 .set-grays(@color: @base-color) {
   @gray-base: desaturate(@color, 90%);
@@ -6,13 +8,13 @@
 
   .set-gray-lighter() {
     .set-contrast-ratio(@gray-base, white);
-    .contrast-fill(@gray-base; @contrast-ratio*.88; @mode: tint;);
+    .contrast-fill(@gray-base; @contrast-ratio*.8; @mode: tint;);
     @gray-lighter: @fill;
   }
 
   .set-gray-darker() {
     .set-contrast-ratio(@gray-base, black);
-    .contrast-fill(@gray-base; @contrast-ratio*.64; @mode: shade;);
+    .contrast-fill(@gray-base; @contrast-ratio*.6; @mode: shade;);
     @gray-darker: @fill;
   }
 
@@ -36,8 +38,3 @@
   @grey-dark: @gray-dark;
   @grey-darker: @gray-darker;
 }
-
-each(@gray-names, {
-  @color: @@value;
-  .@{value} { padding: 1rem;}
-});

@@ -21,7 +21,7 @@
 @background: @background-color; // Defines a variety of background properties within one declaration.
 @background-attachment: scroll; // Specify whether the background image is fixed in the viewport or scrolls.
 @background-clip: border-box; // Specifies the painting area of the background.
-@background-color: overlay(@action, @gray-dark); // Defines an element's background color.
+@background-color: overlay(@gray, @action); // Defines an element's background color.
 @background-image: none; // Defines an element's background image.
 @background-origin: padding-box; // Specifies the positioning area of the background images.
 @background-position: center center; // Defines the origin of a background image.
@@ -69,7 +69,7 @@
 // Dimension Properties
 @height: auto; // Specify the height of an element.
 @max-height: none; // Specify the maximum height of an element.
-@max-width: @text-measure * 1rem; // Specify the maximum width of an element.
+@max-width: @text-measure / @golden-ratio * 1rem; // Specify the maximum width of an element.
 @min-height: 0; // Specify the minimum height of an element.
 @min-width: 0; // Specify the minimum width of an element.
 @width: auto; // Specify the width of an element.

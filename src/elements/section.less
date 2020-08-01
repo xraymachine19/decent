@@ -1,16 +1,20 @@
 section {
-    .default(box-shadow);
+    &:extend(.matte);
+    .colorize(@white);
+    // .default(box-shadow);
+    .default(max-width);
 
     padding: @padding/2;
-    .colorize(@main-background);
-    border: 0 solid @gray-dark;
-    .contrast(border-color; average(@main-background, @background); 1.5;);
-    margin-bottom: @gutter;
+    
+    border-color: transparent;
+    border-style: solid;
+    // .contrast(border-color; @background; 1.5;);
+    margin: 0 auto @gutter auto;
 
     .on-large-phone({
         padding: @padding;
-        margin-left: @margin;
-        margin-right: @margin;
+        // margin-left: @margin;
+        // margin-right: @margin;
     });
 
     .on-tablet({

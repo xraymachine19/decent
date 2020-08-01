@@ -72,15 +72,12 @@
     // color palette
     float: left;
 
-    @size: @gutter;
-
-    width: @size;
-    height: @size;
     margin-right: @padding;
     margin-bottom: @padding;
 
-    overflow: hidden;
-    color: transparent !important;
+    padding: @text-padding;
+
+    .default(border-radius);
 
     &:last-child {
         .clearfix();
@@ -91,17 +88,20 @@
     // @logo: data-uri("less_logo.png");
 
     display: block;
-    max-width: image-width("less_logo.png")/4;
+    max-width: 120px;
     // height: image-height("less_logo.png")/4;
     // background: @logo;
     // background-size: 100% 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
 }
 
 .powered-by {
+    display: block;
     font-size: 90%;
     text-decoration: none;
-    margin-right: 12px;
+    margin: 0 auto;
+    max-width: 120px;
+    padding: @padding/2;
 }
 
 .logo {
@@ -109,7 +109,7 @@
     display: block;
     margin: 0 auto;
     max-width: floor(@aside-width/2);
-    max-width: image-width("less_logo.png")/4;
+    // max-width: image-width("less_logo.png")/4;
   }
 
 .pattern-example {

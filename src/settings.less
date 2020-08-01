@@ -1,14 +1,15 @@
 // basics
 
 @debug: false;
-@randomness: true;
+@randomness: false;
 
-.set-random-color();
-@base-color: @random-color;
-
+//.set-random-color();
+// @base-color: @random-color;
+@base-color: royalblue;
 // css attribute defaults
 @main-background: lighten(black, (98% + luma(@base-color)/50)); // background of 'main' element
-
+@main-background: @background;
+@background: @action;
 
 // font stack settings TODO: better fonts 
 // TODO: headline font settings
@@ -17,7 +18,7 @@
 @sans-serif: true;
 
 // design variables
-@contrast-standard: 4.5; // 4.5 is level II, 7 is level III per WCAG standards for body text
+@text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
 @ambient: overlay(@base-color, white);
 @golden-ratio: 1.618;
 @shadow-color: @gray-darker;
@@ -26,10 +27,10 @@
 
 // layout settings
 // TODO: make this its own file
-@text-measure: 55; // an estimate
+@text-measure: 65; // an estimate
 @text-padding: .18em .2em*@golden-ratio .22em .2em*@golden-ratio;
 @column-width: @max-width;
-@gutter: @margin*@golden-ratio;
+@gutter: @margin * @golden-ratio;
 @page-width: @column-width + @gutter + @aside-width; // TODO: deprecate old layout vars
 @aside-width: 36rem;
 

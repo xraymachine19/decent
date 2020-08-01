@@ -1,6 +1,6 @@
 body {
     .default(font-family);
-    background-color: @background;
+    .default(background-color);
     .contrast(color, @background);
 
     & when (@randomness = true) {
@@ -14,13 +14,9 @@ body {
     }
 
     & when (@randomness = false) {
-      .pattern(bamboo);
+      .pattern(texture; @background;);
     }
-    
-    background-attachment: fixed;
-    padding-top: @padding;
-    -webkit-overflow-scrolling: touch;
-  
+      
     font-size: @font-size * .8;
     line-height: @line-height * .8;
 
@@ -30,7 +26,6 @@ body {
     });
 
     .on-tablet({
-      padding-top: @gutter;
       .default(font-size);
       .default(line-height);
     });

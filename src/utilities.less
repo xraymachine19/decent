@@ -1,30 +1,45 @@
 // defaults for inline and block level elements
 // these rules generate a lot of CSS but cover tons of HTML edge cases
 
+// semantic color names .colorize() when used as a class
+each(@semantic-color-names, { &.@{value} { .colorize(@@value);};});
+
+// extended color names .colorize() when used as a class
+each(@extended-color-names, { &.@{value} { .colorize(@@value);};});
+
+// gray color names .colorize() when used as a class
+each(@gray-names, { &.@{value} { .colorize(@@value);};});
+
+.semantic-classes({
+  .default(padding);
+});
+
 .inline-elements({
-  .default(max-width);
-  each(@semantic-color-names, { &.@{value} { .color-text(@@value);};});
+
+  .semantic-classes({
+    background: transparent;
+  });
+
+  each(@semantic-color-names, { &.@{value} { .color-text(@@value; @background; 3;); background: transparent;};});
 });
 
 .block-level-elements({
   margin-bottom: @margin;
 
-  each(@semantic-color-names, { &.@{value} { .colorize(@@value);};});
   
-  each(@extended-color-names, { 
-    @replace: replace(e(@value), "var-", "");
-    &.@{replace} { 
-      .colorize(@@value);
+  
+  // each(@extended-color-names, { 
+  //   @replace: replace(e(@value), "var-", "");
+  //   &.@{replace} { 
+  //     .colorize(@@value);
 
-      &:before {
-        content: "@{replace}";
-      }
-    };
-  });
+  //     &:before {
+  //       content: "@{replace}";
+  //     }
+  //   };
+  // });
 
-  .semantic-classes({
-      .default(padding);
-  });
+  
 });
 
 
@@ -39,6 +54,33 @@
     padding-right: .15em;
     padding-left: .125em;
   }
+}
+
+.hero {
+  @color: @ambient;
+
+  .default(padding);
+  min-height: 100vh / @golden-ratio;
+  width: 100%;
+  max-width: none;
+  box-shadow: none;
+  padding: @gutter;
+  box-shadow: inset @box-shadow;
+
+  .pattern(topography; @color;);
+  .colorize(@color);
+
+  > * {
+    max-width: @max-width * @golden-ratio;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.matte {
+  .default(box-shadow);
+  .default(border);
+  .colorize(@white);
 }
 
 .feature {

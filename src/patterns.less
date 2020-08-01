@@ -99,13 +99,9 @@ each(@patterns-all, {
                             @alternate,
                             @accent,
                             @info,
-                            @highlight,
-                            @failure,
-                            @success,
-                            @warning,
                             @default,
                             @red, @orange, @yellow, @green, @blue, @purple, @brown,
-                            @pink, @teal, @olive, @orangered, @violet, @indigo;
+                            @pink, @teal, @olive, @violet, @indigo;
 
             @length: length(@potentials);
 
@@ -119,7 +115,7 @@ each(@patterns-all, {
         .pattern(@value; @color-random;);
 
         &:after {
-            content: ".pattern(@{value});";
+            content: ".pattern(@{value}; @{color-random};);";
         }
     }
 });
