@@ -47,12 +47,16 @@ each(@gray-names, { &.@{value} { .colorize(@@value);};});
   }
 }
 
+.ascii {
+  font-family: @font-family-monospace;
+  padding: @padding 1ch;
+}
 
-
-.matte {
-  .default(box-shadow);
-  .default(border);
-  .colorize(@white);
+.terminal {
+  &:before {
+    content: "$ ";
+    .color-text(@info; @gray-darker; 7;);
+  }
 }
 
 .feature {

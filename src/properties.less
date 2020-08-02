@@ -36,7 +36,7 @@
 @border-bottom-right-radius: @border-radius; // Defines the shape of the bottom-right border corner of an element.
 @border-bottom-style: @border-style; // Sets the style of the bottom border of an element.
 @border-bottom-width: @border-width; // Sets the width of the bottom border of an element.
-@border-color: @gray-medium; // Sets the color of the border on all the four sides of an element.
+@border-color: @gray-light; // Sets the color of the border on all the four sides of an element.
 @border-image: none; // Specifies how an image is to be used in place of the border styles.
 @border-image-outset: 0; // Specifies the amount by which the border image area extends beyond the border box.
 @border-image-repeat: stretch; // Specifies whether the image-border should be repeated, rounded or stretched.
@@ -47,7 +47,7 @@
 @border-left-color: @border-color; // Sets the color of the left border of an element.
 @border-left-style: @border-style; // Sets the style of the left border of an element.
 @border-left-width: @border-width; // Sets the width of the left border of an element.
-@border-radius: @padding / @golden-ratio; // Defines the shape of the border corners of an element.
+@border-radius: 6px; // Defines the shape of the border corners of an element.
 @border-right: @border; // Sets the width, style, and color of the right border of an element.
 @border-right-color: @border-color; // Sets the color of the right border of an element.
 @border-right-style: @border-style; // Sets the style of the right border of an element.
@@ -137,7 +137,7 @@
 @outline-width: @border-width; // Sets the width of the outline.
 
 // Padding Properties
-@padding: 1rem; // Sets the padding on all four sides of the element.
+@padding: 1rem * @golden-ratio; // Sets the padding on all four sides of the element.
 @padding-bottom: @padding; // Sets the padding to the bottom side of an element.
 @padding-left: @padding; // Sets the padding to the left side of an element.
 @padding-right: @padding; // Sets the padding to the right side of an element.
@@ -209,5 +209,5 @@
 @clip: auto; // Defines the clipping region.
 @visibility: visible; // Specifies whether or not an element is visible.
 @cursor: pointer; // Specify the type of cursor.
-@box-shadow: 0 1px 2px fade(@shadow-color, 25%); // Applies one or more drop-shadows to the element's box.
+@box-shadow: 0 1px 2px @shadow-color; // Applies one or more drop-shadows to the element's box.
 @box-sizing: border-box; // Alter the default CSS box model.

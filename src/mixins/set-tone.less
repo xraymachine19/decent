@@ -8,11 +8,11 @@
   .set-contrast-floor(@color);
 
   .tone(@color) when (@contrast-floor > @contrast-ceiling) {
-    @tone: black;
+    @tone: @black;
   }
 
   .tone(@color) when (default()) {
-    @tone: white;
+    @tone: @white;
   }
 
   .tone(@color);

@@ -1,5 +1,14 @@
 pre {
-    &:extend(code);
+    .colorize(@gray-darker);
     overflow: hidden;
-    .default(padding);
+    padding: @text-padding;
+    box-shadow: inset @box-shadow;
+    font-family: @font-family-monospace;
+    .default(border-radius);
+    .pattern(texture; @gray-darker;);
+
+    > code {
+        background: transparent;
+        padding: 0;
+    }
 }

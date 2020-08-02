@@ -29,7 +29,7 @@
     </nav>
     <main>
       <section class="hero">
-        <h1>Decent isn't <b class="failure">another component library</b>, it's an environment for making your own component library.</h1>
+        <h1>Decent isn't <em>another component library</em>, it's an environment for making your own component library.</h1>
       
         <p class="feature">Built for the <strong>decent</strong>ralized web, Decent makes using your own style library easier than using Bigcorp's latest shovelware.</p>
 
@@ -49,7 +49,7 @@
           <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="decentless_0"></a>decent.less</h1>
 <p class="has-line-data" data-line-start="2" data-line-end="3">A Less library for smarter component styling</p>
 <h2 class="code-line" data-line-start=5 data-line-end=6 ><a id="Setup_and_testing_5"></a>Setup and testing</h2>
-<ol>
+<ol class="well">
 <li class="has-line-data" data-line-start="7" data-line-end="8">Run ‘python -m SimpleHTTPServer’ in the decent directory.</li>
 <li class="has-line-data" data-line-start="8" data-line-end="9">Follow the directions there (or just go to localhost:8000)</li>
 <li class="has-line-data" data-line-start="9" data-line-end="10">Edit index.html or the less, then refresh to test stuff.</li>
@@ -73,7 +73,8 @@
 <li class="has-line-data" data-line-start="30" data-line-end="31">Decent allows for a leaner DOM, which makes everything (CSS, JS) faster</li>
 <li class="has-line-data" data-line-start="31" data-line-end="33">Decent itself compiles quickly, picking the right colors out of millions in seconds</li>
 </ul>
-<h2 class="code-line" data-line-start=33 data-line-end=34 ><a id="Environment_33"></a>Environment</h2>
+<div class="matte">
+  <h2 class="code-line" data-line-start=33 data-line-end=34 ><a id="Environment_33"></a>Environment</h2>
 <p class="has-line-data" data-line-start="35" data-line-end="36">Decent is a fuller coding environment for Less.</p>
 <h3 class="code-line" data-line-start=37 data-line-end=38 ><a id="HTML__CSS_concepts_37"></a>HTML &amp; CSS concepts</h3>
 <ul>
@@ -85,6 +86,7 @@
 <li class="has-line-data" data-line-start="42" data-line-end="43">Each mixin has its own file</li>
 <li class="has-line-data" data-line-start="43" data-line-end="45">Mixins use import statements to list dependencies</li>
 </ul>
+</div>
 <h2 class="code-line" data-line-start=45 data-line-end=46 ><a id="Design_fundamentals_45"></a>Design fundamentals</h2>
 <p class="has-line-data" data-line-start="47" data-line-end="48">Decent gives designers fundamental tools for building UIs.</p>
 <h3 class="code-line" data-line-start=49 data-line-end=50 ><a id="Typography_49"></a>Typography</h3>
@@ -118,24 +120,20 @@
           <p class="has-line-data" data-line-start="6" data-line-end="7">Here’s a quick tutorial if you don’t know it.</p>
           <p class="has-line-data" data-line-start="8" data-line-end="9">Variables look like this:</p>
           <pre><code>p {
-              @variable-name: #000000;
-              color: @variable-name;
-          }
-          </code></pre>
+    @variable-name: #000000;
+    color: @variable-name;
+}</code></pre>
           <p class="has-line-data" data-line-start="15" data-line-end="16">They’re set with the @ symbol. The above outputs:</p>
-          <pre><code>p { color: #000000;}
-          </code></pre>
+          <pre><code>p { color: #000000;}</code></pre>
           <p class="has-line-data" data-line-start="19" data-line-end="20">Next, you can nest rules inside of each other:</p>
           <pre><code>p {
-              @variable-name: #ffffff;
-              span { 
-                  color: @variable-name;
-              }
-          }
-          </code></pre>
+    @variable-name: #ffffff;
+    span { 
+        color: @variable-name;
+    }
+}</code></pre>
           <p class="has-line-data" data-line-start="28" data-line-end="29">This lets you quickly write and organize rules in a codebase. The above outputs:</p>
-          <pre><code>p span { color: #ffffff;}
-          </code></pre>
+          <pre><code>p span { color: #ffffff;}</code></pre>
           <p class="has-line-data" data-line-start="32" data-line-end="33">There you go! That covers about 90% of the Less you will ever write. It has tons and tons great features besides these, though, and great docs to go with it. But if you know CSS and the above, then you know Less. Welcome to the club!</p>
           <h1 class="code-line" data-line-start=35 data-line-end=36><a id="Wait_what_about_Sass_35"></a>Wait, what about Sass?</h1>
           <p class="has-line-data" data-line-start="37" data-line-end="38">We get it. A lot of people “moved on” to Sass.</p>
@@ -156,20 +154,17 @@
           <p class="has-line-data" data-line-start="67" data-line-end="68">Don’t write anything in there. You don’t edit CSS files now. You are writing in the Decent way now.</p>
           <p class="has-line-data" data-line-start="69" data-line-end="70">Replace the contents of <strong>&lt;body&gt;</strong> with this (no, we won’t need that scripts file):</p>
           <pre><code>&lt;body&gt;
-              &lt;main&gt;
-                  &lt;section&gt;
-                  &lt;/section&gt;
-              &lt;/main&gt;
-          &lt;/body&gt;
-          </code></pre>
+    &lt;main&gt;
+        &lt;section&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+&lt;/body&gt;</code></pre>
           <p class="has-line-data" data-line-start="78" data-line-end="79">Out of the box, Decent uses main, section and nav as high level organizational elements. We’ll write our demo HTML in that section element.</p>
           <p class="has-line-data" data-line-start="80" data-line-end="81">Second, you need a way to look at this webpage. If you need something quick, we recommend:</p>
-          <pre><code>python -m SimpleHTTPServer
-          </code></pre>
+          <pre><code class="terminal">python -m SimpleHTTPServer</code></pre>
           <p class="has-line-data" data-line-start="84" data-line-end="85">That’ll serve your <strong>index.html</strong> file locally, acting like a real website, provided you run it in the same folder (the desktop folder, in the example above). You might need to install python.</p>
           <p class="has-line-data" data-line-start="86" data-line-end="87">Next, we’ll need NPM and Less. Decent is the thing that runs your CSS codebase. Decent runs on Less which runs in NPM. It’s less complicated than it sounds. Just run:</p>
-          <pre><code>npm install -g less 
-          </code></pre>
+          <pre><code class="terminal">npm install -g less</code></pre>
           <p class="has-line-data" data-line-start="90" data-line-end="91">That installs Less globally, meaning you can run it in any directory. You want to do that because Less runs on your machine, and not so much as a featured package on your site. Your site only shows the compiled results of Less. (The exception here might be less.js. We don’t recommend using less.js with Decent.)</p>
           <p class="has-line-data" data-line-start="92" data-line-end="93">If you don’t have NPM, get it here: <a href="https://www.npmjs.com/get-npm">https://www.npmjs.com/get-npm</a></p>
           <p class="has-line-data" data-line-start="94" data-line-end="95">It’s worth it! Even if you only ever use it for Less.</p>
@@ -181,7 +176,7 @@
           <p class="has-line-data" data-line-start="104" data-line-end="105">If you’re using a more complicated setup, you can probably extrapolate from this demo. Less integrates well with command-line based workflows and has desktop solutions too.</p>
           <p class="has-line-data" data-line-start="106" data-line-end="107">Changes to both files will be reflected on <a href="http://localhost:8000/">http://localhost:8000/</a> whenever we make them and refresh. So where do we put Decent?</p>
           <p class="has-line-data" data-line-start="108" data-line-end="109">The answer: Anywhere you’d like! It works best right in the root directory of the site.</p>
-          <p class="has-line-data" data-line-start="110" data-line-end="116">project-name<br>
+          <p class="has-line-data ascii" data-line-start="110" data-line-end="116">project-name<br>
           ├── decent<br>
           │ ├── index.less<br>
           │ └── (many, many other files)<br>
@@ -196,8 +191,7 @@
           └── styles.css</p>
           <p class="has-line-data" data-line-start="126" data-line-end="127">In this way, Decent <em>is</em> your CSS/Less codebase. Or at least the start of your codebase.</p>
           <h1 class="code-line" data-line-start=128 data-line-end=129><a id="Wait_cant_I_just_grab_the_node_package_and_import_128"></a>Wait, can’t I just grab the node package and import?</h1>
-          <pre><code>This section is a little advanced. To continue with the directory building in the simple tutorial, click here.
-          </code></pre>
+          <p class="warning">This section is a little advanced. To continue with the directory building in the simple tutorial, click here.</p>
           <p class="has-line-data" data-line-start="132" data-line-end="133">You can! We recommend using Decent in the above way, as a downloaded and bootstrapped CSS codebase starting point.</p>
           <p class="has-line-data" data-line-start="134" data-line-end="135">But you can also grab the Node package and import it in your Less codebase. Decent files are all designed to be able to be imported on their own, with their own dependencies stated inside their file.</p>
           <p class="has-line-data" data-line-start="136" data-line-end="137">Want Decent’s awesome contrasting superpowers but nothing else? Try:</p>
@@ -207,35 +201,34 @@
           <p class="has-line-data" data-line-start="142" data-line-end="143">All we’re saying is that when it came to easy variable names or the sanctity of the scope, we picked the easy variable names every single time.</p>
           <h1 class="code-line" data-line-start=144 data-line-end=145><a id="Lets_run_this_thing_144"></a>Let’s run this thing!</h1>
           <p class="has-line-data" data-line-start="146" data-line-end="147">Where were we? We had just put together our basic directory structure:</p>
-          <p class="has-line-data" data-line-start="148" data-line-end="154">project-name<br>
+          <p class="has-line-data ascii" data-line-start="148" data-line-end="154">project-name<br>
           ├── less<br>
           │ ├── index.less<br>
           │ └── (many, many other files)<br>
           ├── index.html<br>
           └── styles.css</p>
           <p class="has-line-data" data-line-start="155" data-line-end="156">Where do we start with the actual styling? Let’s imagine we want to write this rule:</p>
-          <pre><code>p { border: 2px dashed red;}
-          </code></pre>
+          <pre><code>p { border: 2px dashed red;}</code></pre>
           <p class="has-line-data" data-line-start="159" data-line-end="160">In CSS, we start writing the rule. In Less, we start writing the rule.</p>
           <p class="has-line-data" data-line-start="161" data-line-end="162">In Decent, we <em>add the rule</em> to the p definition already in <code>elements/p.less</code>:</p>
-          <p class="has-line-data" data-line-start="163" data-line-end="172">project-name<br>
+          <p class="has-line-data ascii" data-line-start="163" data-line-end="172">project-name<br>
           ├── less<br>
           │ ├── index.less<br>
-          │ └── (many, many other files)<br>
-          │ ├── elements<br>
-          ├── ├── ├── <strong>p.less</strong><br>
-          │ └── (other elements)<br>
+          │ ├── (many, many other files)<br>
+          │ └── elements<br>
+          │     ├── <strong>p.less</strong><br>
+          │     └── (other elements)<br>
           ├── index.html<br>
           └── styles.css</p>
           <p class="has-line-data" data-line-start="173" data-line-end="174">This happens because Decent makes it so that your website <strong>supports all HTML</strong>. All HTML elements have their own file and represenation in Decent. HTML support isn’t a weird feature for Decent to have; it’s a weird feature for most sites to be lacking.</p>
           <p class="has-line-data" data-line-start="175" data-line-end="176">Workflow-wise, this means finding “p.less” through your IDE and editing the lone rule within the file, instead of scrolling through one big file looking for one rule among dozens.</p>
           <p class="has-line-data" data-line-start="177" data-line-end="178">For everything outside of HTML elements, we can add rules in the traditional way. For the demo purposes, we can write new rules at the end of <strong>index.less</strong>. Writing rules here gives us easy control over the variable environment. Lazy loading uses the definitions it finds last, so writing Less here is kinda like having “the high ground.”</p>
           <p class="has-line-data" data-line-start="179" data-line-end="180">We might write this rule at the end of index.less, after all the import statements, instead of the paragraph rule:</p>
-          <pre><code>.offer-frame { border: 2px dashed red;}
-          </code></pre>
+          <pre><code>.offer-frame { border: 2px dashed red;}</code></pre>
           <p class="has-line-data" data-line-start="183" data-line-end="184">Now our .offer-frame component (or whatever it is) has the border rule. How do we get it to show up? First let’s make sure it’s in our index.html in the section inside body:</p>
-          <pre><code>&lt;p class=&quot;offer-frame&quot;&gt;20% off compile times!&lt;/p&gt;
-          </code></pre>
+<pre><code>&lt;p class=&quot;offer-frame&quot;&gt;
+    20% off compile times!
+&lt;/p&gt;</code></pre>
           <p class="has-line-data" data-line-start="187" data-line-end="188">It won’t show up if it’s not there, right? Then let’s compile the rules for how it looks using Less.</p>
           <h1 class="code-line" data-line-start=189 data-line-end=190><a id="Compiling_the_Less_189"></a>Compiling the Less</h1>
           <p class="has-line-data" data-line-start="191" data-line-end="192">To compile our Less, we need to be in our terminal in the site’s root directory, which here is “project-name.” Look, all the best frameworks are boring. Bear with us.</p>
@@ -246,8 +239,7 @@
           ├── index.html<br>
           └── styles.css</p>
           <p class="has-line-data" data-line-start="200" data-line-end="201">To compile here, the command is:</p>
-          <pre><code>lessc less/index.less styles.css
-          </code></pre>
+          <pre><code>lessc less/index.less styles.css</code></pre>
           <p class="has-line-data" data-line-start="204" data-line-end="205">No, that’s not a typo. It’s <code>lessc</code> in the command line. This will compile the CSS and report back on whether it was a success or a failure. If it’s a failure, we’ll get a hint as to why. If it’s a success, we’re ready to look at the changes.</p>
           <p class="has-line-data" data-line-start="206" data-line-end="207">Going back to <a href="http://localhost:8000/">http://localhost:8000/</a>, we should see our new dashed red border line on the offer component.</p>
           <p class="has-line-data" data-line-start="208" data-line-end="209">Now that it’s there and working, let’s make it official. To do that, we might add a ‘components’ directory as a sibling of the ‘elements’ directory, with an ‘offer-frame.less’ file in there. Then we’d import <em>that</em> in index.less instead of just writing the rules right there.</p>
@@ -257,10 +249,9 @@
           <p class="has-line-data" data-line-start="216" data-line-end="217">Let’s edit .offer-frame.</p>
           <p class="has-line-data" data-line-start="218" data-line-end="219">Let’s give it a red background:</p>
           <pre><code>.offer-frame { 
-              border: 2px dashed red;
-              background: red;
-          }
-          </code></pre>
+    border: 2px dashed red;
+    background: red;
+}</code></pre>
           <p class="has-line-data" data-line-start="225" data-line-end="226">Compile with <code>lessc</code> and see the red background. There are two problems here, both of which we will solve the Decent way.</p>
           <p class="has-line-data" data-line-start="227" data-line-end="228">First, let’s get the text contrast up to standards.</p>
           <p class="has-line-data" data-line-start="229" data-line-end="230">We could write out something like <code>color: white;</code> but, as a follower of the Decent way, you should know this: Typing out “color:” in your Less is a code smell.</p>
@@ -268,28 +259,25 @@
           <p class="has-line-data" data-line-start="233" data-line-end="234">In Decent, we use the <strong>.contrast()</strong> mixin to programmatically find the best text color given the background color as an argument. It takes no time at all (except, well, compile time) and provides perfect consistency (which we can adjust!) across our site.</p>
           <p class="has-line-data" data-line-start="235" data-line-end="236">So here we write:</p>
           <pre><code>.offer-frame { 
-              border: 2px dashed red;
-              background: red;
-              **.contrast(red);**
-          }
-          </code></pre>
+    border: 2px dashed red;
+    background: red;
+    <strong>.contrast(red);</strong>
+}</code></pre>
           <p class="has-line-data" data-line-start="243" data-line-end="244">This will output a color that meets our site’s default contrast standard. Speaking of which, Decent has a whole bunch of defaults. One of them will be good for the problem we see on refresh: The .offer-frame paragraph has no padding!write</p>
           <p class="has-line-data" data-line-start="245" data-line-end="246">Naturally, we add this in:</p>
           <pre><code>.offer-frame { 
-              border: 2px dashed red;
-              background: red;
-              .contrast(red);
-              **padding:** 
-          }
-          </code></pre>
+    border: 2px dashed red;
+    background: red;
+    .contrast(red);
+    <strong>padding:</strong> 
+}</code></pre>
           <p class="has-line-data" data-line-start="254" data-line-end="255">But what comes next? What do we set the padding to? We set it to the default padding. Someone wrote that down somewhere, right? And how do we express that? In CSS, it’s maybe not so straightforward. In Decent, it looks like this:</p>
           <pre><code>.offer-frame { 
-              border: 2px dashed red;
-              background: red;
-              .contrast(red);
-              **.default(padding);**
-          }
-          </code></pre>
+    border: 2px dashed red;
+    background: red;
+    .contrast(red);
+    <strong>.default(padding);</strong>
+}</code></pre>
           <p class="has-line-data" data-line-start="263" data-line-end="264">Ultimately, this ‘padding’ reference goes back to Decent’s <strong>properties.less</strong> file which contains default variable counterparts for every CSS property, meaning <strong>.default()</strong> can be used with <em>any</em> CSS property. There are no eggshells here. Decent unapologetically puts a lot of variables into the global scope.</p>
           <p class="has-line-data" data-line-start="265" data-line-end="266">When transplanted to another app, .offer-frame will play by its rules, using that app’s default padding. This idea of transplantability is a core theme in Decent, which targets the decentralized web. A shared precompile styling environment lets the sites of the next Internet share parts as needed without looking ridiculous. (Don’t worry, it works with the Legacy Internet too.)</p>
           <p class="has-line-data" data-line-start="267" data-line-end="268">Enough of the ideals. Let’s clean up .offer-frame a bit.</p>
@@ -298,25 +286,23 @@
           <p class="has-line-data" data-line-start="273" data-line-end="274">It’s not, as implied above, the default value for “color:” the property. It’s the only exception, because we shouldn’t be writing “color:” in our code.</p>
           <p class="has-line-data" data-line-start="275" data-line-end="276">So let’s set that red background to a variable:</p>
           <pre><code>.offer-frame { 
-              @color: red;
-              border: 2px dashed @color;
-              background: @color;
-              .contrast(@color);
-              **.default(padding);**
-          }
-          </code></pre>
+    @color: red;
+    border: 2px dashed @color;
+    background: @color;
+    .contrast(@color);
+    <strong>.default(padding);</strong>
+}</code></pre>
           <p class="has-line-data" data-line-start="285" data-line-end="286">Now it has padding, the text is properly contrasted, and it even has the cool dashed border going on still.</p>
           <p class="has-line-data" data-line-start="287" data-line-end="288">The problem now is that, in most themes and applications, red (the CSS color) is just a bit too much.</p>
           <p class="has-line-data" data-line-start="289" data-line-end="290">There’s a less obvious problem: Red means something to us. But it doesn’t necessarily mean something.</p>
           <p class="has-line-data" data-line-start="291" data-line-end="292">Project-wide meaning is a hard thing to nail down, especially in a visual design sense. To remedy this, Decent ships with ten semantic colors, all of which convey some sort of meaning. Here, we’ll convey meaning through the variable <strong>@failure</strong>, which is always red.</p>
           <pre><code>.offer-frame { 
-              @color: @failure;
-              border: 2px dashed @color;
-              background: @color;
-              .contrast(@color);
-              **.default(padding);**
-          }
-          </code></pre>
+    @color: @failure;
+    border: 2px dashed @color;
+    background: @color;
+    .contrast(@color);
+    <strong>.default(padding);</strong>
+}</code></pre>
           <p class="has-line-data" data-line-start="301" data-line-end="302">Notice that the contrast adjusts to the new color. If we changed it to <strong>@success</strong>, which is always green, the text contrast would still just work. Try ‘white’ and ‘black’ too.</p>
           <p class="has-line-data" data-line-start="303" data-line-end="304">Note also that the semantic colors in your codebase are all downstream of the <strong>@base-color</strong> variable. This variable should be something like your “brand color” or main color of the project. There are as many sets of semantic colors as there are input values.</p>
           <h1 class="code-line" data-line-start=305 data-line-end=306><a id="Thats_it_Youre_done_305"></a>That’s it! You’re done.</h1>

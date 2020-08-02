@@ -1,13 +1,13 @@
 .hero {
-    @hero-background: @alternate;
+    @hero-background: @ambient;
   
     .default(padding);
-    min-height: 100vh / @golden-ratio;
+    min-height: 60vh;
     width: 100%;
     max-width: none;
-    box-shadow: none;
+    border-width: 0;
     padding: @gutter;
-    // box-shadow: inset @box-shadow;
+    box-shadow: inset @box-shadow;
   
     .set-bg() when (@randomness = true) {
         .set-pattern() {
@@ -20,7 +20,7 @@
     }
 
     .set-bg() when (@randomness = false) {
-        .pattern(topography; @hero-background; 1.1;);
+        .pattern(topography; @hero-background; 1.05;);
     }
 
     .set-bg();
@@ -30,5 +30,13 @@
       max-width: @max-width * @golden-ratio;
       margin-left: auto;
       margin-right: auto;
+
+      &:last-child {
+          margin-bottom: 0;
+      }
     }
+
+    .button-elements({
+        font-size: 125%;
+    });
   }

@@ -2,13 +2,13 @@
 
 .set-grays();
 .set-grays(@color: @base-color) {
-  @gray-base: desaturate(@color, 90%);
+  @gray-base: desaturate(@color, 85%) + @ambient*.1;
   @gray-medium: @gray-base;
   @gray: @gray-base;
 
   .set-gray-lighter() {
     .set-contrast-ratio(@gray-base, white);
-    .contrast-fill(@gray-base; @contrast-ratio*.85; @mode: tint;);
+    .contrast-fill(@gray-base; @contrast-ratio*.9; @mode: tint;);
     @gray-lighter: @fill;
   }
 

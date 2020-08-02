@@ -1,5 +1,4 @@
 section {
-    &:extend(.matte);
     .colorize(@white);
     // .default(box-shadow);
     .default(max-width);
@@ -19,6 +18,7 @@ section {
 
     .on-tablet({
         border-width: 1px;
+        .default(border-color);
         padding: @padding*2;
     });
 }
