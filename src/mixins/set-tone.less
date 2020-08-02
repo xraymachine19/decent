@@ -1,5 +1,6 @@
 // sets variable @tone to white or black, depending on which is better for text contrast
 
+@import (reference) "colors/grays";
 @import (reference) "set-contrast-ceiling";
 @import (reference) "set-contrast-floor";
 
@@ -11,8 +12,18 @@
     @tone: @black;
   }
 
-  .tone(@color) when (default()) {
+  .tone(@color) when (@contrast-floor <= @contrast-ceiling) {
     @tone: @white;
+  }
+
+  .tone(@color) when (@contrast-floor > @contrast-ceiling)
+                 and (@text-contrast > 7) {
+    @tone: black;
+  }
+
+  .tone(@color) when (@contrast-floor <= @contrast-ceiling)
+                 and (@text-contrast > 7) {
+    @tone: white;
   }
 
   .tone(@color);

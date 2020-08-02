@@ -19,7 +19,7 @@
 
 // design variables
 @text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
-@ambient: overlay(@base-color, white);
+@ambient: overlay(average(@action, white), @base-color);
 @golden-ratio: 1.618;
 @shadow-color: fade(@black, 16%);
 @pi: 3.14159;

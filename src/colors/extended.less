@@ -21,8 +21,6 @@
     .set-violet();
     .set-purple();
     .set-pink();
-    .set-white();
-    .set-black();
     .set-brown();
 }
 
@@ -101,18 +99,6 @@
     .set-lumafix(@base; @strength: @color-strength;);
     @purple: @lumafix;
     @var-purple: @lumafix;
-}
-
-.set-white() {
-    @mix: average(white, @gray-lighter);
-    @white: @mix;
-    @var-white: @mix;
-}
-
-.set-black() {
-    @mix: average(black, @gray-darker);
-    @black: @mix;
-    @var-black: @mix;
 }
 
 .set-brown() {

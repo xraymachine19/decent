@@ -152,7 +152,7 @@
           <p class="has-line-data" data-line-start="63" data-line-end="64">First, you should have some sort of web page to look at. It can be an <em>index.html</em> file on your desktop. Or a Django app running in the cloud. We really like Sitepoint’s starting point because we’re copy/paste bandits: <a href="https://www.sitepoint.com/a-basic-html5-template/">https://www.sitepoint.com/a-basic-html5-template/</a></p>
           <p class="has-line-data" data-line-start="65" data-line-end="66">Take note of where it links to the CSS: <strong>styles.css</strong> is your stylesheet target.</p>
           <p class="has-line-data" data-line-start="67" data-line-end="68">Don’t write anything in there. You don’t edit CSS files now. You are writing in the Decent way now.</p>
-          <p class="has-line-data" data-line-start="69" data-line-end="70">Replace the contents of <strong>&lt;body&gt;</strong> with this (no, we won’t need that scripts file):</p>
+          <p class="has-line-data" data-line-start="69" data-line-end="70">Replace the <strong>&lt;body&gt;</strong> element with this (no, we won’t need that scripts file&mdash; Decent is <em>not</em> a Javascript library):</p>
           <pre><code>&lt;body&gt;
     &lt;main&gt;
         &lt;section&gt;
@@ -170,7 +170,7 @@
           <p class="has-line-data" data-line-start="94" data-line-end="95">It’s worth it! Even if you only ever use it for Less.</p>
           <h1 class="code-line" data-line-start=96 data-line-end=97><a id="A_simple_workflow_96"></a>A simple workflow</h1>
           <p class="has-line-data" data-line-start="98" data-line-end="99">If you’re following along with the above, your directory structure might look like this:</p>
-          <p class="has-line-data" data-line-start="100" data-line-end="103">project-name<br>
+          <p class="has-line-data ascii" data-line-start="100" data-line-end="103">project-name<br>
           ├── index.html<br>
           └── styles.css</p>
           <p class="has-line-data" data-line-start="104" data-line-end="105">If you’re using a more complicated setup, you can probably extrapolate from this demo. Less integrates well with command-line based workflows and has desktop solutions too.</p>
@@ -183,7 +183,7 @@
           ├── index.html<br>
           └── styles.css</p>
           <p class="has-line-data" data-line-start="117" data-line-end="118">At this point, you may want to change the name of the ‘decent’ folder into something more sensible, like ‘less’:</p>
-          <p class="has-line-data" data-line-start="119" data-line-end="125">project-name<br>
+          <p class="has-line-data ascii" data-line-start="119" data-line-end="125">project-name<br>
           ├── less<br>
           │ ├── index.less<br>
           │ └── (many, many other files)<br>
@@ -195,10 +195,9 @@
           <p class="has-line-data" data-line-start="132" data-line-end="133">You can! We recommend using Decent in the above way, as a downloaded and bootstrapped CSS codebase starting point.</p>
           <p class="has-line-data" data-line-start="134" data-line-end="135">But you can also grab the Node package and import it in your Less codebase. Decent files are all designed to be able to be imported on their own, with their own dependencies stated inside their file.</p>
           <p class="has-line-data" data-line-start="136" data-line-end="137">Want Decent’s awesome contrasting superpowers but nothing else? Try:</p>
-          <pre><code>@import &quot;node/directory/decent/mixins/contrast.less&quot;;
-          </code></pre>
+          <pre><code>@import &quot;node/directory/decent/mixins/contrast.less&quot;;</code></pre>
           <p class="has-line-data" data-line-start="140" data-line-end="141">Importing the entire library can be a little risky. Decent is meant as an environment, and may have problems sharing the stage in this capacity.</p>
-          <p class="has-line-data" data-line-start="142" data-line-end="143">All we’re saying is that when it came to easy variable names or the sanctity of the scope, we picked the easy variable names every single time.</p>
+          <p class="has-line-data" data-line-start="142" data-line-end="143">When it came to easy variable names or the sanctity of the scope, we picked the easy variable names every single time.</p>
           <h1 class="code-line" data-line-start=144 data-line-end=145><a id="Lets_run_this_thing_144"></a>Let’s run this thing!</h1>
           <p class="has-line-data" data-line-start="146" data-line-end="147">Where were we? We had just put together our basic directory structure:</p>
           <p class="has-line-data ascii" data-line-start="148" data-line-end="154">project-name<br>
@@ -216,10 +215,11 @@
           │ ├── index.less<br>
           │ ├── (many, many other files)<br>
           │ └── elements<br>
-          │     ├── <strong>p.less</strong><br>
-          │     └── (other elements)<br>
+          │ &nbsp; ├── <strong>p.less</strong><br>
+          │ &nbsp; └── (other elements)<br>
           ├── index.html<br>
           └── styles.css</p>
+          <p class="info"><strong>It's quicker and easier!</strong> If you're in Sublime, Atom or VS Code, you can use <strong>ctrl/cmd + P</strong> and type "p.less" to get to the file quickly.</p>
           <p class="has-line-data" data-line-start="173" data-line-end="174">This happens because Decent makes it so that your website <strong>supports all HTML</strong>. All HTML elements have their own file and represenation in Decent. HTML support isn’t a weird feature for Decent to have; it’s a weird feature for most sites to be lacking.</p>
           <p class="has-line-data" data-line-start="175" data-line-end="176">Workflow-wise, this means finding “p.less” through your IDE and editing the lone rule within the file, instead of scrolling through one big file looking for one rule among dozens.</p>
           <p class="has-line-data" data-line-start="177" data-line-end="178">For everything outside of HTML elements, we can add rules in the traditional way. For the demo purposes, we can write new rules at the end of <strong>index.less</strong>. Writing rules here gives us easy control over the variable environment. Lazy loading uses the definitions it finds last, so writing Less here is kinda like having “the high ground.”</p>
@@ -232,7 +232,7 @@
           <p class="has-line-data" data-line-start="187" data-line-end="188">It won’t show up if it’s not there, right? Then let’s compile the rules for how it looks using Less.</p>
           <h1 class="code-line" data-line-start=189 data-line-end=190><a id="Compiling_the_Less_189"></a>Compiling the Less</h1>
           <p class="has-line-data" data-line-start="191" data-line-end="192">To compile our Less, we need to be in our terminal in the site’s root directory, which here is “project-name.” Look, all the best frameworks are boring. Bear with us.</p>
-          <p class="has-line-data" data-line-start="193" data-line-end="199">project-name<br>
+          <p class="has-line-data ascii" data-line-start="193" data-line-end="199">project-name<br>
           ├── less<br>
           │ ├── index.less<br>
           │ └── (many, many other files)<br>

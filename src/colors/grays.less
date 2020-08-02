@@ -1,40 +1,54 @@
 @gray-names: gray-lighter, gray-light, gray-medium, gray-dark, gray-darker;
 
-.set-grays();
-.set-grays(@color: @base-color) {
-  @gray-base: desaturate(@color, 85%) + @ambient*.1;
-  @gray-medium: @gray-base;
-  @gray: @gray-base;
+@gray-base: desaturate(@base-color, 85%) + @ambient*.1;
+@gray-medium: @gray-base;
+@gray: @gray-base;
 
-  .set-gray-lighter() {
-    .set-contrast-ratio(@gray-base, white);
-    .contrast-fill(@gray-base; @contrast-ratio*.9; @mode: tint;);
-    @gray-lighter: @fill;
-  }
-
-  .set-gray-darker() {
-    .set-contrast-ratio(@gray-base, black);
-    .contrast-fill(@gray-base; @contrast-ratio*.6; @mode: shade;);
-    @gray-darker: @fill;
-  }
-
-  .set-gray-light() {
-    @gray-light: average(@gray-base, @gray-lighter);
-  }
-
-  .set-gray-dark() {
-    @gray-dark: average(@gray-base, @gray-darker);
-  }
-
-  .set-gray-lighter();
-  .set-gray-light();
-  .set-gray-darker();
-  .set-gray-dark();
-
-  @grey-lighter: @gray-lighter;
-  @grey-light: @gray-light;
-  @grey-medium: @gray-medium;
-  @grey: @gray;
-  @grey-dark: @gray-dark;
-  @grey-darker: @gray-darker;
+.set-gray-lighter() {
+  .set-contrast-ratio(@gray-base, white);
+  .contrast-fill(@gray-base; @contrast-ratio*.9; @mode: tint;);
+  @gray-lighter: @fill;
 }
+
+.set-gray-darker() {
+  .set-contrast-ratio(@gray-base, black);
+  .contrast-fill(@gray-base; @contrast-ratio*.6; @mode: shade;);
+  @gray-darker: @fill;
+}
+
+.set-gray-light() {
+  @gray-light: average(@gray-base, @gray-lighter);
+}
+
+.set-gray-dark() {
+  @gray-dark: average(@gray-base, @gray-darker);
+}
+
+.set-white() {
+  @mix: average(white, @gray-lighter);
+  @white: @mix;
+  @var-white: @mix;
+}
+
+.set-black() {
+  @mix: average(black, @gray-darker);
+  @black: @mix;
+  @var-black: @mix;
+}
+
+
+
+.set-gray-lighter();
+.set-gray-light();
+.set-white();
+
+.set-gray-darker();
+.set-gray-dark();
+.set-black();
+
+@grey-lighter: @gray-lighter;
+@grey-light: @gray-light;
+@grey-medium: @gray-medium;
+@grey: @gray;
+@grey-dark: @gray-dark;
+@grey-darker: @gray-darker;
