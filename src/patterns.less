@@ -115,7 +115,7 @@ each(@patterns-all, {
         .pattern(@value; @color-random;);
 
         &:after {
-            content: ".pattern(@{value}; @{color-random};);";
+            content: ".pattern(@{value}, @{color-random});";
         }
     }
 });
@@ -125,7 +125,7 @@ each(@patterns-all, {
     // .@{pattern-name} { background: data-uri('image/svg+xml;charset=UTF-8', 'svg/@{pattern-name}.svg')}
 }
 
-.pattern(@pattern-name: anchors-away; @base: @background-color;) {
+.pattern(@pattern-name: anchors-away; @base: @background-color; @contrast: 1.125;) {
     @anchors-away: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%20width%3D%2280%22%20height%3D%2280%22%3E%3Cpath%20fill%3D%22@{fg}%22%20d%3D%22M14%2016H9v-2h5V9.87a4%204%200%201%201%202%200V14h5v2h-5v15.95A10%2010%200%200%200%2023.66%2027l-3.46-2%208.2-2.2-2.9%205a12%2012%200%200%201-21%200l-2.89-5%208.2%202.2-3.47%202A10%2010%200%200%200%2014%2031.95V16zm40%2040h-5v-2h5v-4.13a4%204%200%201%201%202%200V54h5v2h-5v15.95A10%2010%200%200%200%2063.66%2067l-3.47-2%208.2-2.2-2.88%205a12%2012%200%200%201-21.02%200l-2.88-5%208.2%202.2-3.47%202A10%2010%200%200%200%2054%2071.95V56zm-39%206a2%202%200%201%201%200-4%202%202%200%200%201%200%204zm40-40a2%202%200%201%201%200-4%202%202%200%200%201%200%204zM15%208a2%202%200%201%200%200-4%202%202%200%200%200%200%204zm40%2040a2%202%200%201%200%200-4%202%202%200%200%200%200%204z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E";
     @architect: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22199%22%20viewBox%3D%220%200%20100%20199%22%3E%3Cg%20fill%3D%22@{fg}%22%3E%3Cpath%20d%3D%22M0%20199V0h1v1.99L100%20199h-1.12L1%204.22V199H0zM100%202h-.12l-1-2H100v2z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E";
     @autumn: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2288%22%20height%3D%2224%22%20viewBox%3D%220%200%2088%2024%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cg%20id%3D%22autumn%22%20fill%3D%22@{fg}%22%3E%3Cpath%20d%3D%22M10%200l30%2015%202%201V2.18A10%2010%200%200%200%2041.76%200H39.7a8%208%200%200%201%20.3%202.18v10.58L14.47%200H10zm31.76%2024a10%2010%200%200%200-5.29-6.76L4%201%202%200v13.82a10%2010%200%200%200%205.53%208.94L10%2024h4.47l-6.05-3.02A8%208%200%200%201%204%2013.82V3.24l31.58%2015.78A8%208%200%200%201%2039.7%2024h2.06zM78%2024l2.47-1.24A10%2010%200%200%200%2086%2013.82V0l-2%201-32.47%2016.24A10%2010%200%200%200%2046.24%2024h2.06a8%208%200%200%201%204.12-4.98L84%203.24v10.58a8%208%200%200%201-4.42%207.16L73.53%2024H78zm0-24L48%2015l-2%201V2.18A10%2010%200%200%201%2046.24%200h2.06a8%208%200%200%200-.3%202.18v10.58L73.53%200H78z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
@@ -212,7 +212,7 @@ each(@patterns-all, {
 
     @pattern: @@pattern-name;
 
-    .contrast-fill(@base; 1.125;);
+    .contrast-fill(@base; @contrast;);
     @fg-base: @fill;
   
     // we need the foreground color inside the SVG to be in rgb(r,g,b) format

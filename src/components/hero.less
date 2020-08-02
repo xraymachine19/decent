@@ -1,0 +1,34 @@
+.hero {
+    @hero-background: @alternate;
+  
+    .default(padding);
+    min-height: 100vh / @golden-ratio;
+    width: 100%;
+    max-width: none;
+    box-shadow: none;
+    padding: @gutter;
+    // box-shadow: inset @box-shadow;
+  
+    .set-bg() when (@randomness = true) {
+        .set-pattern() {
+            @random: `Math.random()`;
+            @length: length(@patterns-all);
+            @the-pattern: floor(@random*@length);
+            .pattern(extract(@patterns-all, @the-pattern); @hero-background; 1.1;);
+        }
+        .set-pattern();
+    }
+
+    .set-bg() when (@randomness = false) {
+        .pattern(topography; @hero-background; 1.1;);
+    }
+
+    .set-bg();
+    .colorize(@hero-background; 7;);
+  
+    > * {
+      max-width: @max-width * @golden-ratio;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

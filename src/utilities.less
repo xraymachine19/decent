@@ -10,23 +10,14 @@ each(@extended-color-names, { &.@{value} { .colorize(@@value);};});
 // gray color names .colorize() when used as a class
 each(@gray-names, { &.@{value} { .colorize(@@value);};});
 
-.semantic-classes({
-  .default(padding);
-});
 
-.inline-elements({
-
-  .semantic-classes({
-    background: transparent;
-  });
-
-  each(@semantic-color-names, { &.@{value} { .color-text(@@value; @background; 3;); background: transparent;};});
-});
 
 .block-level-elements({
   margin-bottom: @margin;
 
-  
+  .semantic-classes({
+    .default(padding);
+  });
   
   // each(@extended-color-names, { 
   //   @replace: replace(e(@value), "var-", "");
@@ -56,26 +47,7 @@ each(@gray-names, { &.@{value} { .colorize(@@value);};});
   }
 }
 
-.hero {
-  @color: @ambient;
 
-  .default(padding);
-  min-height: 100vh / @golden-ratio;
-  width: 100%;
-  max-width: none;
-  box-shadow: none;
-  padding: @gutter;
-  box-shadow: inset @box-shadow;
-
-  .pattern(topography; @color;);
-  .colorize(@color);
-
-  > * {
-    max-width: @max-width * @golden-ratio;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 .matte {
   .default(box-shadow);

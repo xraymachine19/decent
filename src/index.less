@@ -45,6 +45,9 @@
 @import "elements/textarea";
 // TODO: support all HTML elements
 
+@import "components/hero";
+
+
 // button.warning {
 //     &:before {
 //         content:"";
@@ -88,11 +91,12 @@
     // @logo: data-uri("less_logo.png");
 
     display: block;
-    max-width: 120px;
+    max-width: 100%;
     // height: image-height("less_logo.png")/4;
     // background: @logo;
     // background-size: 100% 100%;
     // margin: 0 auto;
+    margin-right: 12px;
 }
 
 .powered-by {
@@ -102,6 +106,7 @@
     margin: 0 auto;
     max-width: 120px;
     padding: @padding/2;
+    .contrast(color, @info);
 }
 
 .logo {

@@ -105,10 +105,10 @@
 	// uses result as text color (or @property if specified)
 
 	@start: 0%;
-    @iterations: 200;
+    @iterations: 400;
     
     // this expression describes the contrasting color that will be used for text
-	@contrast: mix(@tone, @color, @start + @index*.5);
+	@contrast: mix(@tone, @color, @start + @index*.25);
     @index: 1;
 
     // these settings will get PERFECT contrast ratio results, or pretty close
