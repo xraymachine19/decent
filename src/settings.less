@@ -8,7 +8,7 @@
 // @base-color: #bef8ce;
 // css attribute defaults
 @main-background: lighten(black, (98% + luma(@base-color)/50)); // background of 'main' element
-@main-background: @background;
+@main-background: @white;
 @background: @action;
 
 // font stack settings TODO: better fonts 
@@ -19,7 +19,7 @@
 
 // design variables
 @text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
-@ambient: overlay(average(@action, white), @base-color);
+@ambient: overlay(@base-color, white);
 @golden-ratio: 1.618;
 @shadow-color: fade(@black, 16%);
 @pi: 3.14159;

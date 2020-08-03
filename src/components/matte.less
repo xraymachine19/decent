@@ -3,6 +3,7 @@
     .default(border);
     .default(border-radius);
     .default(padding);
-    .colorize(@white);
-    .pattern(texture; white;);
+    @bright-white: average(white, @white);
+    .colorize(@bright-white);
+    .pattern(texture; @bright-white;);
   }

@@ -1,12 +1,11 @@
 .hero {
-    @hero-background: @ambient;
+    @hero-background: @accent;
   
     .default(padding);
     min-height: 60vh;
     width: 100%;
     max-width: none;
     border-width: 0;
-    padding: @gutter;
     box-shadow: inset @box-shadow;
   
     .set-bg() when (@randomness = true) {
@@ -38,5 +37,9 @@
 
     .button-elements({
         font-size: 125%;
+    });
+
+    .on-tablet({
+        padding: @gutter;
     });
   }

@@ -3,8 +3,166 @@
 
 // eg '.default(padding);' is equivalent to 'padding: @padding;'
 
-
 @test: 'test';
+
+@css-property-names: background,
+background-attachment,
+background-clip,
+background-color,
+background-image,
+background-origin,
+background-position,
+background-repeat,
+background-size,
+border,
+border-bottom,
+border-bottom-color,
+border-bottom-left-radius,
+border-bottom-right-radius,
+border-bottom-style,
+border-bottom-width,
+border-color,
+border-image,
+border-image-outset,
+border-image-repeat,
+border-image-slice,
+border-image-source,
+border-image-width,
+border-left,
+border-left-color,
+border-left-style,
+border-left-width,
+border-radius,
+border-right,
+border-right-color,
+border-right-style,
+border-right-width,
+border-style,
+border-top,
+border-top-color,
+border-top-left-radius,
+border-top-right-radius,
+border-top-style,
+border-top-width,
+border-width,
+color,
+opacity,
+height,
+max-height,
+max-width,
+min-height,
+min-width,
+width,
+content,
+quotes,
+counter-reset,
+counter-increment,
+align-content,
+align-items,
+align-self,
+flex,
+flex-basis,
+flex-direction,
+flex-flow,
+flex-grow,
+flex-shrink,
+flex-wrap,
+justify-content,
+order,
+font,
+font-family,
+font-size,
+font-size-adjust,
+font-stretch,
+font-style,
+font-variant,
+font-weight,
+list-style,
+list-style-image,
+list-style-position,
+list-style-type,
+margin,
+margin-bottom,
+margin-left,
+margin-right,
+margin-top,
+column-count,
+column-fill,
+column-gap,
+column-rule,
+column-rule-color,
+column-rule-style,
+column-rule-width,
+column-span,
+column-width,
+columns,
+outline,
+outline-color,
+outline-offset,
+outline-style,
+outline-width,
+padding,
+padding-bottom,
+padding-left,
+padding-right,
+padding-top,
+page-break-after,
+page-break-before,
+page-break-inside,
+border-collapse,
+border-spacing,
+caption-side,
+empty-cells,
+table-layout,
+direction,
+tab-size,
+text-align,
+text-align-last,
+text-decoration,
+text-decoration-color,
+text-decoration-line,
+text-decoration-style,
+text-indent,
+text-justify,
+text-overflow,
+text-shadow,
+text-transform,
+line-height,
+vertical-align,
+letter-spacing,
+word-spacing,
+white-space,
+word-break,
+word-wrap,
+backface-visibility,
+perspective,
+perspective-origin,
+transform,
+transform-origin,
+transform-style,
+transition,
+transition-delay,
+transition-duration,
+transition-property,
+transition-timing-function,
+display,
+position,
+top,
+right,
+bottom,
+left,
+float,
+clear,
+z-index,
+overflow,
+overflow-x,
+overflow-y,
+resize,
+clip,
+visibility,
+cursor,
+box-shadow,
+box-sizing;
 
 // Animation Properties
 // @animation: @test; // Specifies the keyframe-based animations.
@@ -178,19 +336,19 @@
 @word-wrap: @test; // Specifies whether to break words when the content overflows the boundaries of its container.
 
 // Transform Properties
-@backface-visibility: @test; // Specifies whether or not the "back" side of a transformed element is visible when facing the user.
-@perspective: @test; // Defines the perspective from which all child elements of the object are viewed.
-@perspective-origin: @test; // Defines the origin (the vanishing point for the 3D space) for the perspective property.
-@transform: @test; // Applies a 2D or 3D transformation to an element.
-@transform-origin: @test; // Defines the origin of transformation for an element.
-@transform-style: @test; // Specifies how nested elements are rendered in 3D space.
+@backface-visibility: visible; // Specifies whether or not the "back" side of a transformed element is visible when facing the user.
+@perspective: none; // Defines the perspective from which all child elements of the object are viewed.
+@perspective-origin: 50% 50%; // Defines the origin (the vanishing point for the 3D space) for the perspective property.
+@transform: none; // Applies a 2D or 3D transformation to an element.
+@transform-origin: 50% 50% 0; // Defines the origin of transformation for an element.
+@transform-style: flat; // Specifies how nested elements are rendered in 3D space.
 
 // Transitions Properties
-@transition: @test; // Defines the transition between two states of an element.
-@transition-delay: @test; // Specifies when the transition effect will start.
-@transition-duration: @test; // Specifies the number of seconds or milliseconds a transition effect should take to complete.
-@transition-property: @test; // Specifies the names of the CSS properties to which a transition effect should be applied.
-@transition-timing-function: @test; // Specifies the speed curve of the transition effect.
+@transition: @transition-property @transition-duration @transition-timing-function @transition-delay; // Defines the transition between two states of an element.
+@transition-delay: 0s; // Specifies when the transition effect will start.
+@transition-duration: 0s; // Specifies the number of seconds or milliseconds a transition effect should take to complete.
+@transition-property: all; // Specifies the names of the CSS properties to which a transition effect should be applied.
+@transition-timing-function: ease; // Specifies the speed curve of the transition effect.
 
 // Visual formatting Properties
 @display: inline; // Specifies how an element is displayed onscreen.
