@@ -1,9 +1,7 @@
 .matte {
+    @matte-background: @white;
     .default(box-shadow);
-    .default(border);
     .default(border-radius);
     .default(padding);
-    @bright-white: average(white, @white);
-    .colorize(@bright-white);
-    .pattern(texture; @bright-white;);
+    .pattern(texture, @matte-background);
   }

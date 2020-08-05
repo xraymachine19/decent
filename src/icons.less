@@ -524,8 +524,8 @@ wifi;
    
     @icon: @@icon-name;
 
-    .contrast-fill(@base; @contrast-standard: @contrast-ratio;);
-    @bg-base: @fill;
+    .set-contrast(@base; @contrast-standard: @contrast-ratio;);
+    @bg-base: @contrast;
   
     @bg-red: round(red(@bg-base));
     @bg-green: round(green(@bg-base));

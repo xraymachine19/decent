@@ -1,10 +1,8 @@
 // environment
 // all of these files only output variables/mixins for the environment, no CSS rules
 
-
 @import (reference) "properties";
 @import (reference) "settings";
-
 
 @import (reference) "viewports";
 @import (reference) "targets";
@@ -19,17 +17,19 @@
 
 @import (reference) "random";
 
-
 // css output
 // edit these files directly to change the appearance of HTML elements
 
 @import "reset";
-@import "utilities";
+
+@import "property-classes";
 
 @import "elements/body";
 @import "elements/main";
 @import "elements/nav";
 @import "elements/section";
+@import "elements/aside";
+@import "elements/footer";
 @import "elements/headline";
 @import "elements/p";
 @import "elements/a";
@@ -39,6 +39,7 @@
 @import "elements/ul";
 @import "elements/span";
 @import "elements/mark";
+@import "elements/kbd";
 @import "elements/b";
 @import "elements/button";
 @import "elements/pre";
@@ -50,7 +51,15 @@
 @import "components/hero";
 @import "components/matte";
 @import "components/well";
+@import "components/card";
+@import "components/feature";
+@import "components/dropcap";
+@import "components/group";
+@import "components/pagination";
+@import "components/two-column";
+@import "components/three-column";
 
+@import "utilities";
 
 // button.warning {
 //     &:before {
@@ -71,6 +80,10 @@
 //         .icon(alert-triangle; @failure;);
 //     }
 // }
+
+
+.ambient { .colorize(@ambient);}
+.base-color { .colorize(@base-color);}
 
 // add any other Less/CSS here
 
@@ -163,14 +176,4 @@
     }
 }
 
-
 #icon_library { display: none;}
-
-
-each(@gray-names, {
-    @color: @@value;
-
-    .@{value} {
-        .colorize(@color);
-    }
-});

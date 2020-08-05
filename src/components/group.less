@@ -1,0 +1,30 @@
+.group {
+    // generically groups images, buttons, inputs or lists
+
+
+    padding: 0;
+    margin: 0;
+    .default(margin-bottom);
+
+    ul& {
+        list-style-type: none;
+    }
+
+    ol& {
+        list-style-position: inside;
+    }
+
+
+    li {
+        .default(border-bottom);
+        padding: @text-padding;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .button-elements({
+
+    });
+}

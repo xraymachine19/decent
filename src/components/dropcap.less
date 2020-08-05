@@ -1,0 +1,11 @@
+.dropcap {
+    &:first-letter {
+        @size: 4.5em;
+        float: left;
+        font-size: @size;
+        font-weight: bold;
+        padding: .25em .2em;
+        @height: unit(@size) / @golden-ratio;
+        line-height: @height;
+    }
+}

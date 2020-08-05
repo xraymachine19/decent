@@ -1,8 +1,7 @@
 .well {
+    @well-background: @gray-lighter;
     .default(padding);
     .default(border-radius);
-    .colorize(@gray-lighter);
-    .pattern(texture; @gray-lighter;);
+    .pattern(texture; @well-background;);
     box-shadow: inset @box-shadow;
-    border: 1px solid @gray-lighter;
 }

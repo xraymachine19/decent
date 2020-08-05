@@ -1,0 +1,20 @@
+.pagination {
+    list-style-type: none;
+    padding: @text-padding;
+    margin: 0;
+    .default(margin-bottom);
+
+    .clearfix();
+
+    > li {
+        float: left;
+        margin-right: @text-padding-right;
+
+        > a {
+            .invert-text-against(@default);
+            padding: @text-padding;
+            text-decoration: none;
+            .default(border-radius);
+        }
+    }
+}

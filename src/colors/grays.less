@@ -1,37 +1,42 @@
-@gray-names: gray-lighter, gray-light, gray-medium, gray-dark, gray-darker;
-
-@gray-base: desaturate(@base-color, 85%) + @ambient*.1;
-@gray-medium: @gray-base;
-@gray: @gray-base;
+@gray-names: gray-lighter, gray-light, gray-medium, ~"gray", gray-dark, gray-darker;
+@gray-mix: 30%;
+@gray-base: desaturate(@base-color, 85%);
+@gray-medium: mix(lighten(black, 50%), @gray-base, @gray-mix);
+@gray: @gray-medium;
 
 .set-gray-lighter() {
-  .set-contrast-ratio(@gray-base, white);
-  .contrast-fill(@gray-base; @contrast-ratio*.88; @mode: tint;);
-  @gray-lighter: @fill;
-}
-
-.set-gray-darker() {
-  .set-contrast-ratio(@gray-base, black);
-  .contrast-fill(@gray-base; @contrast-ratio*.6; @mode: shade;);
-  @gray-darker: @fill;
+  .set-contrast-ceiling(@gray-base);
+  .set-contrast(@gray-base; @contrast-ceiling*.9; @mode: tint;);
+  @gray-lighter-base: @contrast;
+  @gray-lighter: mix(lighten(black, 84%), @gray-lighter-base, @gray-mix);
 }
 
 .set-gray-light() {
-  @gray-light: average(@gray-base, @gray-lighter);
+  @gray-light-base: mix(@gray-base, @gray-lighter, 67%);
+  @gray-light: mix(lighten(black, 75%), @gray-light-base, @gray-mix);
 }
 
 .set-gray-dark() {
-  @gray-dark: average(@gray-base, @gray-darker);
+  @gray-dark-base: mix(@gray-base, @gray-darker, 67%);
+  @gray-dark: mix(darken(black, 25%), @gray-dark-base, @gray-mix);
 }
 
+.set-gray-darker() {
+  .set-contrast-floor(@gray-base);
+  .set-contrast(@gray-base; @contrast-floor*.62; @mode: shade;);
+  @gray-darker-base: @contrast;
+  @gray-darker: mix(lighten(black, 16%), @gray-darker-base, @gray-mix);
+}
+
+
 .set-white() {
-  @mix: average(white, @gray-lighter);
+  @mix: mix(@gray-lighter, white, @gray-mix);
   @white: @mix;
   @var-white: @mix;
 }
 
 .set-black() {
-  @mix: average(black, @gray-darker);
+  @mix: mix(@gray-darker, black, @gray-mix);
   @black: @mix;
   @var-black: @mix;
 }

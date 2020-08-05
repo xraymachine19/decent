@@ -1,14 +1,14 @@
 .button-elements({
-    .default(margin-bottom);
-    .default(border);
+    // .default(border);
+    border: none;
     .default(border-radius);
     .default(font-size);
     .default(box-shadow);
   
     display: inline;
+    font-family: inherit;
     padding: 1em / @golden-ratio;
     .button-color(@default);
-    width: 100%;
     max-width: @aside-width;
     line-height: 1;
     text-align: center;
@@ -19,50 +19,17 @@
     text-decoration: none;
     touch-action: manipulation;
     cursor: pointer;
-    .no-user-select;
-    border: 1px solid @gray-dark;
     transform: scale(1);
     transition: .08s linear;
+    .no-user-select;
 
     &:active {
-      transform: scale(.98);
+      transform: scale(.985);
       box-shadow: none;
-    }
-
-    // TODO: better font conventions
-    & when (@serif = true) {
-      font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-    }
-
-    & when (@sans-serif = true) {
-        font-family:  "Helvetica Neue",
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Oxygen-Sans,
-                Ubuntu,
-                Cantarell,
-                sans-serif;
-    }
-
-    & when (@monospace = true) {
-        font-family:
-          "SFMono-Regular",
-          Consolas,
-          "Liberation Mono",
-          Menlo,
-          Courier,
-          monospace;
     }
 
     .on-tablet({
       width: auto;
-      margin-right: 1ch;
-
-      &:last-child {
-        margin-right: 0;
-      }
     });
 
     each(@semantic-color-names, {
@@ -90,13 +57,5 @@
   .color();
   background-color: @color;
   // .pattern(texture; @color;);
-  .contrast(border-color; @color; 1.5; shade;);
+  // .contrast(border-color; @color; 1.5; shade;);
 }
-
-// .button-elements({
- 
-//   &:focus {outline:none;}
-//   &::-moz-focus-inner {border:0;}
-// });
-
-

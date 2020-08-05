@@ -227,7 +227,7 @@ box-sizing;
 // Dimension Properties
 @height: auto; // Specify the height of an element.
 @max-height: none; // Specify the maximum height of an element.
-@max-width: @text-measure / @golden-ratio * 1rem; // Specify the maximum width of an element.
+@max-width: floor(@text-measure / @golden-ratio) * 1rem; // Specify the maximum width of an element.
 @min-height: 0; // Specify the minimum height of an element.
 @min-width: 0; // Specify the minimum width of an element.
 @width: auto; // Specify the width of an element.
@@ -327,7 +327,7 @@ box-sizing;
 @text-overflow: @test; // Specifies how the text content will be displayed, when it overflows the block containers.
 @text-shadow: @test; // Applies one or more shadows to the text content of an element.
 @text-transform: @test; // Transforms the case of the text.
-@line-height: @font-size * @golden-ratio; // Sets the height between lines of text.
+@line-height: ceil(@font-size * @golden-ratio * (@text-measure/55)); // Sets the height between lines of text.
 @vertical-align: @test; // Sets the vertical positioning of an element relative to the current text baseline.
 @letter-spacing: @test; // Sets the extra spacing between letters.
 @word-spacing: @test; // Sets the spacing between words.
@@ -353,10 +353,10 @@ box-sizing;
 // Visual formatting Properties
 @display: inline; // Specifies how an element is displayed onscreen.
 @position: relative; // Specifies how an element is positioned.
-@top: auto; // Specify the location of the top edge of the positioned element.
-@right: auto; // Specify the location of the right edge of the positioned element.
-@bottom: auto; // Specify the location of the bottom edge of the positioned element.
-@left: auto; // Specify the location of the left edge of the positioned element.
+@top: 0; // Specify the location of the top edge of the positioned element.
+@right: 0; // Specify the location of the right edge of the positioned element.
+@bottom: 0; // Specify the location of the bottom edge of the positioned element.
+@left: 0; // Specify the location of the left edge of the positioned element.
 @float: left; // Specifies whether or not a box should float.
 @clear: both; // Specifies the placement of an element in relation to floating elements.
 @z-index: 10; // Specifies a layering or stacking order for positioned elements.

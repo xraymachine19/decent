@@ -1,0 +1,11 @@
+.two-column {
+    > * {
+        margin-bottom: @margin;
+    }
+
+    .on-large-phone({
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: @padding;
+    });
+}

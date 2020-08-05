@@ -1,39 +1,58 @@
 .hero {
     @hero-background: @accent;
+
+    @subtle-patterns: bamboo, charlie-brown, diagonal-lines, endless-clouds, eyes,
+    falling-triangles, glamorous, graph-paper, heavy-rain, i-like-food, jigsaw, 
+    morphing-diamonds, parkay-floor, pixel-dots, rain, signal, texture, tiny-checkers,
+    volcano-lamp, zig-zag;
   
-    .default(padding);
-    min-height: 60vh;
+    font-size: 110%;
+    padding: @padding;
     width: 100%;
     max-width: none;
     border-width: 0;
-    box-shadow: inset @box-shadow;
+    margin-bottom: @gutter;
   
-    .set-bg() when (@randomness = true) {
-        .set-pattern() {
+    .set-pattern() when (@randomness = true) {
+        .set-random-pattern(@pattern-list) {
             @random: `Math.random()`;
-            @length: length(@patterns-all);
+            @length: length(@pattern-list);
             @the-pattern: floor(@random*@length);
-            .pattern(extract(@patterns-all, @the-pattern); @hero-background; 1.1;);
+            @random-pattern: extract(@pattern-list, @the-pattern);
         }
-        .set-pattern();
+
+        .set-random-pattern(@subtle-patterns);
+        @pattern: @random-pattern;
     }
 
-    .set-bg() when (@randomness = false) {
-        .pattern(topography; @hero-background; 1.05;);
+    .set-pattern() when (@randomness = false) {
+        @pattern: topography;
     }
 
-    .set-bg();
-    .colorize(@hero-background; 7;);
+    .set-pattern();
+
+    .pattern(@pattern; @hero-background; 1.1;);
+
+    // this generates a pattern background for each semantic color
+    each(@semantic-color-names, {
+        @color: @@value;
+        @color-name: @value;
+        &.@{color-name} { .pattern(@pattern; @color; 1.1;);}
+    });
   
+    // a wider max-width for everything inside the hero
     > * {
       max-width: @max-width * @golden-ratio;
       margin-left: auto;
       margin-right: auto;
-
-      &:last-child {
-          margin-bottom: 0;
-      }
     }
+
+    // this rewrites color- rules to work inside the hero
+    .inline-elements({
+        each(@semantic-color-names, { 
+            &.color-@{value} { .color-text(@@value; @hero-background);};
+        });
+    });
 
     .button-elements({
         font-size: 125%;

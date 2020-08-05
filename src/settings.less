@@ -7,8 +7,8 @@
 @base-color: @random-color;
 // @base-color: #bef8ce;
 // css attribute defaults
-@main-background: lighten(black, (98% + luma(@base-color)/50)); // background of 'main' element
-@main-background: @white;
+// @main-background: lighten(black, (98% + luma(@base-color)/50)); // background of 'main' element
+// @main-background: @white;
 @background: @action;
 
 // font stack settings TODO: better fonts 
@@ -17,22 +17,38 @@
 @serif: false;
 @sans-serif: true;
 
+// patterns
+
+@pattern-body: anchors-away;
+@pattern-well: texture;
+@pattern-hero: charlie-brown;
+
 // design variables
 @text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
-@ambient: overlay(@base-color, white);
+@ambient: screen(@gray-lighter, @base-color);
 @golden-ratio: 1.618;
-@shadow-color: fade(@black, 16%);
+@shadow-color: fade(@black, 30%);
 @pi: 3.14159;
 @highlight-mode: auto; // auto or a bright color, eg. cyan, yellow, magenta
 
 // layout settings
 // TODO: make this its own file
 @text-measure: 65; // an estimate
-@text-padding: .18em .2em*@golden-ratio .22em .2em*@golden-ratio;
-@column-width: @max-width;
+@text-padding: @text-padding-top @text-padding-right @text-padding-bottom @text-padding-left;
+@text-padding-top: .18em;
+@text-padding-right: .2em*@golden-ratio;
+@text-padding-bottom: .22em;
+@text-padding-left: @text-padding-right;
 @gutter: @margin * @golden-ratio;
+
+// widths
 @page-width: @column-width + @gutter + @aside-width; // TODO: deprecate old layout vars
-@aside-width: 36rem;
+@aside-width: floor(@max-width / @golden-ratio);
+@column-width: @max-width;
+@avatar-width: 10rem;
+@icon-width: 1rem;
+@full-width: 100%;
+@grid-width: @page-width/12;
 
 // TODO: animation settings/defaults
 
@@ -46,12 +62,12 @@
 // decent uses name lists any time a variable name also needs to be a class name
 
 @semantic-color-names:   action, reaction, alternate, info, warning, accent, success, failure, highlight, default;
-@gray-names:				      gray-darker, gray-dark, gray-medium, gray-light, gray-lighter;
+@semantic-class-names:   @semantic-color-names;
+
 
 // variable lists
 // like the name lists, but these refer to the actual color, not the name
 @semantic-colors:   @action, @reaction, @alternate, @info, @warning, @accent, @success, @failure, @highlight, @default;
-@grays:				      @gray-darker, @gray-dark, @gray-medium, @gray-light, @gray-lighter;
 
 // fonts are here for right now
 

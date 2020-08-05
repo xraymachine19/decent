@@ -1,6 +1,9 @@
 .random-fontfamily();
 @font-family: @font-family-random;
 // .random-background();
+
+.random-main-background();
+@main-background: @main-background-random;
 .random-padding();
 @padding: @padding-random;
 .random-margin();
@@ -9,6 +12,8 @@
 @text-measure: @text-measure-random;
 .random-fontsize();
 @font-size: @font-size-random;
+.random-borderradius();
+@border-radius: @border-radius-random;
 
 .random-fontfamily() {
     
@@ -37,6 +42,42 @@
     @random: `Math.random()`;
     @bg: ceil(@length*@random);
     @background-random: extract(@potentials, @bg);
+}
+
+.random-main-background() {
+    
+    .set-potentials() when (luma(@base-color) > 25%) {
+                @potentials: @white,
+                mix(@white, @ambient, 90%),
+                mix(@white, @action, 90%),
+                mix(@white, @reaction, 90%),
+                mix(@white, @alternate, 90%),
+                mix(@white, @accent, 90%),
+                mix(@white, @highlight, 90%),
+                @gray-lighter,
+                @white,
+                @white,
+                @white;
+    }
+
+    .set-potentials() when (default()) {
+        @potentials: @black, @gray-darker, @gray-dark,
+                mix(@black, @ambient, 90%),
+                mix(@black, @action, 90%),
+                mix(@black, @reaction, 90%),
+                mix(@black, @alternate, 90%),
+                mix(@black, @accent, 90%),
+                mix(@black, @highlight, 90%),
+                @white;
+    }
+
+    .set-potentials();
+
+    @length: length(@potentials);
+
+    @random: `Math.random()`;
+    @bg: ceil(@length*@random);
+    @main-background-random: extract(@potentials, @bg);
 }
 
 
@@ -73,9 +114,16 @@
 
 .random-textmeasure() {
     @random: `Math.random()`;
-    @plustextmeasure: floor(@random*30);
-    @basetextmeasure: 55;
+    @plustextmeasure: floor(@random*22);
+    @basetextmeasure: 62;
     @text-measure-random: @plustextmeasure + @basetextmeasure;
+}
+
+.random-borderradius() {
+    @random: `Math.random()`;
+    @plusborderradius: floor(@random*12);
+    @baseborderradius: 0px;
+    @border-radius-random: @plusborderradius + @baseborderradius;
 }
 
 .random-fontsize() {

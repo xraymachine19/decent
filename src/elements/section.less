@@ -1,12 +1,10 @@
 section {
-    .colorize(@white);
+    .colorize(@main-background);
     // .default(box-shadow);
     .default(max-width);
 
     padding: @padding/2;
     
-    border-color: transparent;
-    border-style: solid;
     // .contrast(border-color; @background; 1.5;);
     margin: 0 auto @gutter auto;
 
@@ -18,7 +16,6 @@ section {
 
     .on-tablet({
         border-width: 1px;
-        .default(border-color);
         padding: @padding*2;
     });
 }

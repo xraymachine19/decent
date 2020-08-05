@@ -28,16 +28,16 @@
       </ul>
     </nav>
     <main>
-      <section class="hero">
+      <section class="hero border-bottom">
         <h1>Decent isn't <em>another component library</em>, it's an environment for making one of your own.</h1>
       
-        <p class="feature">Built for the <strong>decent</strong>ralized web, Decent makes using your own style library easier than using Bigcorp's latest shovelware.</p>
+        <p class="feature">Built for the <strong>decent</strong>ralized web, Decent makes using your own CSS-based style&nbsp;library easier than using Bigcorp's latest shovelware.</p>
 
         <p class="text-center">
           Start your UI revolution here:
         </p>
         <p class="text-center">
-          <button class="highlight">Get the code</button> <button class="action">Read the docs</button> 
+          <button class="highlight">Get the code</button> &nbsp; <button class="action">Read the docs</button> 
         </p>
 
         <div class="text-center feature-links">
@@ -49,8 +49,8 @@
           <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="decentless_0"></a>decent.less</h1>
 <p class="has-line-data" data-line-start="2" data-line-end="3">A Less library for smarter component styling</p>
 <h2 class="code-line" data-line-start=5 data-line-end=6 ><a id="Setup_and_testing_5"></a>Setup and testing</h2>
-<ol class="well">
-<li class="has-line-data" data-line-start="7" data-line-end="8">Run ‘python -m SimpleHTTPServer’ in the decent directory.</li>
+<ol class="well group">
+<li class="has-line-data" data-line-start="7" data-line-end="8">Run <kbd>python -m SimpleHTTPServer</kbd> in the decent directory.</li>
 <li class="has-line-data" data-line-start="8" data-line-end="9">Follow the directions there (or just go to localhost:8000)</li>
 <li class="has-line-data" data-line-start="9" data-line-end="10">Edit index.html or the less, then refresh to test stuff.</li>
 <li class="has-line-data" data-line-start="10" data-line-end="11">index.html isn’t the public splash page for github but you can put that kinda content there if you’d like. It’s really just a scratchpad. Test-style setups (gray-scale contrasting table for example) are good here too.</li>
@@ -159,7 +159,7 @@
         &lt;/section&gt;
     &lt;/main&gt;
 &lt;/body&gt;</code></pre>
-          <p class="has-line-data" data-line-start="78" data-line-end="79">Out of the box, Decent uses main, section and nav as high level organizational elements. We’ll write our demo HTML in that section element.</p>
+          <p class="has-line-data" data-line-start="78" data-line-end="79">Out of the box, Decent uses main, section and nav as high-level organizational elements. We’ll write our demo HTML in that section element.</p>
           <p class="has-line-data" data-line-start="80" data-line-end="81">Second, you need a way to look at this webpage. If you need something quick, we recommend:</p>
           <pre><code class="terminal">python -m SimpleHTTPServer</code></pre>
           <p class="has-line-data" data-line-start="84" data-line-end="85">That’ll serve your <strong>index.html</strong> file locally, acting like a real website, provided you run it in the same folder (the desktop folder, in the example above). You might need to install python.</p>
@@ -198,6 +198,7 @@
           <pre><code>@import &quot;node/directory/decent/mixins/contrast.less&quot;;</code></pre>
           <p class="has-line-data" data-line-start="140" data-line-end="141">Importing the entire library can be a little risky. Decent is meant as an environment, and may have problems sharing the stage in this capacity.</p>
           <p class="has-line-data" data-line-start="142" data-line-end="143">When it came to easy variable names or the sanctity of the scope, we picked the easy variable names every single time.</p>
+          <p>The "golden path" install is installing with node, then <strong>copying the folder over</strong> to serve as your codebase. That way you have a local copy of the original files, along with access to Decent's node dependencies and component imports. (You may need to change the @node_dir variable)</p>
           <h1 class="code-line" data-line-start=144 data-line-end=145><a id="Lets_run_this_thing_144"></a>Let’s run this thing!</h1>
           <p class="has-line-data" data-line-start="146" data-line-end="147">Where were we? We had just put together our basic directory structure:</p>
           <p class="has-line-data ascii" data-line-start="148" data-line-end="154">project-name<br>
@@ -254,16 +255,16 @@
 }</code></pre>
           <p class="has-line-data" data-line-start="225" data-line-end="226">Compile with <code>lessc</code> and see the red background. There are two problems here, both of which we will solve the Decent way.</p>
           <p class="has-line-data" data-line-start="227" data-line-end="228">First, let’s get the text contrast up to standards.</p>
-          <p class="has-line-data" data-line-start="229" data-line-end="230">We could write out something like <code>color: white;</code> but, as a follower of the Decent way, you should know this: Typing out “color:” in your Less is a code smell.</p>
-          <p class="has-line-data" data-line-start="231" data-line-end="232">How do you know what color some text is? If the designer looked up the contrast numbers, then the designer wasted his time. If the developer looked up the contrast numbers, then the developer wasted her time. Even if you’re subtly adding non-black or non-white tone to the text, Decent is still the best tool to use (although that’s too advanced for this tutorial).</p>
-          <p class="has-line-data" data-line-start="233" data-line-end="234">In Decent, we use the <strong>.contrast()</strong> mixin to programmatically find the best text color given the background color as an argument. It takes no time at all (except, well, compile time) and provides perfect consistency (which we can adjust!) across our site.</p>
-          <p class="has-line-data" data-line-start="235" data-line-end="236">So here we write:</p>
+          <p class="has-line-data" data-line-start="229" data-line-end="230">We could write out something like <code>color: white;</code> or we could find something that worked well with the design. Or we could just automate all of that as a part of our project settings (This is what Decent does).</p>
+          <p class="has-line-data" data-line-start="231" data-line-end="232">How do we know what color some text is, anyway? If the designer looked up the contrast numbers, then the designer wasted his time. If the developer looked up the contrast numbers, then the developer wasted her time. Instead, use Decent to establish a contrast standard along with a tinting/shading strategy unique to your project.</p>
+          <p class="has-line-data" data-line-start="233" data-line-end="234">To do this, we use the <strong>.contrast()</strong> mixin to programmatically find the best text color given the CSS property and background color as an argument. It takes no time at all (except, well, compile time) and provides perfect consistency (which we can adjust later!) across a project.</p>
+          <p class="has-line-data" data-line-start="235" data-line-end="236">So here we can write:</p>
           <pre><code>.offer-frame { 
     border: 2px dashed red;
     background: red;
     <strong>.contrast(red);</strong>
 }</code></pre>
-          <p class="has-line-data" data-line-start="243" data-line-end="244">This will output a color that meets our site’s default contrast standard. Speaking of which, Decent has a whole bunch of defaults. One of them will be good for the problem we see on refresh: The .offer-frame paragraph has no padding!write</p>
+          <p class="has-line-data" data-line-start="243" data-line-end="244">This will output a color that meets our site’s default contrast standard. Speaking of which, Decent has a whole bunch of defaults. One of them will be good for the problem we see on refresh: The .offer-frame paragraph has no padding.</p>
           <p class="has-line-data" data-line-start="245" data-line-end="246">Naturally, we add this in:</p>
           <pre><code>.offer-frame { 
     border: 2px dashed red;
@@ -271,19 +272,19 @@
     .contrast(red);
     <strong>padding:</strong> 
 }</code></pre>
-          <p class="has-line-data" data-line-start="254" data-line-end="255">But what comes next? What do we set the padding to? We set it to the default padding. Someone wrote that down somewhere, right? And how do we express that? In CSS, it’s maybe not so straightforward. In Decent, it looks like this:</p>
+          <p class="has-line-data" data-line-start="254" data-line-end="255">But what comes next? What do we set the padding to? We set it to the <em>default</em> padding, which is set at the project level. But how do we express that? In CSS, it’s maybe not so straightforward. In Decent, it looks like this:</p>
           <pre><code>.offer-frame { 
     border: 2px dashed red;
     background: red;
     .contrast(red);
     <strong>.default(padding);</strong>
 }</code></pre>
-          <p class="has-line-data" data-line-start="263" data-line-end="264">Ultimately, this ‘padding’ reference goes back to Decent’s <strong>properties.less</strong> file which contains default variable counterparts for every CSS property, meaning <strong>.default()</strong> can be used with <em>any</em> CSS property. There are no eggshells here. Decent unapologetically puts a lot of variables into the global scope.</p>
-          <p class="has-line-data" data-line-start="265" data-line-end="266">When transplanted to another app, .offer-frame will play by its rules, using that app’s default padding. This idea of transplantability is a core theme in Decent, which targets the decentralized web. A shared precompile styling environment lets the sites of the next Internet share parts as needed without looking ridiculous. (Don’t worry, it works with the Legacy Internet too.)</p>
+          <p class="has-line-data" data-line-start="263" data-line-end="264">Ultimately, this ‘padding’ reference goes back to Decent’s <strong>properties.less</strong> file which contains default variable counterparts for every single CSS property, meaning <strong>.default()</strong> can be used with <em>any</em> CSS property. There are no eggshells here. Decent unapologetically puts a lot of variables into the global scope. .default(border), .default(margin), .default(box-shadow) will all output rules assigning those CSS properties to those same-named Less variable values.</p>
+          <p class="has-line-data" data-line-start="265" data-line-end="266">When transplanted to another app, .offer-frame will play by that app's rules, using that app’s default padding. This idea of transplantability is a core theme in Decent, which targets the decentralized web. A shared precompile styling environment lets the sites of the next Internet share parts as needed without looking ridiculous. (Don’t worry, it works with the "Legacy Internet" too.)</p>
           <p class="has-line-data" data-line-start="267" data-line-end="268">Enough of the ideals. Let’s clean up .offer-frame a bit.</p>
           <h1 class="code-line" data-line-start=269 data-line-end=270><a id="Color_and_meaning_269"></a>Color and meaning</h1>
           <p class="has-line-data" data-line-start="271" data-line-end="272">Generally @color is used to represent what color something is.</p>
-          <p class="has-line-data" data-line-start="273" data-line-end="274">It’s not, as implied above, the default value for “color:” the property. It’s the only exception, because we shouldn’t be writing “color:” in our code.</p>
+          <p class="has-line-data" data-line-start="273" data-line-end="274">It’s not, as implied above, the default value for “color:” the CSS property. It’s the only exception, because we shouldn’t be writing “color:” in our code.</p>
           <p class="has-line-data" data-line-start="275" data-line-end="276">So let’s set that red background to a variable:</p>
           <pre><code>.offer-frame { 
     @color: red;
@@ -292,9 +293,9 @@
     .contrast(@color);
     <strong>.default(padding);</strong>
 }</code></pre>
-          <p class="has-line-data" data-line-start="285" data-line-end="286">Now it has padding, the text is properly contrasted, and it even has the cool dashed border going on still.</p>
+          <p class="has-line-data" data-line-start="285" data-line-end="286">Now it has padding, the text is properly contrasted, and it even has that neat border.</p>
           <p class="has-line-data" data-line-start="287" data-line-end="288">The problem now is that, in most themes and applications, red (the CSS color) is just a bit too much.</p>
-          <p class="has-line-data" data-line-start="289" data-line-end="290">There’s a less obvious problem: Red means something to us. But it doesn’t necessarily mean something.</p>
+          <p class="has-line-data" data-line-start="289" data-line-end="290">There’s a less obvious problem: Red means something to us. But it doesn’t necessarily mean something in general.</p>
           <p class="has-line-data" data-line-start="291" data-line-end="292">Project-wide meaning is a hard thing to nail down, especially in a visual design sense. To remedy this, Decent ships with ten semantic colors, all of which convey some sort of meaning. Here, we’ll convey meaning through the variable <strong>@failure</strong>, which is always red.</p>
           <pre><code>.offer-frame { 
     @color: @failure;
@@ -367,6 +368,8 @@
           <div class="violet">violet</div>
           <div class="pink">pink</div>
           <div class="white">white</div>
+          <div style="background-color: #ffffff !important;">#ffffff</div>
+          <div class="gray">gray</div>
           <div class="black">black</div>
           <div class="brown">brown</div>
           <p class="clearfix"></p>
@@ -378,9 +381,249 @@
           <div class="gray-dark">gray-dark</div>
           <div class="gray-darker">gray-darker</div>
           <p class="clearfix"></p>
-        </section>
-        <section class="color-palette">
+
+          <h2>Some unofficial colors</h2>
+          <p>These won't actually have class support in the final version.</p>
+          <div class="ambient">ambient</div>
+          <div class="base-color">base-color</div>
+          <p class="clearfix"></p>
+
           
+        </section>
+        <section id="components">
+          <h1><a href="#components">Components</a></h1>
+
+          <p>Okay, maybe it <em>is</em> another component library. A little bit. These are just to get you started on your own set.</p>
+
+          <p>Decent works great with any Javascript project... because it doesn't include any Javascript of its own, and therefore can't conflict with whatever JS approach your project uses.</p>
+
+          <p>Decent's components are written to be simple and composable, meaning they can usually be used with the other component classes, or with CSS property-name classes.</p>
+
+          <h2>.matte</h2>
+          <p>The matte component presents the inner content on a raised, textured surface.</p>
+          <div class="border padding">
+            <p>This unfortunate content has no matte. It only has a div with "border" and "padding" classes.</p>
+          </div>
+
+          <div class="matte">
+            <p>This lucky content is presented on the matte component, put on a pedestal above the surrounding content.</p>
+          </div>
+
+          <div class="matte feature">
+            <h3>Mattes can be feature elements too.</h3>
+            <p>This lucky content is presented on the matte component, put on a pedestal above the surrounding content.</p>
+          </div>
+
+          <h2>.well</h2>
+
+          <p>Wells work a whole lot like mattes. Instead of having a raised, textured appearance, they have a lowered, textured appearance.</p>
+
+          <div class="well">
+            <p>This lucky content is presented in the well component, lowered safely away from the surrounding content.</p>
+          </div>
+
+          <p>You could probably put a matte inside of a well.</p>
+
+          <div class="well">
+            <p>This lucky content is presented on the matte component, lowered safely away from the surrounding content.</p>
+            <p class="matte">This second paragraph is a matte.</p>
+          </div>
+
+          <h2>.dropcap</h2>
+
+          <p class="dropcap">Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly.</p>
+
+          <h2>.card</h2>
+          <p>Present information in the popular card format by adding the .card class to a div.</p>
+          <div id="mouser" class="card">
+            <h4 class="action">The Mouser</h4>
+            <img class="float" src="http://placekitten.com/200/200">
+            <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
+            <footer class="float">
+              <button class="action">Hire</button> <button class="info">Save</button>
+            </footer>
+          </div>
+
+          <div class="card border">
+            <h4 class="text-failure">Fuzzy Mittens</h4>
+            <img class="float padding-right border-right margin-right" src="http://placekitten.com/300/300">
+            <p>Fuzzy runs catnip all through the neighborhood.</p>
+            <footer class="float">
+              <button class="action">Hire</button> <button class="info">Save</button>
+            </footer>
+          </div>
+
+          <p>Cards with an img or .overlay component up front will feature it.</p>
+
+          <div class="two-column">
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/500/500">
+                <footer class="bottom right">
+                  <button class="action">Hire</button> <button class="info">Save</button>
+                </footer>
+              </div>
+              <h4>Dog</h4>
+              <p>His name is ironic or something. Don't cross him. His meow is worse than his bite.</p>
+            </div>
+
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/400/400">
+                <footer class="top left">
+                  <button class="action">Hire</button> <button class="info">Save</button>
+                </footer>
+              </div>
+              <h4>Scratches</h4>
+              <p>Nobody knows if his name refers to the scratches that cover his body, or those he's dished out to others. Everyone knows better than to ask.</p>
+            </div>
+          </div>
+
+          <h2>.pagination</h2>
+
+          <p>The pagination component turns a ul into a navigable list of pages.</p>
+
+          <ul class="pagination border">
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+          </ul>
+
+          <ul class="pagination well">
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+          </ul>
+          
+
+          <h2>.group</h2>
+
+          <p>The .group class groups like things inside of it.</p>
+
+          <ul class="group">
+            <li>Apples</li>
+            <li>Oranges</li>
+            <li>Apricots</li>
+            <li>Watermelons</li>
+            <li>Kiwis</li>
+          </ul>
+
+          <ol class="group">
+            <li>Apples</li>
+            <li>Oranges</li>
+            <li>Apricots</li>
+            <li>Watermelons</li>
+            <li>Kiwis</li>
+          </ol>
+
+          <p>ul and ol .group components work well with the border class:</p>
+
+          <div class="two-column">
+            <ul class="group border">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Watermelons</li>
+              <li>Kiwis</li>
+            </ul>
+
+            <ol class="group border border-radius">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Watermelons</li>
+              <li>Kiwis</li>
+            </ol>
+          </div>
+
+          <aside>
+            <p class="info"><strong>Note:</strong> The border class works because <em>any CSS property</em> works as a class name, outputting the default value from <strong>properties.less</strong>.</p>
+          </aside>
+          
+
+          <h2>.hero</h2>
+
+          <p>The hero class is usually one of the first elements on the page, outside of the normal section flow. It's full-width and heavily emphasizes all of the content within. It has a colored, patterned background.</p>
+
+          <div class="hero accent">
+            <h1>The hero class is loud and gets attention.</h1>
+            <p class="feature">Body copy should <em>probably</em> have a <strong>.feature</strong> class to match the size.</p>
+            <p>Normal paragraphs will be a bit bigger too, though.</p>
+            <p class="text-center"><button class="highlight">Sign up now</button></p>
+          </div>
+
+          <p>As a direct descendant of the body element, the hero component takes up the full page width and commands more attention.</p>
+
+          <aside class="hero matte card reaction">
+            <p class="feature"><strong>.hero</strong> doesn't need to be the first element, or even applied to a div. It works with other classes too.</p>
+          </aside>
+          
+          <h2>.two-column</h2>
+
+          <p>The two-column container will cause its contents to display as two columns.</p>
+
+          <div class="two-column">
+            <div id="mouser" class="card border">
+              <h4>The Mouser</h4>
+              <img class="float" src="http://placekitten.com/200/200">
+              <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
+              <footer class="float">
+                <button class="action">Hire</button> <button class="info">Save</button>
+              </footer>
+            </div>
+  
+            <div class="card border">
+              <h4 class="text-failure">Fuzzy Mittens</h4>
+              <img class="float padding-right border-right margin-right" src="http://placekitten.com/300/300">
+              <p>Fuzzy runs catnip all through the neighborhood.</p>
+              <footer class="float">
+                <button class="action">Hire</button> <button class="info">Save</button>
+              </footer>
+            </div>
+          </div>
+
+          <h2>.three-column</h2>
+
+          <p>The three-column container will cause its contents to display as three columns.</p>
+
+          <div class="three-column">
+            <ol class="group border">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Pears</li>
+              <li>Kiwis</li>
+            </ol>
+            <ol class="group well">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Pears</li>
+              <li>Kiwis</li>
+            </ol>
+            <ol class="group matte">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Pears</li>
+              <li>Kiwis</li>
+            </ol>
+          </div>
+
+
+
         </section>
 
 
@@ -401,7 +644,8 @@
           <p class="text-center">
             <button class="success">Success</button>
             <button class="failure">Failure</button>
-            <button>Default</button>
+            <button class="default">Default</button>
+            <button>No class</button>
           </p>
           
           
@@ -667,11 +911,6 @@
       <section id="pattern_library">
         <h1>Pattern library</h1>
         <p>Decent has a whole bunch of patterns.</p>
-        <p>
-          <input type="text">
-        </p>
-        
-        <textarea name="testarea" id="" cols="30" rows="10"></textarea>
         <div class="pattern-example anchors-away"></div>
         <div class="pattern-example architect"></div>
         <div class="pattern-example autumn"></div>

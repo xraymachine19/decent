@@ -94,13 +94,7 @@ each(@patterns-all, {
     .@{value} {
 
         .set-color-random() {
-            @potentials:    @action,
-                            @reaction,
-                            @alternate,
-                            @accent,
-                            @info,
-                            @default,
-                            @red, @orange, @yellow, @green, @blue, @purple, @brown,
+            @potentials:    @red, @orange, @yellow, @green, @blue, @purple, @brown,
                             @pink, @teal, @olive, @violet, @indigo;
 
             @length: length(@potentials);
@@ -212,8 +206,8 @@ each(@patterns-all, {
 
     @pattern: @@pattern-name;
 
-    .contrast-fill(@base; @contrast;);
-    @fg-base: @fill;
+    .set-contrast(@base; @contrast;);
+    @fg-base: @contrast;
   
     // we need the foreground color inside the SVG to be in rgb(r,g,b) format
     @fg-red: round(red(@fg-base));
@@ -221,6 +215,6 @@ each(@patterns-all, {
     @fg-blue: round(blue(@fg-base));
     @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
 
-    background-color: @base;
+    .colorize(@base);
     background-image: url("data:image/svg+xml,@{pattern}");
 }

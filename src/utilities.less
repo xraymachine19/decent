@@ -1,51 +1,10 @@
-// defaults for inline and block level elements
-// these rules generate a lot of CSS but cover tons of HTML edge cases
-
-// semantic color names .colorize() when used as a class
-each(@semantic-color-names, { &.@{value} { .colorize(@@value);};});
-
-// extended color names .colorize() when used as a class
-each(@extended-color-names, { &.@{value} { .colorize(@@value);};});
-
-// gray color names .colorize() when used as a class
-each(@gray-names, { &.@{value} { .colorize(@@value);};});
-
-
-
-.block-level-elements({
-  margin-bottom: @margin;
-
-  .semantic-classes({
-    .default(padding);
-  });
-  
-  // each(@extended-color-names, { 
-  //   @replace: replace(e(@value), "var-", "");
-  //   &.@{replace} { 
-  //     .colorize(@@value);
-
-  //     &:before {
-  //       content: "@{replace}";
-  //     }
-  //   };
-  // });
-
-  
-});
 
 
 // utility classes
 
-.dropcap {
-  &:first-letter {
-    float: left;
-    font-size: 360%;
-    line-height: 2;
-    padding-top: .125em;
-    padding-right: .15em;
-    padding-left: .125em;
-  }
-}
+.inverted {}
+
+.disabled {}
 
 .ascii {
   font-family: @font-family-monospace;
@@ -54,21 +13,12 @@ each(@gray-names, { &.@{value} { .colorize(@@value);};});
   padding-right: 1ch;
 }
 
-.terminal {
-  &:before {
-    content: "$ ";
-    .color-text(@info; @gray-darker; 7;);
-  }
-}
-
-.feature {
-  padding: @padding*2;
-  font-size: @golden-ratio*100%;
-  line-height: @golden-ratio;
-}
-
 .text-center {
   text-align: center;
+}
+
+.no-shadow {
+  box-shadow: unset;
 }
 
 .no-user-select {
@@ -89,3 +39,14 @@ each(@gray-names, { &.@{value} { .colorize(@@value);};});
   }
 }
 
+// semantic color names .colorize() when used as a class
+each(@semantic-color-names, { 
+  &.@{value} { .colorize(@@value);};
+  &.color-@{value} { .color-text(@@value);};
+});
+
+// extended color names .colorize() when used as a class
+each(@extended-color-names, { &.@{value} { .colorize(@@value);};});
+
+// gray color names .colorize() when used as a class
+each(@gray-names, { &.@{value} { .colorize(@@value);};});

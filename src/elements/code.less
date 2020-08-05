@@ -7,6 +7,13 @@ code {
     padding: @text-padding;
     .pattern(texture; @gray-darker;);
 
+    &.terminal {
+        &:before {
+            content: "$ ";
+            .color-text(@info; @gray-darker; 7;);
+        }
+    }
+
     each(@semantic-color-names, {
         @color: @@value;
         &.@{value}, & .@{value} {
