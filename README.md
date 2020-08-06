@@ -14,6 +14,7 @@ A Less library for smarter component styling
 ## Compiling the Less
 
 1. Run 'lessc src/index.less docs/css/index.css'.
+2. If JS is enabled for randomness, use 'lessc --js src/index.less docs/css/index.css'
 
 ---
 
