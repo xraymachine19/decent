@@ -10,20 +10,16 @@ each(@css-property-names, {
     };
 });
 
+// semantic classes defaults 
+
+.semantic-classes({
+    .default(padding);
+});
+
 // rules for block level elements
 
 .block-level-elements({
     .default(margin-bottom);
-
-    .semantic-classes({
-        .default(padding);
-    });
-});
-
-.inline-elements({
-    .semantic-classes({
-        padding: @text-padding;
-    });
 });
 
 // gutter isn't a property but gets similar rules

@@ -7,9 +7,11 @@
 @import (reference) "viewports";
 @import (reference) "targets";
 
-@import (reference) "colors/semantic";
 @import (reference) "colors/grays";
-@import (reference) "colors/extended";
+@import "colors/extended";
+@import (reference) "colors/semantic";
+
+
 @import (reference) "colors/turbo";
 
 @import (reference) "patterns"; 
@@ -49,17 +51,31 @@
 // TODO: support all HTML elements or have etc file
 
 @import "components/hero";
+@import "components/group";
+@import "components/bar";
 @import "components/matte";
 @import "components/well";
+@import "components/badge";
 @import "components/card";
 @import "components/feature";
 @import "components/dropcap";
-@import "components/group";
 @import "components/pagination";
 @import "components/two-column";
 @import "components/three-column";
+@import "components/golden-column";
 
 @import "utilities";
+@import "no";
+
+.set-closer-farther-hue(@teal, @blue, @cyan);
+
+.cyan-before();
+
+.cyan-before() when (@closer = @teal) { .cyan:before { content:"teal w";}}
+
+.cyan-before() when (@closer = @cyan) { .cyan:before { content:"cyan w";}}
+
+.cyan-before() when (@closer = @blue) { .cyan:before { content:"blue w";}}
 
 // button.warning {
 //     &:before {
@@ -96,6 +112,7 @@
     margin-bottom: @padding;
 
     padding: @text-padding;
+    padding: @padding;
 
     .default(border-radius);
 

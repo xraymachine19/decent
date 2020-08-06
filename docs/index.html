@@ -14,17 +14,15 @@
 </head>
 
 <body>
-    <nav>
-      <h1>
-        
-        Decent
-      </h1>
+    <nav class="bar info group inner-page-width">
+      <a class="block text-padding">
+        <h4>Decent</h4>
+      </a>
 
-      <ul>
+      <ul class="bar group position right">
         <li><a href="#button_gallery">Buttons</a></li>
         <li><a href="#pattern_library">Patterns</a></li>
         <li><a href="#how_to">How to</a></li>
-        
       </ul>
     </nav>
     <main>
@@ -37,7 +35,7 @@
           Start your UI revolution here:
         </p>
         <p class="text-center">
-          <button class="highlight">Get the code</button> &nbsp; <button class="action">Read the docs</button> 
+          <button class="reaction">Get the code</button> &nbsp; <button class="action">Read the docs</button> 
         </p>
 
         <div class="text-center feature-links">
@@ -98,19 +96,18 @@
 <ul>
 <li class="has-line-data" data-line-start="60" data-line-end="61"><strong>action</strong>: A version of the base color</li>
 <li class="has-line-data" data-line-start="61" data-line-end="62"><strong>reaction</strong>: A complement to action</li>
-<li class="has-line-data" data-line-start="62" data-line-end="64"><strong>alternate</strong>: A CMYK print-style highlight color</li>
+<li class="has-line-data" data-line-start="62" data-line-end="64"><strong>alternate</strong>: A third color</li>
 </ul>
 <p class="has-line-data" data-line-start="64" data-line-end="65">Informational colors</p>
 <ul>
 <li class="has-line-data" data-line-start="65" data-line-end="66"><strong>info</strong>: An info-conveying blue</li>
 <li class="has-line-data" data-line-start="66" data-line-end="67"><strong>warning</strong>: An urgent info-conveying orange</li>
-<li class="has-line-data" data-line-start="67" data-line-end="69"><strong>accent</strong>: An attention-drawing but neutral color</li>
+
 </ul>
 <p class="has-line-data" data-line-start="69" data-line-end="70">Transactional colors</p>
 <ul>
 <li class="has-line-data" data-line-start="70" data-line-end="71"><strong>action</strong>: A reassuring green</li>
 <li class="has-line-data" data-line-start="71" data-line-end="72"><strong>reaction</strong>: An alarming red</li>
-<li class="has-line-data" data-line-start="72" data-line-end="73"><strong>highlight</strong>: A CMYK print-style highlight color</li>
 </ul>
         </section>
         <section id="how_to">
@@ -325,10 +322,8 @@
           <p class="alternate">This is an <strong>alternate</strong> paragraph.</p>
           <p class="info icon-info">This is an <strong>info</strong> paragraph.</p>
           <p class="warning">This is a <strong>warning</strong> paragraph.</p>
-          <p class="accent">This is an <strong>accent</strong> paragraph.</p>
           <p class="success">This is a <strong>success</strong> paragraph.</p>
           <p class="failure">This is a <strong>failure</strong> paragraph.</p>
-          <p class="highlight">This is a <strong>highlight</strong> paragraph.</p>
           <p class="default">This is a <strong>default</strong> paragraph.</p>
 
           <p>This is a regular paragraph.</p>
@@ -347,28 +342,28 @@
           <div class="reaction">reaction</div>
           <div class="alternate">alternate</div>
           <div class="info icon-info">info</div>
-          <div class="warning">warning</div>
-          <div class="accent">accent</div>
+          
           <div class="success">success</div>
+          <div class="warning">warning</div>
           <div class="failure">failure</div>
-          <div class="highlight">highlight</div>
           <div class="default">default</div>
           <p class="clearfix"></p>
 
           <h2>Some extended colors</h2>
+          <div class="pink">pink</div>
           <div class="red">red</div>
           <div class="orange">orange</div>
           <div class="yellow">yellow</div>
           <div class="olive">olive</div>
           <div class="green">green</div>
           <div class="teal">teal</div>
+          <div class="cyan">cyan</div>
           <div class="blue">blue</div>
           <div class="indigo">indigo</div>
           <div class="purple">purple</div>
           <div class="violet">violet</div>
-          <div class="pink">pink</div>
+          <div class="magenta">magenta</div>
           <div class="white">white</div>
-          <div style="background-color: #ffffff !important;">#ffffff</div>
           <div class="gray">gray</div>
           <div class="black">black</div>
           <div class="brown">brown</div>
@@ -398,6 +393,10 @@
           <p>Decent works great with any Javascript project... because it doesn't include any Javascript of its own, and therefore can't conflict with whatever JS approach your project uses.</p>
 
           <p>Decent's components are written to be simple and composable, meaning they can usually be used with the other component classes, or with CSS property-name classes.</p>
+
+          <h2>.feature</h2>
+          <p>Boost an element's font-size and give it generous padding.</p>
+          <p class="feature">This <strong>.feature</strong> element is awesome.</p>
 
           <h2>.matte</h2>
           <p>The matte component presents the inner content on a raised, textured surface.</p>
@@ -460,7 +459,7 @@
               <div class="overlay">
                 <img src="http://placekitten.com/500/500">
                 <footer class="bottom right">
-                  <button class="action">Hire</button> <button class="info">Save</button>
+                  <button class="yellow">Hire</button> <button class="blue">Save</button>
                 </footer>
               </div>
               <h4>Dog</h4>
@@ -548,6 +547,33 @@
             </ol>
           </div>
 
+          <p>Groups work on buttons:</p>
+          <p class="group">
+            <button class="info">Info</button>
+            <button class="warning">Warning</button>
+          </p>
+
+          <div class="group border-radius border">
+            <button class="action">Action</button>
+            <button class="reaction">Reaction</button>
+            <button class="alternate">Alternate</button>
+          </div>
+
+          <div class="two-column">
+            <div class="group border-radius border">
+              <button>Deploy Fuzzy</button>
+              <button>Deploy Scratches</button>
+              <button>Deploy Mouser</button>
+            </div>
+
+            <div class="group border">
+              <button class="info">Menus</button>
+              <button class="info">Journals</button>
+              <button class="info">Diaries</button>
+            </div>
+
+          </div>
+
           <aside>
             <p class="info"><strong>Note:</strong> The border class works because <em>any CSS property</em> works as a class name, outputting the default value from <strong>properties.less</strong>.</p>
           </aside>
@@ -557,11 +583,11 @@
 
           <p>The hero class is usually one of the first elements on the page, outside of the normal section flow. It's full-width and heavily emphasizes all of the content within. It has a colored, patterned background.</p>
 
-          <div class="hero accent">
+          <div class="hero reaction">
             <h1>The hero class is loud and gets attention.</h1>
             <p class="feature">Body copy should <em>probably</em> have a <strong>.feature</strong> class to match the size.</p>
             <p>Normal paragraphs will be a bit bigger too, though.</p>
-            <p class="text-center"><button class="highlight">Sign up now</button></p>
+            <p class="text-center"><button class="info">Sign up now</button></p>
           </div>
 
           <p>As a direct descendant of the body element, the hero component takes up the full page width and commands more attention.</p>
@@ -569,7 +595,70 @@
           <aside class="hero matte card reaction">
             <p class="feature"><strong>.hero</strong> doesn't need to be the first element, or even applied to a div. It works with other classes too.</p>
           </aside>
+
+          <h2>.bar</h2>
+
+          <p>The bar component turns things into bars.</p>
+
+          <div class="bar action">
+            <p>A paragraph inside a bar. <button class="info">Wow!</button></p>
+          </div>
+
+          <p>Bars don't have a max-width and they don't exceed their line-height.</p>
           
+          <p>Bars compose with the <strong>.group</strong> class.</p>
+
+          <p>Just the div:</p>
+          <div>
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group:</p>
+
+          <div class="group">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group and border:</p>
+
+          <div class="group border">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group, border and border-radius:</p>
+
+          <div class="group border border-radius">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>bar:</p>
+
+          <div class="bar">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group, bar and no-shadows:</p>
+
+          <div class="group bar no-shadows">
+            <button class="action">Send Fuzzy</button><button class="action">Send Scratches</button><button class="failure">Cancel</button>
+          </div>
+
+          <p>group, bar, border and border-radius:</p>
+
+          <div class="group bar border border-radius">
+            <button class="action">Send Fuzzy</button><button class="action">Send Scratches</button><button class="failure">Cancel</button>
+          </div>
+
           <h2>.two-column</h2>
 
           <p>The two-column container will cause its contents to display as two columns.</p>
@@ -622,8 +711,91 @@
             </ol>
           </div>
 
+          <h2>.golden-column</h2>
+
+          <p>The golden-column component organizes child elements into two columns, proportioned to the golden ratio.</p>
+
+          <div class="golden-column">
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/600/400">
+                <div class="group bar top right border">
+                  <button class="action">Hire</button>
+                  <button class="action">Save</button>
+                  <button class="failure">Block</button>
+                </div>
+              </div>
+              <h4 class="text-failure">Fuzzy Mittens</h4>
+              <p>Fuzzy runs catnip all through the neighborhood.</p>
+              
+            </div>
+            <div class="well">
+              <ol class="group">
+                <li>OG Mouse</li>
+                <li>Red dot</li>
+                <li>Purr kush</li>
+                <li>Whiskertwitch</li>
+                <li>Sidegarden</li>
+              </ol>
+              <p>Fuzzy carries only the finest strains of catnip.</p>
+            </div>
+            
+          </div>
 
 
+
+        </section>
+
+        <section>
+          <h2>'No' classes</h2>
+
+          <p>Want less of something? The "no" utility classes help.</p>
+
+          <p>A plain ol' card:</p>
+          <div class="card">
+            <div class="overlay">
+              <img src="http://placekitten.com/340/140">
+              <span class="feature badge top right">A+!</span>
+            </div>
+            <ul class="alternate group">
+              <li>Test 1</li>
+              <li>Test 2</li>
+              <li>Test 3</li>
+            </ul>
+            <p class="feature text-center">Summary results:</p>
+            <p>You did okay.</p>
+            <button class="failure feature full-width">Accept my fate</button>
+          </div>
+
+          <div class="card no-shadow">
+            <div class="overlay">
+              <img src="http://placekitten.com/340/140">
+              <span class="feature badge top right">A+!</span>
+            </div>
+            <ul class="alternate group">
+              <li>Test 1</li>
+              <li>Test 2</li>
+              <li>Test 3</li>
+            </ul>
+            <p class="feature text-center">Summary results:</p>
+            <p>You did okay.</p>
+            <button class="failure feature full-width">Accept my fate</button>
+          </div>
+
+          <div class="card no-shadows">
+            <div class="overlay">
+              <img src="http://placekitten.com/340/140">
+              <span class="feature badge top right">A+!</span>
+            </div>
+            <ul class="alternate group">
+              <li>Test 1</li>
+              <li>Test 2</li>
+              <li>Test 3</li>
+            </ul>
+            <p class="feature text-center">Summary results:</p>
+            <p>You did okay.</p>
+            <button class="failure feature full-width">Accept my fate</button>
+          </div>
         </section>
 
 
@@ -638,8 +810,6 @@
           <p class="text-center">
             <button class="info">Info</button>
             <button class="warning">Warning</button>
-            <button class="accent">Accent</button>
-            <button class="highlight">Highlight</button>
           </p>
           <p class="text-center">
             <button class="success">Success</button>
@@ -647,10 +817,6 @@
             <button class="default">Default</button>
             <button>No class</button>
           </p>
-          
-          
-          
-          
       </section>
 
       <section id="icon_library">

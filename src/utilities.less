@@ -2,6 +2,43 @@
 
 // utility classes
 
+.inner-max-width {
+  @half-max-width: @max-width/2;
+  @padding: ~"calc(50% - @{half-max-width})";
+  position: relative;
+  padding-left: @padding;
+  padding-right: @padding;
+}
+
+.inner-page-width {
+  @half-page-width: @page-width/2;
+  @padding: ~"calc(50% - @{half-page-width})";
+  position: relative;
+  padding-left: @padding;
+  padding-right: @padding;
+
+  .right {
+    right: @padding;
+  }
+
+  .left {
+    left: @padding;
+  }
+}
+
+.text-padding {
+  padding: @text-padding;
+}
+
+.block {
+  display: block;
+}
+
+.transparent {
+  color: inherit;
+  background: transparent;
+}
+
 .inverted {}
 
 .disabled {}
@@ -15,17 +52,6 @@
 
 .text-center {
   text-align: center;
-}
-
-.no-shadow {
-  box-shadow: unset;
-}
-
-.no-user-select {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 .hide, .hidden { display: none !important;}

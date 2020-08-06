@@ -23,9 +23,9 @@
 
     // tone is the color mixed into the background to lighten or darken the text
     
-    .tone(@color) when (@mode = tint) { @tone: white;}
+    .tone(@color) when (@mode = tint) { @tone: @white;}
 
-	.tone(@color) when (@mode = shade) { @tone: black;}
+	.tone(@color) when (@mode = shade) { @tone: @black;}
 
 	.tone(@color) when (default()) { .set-tone(@color);}
 

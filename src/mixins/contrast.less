@@ -1,10 +1,6 @@
 @import (reference) "set-contrast-ratio";
 @import (reference) "set-tone";
 
-// TODO: preferential tinting - the mixin shouldn't always pick a tone strategy with the higher contrast ceiling
-// if the ceiling is higher but still over the contrast standard, preferential tint would allow the user to
-// specify the tone that shows up in that case
-
 .contrast(
         @property: color; 
         @compare: @main-background; 

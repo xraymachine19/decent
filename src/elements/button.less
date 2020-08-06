@@ -7,7 +7,7 @@
   
     display: inline;
     font-family: inherit;
-    padding: 1em / @golden-ratio;
+    padding: 1em / @golden-ratio !important;
     .button-color(@default);
     max-width: @aside-width;
     line-height: 1;
@@ -24,7 +24,7 @@
     .no-user-select;
 
     &:active {
-      transform: scale(.985);
+      transform: scale(.99);
       box-shadow: none;
     }
 
@@ -39,8 +39,9 @@
 });
 
 .button-color(@color) {
-  .contrast(color, @color);
-  background: @color;
+  // .contrast(color, @color);
+  // background: @color;
+  // .colorize(@color);
 
   // use white text unless the contrast would be too low
 
@@ -56,6 +57,8 @@
 
   .color();
   background-color: @color;
+  // .set-lumafix(@color, @gray-dark);
+  // border-color:@lumafix;
   // .pattern(texture; @color;);
-  // .contrast(border-color; @color; 1.5; shade;);
+  .contrast(border-color; @color; 1.5; shade;);
 }

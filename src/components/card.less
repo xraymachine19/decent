@@ -1,11 +1,9 @@
 .card {
-    // .default(border);
     .default(box-shadow);
     .default(border-radius);
     .default(margin-bottom);
 
-    .colorize(@white);
-
+    .colorize(white);
     position: relative;
     max-width: @aside-width;
     overflow: hidden;
@@ -27,6 +25,11 @@
 
     img {
         max-width: 30%;
+    }
+
+    .full-width {
+        @card-gutter: @padding*2;
+        width: ~"calc(100% - @{card-gutter})";
     }
 
     .overlay {

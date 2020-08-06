@@ -1,10 +1,44 @@
 .group {
     // generically groups images, buttons, inputs or lists
 
-
     padding: 0;
     margin: 0;
     .default(margin-bottom);
+    max-width: @aside-width;
+
+    &.border-radius {
+        & > *:first-child {
+            .default(border-top-left-radius);
+            .default(border-top-right-radius);
+        }
+
+        & > *:last-child {
+            .default(border-bottom-left-radius);
+            .default(border-bottom-right-radius);
+        }
+    }
+
+    &.border {
+        border-width: 0;
+
+        > li {
+            .default(border-bottom);
+
+            &:last-child {
+                border-bottom-width: 0;
+            }
+        }
+
+        .button-elements({
+            border-width: 1px;
+            border-style: solid;
+            border-bottom-width: 0;
+
+            &:last-child {
+                border-bottom-width: @border-width;
+            }
+        });
+    }
 
     ul& {
         list-style-type: none;
@@ -13,7 +47,6 @@
     ol& {
         list-style-position: inside;
     }
-
 
     li {
         .default(border-bottom);
@@ -25,6 +58,15 @@
     }
 
     .button-elements({
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin-bottom: -1px;
+        border-radius: 0;
 
+        &:last-child {
+            margin-bottom: 0;
+            margin-top: -1px;
+        }
     });
 }

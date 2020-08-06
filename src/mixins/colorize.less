@@ -2,5 +2,7 @@
 
 .colorize(@background; @contrast-standard: 7; @property: color; @mode: auto;) {
     background-color: @background;
-    .contrast(color; @background; @contrast-standard; @mode;);
+    .contrast(color; @background; @contrast-standard;);
+    // .set-lumafix(@background; @gray-medium;);
+    // border-color: @lumafix;
 }

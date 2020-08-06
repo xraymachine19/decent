@@ -34,8 +34,8 @@
 .random-background() {
     
     @potentials: @action, @reaction, average(@action, @gray-darker), @gray-darker, @gray-lighter,
-     @info, @accent, average(@reaction, @gray-darker), average(@alternate, @gray-darker), @alternate
-    @highlight, @action, @action, @action, @action;
+     @info, average(@reaction, @gray-darker), average(@alternate, @gray-darker), @alternate
+     @action, @action, @action, @action;
 
     @length: length(@potentials);
 
@@ -46,30 +46,27 @@
 
 .random-main-background() {
     
-    .set-potentials() when (luma(@base-color) > 25%) {
+    .set-potentials() {
                 @potentials: @white,
                 mix(@white, @ambient, 90%),
                 mix(@white, @action, 90%),
                 mix(@white, @reaction, 90%),
                 mix(@white, @alternate, 90%),
-                mix(@white, @accent, 90%),
-                mix(@white, @highlight, 90%),
+                mix(@white, @info, 90%),
                 @gray-lighter,
                 @white,
                 @white,
                 @white;
     }
 
-    .set-potentials() when (default()) {
-        @potentials: @black, @gray-darker, @gray-dark,
-                mix(@black, @ambient, 90%),
-                mix(@black, @action, 90%),
-                mix(@black, @reaction, 90%),
-                mix(@black, @alternate, 90%),
-                mix(@black, @accent, 90%),
-                mix(@black, @highlight, 90%),
-                @white;
-    }
+    // .set-potentials() when (default()) {
+    //     @potentials: @gray-dark,
+    //             mix(@black, @ambient, 80%),
+    //             mix(@black, @action, 80%),
+    //             mix(@black, @reaction, 80%),
+    //             mix(@black, @alternate, 80%),
+    //             @white;
+    // }
 
     .set-potentials();
 
@@ -114,8 +111,8 @@
 
 .random-textmeasure() {
     @random: `Math.random()`;
-    @plustextmeasure: floor(@random*22);
-    @basetextmeasure: 62;
+    @plustextmeasure: floor(@random*20);
+    @basetextmeasure: 70;
     @text-measure-random: @plustextmeasure + @basetextmeasure;
 }
 

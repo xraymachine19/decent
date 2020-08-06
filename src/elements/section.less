@@ -1,21 +1,15 @@
 section {
     .colorize(@main-background);
-    // .default(box-shadow);
     .default(max-width);
 
     padding: @padding/2;
-    
-    // .contrast(border-color; @background; 1.5;);
     margin: 0 auto @gutter auto;
 
     .on-large-phone({
         padding: @padding;
-        // margin-left: @margin;
-        // margin-right: @margin;
     });
 
     .on-tablet({
-        border-width: 1px;
         padding: @padding*2;
     });
 }

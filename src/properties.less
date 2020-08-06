@@ -182,7 +182,7 @@ box-sizing;
 @background-color: overlay(@gray, @action); // Defines an element's background color.
 @background-image: none; // Defines an element's background image.
 @background-origin: padding-box; // Specifies the positioning area of the background images.
-@background-position: center center; // Defines the origin of a background image.
+@background-position: top center; // Defines the origin of a background image.
 @background-repeat: no-repeat; // Specify whether/how the background image is tiled.
 @background-size: auto; // Specifies the size of the background images.
 
@@ -194,7 +194,7 @@ box-sizing;
 @border-bottom-right-radius: @border-radius; // Defines the shape of the bottom-right border corner of an element.
 @border-bottom-style: @border-style; // Sets the style of the bottom border of an element.
 @border-bottom-width: @border-width; // Sets the width of the bottom border of an element.
-@border-color: @gray-light; // Sets the color of the border on all the four sides of an element.
+@border-color: @default; // Sets the color of the border on all the four sides of an element.
 @border-image: none; // Specifies how an image is to be used in place of the border styles.
 @border-image-outset: 0; // Specifies the amount by which the border image area extends beyond the border box.
 @border-image-repeat: stretch; // Specifies whether the image-border should be repeated, rounded or stretched.
@@ -351,8 +351,8 @@ box-sizing;
 @transition-timing-function: ease; // Specifies the speed curve of the transition effect.
 
 // Visual formatting Properties
-@display: inline; // Specifies how an element is displayed onscreen.
-@position: relative; // Specifies how an element is positioned.
+@display: block; // Specifies how an element is displayed onscreen.
+@position: absolute; // Specifies how an element is positioned.
 @top: 0; // Specify the location of the top edge of the positioned element.
 @right: 0; // Specify the location of the right edge of the positioned element.
 @bottom: 0; // Specify the location of the bottom edge of the positioned element.

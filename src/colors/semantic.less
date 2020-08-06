@@ -1,14 +1,4 @@
 .set-color-bases();
-.set-action();
-.set-reaction();
-.set-warning();
-.set-info();
-.set-success();
-.set-failure();
-.set-highlight();
-.set-accent();
-.set-alternate();
-.set-default();
 
 .set-color-bases(@color: @base-color;) {
 
@@ -25,27 +15,35 @@
 	.set-bases() when (@number >= 192) {
 		@reaction-base: extract(@turbo, @number - 128);
 		@alt-base: extract(@turbo, @number - @offset*2);
-		@accent-base: extract(@turbo, @number - @offset);
+		@info-base: extract(@turbo, @number - @offset);
 	}
 
 	.set-bases() when (@number > 128) and (@number < 192) {
 		@reaction-base: extract(@turbo, @number - 128);
 		@alt-base: extract(@turbo, @number - @offset*2);
-		@accent-base: extract(@turbo, @number - @offset);
+		@info-base: extract(@turbo, @number - @offset);
 	}
 
 	.set-bases() when (@number > 64) and (@number <= 128) {
 		@reaction-base: extract(@turbo, @number + 128);
 		@alt-base: extract(@turbo, @number + @offset*2);
-		@accent-base: extract(@turbo, @number + @offset);
+		@info-base: extract(@turbo, @number + @offset);
 	}
 
 	.set-bases() when (@number <= 64) {
 		@reaction-base: extract(@turbo, @number + 128);
 		@alt-base: extract(@turbo, @number + @offset*2);
-		@accent-base: extract(@turbo, @number + @offset);
-
+		@info-base: extract(@turbo, @number + @offset);
 	}
+
+	.set-action();
+	.set-reaction();
+	.set-success();
+	.set-warning();
+	.set-info();
+	.set-failure();
+	.set-alternate();
+	.set-default();
 }
 
 .set-action() {
@@ -82,9 +80,9 @@
 		@distance-info: @distance;
 	}
 
-	.set-distance-accent() {
-		.set-distance(@alt-base, @accent-base);
-		@distance-accent: @distance;
+	.set-distance-success() {
+		.set-distance(@alt-base, @success-base);
+		@distance-success: @distance;
 	}
 
 	.set-alternate-base() {
@@ -92,7 +90,7 @@
 		@alternate-was-alternate: false;
 	}
 
-	.set-alternate-base() when (@distance-info < 100) or (@distance-accent < 100) {
+	.set-alternate-base() when (@distance-info < 100) or (@distance-success < 100) {
 		@alternate-base: @alt-alt;
 		@alternate-was-alternate: true;
 	}
@@ -103,89 +101,38 @@
 	}
 
 	.set-distance-info();
-	.set-distance-accent();
+	.set-distance-success();
 	.set-alternate-base();
 	.set-alternate-final();
 }
 
 .set-alternate() when (@base-color = white) or (@base-color = black) { @alternate: average(white, black);}
 
-
-.set-info() {
-	// info is a light blue or teal 
-	// it indicates innocuous, low-urgency information
-
-	// @info-base: extract(@turbo, 64);
-
-	// .set-info-final() {
-	// 	.set-lumafix(@info-base, @base-color, 50%);
-	// 	@info:@lumafix;
-	// }
-
-	// .set-info-final();
-
-
-	@blue: extract(@turbo, 64);
-	@teal: extract(@turbo, 74);
-
-	.set-distance-action() {
-		.set-distance(@blue, @action-base);
-		@distance-action: @distance;
-	}
-
-	.set-distance-accent() {
-		.set-distance(@blue, @accent-base);
-		@distance-accent: @distance;
-	}
-
-	.set-info-base() when (@distance-action < 100) or (@distance-accent < 100) {
-		@info-base: @teal;
-		@info-was-teal: true;
-	}
-
-	.set-info-base() when (default()) {
-		@info-base: @blue;
-		@info-was-teal: false;
-	}
-
-	.set-info-final() {
-		.set-lumafix(@info-base; @strength: 15%;);
-		@info: @lumafix;
-	}
-
-	.set-distance-action();
-	.set-distance-accent();
-	.set-info-base();
-	.set-info-final();
-
-
-}
-
 .set-warning() {
 	// warning is a high urgency version of its pairing, info
 	// its orange/yellow is a complement to info's teal/blue
 	// remember: warning comes before the failure, failure after
 
-	@orange: extract(@turbo, 174);
-	@yellow: extract(@turbo, 152);
+	@warning-orange: extract(@turbo, 174);
+	@warning-yellow: extract(@turbo, 152);
 
 	.set-distance-action() {
-		.set-distance(@orange, @action-base);
+		.set-distance(@warning-orange, @action-base);
 		@distance-action: @distance;
 	}
 
 	.set-distance-reaction() {
-		.set-distance(@orange, @reaction-base);
+		.set-distance(@warning-orange, @reaction-base);
 		@distance-reaction: @distance;
 	}
 
 	.set-warning-base() when (@distance-action < 70) or (@distance-reaction < 70) {
-		@warning-base: @yellow;
+		@warning-base: @warning-yellow;
 		@warning-was-yellow: true;
 	}
 
 	.set-warning-base() when (default()) {
-		@warning-base: @orange;
+		@warning-base: @warning-orange;
 		@warning-was-yellow: false;
 	}
 
@@ -209,25 +156,25 @@
 	// success indicates that an action worked or a positive response came through
 	// its green tells users they're good to go 
 
-	@green: extract(@turbo, 105);
-	@lightgreen: extract(@turbo, 130);
+	@success-green: extract(@turbo, 105);
+	@success-lightgreen: extract(@turbo, 130);
 
 	.set-distance-action() {
-		.set-distance(@green, @action-base);
+		.set-distance(@success-green, @action-base);
 		@distance-action: @distance;
 	}
 
 	.set-distance-reaction() {
-		.set-distance(@green, @reaction-base);
+		.set-distance(@success-green, @reaction-base);
 		@distance-reaction: @distance;
 	}
 
 	.set-success-base() when (@distance-action < 100) or (@distance-reaction < 100) {
-		@success-base: @lightgreen;
+		@success-base: @success-lightgreen;
 	}
 
 	.set-success-base() when (default()) {
-		@success-base: @green;
+		@success-base: @success-green;
 	}
 
 	.set-success-final() {
@@ -247,25 +194,25 @@
 	// success's opposite and complement, failure's red tells the user something is wrong 
 	// good for negative server responses, missing info, or drawing attention to faults
 
-	@red: extract(@turbo, 225);
-	@darkred: extract(@turbo, 240);
+	@failure-red: extract(@turbo, 225);
+	@failuredarkred: extract(@turbo, 240);
 
 	.set-distance-action() {
-		.set-distance(@red, @action-base);
+		.set-distance(@failure-red, @action-base);
 		@distance-action: @distance;
 	}
 
 	.set-distance-reaction() {
-		.set-distance(@red, @reaction-base);
+		.set-distance(@failure-red, @reaction-base);
 		@distance-reaction: @distance;
 	}
 
 	.set-failure-base() when (@distance-action < 100) or (@distance-reaction < 100) {
-		@failure-base: @darkred;
+		@failure-base: @failuredarkred;
 	}
 
 	.set-failure-base() when (default()) {
-		@failure-base: @red;
+		@failure-base: @failure-red;
 	}
 
 	.set-failure-final() when (luma(@base-color) > 50%) {
@@ -286,85 +233,51 @@
 	.set-failure-final();
 }
 
-.set-highlight() {
-	// highlight is a bright color meant to evoke a highlighter and print text
-	// depending on the base color, it can be cyan, magenta or yellow
-
-	// implicitly supports an "auto" feature in @highlight-color
-
-	.set-highlight-base() when (red(@base-color) > 0) {
-		@highlight-base: magenta;
-	}
-
-	.set-highlight-base() when (red(@base-color) > 85) {
-		@highlight-base: cyan;
-	}
-
-	.set-highlight-base() when (red(@base-color) > 170) {
-		@highlight-base: yellow;
-	}
-
-	.set-highlight-base() when (isColor(@highlight-mode)) {
-		@highlight-base: @highlight-mode;
-	}
-
-	.set-highlight-final() {
-		.set-lumafix(@highlight-base, @strength: 33% + luma(@base-color)*.33);
-		@highlight: @lumafix;
-	}
-
-	.set-highlight-base();
-	.set-highlight-final();
-}
-
-.set-accent() {
-	// accent is meant to be used sparingly with @action, @reaction and @alternate 
-	// its extra saturation and lightness is good for drawing attention or balancing designs
+.set-info() {
+	// info is meant to be used sparingly with @action, @reaction and @alternate 
+	// its extra saturation and lightness is good for drawing attention, like
+	// a less urgent warning
 
 	.set-lumafix(@alt-acc-base; @strength: 50%);
-	@alt-acc-base: spin(@accent-base, 180);
+	@alt-acc-base: spin(@info-base, 180);
 	@alt-acc: @lumafix;
 
 	.set-distance-warning() {
-		.set-distance(@accent-base, @warning-base);
+		.set-distance(@info-base, @warning-base);
 		@distance-warning: @distance;
 	}
 
-	.set-distance-highlight() {
-		.set-distance(@accent-base, @highlight-base);
-		@distance-highlight: @distance;
+	.set-distance-success() {
+		.set-distance(@info-base, @success-base);
+		@distance-success: @distance;
 	}
 
-	.set-new-accent-base() {
-		@new-accent-base: @accent-base;
-		@accent-was-alternate: false;
+	.set-new-info-base() {
+		@new-info-base: @info-base;
+		@info-was-alternate: false;
 	}
 
-	.set-new-accent-base() when (@distance-warning < 150) or (@distance-highlight < 150) {
-		@new-accent-base: @alt-acc;
-		@accent-was-alternate: true;
+	.set-new-info-base() when (@distance-warning < 150) or (@distance-success < 150) {
+		@new-info-base: @alt-acc;
+		@info-was-alternate: true;
 	}
 
-	.set-accent-final() {
-		@bright-accent-base:lighten(saturate(mix(@lumafix, @new-accent-base, 20%), 20%), 10%);
-		.set-lumafix(@bright-accent-base; @strength: 20%;);
-		@accent: @lumafix;
+	.set-info-final() {
+		@bright-info-base:lighten(saturate(mix(@lumafix, @new-info-base, 10%), 10%), 10%);
+		.set-lumafix(@bright-info-base; @strength: 20%;);
+		@info: @lumafix;
 	}
 
 	.set-distance-warning();
-	.set-distance-highlight();
-	.set-new-accent-base();
-	.set-accent-final();
-
-
-
-
+	.set-distance-success();
+	.set-new-info-base();
+	.set-info-final();
 }
 
 .set-default() {
 	// default is an average of all of the other semantic colors
 	// it functions as a plain, neutral color within a theme-- a good default
 
-	.set-average(@action, @reaction, @alternate, @info, @warning, @accent, @success, @failure, @highlight;);
+	.set-average(@action, @reaction, @alternate, @info, @warning, @success, @failure;);
 	@default: @average;
 }
