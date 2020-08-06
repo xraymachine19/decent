@@ -12,14 +12,14 @@
                when (@contrast-ratio < @contrast-standard)
                 and (@index < @iterations) {
   
-      @new-text-color: mix(@tone, @color, 2.5%*@index);
+        @new-text-color: mix(@tone, @color, 2%*@index);
   
         .set-contrast-ratio(@text-background, @new-text-color);
         .adjust-text(@contrast-ratio, @index + 1);
     }
   
     .adjust-text(@contrast-ratio, @index) when (default()) {
-        color: mix(@tone, @color, 2.5%*@index);
+        color: mix(@tone, @color, 2%*@index);
     }
 }
   

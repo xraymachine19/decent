@@ -1,23 +1,40 @@
 .bar {
+    position: relative;
     .default(line-height);
     line-height: 1;
     max-width: 100%;
 
     padding: @padding / @golden-ratio;
 
+    .bar {
+        padding: 0;
+    }
+
+    .top, .bottom, .left, .right {
+        float: left;
+        position: absolute;
+    }
+
     > * {
         display: inline;
+        width: auto;
         .default(max-width);
         margin-top: 0 !important;
-        width: auto !important;
+        margin-bottom: 0 !important;
         margin-right: @padding;
+        padding: @text-padding;
 
         &:last-child {
             margin-right: 0;
         }
     }
 
+    * {
+        margin-bottom: 0 !important;
+    }
+
     .button-elements({
+        width: auto;
         display: inline;
         margin-bottom: 0;
     });

@@ -7,480 +7,6 @@
 *:after {
   box-sizing: border-box;
 }
-.background {
-  background: #e675af;
-}
-.background-attachment {
-  background-attachment: scroll;
-}
-.background-clip {
-  background-clip: border-box;
-}
-.background-color {
-  background-color: #ec98c3;
-}
-.background-image {
-  background-image: none;
-}
-.background-origin {
-  background-origin: padding-box;
-}
-.background-position {
-  background-position: top center;
-}
-.background-repeat {
-  background-repeat: no-repeat;
-}
-.background-size {
-  background-size: auto;
-}
-.border {
-  border: 1px solid #919b75;
-}
-.border-bottom {
-  border-bottom: 1px solid #919b75;
-}
-.border-bottom-color {
-  border-bottom-color: #919b75;
-}
-.border-bottom-left-radius {
-  border-bottom-left-radius: 11px;
-}
-.border-bottom-right-radius {
-  border-bottom-right-radius: 11px;
-}
-.border-bottom-style {
-  border-bottom-style: solid;
-}
-.border-bottom-width {
-  border-bottom-width: 1px;
-}
-.border-color {
-  border-color: #919b75;
-}
-.border-image {
-  border-image: none;
-}
-.border-image-outset {
-  border-image-outset: 0;
-}
-.border-image-repeat {
-  border-image-repeat: stretch;
-}
-.border-image-slice {
-  border-image-slice: 100%;
-}
-.border-image-source {
-  border-image-source: none;
-}
-.border-image-width {
-  border-image-width: 1;
-}
-.border-left {
-  border-left: 1px solid #919b75;
-}
-.border-left-color {
-  border-left-color: #919b75;
-}
-.border-left-style {
-  border-left-style: solid;
-}
-.border-left-width {
-  border-left-width: 1px;
-}
-.border-radius {
-  border-radius: 11px;
-}
-.border-right {
-  border-right: 1px solid #919b75;
-}
-.border-right-color {
-  border-right-color: #919b75;
-}
-.border-right-style {
-  border-right-style: solid;
-}
-.border-right-width {
-  border-right-width: 1px;
-}
-.border-style {
-  border-style: solid;
-}
-.border-top {
-  border-top: 1px solid #919b75;
-}
-.border-top-color {
-  border-top-color: #919b75;
-}
-.border-top-left-radius {
-  border-top-left-radius: 11px;
-}
-.border-top-right-radius {
-  border-top-right-radius: 11px;
-}
-.border-top-style {
-  border-top-style: solid;
-}
-.border-top-width {
-  border-top-width: 1px;
-}
-.border-width {
-  border-width: 1px;
-}
-.color {
-  color: #e675af;
-}
-.opacity {
-  opacity: 1;
-}
-.height {
-  height: auto;
-}
-.max-height {
-  max-height: none;
-}
-.max-width {
-  max-width: 45rem;
-}
-.min-height {
-  min-height: 0;
-}
-.min-width {
-  min-width: 0;
-}
-.width {
-  width: auto;
-}
-.content {
-  content: normal;
-}
-.quotes {
-  quotes: inherit;
-}
-.counter-reset {
-  counter-reset: none;
-}
-.counter-increment {
-  counter-increment: none;
-}
-.align-content {
-  align-content: stretch;
-}
-.align-items {
-  align-items: stretch;
-}
-.align-self {
-  align-self: auto;
-}
-.flex {
-  flex: 0 1 auto;
-}
-.flex-basis {
-  flex-basis: auto;
-}
-.flex-direction {
-  flex-direction: row;
-}
-.flex-flow {
-  flex-flow: row nowrap;
-}
-.flex-grow {
-  flex-grow: 0;
-}
-.flex-shrink {
-  flex-shrink: 1;
-}
-.flex-wrap {
-  flex-wrap: nowrap;
-}
-.justify-content {
-  justify-content: flex-start;
-}
-.order {
-  order: 0;
-}
-.font {
-  font: normal normal normal 21px "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-}
-.font-family {
-  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-}
-.font-size {
-  font-size: 21px;
-}
-.font-size-adjust {
-  font-size-adjust: none;
-}
-.font-stretch {
-  font-stretch: normal;
-}
-.font-style {
-  font-style: normal;
-}
-.font-variant {
-  font-variant: normal;
-}
-.font-weight {
-  font-weight: normal;
-}
-.list-style {
-  list-style: disc outside none;
-}
-.list-style-image {
-  list-style-image: none;
-}
-.list-style-position {
-  list-style-position: outside;
-}
-.list-style-type {
-  list-style-type: disc;
-}
-.margin {
-  margin: 33px;
-}
-.margin-bottom {
-  margin-bottom: 33px;
-}
-.margin-left {
-  margin-left: 33px;
-}
-.margin-right {
-  margin-right: 33px;
-}
-.margin-top {
-  margin-top: 33px;
-}
-.column-count {
-  column-count: auto;
-}
-.column-fill {
-  column-fill: balance;
-}
-.column-gap {
-  column-gap: 33px;
-}
-.column-rule {
-  column-rule: 1px solid #919b75;
-}
-.column-rule-color {
-  column-rule-color: #919b75;
-}
-.column-rule-style {
-  column-rule-style: solid;
-}
-.column-rule-width {
-  column-rule-width: 1px;
-}
-.column-span {
-  column-span: none;
-}
-.column-width {
-  column-width: 45rem;
-}
-.columns {
-  columns: 45rem auto;
-}
-.outline {
-  outline: 1px solid #919b75;
-}
-.outline-color {
-  outline-color: #919b75;
-}
-.outline-offset {
-  outline-offset: 0;
-}
-.outline-style {
-  outline-style: solid;
-}
-.outline-width {
-  outline-width: 1px;
-}
-.padding {
-  padding: 20px;
-}
-.padding-bottom {
-  padding-bottom: 20px;
-}
-.padding-left {
-  padding-left: 20px;
-}
-.padding-right {
-  padding-right: 20px;
-}
-.padding-top {
-  padding-top: 20px;
-}
-.page-break-after {
-  page-break-after: auto;
-}
-.page-break-before {
-  page-break-before: auto;
-}
-.page-break-inside {
-  page-break-inside: auto;
-}
-.border-collapse {
-  border-collapse: 'test';
-}
-.border-spacing {
-  border-spacing: 'test';
-}
-.caption-side {
-  caption-side: 'test';
-}
-.empty-cells {
-  empty-cells: 'test';
-}
-.table-layout {
-  table-layout: 'test';
-}
-.direction {
-  direction: 'test';
-}
-.tab-size {
-  tab-size: 'test';
-}
-.text-align {
-  text-align: 'test';
-}
-.text-align-last {
-  text-align-last: 'test';
-}
-.text-decoration {
-  text-decoration: 'test';
-}
-.text-decoration-color {
-  text-decoration-color: 'test';
-}
-.text-decoration-line {
-  text-decoration-line: 'test';
-}
-.text-decoration-style {
-  text-decoration-style: 'test';
-}
-.text-indent {
-  text-indent: 'test';
-}
-.text-justify {
-  text-justify: 'test';
-}
-.text-overflow {
-  text-overflow: 'test';
-}
-.text-shadow {
-  text-shadow: 'test';
-}
-.text-transform {
-  text-transform: 'test';
-}
-.line-height {
-  line-height: 46px;
-}
-.vertical-align {
-  vertical-align: 'test';
-}
-.letter-spacing {
-  letter-spacing: 'test';
-}
-.word-spacing {
-  word-spacing: 'test';
-}
-.white-space {
-  white-space: 'test';
-}
-.word-break {
-  word-break: 'test';
-}
-.word-wrap {
-  word-wrap: 'test';
-}
-.backface-visibility {
-  backface-visibility: visible;
-}
-.perspective {
-  perspective: none;
-}
-.perspective-origin {
-  perspective-origin: 50% 50%;
-}
-.transform {
-  transform: none;
-}
-.transform-origin {
-  transform-origin: 50% 50% 0;
-}
-.transform-style {
-  transform-style: flat;
-}
-.transition {
-  transition: all 0s ease 0s;
-}
-.transition-delay {
-  transition-delay: 0s;
-}
-.transition-duration {
-  transition-duration: 0s;
-}
-.transition-property {
-  transition-property: all;
-}
-.transition-timing-function {
-  transition-timing-function: ease;
-}
-.display {
-  display: block;
-}
-.position {
-  position: absolute;
-}
-.top {
-  top: 0;
-}
-.right {
-  right: 0;
-}
-.bottom {
-  bottom: 0;
-}
-.left {
-  left: 0;
-}
-.float {
-  float: left;
-}
-.clear {
-  clear: both;
-}
-.z-index {
-  z-index: 10;
-}
-.overflow {
-  overflow: show;
-}
-.overflow-x {
-  overflow-x: show;
-}
-.overflow-y {
-  overflow-y: show;
-}
-.resize {
-  resize: none;
-}
-.clip {
-  clip: auto;
-}
-.visibility {
-  visibility: visible;
-}
-.cursor {
-  cursor: pointer;
-}
-.box-shadow {
-  box-shadow: 0 1px 2px rgba(11, 11, 11, 0.225);
-}
-.box-sizing {
-  box-sizing: border-box;
-}
 .action,
 .reaction,
 .alternate,
@@ -491,7 +17,7 @@
 .failure,
 .highlight,
 .default {
-  padding: 20px;
+  padding: 13px;
 }
 p,
 ol,
@@ -503,72 +29,81 @@ form,
 main,
 section,
 table {
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 }
 .gutter {
-  margin: 53.394px;
+  margin: 24.27px;
 }
 .gutter-top {
-  margin-top: 53.394px;
+  margin-top: 24.27px;
 }
 .gutter-right {
-  margin-right: 53.394px;
+  margin-right: 24.27px;
 }
 .gutter-bottom {
-  margin-bottom: 53.394px;
+  margin-bottom: 24.27px;
 }
 .gutter-left {
-  margin-left: 53.394px;
+  margin-left: 24.27px;
+}
+.aside-width {
+  width: 28rem;
 }
 .full-width {
   width: 100%;
 }
 body {
-  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-  color: #0b0b0b;
-  background-color: #ec98c3;
-  color: #271c22;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2040%22%20width%3D%2280%22%20height%3D%2240%22%3E%3Cpath%20fill%3D%22rgb(222,143,183)%22%20d%3D%22M0%2040a19.96%2019.96%200%200%201%205.9-14.11%2020.17%2020.17%200%200%201%2019.44-5.2A20%2020%200%200%201%2020.2%2040H0zM65.32.75A20.02%2020.02%200%200%201%2040.8%2025.26%2020.02%2020.02%200%200%201%2065.32.76zM.07%200h20.1l-.08.07A20.02%2020.02%200%200%201%20.75%205.25%2020.08%2020.08%200%200%201%20.07%200zm1.94%2040h2.53l4.26-4.24v-9.78A17.96%2017.96%200%200%200%202%2040zm5.38%200h9.8a17.98%2017.98%200%200%200%206.67-16.42L7.4%2040zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62%202.42zm32.86-.78A18%2018%200%200%200%2063.85%203.63L43.68%2023.8zm7.2-19.17v9.15L62.43%202.22c-3.96-.5-8.05.3-11.57%202.4zm-3.49%202.72c-4.1%204.1-5.81%209.69-5.13%2015.03l6.61-6.6V6.02c-.51.41-1%20.85-1.48%201.33zM17.18%200H7.42L3.64%203.78A18%2018%200%200%200%2017.18%200zM2.08%200c-.01.8.04%201.58.14%202.37L4.59%200H2.07z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: #121212;
+  background-color: #b6b6b6;
+  color: #242424;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2224%22%20viewBox%3D%220%200%2012%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22rgb(170,170,170)%22%3E%3Cpath%20d%3D%22M2%200h2v12H2V0zm1%2020c1.105%200%202-.895%202-2s-.895-2-2-2-2%20.895-2%202%20.895%202%202%202zM9%208c1.105%200%202-.895%202-2s-.895-2-2-2-2%20.895-2%202%20.895%202%202%202zm-1%204h2v12H8V12z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   background-position: top center;
-  font-size: 16.8px;
-  line-height: 36.8px;
+  font-size: 13.6px;
+  line-height: 31.2px;
 }
-@media screen and (min-width: 80.394rem) {
+@media screen and (min-width: 52.27rem) {
   body {
-    font-size: 18.9px;
-    line-height: 41.4px;
+    font-size: 15.3px;
+    line-height: 35.1px;
   }
 }
-@media screen and (min-width: 98.394rem) {
+@media screen and (min-width: 70.27rem) {
   body {
-    font-size: 21px;
-    line-height: 46px;
+    font-size: 17px;
+    line-height: 39px;
   }
 }
 main {
   margin: 0 auto;
-  margin-bottom: 53.394px;
+  margin-bottom: 24.27px;
+}
+nav .bar {
+  margin-bottom: 0;
+}
+nav .bar > * {
+  margin-right: 0;
 }
 section {
-  background-color: #ebeef7;
-  color: #49494c;
-  max-width: 45rem;
-  padding: 10px;
-  margin: 0 auto 53.394px auto;
+  background-color: #f8f8f8;
+  color: #4c4c4c;
+  max-width: 46rem;
+  padding: 6.5px;
+  margin: 0 auto 24.27px auto;
 }
-@media screen and (min-width: 80.394rem) {
+@media screen and (min-width: 52.27rem) {
   section {
-    padding: 20px;
+    padding: 13px;
   }
 }
-@media screen and (min-width: 98.394rem) {
+@media screen and (min-width: 70.27rem) {
   section {
-    padding: 40px;
+    padding: 26px;
   }
 }
 aside {
   margin: 0 auto;
-  max-width: 27rem;
+  max-width: 28rem;
 }
 h1,
 h2,
@@ -576,15 +111,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-weight: bold;
   margin-top: 0.61804697em;
   margin-bottom: 0.61804697em;
   letter-spacing: -0.025em;
   color: inherit;
   line-height: 1.618;
-  max-width: 45rem;
-  width: 100%;
+  max-width: 46rem;
 }
 p + h1,
 p + h2,
@@ -669,22 +203,23 @@ p.default {
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 a {
-  color: #3e4a72;
+  color: inherit;
+  text-decoration: underline;
 }
 form {
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 input {
-  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-  font-size: 21px;
-  line-height: 46px;
-  border: 1px solid #919b75;
-  border-radius: 11px;
-  color: #38383a;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 17px;
+  line-height: 39px;
+  border: 1px solid #88a575;
+  border-radius: 1px;
+  color: #3a3a3a;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 input:focus {
-  box-shadow: 0 0 2px #7690e5;
+  box-shadow: 0 0 2px #7791e5;
 }
 fieldset {
   border: none;
@@ -692,20 +227,20 @@ fieldset {
 }
 ol {
   padding-left: 4ch;
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 }
 ol li {
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 ul {
   padding-left: 3ch;
-  margin-left: 33px;
-  margin-bottom: 33px;
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 kbd {
-  background-color: #0b0b0b;
+  background-color: #0a0a0a;
   color: #b7b7b7;
-  border-radius: 11px;
+  border-radius: 1px;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 b {
@@ -717,16 +252,16 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: none;
-  border-radius: 11px;
-  font-size: 21px;
-  box-shadow: 0 1px 2px rgba(11, 11, 11, 0.225);
+  border-radius: 1px;
+  font-size: 17px;
+  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.225);
   display: inline;
   font-family: inherit;
   padding: 0.61804697em !important;
-  color: #282b20;
-  background-color: #919b75;
-  border-color: #6d7557;
-  max-width: 27rem;
+  color: #293123;
+  background-color: #88a575;
+  border-color: #69805b;
+  max-width: 28rem;
   line-height: 1;
   text-align: center;
   vertical-align: middle;
@@ -751,7 +286,7 @@ input[type="submit"]:active {
   transform: scale(0.99);
   box-shadow: none;
 }
-@media screen and (min-width: 98.394rem) {
+@media screen and (min-width: 70.27rem) {
   button,
   .button,
   input[type="button"],
@@ -765,9 +300,9 @@ button.action,
 input[type="button"].action,
 input[type="reset"].action,
 input[type="submit"].action {
-  color: #452335;
-  background-color: #e675af;
-  border-color: #b25b88;
+  color: #353535;
+  background-color: #a2a2a2;
+  border-color: #7e7e7e;
 }
 button.reaction,
 .button.reaction,
@@ -783,18 +318,18 @@ button.alternate,
 input[type="button"].alternate,
 input[type="reset"].alternate,
 input[type="submit"].alternate {
-  color: #083240;
-  background-color: #1aa7d5;
-  border-color: #1482a5;
+  color: #093948;
+  background-color: #1baedf;
+  border-color: #1587ad;
 }
 button.info,
 .button.info,
 input[type="button"].info,
 input[type="reset"].info,
 input[type="submit"].info {
-  color: white;
-  background-color: #7690e5;
-  border-color: #586cac;
+  color: #21283f;
+  background-color: #7791e5;
+  border-color: #5a6dac;
 }
 button.warning,
 .button.warning,
@@ -810,9 +345,9 @@ button.success,
 input[type="button"].success,
 input[type="reset"].success,
 input[type="submit"].success {
-  color: #195c2b;
-  background-color: #3fe66c;
-  border-color: #31b254;
+  color: #195e2c;
+  background-color: #3feb6e;
+  border-color: #31b655;
 }
 button.failure,
 .button.failure,
@@ -820,24 +355,24 @@ input[type="button"].failure,
 input[type="reset"].failure,
 input[type="submit"].failure {
   color: white;
-  background-color: #dd4319;
-  border-color: #a63213;
+  background-color: #dd4921;
+  border-color: #a63619;
 }
 button.default,
 .button.default,
 input[type="button"].default,
 input[type="reset"].default,
 input[type="submit"].default {
-  color: #282b20;
-  background-color: #919b75;
-  border-color: #6d7557;
+  color: #293123;
+  background-color: #88a575;
+  border-color: #69805b;
 }
 pre {
   overflow: hidden;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
-  box-shadow: inset 0 1px 2px rgba(11, 11, 11, 0.225);
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.225);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  border-radius: 11px;
+  border-radius: 1px;
   background-color: #2e2e2e;
   color: #c1c1c1;
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%224%22%20viewBox%3D%220%200%204%204%22%3E%3Cpath%20fill%3D%22rgb(55,55,55)%22%20d%3D%22M1%203h1v1H1V3zm2-2h1v1H3V1z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
@@ -849,6 +384,7 @@ pre > code {
 }
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: #dadada;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
   background-color: #2e2e2e;
   color: #c1c1c1;
@@ -857,122 +393,122 @@ code {
 }
 code.terminal:before {
   content: "$ ";
-  color: #b8b8fb;
+  color: #b7b7fc;
 }
-code.action,
-code .action {
-  color: #edaacc;
+code.color-action,
+code .color-action {
+  color: #d4d4d4;
   background: #2e2e2e;
 }
-code.reaction,
-code .reaction {
-  color: #94cd50;
+code.color-reaction,
+code .color-reaction {
+  color: #bee097;
   background: #2e2e2e;
 }
-code.alternate,
-code .alternate {
-  color: #78cae4;
+code.color-alternate,
+code .color-alternate {
+  color: #a9deef;
   background: #2e2e2e;
 }
-code.info,
-code .info {
-  color: #adbced;
+code.color-info,
+code .color-info {
+  color: #cdd5f2;
   background: #2e2e2e;
 }
-code.warning,
-code .warning {
-  color: #f7b036;
+code.color-warning,
+code .color-warning {
+  color: #f8cf89;
   background: #2e2e2e;
 }
-code.success,
-code .success {
-  color: #43e670;
+code.color-success,
+code .color-success {
+  color: #64ee8a;
   background: #2e2e2e;
 }
-code.failure,
-code .failure {
-  color: #eeb09f;
+code.color-failure,
+code .color-failure {
+  color: #f2cec5;
   background: #2e2e2e;
 }
-code.default,
-code .default {
-  color: #bac1a9;
+code.color-default,
+code .color-default {
+  color: #ced9c7;
   background: #2e2e2e;
 }
 textarea {
-  font-size: 21px;
-  line-height: 46px;
-  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-  margin-bottom: 33px;
-  border: 1px solid #919b75;
-  border-radius: 11px;
-  color: #38383a;
+  font-size: 17px;
+  line-height: 39px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  margin-bottom: 15px;
+  border: 1px solid #88a575;
+  border-radius: 1px;
+  color: #3a3a3a;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 textarea:focus {
-  box-shadow: 0 0 2px #7690e5;
+  box-shadow: 0 0 2px #7791e5;
 }
 .hero {
   font-size: 110%;
-  padding: 20px;
+  padding: 13px;
   width: 100%;
   max-width: none;
-  margin-bottom: 53.394px;
-  background-color: #7690e5;
-  color: #0b0b0b;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(112,137,217)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  margin-bottom: 24.27px;
+  background-color: #7791e5;
+  color: #0a0a0a;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(113,138,217)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.action {
-  background-color: #e675af;
-  color: #0b0b0b;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(218,111,166)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-color: #a2a2a2;
+  color: #121212;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(154,154,154)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.reaction {
   background-color: #6fbd11;
-  color: #151d0b;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(105,180,16)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  color: #141c0b;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(105,180,16)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.alternate {
-  background-color: #1aa7d5;
-  color: #0b0b0b;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(25,159,203)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-color: #1baedf;
+  color: #0b1215;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(26,166,212)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.info {
-  background-color: #7690e5;
-  color: #0b0b0b;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(112,137,217)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-color: #7791e5;
+  color: #0a0a0a;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(113,138,217)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.warning {
   background-color: #f7af31;
   color: #342711;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(235,166,47)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(235,166,47)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.success {
-  background-color: #3fe66c;
-  color: #15371e;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(60,219,103)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-color: #3feb6e;
+  color: #163d21;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(60,224,105)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.failure {
-  background-color: #dd4319;
-  color: #0b0b0b;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(208,63,24)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-color: #dd4921;
+  color: #0a0a0a;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(209,69,32)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero.default {
-  background-color: #919b75;
-  color: #0b0b0b;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2260px%22%20height%3D%2260px%22%20viewBox%3D%220%200%2060%2060%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Emorphing-diamonds%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22morphing-diamonds%22%20fill%3D%22rgb(138,147,111)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M54.627417%2C1.33226763e-15%20L55.4558441%2C0.828427125%20L54.0416306%2C2.24264069%20L51.7989899%2C-1.44328993e-15%20L54.627417%2C7.10542736e-15%20L54.627417%2C1.33226763e-15%20Z%20M5.372583%2C-5.55111512e-16%20L4.54415588%2C0.828427125%20L5.95836944%2C2.24264069%20L8.20101013%2C-1.44328993e-15%20L5.372583%2C-7.77156117e-16%20L5.372583%2C-5.55111512e-16%20Z%20M48.9705627%2C6.32827124e-15%20L52.627417%2C3.65685425%20L51.2132034%2C5.07106781%20L46.1421356%2C-1.44328993e-15%20L48.9705627%2C5.21804822e-15%20L48.9705627%2C6.32827124e-15%20Z%20M11.0294373%2C-1.44328993e-15%20L7.372583%2C3.65685425%20L8.78679656%2C5.07106781%20L13.8578644%2C1.22124533e-15%20L11.0294373%2C-3.33066907e-16%20L11.0294373%2C-1.44328993e-15%20Z%20M43.3137085%2C2.10942375e-15%20L49.7989899%2C6.48528137%20L48.3847763%2C7.89949494%20L40.4852814%2C2.10942375e-15%20L43.3137085%2C-1.44328993e-15%20L43.3137085%2C2.10942375e-15%20Z%20M16.6862915%2C3.33066907e-16%20L10.2010101%2C6.48528137%20L11.6152237%2C7.89949494%20L19.5147186%2C-3.33066907e-16%20L16.6862915%2C-1.44328993e-15%20L16.6862915%2C3.33066907e-16%20Z%20M37.6568542%2C2.55351296e-15%20L46.9705627%2C9.3137085%20L45.5563492%2C10.7279221%20L34.8284271%2C-5.55111512e-16%20L37.6568542%2C-1.44328993e-15%20L37.6568542%2C2.55351296e-15%20Z%20M22.3431458%2C5.55111512e-16%20L13.0294373%2C9.3137085%20L14.4436508%2C10.7279221%20L25.1715729%2C-1.11022302e-16%20L22.3431458%2C-1.44328993e-15%20L22.3431458%2C5.55111512e-16%20Z%20M32%2C-3.33066907e-16%20L44.1421356%2C12.1421356%20L42.7279221%2C13.5563492%20L30%2C0.828427125%20L17.2720779%2C13.5563492%20L15.8578644%2C12.1421356%20L28%2C-3.33066907e-16%20L32%2C-1.44328993e-15%20L32%2C-3.33066907e-16%20Z%20M0.284271247%2C-1.44328993e-15%20L28.2842712%2C28%20L26.8700577%2C29.4142136%20L-2.15508222e-16%2C2.54415588%20L-2.15508222e-16%2C4.71844785e-16%20L0.284271247%2C4.71844785e-16%20L0.284271247%2C-1.44328993e-15%20Z%20M1.80408836e-15%2C5.372583%20L25.4558441%2C30.8284271%20L24.0416306%2C32.2426407%20L3.33720546e-15%2C8.20101013%20L-2.15508222e-16%2C5.372583%20L1.80408836e-15%2C5.372583%20Z%20M-2.15508222e-16%2C11.0294373%20L22.627417%2C33.6568542%20L21.2132034%2C35.0710678%20L4.80878765e-15%2C13.8578644%20L1.25607397e-15%2C11.0294373%20L-2.15508222e-16%2C11.0294373%20Z%20M-2.15508222e-16%2C16.6862915%20L19.7989899%2C36.4852814%20L18.3847763%2C37.8994949%20L7.73346434e-15%2C19.5147186%20L6.28036983e-16%2C16.6862915%20L-2.15508222e-16%2C16.6862915%20Z%20M1.66860273e-15%2C22.3431458%20L16.9705627%2C39.3137085%20L15.5563492%2C40.7279221%20L-2.15508222e-16%2C25.1715729%20L-2.15508222e-16%2C22.3431458%20L1.66860273e-15%2C22.3431458%20Z%20M-2.15508222e-16%2C28%20L14.1421356%2C42.1421356%20L12.7279221%2C43.5563492%20L-2.15508222e-16%2C30.8284271%20L-2.15508222e-16%2C28%20L-2.15508222e-16%2C28%20Z%20M-2.15508222e-16%2C33.6568542%20L11.3137085%2C44.9705627%20L9.89949494%2C46.3847763%20L5.20282872e-16%2C36.4852814%20L5.20282872e-16%2C33.6568542%20L-2.15508222e-16%2C33.6568542%20Z%20M-2.15508222e-16%2C39.3137085%20L8.48528137%2C47.7989899%20L7.07106781%2C49.2132034%20L3.55271368e-15%2C42.1421356%20L3.55271368e-15%2C39.3137085%20L-2.15508222e-16%2C39.3137085%20Z%20M-2.15508222e-16%2C44.9705627%20L5.65685425%2C50.627417%20L4.24264069%2C52.0416306%20L3.55271368e-15%2C47.7989899%20L2.66453526e-15%2C44.9705627%20L-2.15508222e-16%2C44.9705627%20Z%20M-2.15508222e-16%2C50.627417%20L2.82842712%2C53.4558441%20L1.41421356%2C54.8700577%20L2.48058749e-15%2C53.4558441%20L2.48058749e-15%2C50.627417%20L-2.15508222e-16%2C50.627417%20Z%20M54.627417%2C60%20L30%2C35.372583%20L5.372583%2C60%20L8.20101013%2C60%20L30%2C38.2010101%20L51.7989899%2C60%20L54.627417%2C60%20L54.627417%2C60%20Z%20M48.9705627%2C60%20L30%2C41.0294373%20L11.0294373%2C60%20L13.8578644%2C60%20L30%2C43.8578644%20L46.1421356%2C60%20L48.9705627%2C60%20L48.9705627%2C60%20Z%20M43.3137085%2C60%20L30%2C46.6862915%20L16.6862915%2C60%20L19.5147186%2C60%20L30%2C49.5147186%20L40.4852814%2C60%20L43.3137085%2C60%20L43.3137085%2C60%20Z%20M37.6568542%2C60%20L30%2C52.3431458%20L22.3431458%2C60%20L25.1715729%2C60%20L30%2C55.1715729%20L34.8284271%2C60%20L37.6568542%2C60%20L37.6568542%2C60%20Z%20M32%2C60%20L30%2C58%20L28%2C60%20L32%2C60%20L32%2C60%20Z%20M59.7157288%2C3.33066907e-16%20L31.7157288%2C28%20L33.1299423%2C29.4142136%20L60%2C2.54415588%20L60%2C-1.44328993e-15%20L59.7157288%2C-1.44328993e-15%20L59.7157288%2C3.33066907e-16%20Z%20M60%2C5.372583%20L34.5441559%2C30.8284271%20L35.9583694%2C32.2426407%20L60%2C8.20101013%20L60%2C5.372583%20L60%2C5.372583%20Z%20M60%2C11.0294373%20L37.372583%2C33.6568542%20L38.7867966%2C35.0710678%20L60%2C13.8578644%20L60%2C11.0294373%20L60%2C11.0294373%20Z%20M60%2C16.6862915%20L40.2010101%2C36.4852814%20L41.6152237%2C37.8994949%20L60%2C19.5147186%20L60%2C16.6862915%20L60%2C16.6862915%20Z%20M60%2C22.3431458%20L43.0294373%2C39.3137085%20L44.4436508%2C40.7279221%20L60%2C25.1715729%20L60%2C22.3431458%20L60%2C22.3431458%20Z%20M60%2C28%20L45.8578644%2C42.1421356%20L47.2720779%2C43.5563492%20L60%2C30.8284271%20L60%2C28%20L60%2C28%20Z%20M60%2C33.6568542%20L48.6862915%2C44.9705627%20L50.1005051%2C46.3847763%20L60%2C36.4852814%20L60%2C33.6568542%20L60%2C33.6568542%20Z%20M60%2C39.3137085%20L51.5147186%2C47.7989899%20L52.9289322%2C49.2132034%20L60%2C42.1421356%20L60%2C39.3137085%20L60%2C39.3137085%20Z%20M60%2C44.9705627%20L54.3431458%2C50.627417%20L55.7573593%2C52.0416306%20L60%2C47.7989899%20L60%2C44.9705627%20L60%2C44.9705627%20Z%20M60%2C50.627417%20L57.1715729%2C53.4558441%20L58.5857864%2C54.8700577%20L60%2C53.4558441%20L60%2C50.627417%20L60%2C50.627417%20Z%20M39.8994949%2C16.3847763%20L41.3137085%2C14.9705627%20L30%2C3.65685425%20L18.6862915%2C14.9705627%20L20.1005051%2C16.3847763%20L30%2C6.48528137%20L39.8994949%2C16.3847763%20L39.8994949%2C16.3847763%20Z%20M37.0710678%2C19.2132034%20L38.4852814%2C17.7989899%20L30%2C9.3137085%20L21.5147186%2C17.7989899%20L22.9289322%2C19.2132034%20L30%2C12.1421356%20L37.0710678%2C19.2132034%20L37.0710678%2C19.2132034%20Z%20M34.2426407%2C22.0416306%20L35.6568542%2C20.627417%20L30%2C14.9705627%20L24.3431458%2C20.627417%20L25.7573593%2C22.0416306%20L30%2C17.7989899%20L34.2426407%2C22.0416306%20L34.2426407%2C22.0416306%20Z%20M31.4142136%2C24.8700577%20L32.8284271%2C23.4558441%20L30%2C20.627417%20L27.1715729%2C23.4558441%20L28.5857864%2C24.8700577%20L30%2C23.4558441%20L31.4142136%2C24.8700577%20L31.4142136%2C24.8700577%20Z%20M56.8700577%2C59.4142136%20L58.2842712%2C58%20L30%2C29.7157288%20L1.71572875%2C58%20L3.12994231%2C59.4142136%20L30%2C32.5441559%20L56.8700577%2C59.4142136%20L56.8700577%2C59.4142136%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-color: #88a575;
+  color: #0a0a0a;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2284px%22%20height%3D%2248px%22%20viewBox%3D%220%200%2084%2048%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040%20(33762)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Esignal%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22signal%22%20fill%3D%22rgb(129,157,112)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L12%2C0%20L12%2C6%20L0%2C6%20L0%2C0%20Z%20M28%2C8%20L40%2C8%20L40%2C14%20L28%2C14%20L28%2C8%20Z%20M42%2C0%20L54%2C0%20L54%2C6%20L42%2C6%20L42%2C0%20Z%20M56%2C0%20L68%2C0%20L68%2C6%20L56%2C6%20L56%2C0%20Z%20M56%2C8%20L68%2C8%20L68%2C14%20L56%2C14%20L56%2C8%20Z%20M42%2C8%20L54%2C8%20L54%2C14%20L42%2C14%20L42%2C8%20Z%20M42%2C24%20L54%2C24%20L54%2C30%20L42%2C30%20L42%2C24%20Z%20M56%2C16%20L68%2C16%20L68%2C22%20L56%2C22%20L56%2C16%20Z%20M70%2C16%20L82%2C16%20L82%2C22%20L70%2C22%20L70%2C16%20Z%20M70%2C0%20L82%2C0%20L82%2C6%20L70%2C6%20L70%2C0%20Z%20M28%2C32%20L40%2C32%20L40%2C38%20L28%2C38%20L28%2C32%20Z%20M14%2C16%20L26%2C16%20L26%2C22%20L14%2C22%20L14%2C16%20Z%20M0%2C24%20L12%2C24%20L12%2C30%20L0%2C30%20L0%2C24%20Z%20M0%2C32%20L12%2C32%20L12%2C38%20L0%2C38%20L0%2C32%20Z%20M14%2C32%20L26%2C32%20L26%2C38%20L14%2C38%20L14%2C32%20Z%20M28%2C40%20L40%2C40%20L40%2C46%20L28%2C46%20L28%2C40%20Z%20M14%2C40%20L26%2C40%20L26%2C46%20L14%2C46%20L14%2C40%20Z%20M42%2C40%20L54%2C40%20L54%2C46%20L42%2C46%20L42%2C40%20Z%20M56%2C32%20L68%2C32%20L68%2C38%20L56%2C38%20L56%2C32%20Z%20M56%2C24%20L68%2C24%20L68%2C30%20L56%2C30%20L56%2C24%20Z%20M70%2C32%20L82%2C32%20L82%2C38%20L70%2C38%20L70%2C32%20Z%20M70%2C40%20L82%2C40%20L82%2C46%20L70%2C46%20L70%2C40%20Z%20M14%2C24%20L26%2C24%20L26%2C30%20L14%2C30%20L14%2C24%20Z%20M28%2C16%20L40%2C16%20L40%2C22%20L28%2C22%20L28%2C16%20Z%20M14%2C8%20L26%2C8%20L26%2C14%20L14%2C14%20L14%2C8%20Z%20M0%2C8%20L12%2C8%20L12%2C14%20L0%2C14%20L0%2C8%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
   background-position: top center;
 }
 .hero > * {
-  max-width: 72.81rem;
+  max-width: 74.428rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -983,7 +519,7 @@ textarea:focus {
 .hero label.color-action,
 .hero select.color-action,
 .hero textarea.color-action {
-  color: #37202c;
+  color: #292929;
 }
 .hero em.color-reaction,
 .hero strong.color-reaction,
@@ -992,7 +528,7 @@ textarea:focus {
 .hero label.color-reaction,
 .hero select.color-reaction,
 .hero textarea.color-reaction {
-  color: #1c2a0c;
+  color: #1e2e0b;
 }
 .hero em.color-alternate,
 .hero strong.color-alternate,
@@ -1001,7 +537,7 @@ textarea:focus {
 .hero label.color-alternate,
 .hero select.color-alternate,
 .hero textarea.color-alternate {
-  color: #0e2a33;
+  color: #0e2e39;
 }
 .hero em.color-info,
 .hero strong.color-info,
@@ -1010,7 +546,7 @@ textarea:focus {
 .hero label.color-info,
 .hero select.color-info,
 .hero textarea.color-info {
-  color: #23293c;
+  color: #242b3f;
 }
 .hero em.color-warning,
 .hero strong.color-warning,
@@ -1019,7 +555,7 @@ textarea:focus {
 .hero label.color-warning,
 .hero select.color-warning,
 .hero textarea.color-warning {
-  color: #2e2310;
+  color: #352811;
 }
 .hero em.color-success,
 .hero strong.color-success,
@@ -1028,7 +564,7 @@ textarea:focus {
 .hero label.color-success,
 .hero select.color-success,
 .hero textarea.color-success {
-  color: #132c19;
+  color: #132e1a;
 }
 .hero em.color-failure,
 .hero strong.color-failure,
@@ -1037,7 +573,7 @@ textarea:focus {
 .hero label.color-failure,
 .hero select.color-failure,
 .hero textarea.color-failure {
-  color: #4a1c0f;
+  color: #491d11;
 }
 .hero em.color-default,
 .hero strong.color-default,
@@ -1046,7 +582,7 @@ textarea:focus {
 .hero label.color-default,
 .hero select.color-default,
 .hero textarea.color-default {
-  color: #262820;
+  color: #262c22;
 }
 .hero button,
 .hero .button,
@@ -1055,30 +591,34 @@ textarea:focus {
 .hero input[type="submit"] {
   font-size: 125%;
 }
-@media screen and (min-width: 98.394rem) {
+@media screen and (min-width: 70.27rem) {
   .hero {
-    padding: 53.394px;
+    padding: 24.27px;
   }
 }
 .group {
   padding: 0;
   margin: 0;
-  margin-bottom: 33px;
-  max-width: 27rem;
+  margin-bottom: 15px;
+  max-width: 28rem;
 }
 .group.border-radius > *:first-child {
-  border-top-left-radius: 11px;
-  border-top-right-radius: 11px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
 }
 .group.border-radius > *:last-child {
-  border-bottom-left-radius: 11px;
-  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
 }
 .group.border {
   border-width: 0;
 }
+ul.group.border,
+ol.group.border {
+  border-width: 1px;
+}
 .group.border > li {
-  border-bottom: 1px solid #919b75;
+  border-bottom: 1px solid #88a575;
 }
 .group.border > li:last-child {
   border-bottom-width: 0;
@@ -1106,7 +646,7 @@ ol.group {
   list-style-position: inside;
 }
 .group li {
-  border-bottom: 1px solid #919b75;
+  border-bottom: 1px solid #88a575;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 .group li:last-child {
@@ -1132,26 +672,43 @@ ol.group {
   margin-top: -1px;
 }
 .bar {
-  line-height: 46px;
+  position: relative;
+  line-height: 39px;
   line-height: 1;
   max-width: 100%;
-  padding: 12.36093943px;
+  padding: 8.03461063px;
+}
+.bar .bar {
+  padding: 0;
+}
+.bar .top,
+.bar .bottom,
+.bar .left,
+.bar .right {
+  float: left;
+  position: absolute;
 }
 .bar > * {
   display: inline;
-  max-width: 45rem;
+  width: auto;
+  max-width: 46rem;
   margin-top: 0 !important;
-  width: auto !important;
-  margin-right: 20px;
+  margin-bottom: 0 !important;
+  margin-right: 13px;
+  padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 .bar > *:last-child {
   margin-right: 0;
+}
+.bar * {
+  margin-bottom: 0 !important;
 }
 .bar button,
 .bar .button,
 .bar input[type="button"],
 .bar input[type="reset"],
 .bar input[type="submit"] {
+  width: auto;
   display: inline;
   margin-bottom: 0;
 }
@@ -1159,14 +716,14 @@ ol.group {
   border-bottom: none;
 }
 .bar.border-radius > *:first-child {
-  border-top-left-radius: 11px;
-  border-bottom-left-radius: 11px;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .bar.border-radius > *:last-child {
-  border-top-right-radius: 11px;
-  border-bottom-right-radius: 11px;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -1182,40 +739,40 @@ ol.group {
   border-bottom-width: 1px;
 }
 .matte {
-  box-shadow: 0 1px 2px rgba(11, 11, 11, 0.225);
-  border-radius: 11px;
-  padding: 20px;
-  background-color: #f9f9f9;
+  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.225);
+  border-radius: 1px;
+  padding: 13px;
+  background-color: #f8f8f8;
   color: #4c4c4c;
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%224%22%20viewBox%3D%220%200%204%204%22%3E%3Cpath%20fill%3D%22rgb(234,234,234)%22%20d%3D%22M1%203h1v1H1V3zm2-2h1v1H3V1z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
   background-position: top center;
 }
 .well {
-  padding: 20px;
-  border-radius: 11px;
-  background-color: #e9e9e9;
-  color: #424242;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%224%22%20viewBox%3D%220%200%204%204%22%3E%3Cpath%20fill%3D%22rgb(219,219,219)%22%20d%3D%22M1%203h1v1H1V3zm2-2h1v1H3V1z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  padding: 13px;
+  border-radius: 1px;
+  background-color: #e6e5e5;
+  color: #414141;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%224%22%20viewBox%3D%220%200%204%204%22%3E%3Cpath%20fill%3D%22rgb(216,216,216)%22%20d%3D%22M1%203h1v1H1V3zm2-2h1v1H3V1z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
   background-position: top center;
-  box-shadow: inset 0 1px 2px rgba(11, 11, 11, 0.225);
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.225);
 }
 .card {
-  box-shadow: 0 1px 2px rgba(11, 11, 11, 0.225);
-  border-radius: 11px;
-  margin-bottom: 33px;
+  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.225);
+  border-radius: 1px;
+  margin-bottom: 15px;
   background-color: white;
-  color: #4e4e4e;
+  color: #4d4d4d;
   position: relative;
-  max-width: 27rem;
+  max-width: 28rem;
   overflow: hidden;
   line-height: 1.618;
 }
 .card > * {
-  margin: 20px;
+  margin: 13px;
   margin-top: 0;
 }
 .card > *:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 .card h1,
 .card h2,
@@ -1230,14 +787,14 @@ ol.group {
   max-width: 30%;
 }
 .card .full-width {
-  width: calc(100% - 40px);
+  width: calc(100% - 26px);
 }
 .card .overlay {
   width: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   position: relative;
   top: 0;
   left: 0;
@@ -1247,7 +804,7 @@ ol.group {
 }
 .card .overlay > * {
   position: absolute;
-  padding: 20px;
+  padding: 13px;
 }
 .card .overlay img {
   position: relative;
@@ -1279,13 +836,13 @@ ol.group {
 .card h5:first-child,
 .card h6:first-child {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   line-height: 1;
   padding-top: 0.18em;
-  padding: 20px;
+  padding: 13px;
 }
 .feature {
-  padding: 40px;
+  padding: 26px;
   font-size: 131%;
   line-height: 1.618;
 }
@@ -1300,7 +857,7 @@ ol.group {
   list-style-type: none;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 15px;
   clear: both;
 }
 .pagination:after {
@@ -1313,57 +870,69 @@ ol.group {
   margin-right: 0.3236em;
 }
 .pagination > li > a {
-  background-color: #6f7856;
+  background-color: #536a45;
   color: white;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
   text-decoration: none;
-  border-radius: 11px;
+  border-radius: 1px;
 }
 .two-column > * {
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 }
-@media screen and (min-width: 80.394rem) {
+@media screen and (min-width: 52.27rem) {
   .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 33px;
+    grid-gap: 15px;
   }
 }
 .three-column > * {
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 }
-@media screen and (min-width: 98.394rem) {
+@media screen and (min-width: 70.27rem) {
   .three-column {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 33px;
+    grid-gap: 15px;
   }
 }
 .golden-column > * {
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 }
-@media screen and (min-width: 98.394rem) {
+@media screen and (min-width: 70.27rem) {
   .golden-column {
     display: grid;
     grid-template-columns: 1.618fr 1fr;
-    grid-gap: 33px;
+    grid-gap: 15px;
   }
 }
 .inner-max-width {
   position: relative;
-  padding-left: calc(50% - 22.5rem);
-  padding-right: calc(50% - 22.5rem);
+  padding-left: calc(50% - 23rem);
+  padding-right: calc(50% - 23rem);
+}
+.inner-max-width .right {
+  right: calc(50% - 23rem);
+}
+.inner-max-width .left {
+  left: calc(50% - 23rem);
 }
 .inner-page-width {
   position: relative;
-  padding-left: calc(50% - 36.405rem);
-  padding-right: calc(50% - 36.405rem);
+  padding-left: calc(50% - 37.214000000000006rem);
+  padding-right: calc(50% - 37.214000000000006rem);
 }
 .inner-page-width .right {
-  right: calc(50% - 36.405rem);
+  right: calc(50% - 37.214000000000006rem);
 }
 .inner-page-width .left {
-  left: calc(50% - 36.405rem);
+  left: calc(50% - 37.214000000000006rem);
+}
+.big {
+  font-size: 125%;
+}
+.small {
+  font-size: 80%;
 }
 .text-padding {
   padding: 0.18em 0.3236em 0.22em 0.3236em;
@@ -1371,8 +940,36 @@ ol.group {
 .block {
   display: block;
 }
+.inline {
+  display: inline;
+}
+.table {
+  display: table;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.inline-block {
+  display: inline-block;
+}
+.static {
+  position: static;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.fixed {
+  position: fixed;
+}
 .transparent {
   color: inherit;
+  position: ;
   background: transparent;
 }
 .ascii {
@@ -1397,148 +994,214 @@ ol.group {
   content: "";
 }
 .action {
-  background-color: #e675af;
-  color: #0b0b0b;
+  background-color: #a2a2a2;
+  color: #121212;
 }
 .color-action {
-  color: #995076;
+  color: #6f6f6f;
 }
 .reaction {
   background-color: #6fbd11;
-  color: #151d0b;
+  color: #141c0b;
 }
 .color-reaction {
-  color: #44710e;
+  color: #48790e;
 }
 .alternate {
-  background-color: #1aa7d5;
-  color: #0b0b0b;
+  background-color: #1baedf;
+  color: #0b1215;
 }
 .color-alternate {
-  color: #15708e;
+  color: #157796;
 }
 .info {
-  background-color: #7690e5;
-  color: #0b0b0b;
+  background-color: #7791e5;
+  color: #0a0a0a;
 }
 .color-info {
-  color: #53659e;
+  color: #596ba8;
 }
 .warning {
   background-color: #f7af31;
   color: #342711;
 }
 .color-warning {
-  color: #87611f;
+  color: #8f6620;
 }
 .success {
-  background-color: #3fe66c;
-  color: #15371e;
+  background-color: #3feb6e;
+  color: #163d21;
 }
 .color-success {
-  color: #237339;
+  color: #247b3c;
 }
 .failure {
-  background-color: #dd4319;
-  color: #0b0b0b;
+  background-color: #dd4921;
+  color: #0a0a0a;
 }
 .color-failure {
-  color: #be3a17;
+  color: #c4411e;
 }
 .default {
-  background-color: #919b75;
-  color: #0b0b0b;
+  background-color: #88a575;
+  color: #0a0a0a;
 }
 .color-default {
-  color: #626950;
+  color: #5f7353;
 }
 .red {
-  background-color: #e64666;
-  color: #0b0b0b;
+  background-color: #e74a69;
+  color: #0a0a0a;
+}
+.color-red {
+  color: #c4405a;
 }
 .orange {
-  background-color: #f29c00;
-  color: #281d09;
+  background-color: #f59e00;
+  color: #2d2009;
+}
+.color-orange {
+  color: #976304;
 }
 .yellow {
-  background-color: #e6e600;
+  background-color: #eaea00;
   color: #424208;
 }
+.color-yellow {
+  color: #717105;
+}
 .olive {
-  background-color: #8d8d00;
-  color: #0b0b0b;
+  background-color: #8e8e00;
+  color: #0a0a0a;
+}
+.color-olive {
+  color: #737302;
 }
 .green {
-  background-color: #279e27;
-  color: #0b0b0b;
+  background-color: #29a629;
+  color: #0a0a0a;
+}
+.color-green {
+  color: #218121;
 }
 .teal {
-  background-color: #009797;
-  color: #0b0b0b;
+  background-color: #009999;
+  color: #0a0a0a;
+}
+.color-teal {
+  color: #027c7c;
 }
 .cyan {
-  background-color: #00d9d9;
-  color: #093434;
+  background-color: #00d6d6;
+  color: #083333;
+}
+.color-cyan {
+  color: #057878;
 }
 .blue {
-  background-color: #6969ff;
-  color: #0b0b0b;
+  background-color: #7171ff;
+  color: #0a0a0a;
+}
+.color-blue {
+  color: #6161d8;
 }
 .indigo {
-  background-color: #9c57ce;
-  color: #0b0b0b;
+  background-color: #a25ed4;
+  color: #0a0a0a;
+}
+.color-indigo {
+  color: #9054bc;
 }
 .violet {
-  background-color: #ec72ec;
-  color: #161016;
+  background-color: #ec76ec;
+  color: #1b121b;
+}
+.color-violet {
+  color: #9f529f;
 }
 .magenta {
-  background-color: #ff21ff;
-  color: #0b0b0b;
+  background-color: #ff2dff;
+  color: #0a0a0a;
+}
+.color-magenta {
+  color: #ba23ba;
 }
 .purple {
-  background-color: #cf2ccf;
-  color: #0b0b0b;
+  background-color: #d546d5;
+  color: #0a0a0a;
+}
+.color-purple {
+  color: #b03bb0;
 }
 .pink {
-  background-color: #ffa8b7;
-  color: #352629;
+  background-color: #ffa6b6;
+  color: #352528;
+}
+.color-pink {
+  color: #8e5e67;
 }
 .brown {
-  background-color: #b16541;
-  color: #0b0b0b;
+  background-color: #b46c49;
+  color: #0a0a0a;
+}
+.color-brown {
+  color: #a06042;
 }
 .black {
-  background-color: #0b0b0b;
+  background-color: #0a0a0a;
   color: #a5a5a5;
 }
+.color-black {
+  color: #0a0a0a;
+}
 .white {
-  background-color: #f9f9f9;
+  background-color: #f8f8f8;
   color: #4c4c4c;
+}
+.color-white {
+  color: #696969;
 }
 .gray-lighter {
   background-color: #e9e9e9;
   color: #424242;
 }
+.color-gray-lighter {
+  color: #6c6c6c;
+}
 .gray-light {
-  background-color: #c1c1c1;
-  color: #2b2b2b;
+  background-color: #bdbdbd;
+  color: #292929;
+}
+.color-gray-light {
+  color: #6e6e6e;
 }
 .gray-medium {
-  background-color: #a0a0a0;
-  color: #0e0e0e;
+  background-color: #9a9a9a;
+  color: #0a0a0a;
+}
+.color-gray-medium {
+  color: #6f6f6f;
 }
 .gray {
-  background-color: #a0a0a0;
-  color: #0e0e0e;
+  background-color: #9a9a9a;
+  color: #0a0a0a;
+}
+.color-gray {
+  color: #6f6f6f;
 }
 .gray-dark {
-  background-color: #5c5c5c;
-  color: #f9f9f9;
+  background-color: #6b6b6b;
+  color: #f8f8f8;
+}
+.color-gray-dark {
+  color: #696969;
 }
 .gray-darker {
   background-color: #2e2e2e;
   color: #c1c1c1;
+}
+.color-gray-darker {
+  color: #2e2e2e;
 }
 .no-padding {
   padding: 0;
@@ -1595,20 +1258,22 @@ ol.group {
   -ms-user-select: none;
 }
 .ambient {
-  background-color: #fdf3f8;
-  color: #4d4b4c;
+  background-color: #f8f6f7;
+  color: #4c4b4b;
 }
 .base-color {
-  background-color: #e675af;
-  color: #0b0b0b;
+  background-color: #b3989f;
+  color: #0e0e0e;
 }
 .color-palette div {
   float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: 4.33333333px;
+  margin-bottom: 4.33333333px;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
-  padding: 20px;
-  border-radius: 11px;
+  width: 100%;
+  border-width: 1px;
+  border-radius: 1px;
+  width: 28rem;
 }
 .color-palette div:last-child {
   clear: both;
@@ -1629,44 +1294,44 @@ ol.group {
   text-decoration: none;
   margin: 0 auto;
   max-width: 120px;
-  padding: 10px;
-  color: #0b0b0b;
+  padding: 6.5px;
+  color: #0a0a0a;
 }
 .logo {
   text-align: center;
   display: block;
   margin: 0 auto;
-  max-width: 13rem;
+  max-width: 14rem;
 }
 .pattern-example {
   width: 100%;
   height: 400px;
-  margin-bottom: 33px;
+  margin-bottom: 15px;
 }
 .pattern-example:after {
-  background-color: #af5a86;
-  color: #0b0b0b;
+  background-color: #89757a;
+  color: #0a0a0a;
   padding: 0.18em 0.3236em 0.22em 0.3236em;
 }
 .icon {
   float: left;
   display: block;
   position: relative;
-  width: 46px;
-  height: 46px;
-  padding: 20px;
-  margin: 20px;
+  width: 39px;
+  height: 39px;
+  padding: 13px;
+  margin: 13px;
   margin-right: 222px;
   background: transparent;
   background-repeat: no-repeat;
-  color: #e675af;
+  color: #a2a2a2;
 }
 .icon:after {
   width: 222px;
   font-size: 85%;
   position: absolute;
   bottom: 0;
-  left: 56px;
+  left: 49px;
 }
 .icon:last-child {
   clear: both;

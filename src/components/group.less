@@ -6,6 +6,14 @@
     .default(margin-bottom);
     max-width: @aside-width;
 
+    > * {
+        
+    }
+
+    * {
+
+    }
+
     &.border-radius {
         & > *:first-child {
             .default(border-top-left-radius);
@@ -20,6 +28,10 @@
 
     &.border {
         border-width: 0;
+
+        ul&, ol& {
+            border-width: 1px;
+        }
 
         > li {
             .default(border-bottom);

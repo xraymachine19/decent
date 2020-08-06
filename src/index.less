@@ -108,13 +108,17 @@
     // color palette
     float: left;
 
-    margin-right: @padding;
-    margin-bottom: @padding;
+    margin-right: @padding/3;
+    margin-bottom: @padding/3;
 
     padding: @text-padding;
-    padding: @padding;
 
+    width: 100%;
+
+    .default(border-width);
     .default(border-radius);
+
+    .aside-width;
 
     &:last-child {
         .clearfix();

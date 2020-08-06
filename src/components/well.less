@@ -1,5 +1,6 @@
 .well {
-    @well-background: @gray-lighter;
+    .set-lumafix(@main-background, @gray-lighter);
+    @well-background: @lumafix;
     .default(padding);
     .default(border-radius);
     .pattern(texture; @well-background;);
