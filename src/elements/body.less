@@ -1,7 +1,7 @@
 body {
     .default(font-family);
     .default(background-color);
-    .contrast(color, @background);
+    .contrast(color, @body-background);
 
     & when (@randomness = true) {
       .set-pattern() {
@@ -14,7 +14,7 @@ body {
     }
 
     & when (@randomness = false) {
-      .pattern(texture; @background;);
+      .pattern(texture; @body-background;);
     }
       
     font-size: @font-size * .8;
