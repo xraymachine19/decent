@@ -17,19 +17,22 @@
 }
 
 .inner-page-width {
-  @half-page-width: @page-width/2;
-  @padding: ~"calc(50% - @{half-page-width})";
   position: relative;
-  padding-left: @padding;
-  padding-right: @padding;
+  padding-left: @gutter;
+  padding-right: @gutter;
 
-  .right {
-    right: @padding;
-  }
-
-  .left {
-    left: @padding;
-  }
+  .on-desktop({
+    @half-page-width: @page-width/2;
+    @padding: ~"calc(50% - @{half-page-width})";
+    
+    .right {
+      right: @padding;
+    }
+  
+    .left {
+      left: @padding;
+    }
+  });
 }
 
 .big {

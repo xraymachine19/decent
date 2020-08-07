@@ -2,40 +2,86 @@
 
 // TODO: remove turbo
 
+@faux-simple-color-wheel: 
+		@red,
+		@orange,
+		@yellow,
+		@olive,
+		@green,
+		@teal,
+		@cyan,
+		@skyblue,
+		@blue,
+		@indigo,
+		@purple,
+		@violet;
+
+@faux-color-wheel: 
+		@red,
+		average(@red, @orange),
+		@orange,
+		average(@orange, @yellow),
+		@yellow,
+		average(@yellow, @olive),
+		@olive,
+		average(@olive, @green),
+		@green,
+		average(@green, @teal),
+		@teal,
+		average(@teal, @cyan),
+		@cyan,
+		average(@cyan, @skyblue),
+		@skyblue,
+		average(@skyblue, @blue),
+		@blue,
+		average(@blue, @indigo),
+		@indigo,
+		average(@indigo, @purple),
+		@purple,
+		average(@purple, @violet),
+		@violet,
+		average(@violet, @red);
+
 .set-color-bases() {
 
-	@offset: 32;
+	@offset: 3;
 
 	@action-base: @base-color;
 
-	.set-rep-color(@color; @turbo;);
+	.set-rep-color(@color; @faux-color-wheel;);
 	
 	@number: @rep-color-number;
 
+	// 0 	0
+	// 64	6
+	// 128	12
+	// 192	18
+	// 256 	24
+
 	.set-bases();
 
-	.set-bases() when (@number >= 192) {
-		@reaction-base: extract(@turbo, @number - 128);
-		@alt-base: extract(@turbo, @number - @offset*2);
-		@info-base: extract(@turbo, @number - @offset);
+	.set-bases() when (@number >= 18) {
+		@reaction-base: extract(@faux-color-wheel, @number - 12);
+		@alt-base: extract(@faux-color-wheel, @number - @offset*2);
+		@info-base: extract(@faux-color-wheel, @number - @offset);
 	}
 
-	.set-bases() when (@number > 128) and (@number < 192) {
-		@reaction-base: extract(@turbo, @number - 128);
-		@alt-base: extract(@turbo, @number - @offset*2);
-		@info-base: extract(@turbo, @number - @offset);
+	.set-bases() when (@number > 12) and (@number < 18) {
+		@reaction-base: extract(@faux-color-wheel, @number - 12);
+		@alt-base: extract(@faux-color-wheel, @number - @offset*2);
+		@info-base: extract(@faux-color-wheel, @number - @offset);
 	}
 
-	.set-bases() when (@number > 64) and (@number <= 128) {
-		@reaction-base: extract(@turbo, @number + 128);
-		@alt-base: extract(@turbo, @number + @offset*2);
-		@info-base: extract(@turbo, @number + @offset);
+	.set-bases() when (@number > 6) and (@number <= 12) {
+		@reaction-base: extract(@faux-color-wheel, @number + 12);
+		@alt-base: extract(@faux-color-wheel, @number + @offset*2);
+		@info-base: extract(@faux-color-wheel, @number + @offset);
 	}
 
-	.set-bases() when (@number <= 64) {
-		@reaction-base: extract(@turbo, @number + 128);
-		@alt-base: extract(@turbo, @number + @offset*2);
-		@info-base: extract(@turbo, @number + @offset);
+	.set-bases() when (@number <= 6) {
+		@reaction-base: extract(@faux-color-wheel, @number + 12);
+		@alt-base: extract(@faux-color-wheel, @number + @offset*2);
+		@info-base: extract(@faux-color-wheel, @number + @offset);
 	}
 
 	.set-action();
@@ -115,8 +161,8 @@
 	// its orange/yellow is a complement to info's teal/blue
 	// remember: warning comes before the failure, failure after
 
-	@warning-orange: extract(@turbo, 174);
-	@warning-yellow: extract(@turbo, 152);
+	@warning-orange: orange;
+	@warning-yellow: yellow;
 
 	.set-distance-action() {
 		.set-distance(@warning-orange, @action-base);
@@ -158,8 +204,8 @@
 	// success indicates that an action worked or a positive response came through
 	// its green tells users they're good to go 
 
-	@success-green: extract(@turbo, 105);
-	@success-lightgreen: extract(@turbo, 130);
+	@success-green: green;
+	@success-lightgreen: chartreuse;
 
 	.set-distance-action() {
 		.set-distance(@success-green, @action-base);
@@ -196,8 +242,8 @@
 	// success's opposite and complement, failure's red tells the user something is wrong 
 	// good for negative server responses, missing info, or drawing attention to faults
 
-	@failure-red: extract(@turbo, 225);
-	@failuredarkred: extract(@turbo, 240);
+	@failure-red: tomato;
+	@failuredarkred: crimson;
 
 	.set-distance-action() {
 		.set-distance(@failure-red, @action-base);

@@ -11,9 +11,6 @@
 @import "colors/extended";
 @import (reference) "colors/semantic";
 
-
-@import (reference) "colors/turbo";
-
 @import (reference) "patterns"; 
 @import (reference) "mixins/mixins";
 
@@ -114,7 +111,8 @@
 
     padding: @text-padding;
 
-    width: 100%;
+    min-width: @avatar-width;
+    max-width: 100%;
 
     .default(border-width);
     .default(border-radius);
