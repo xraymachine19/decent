@@ -1,5 +1,6 @@
 .matte {
-    @matte-background: @main-background;
+    .set-lumafix(@main-background, @white);
+    @matte-background: @lumafix;
     .default(box-shadow);
     .default(border-radius);
     .default(padding);

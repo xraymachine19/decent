@@ -14,6 +14,15 @@
 
     }
 
+    // z-index hack to prevent weird shadow stacking
+    // TODO: replace this, it's terrible
+    &:not(.row) {
+        each(range(1,10), {
+            & > *:nth-child(@{index}) { z-index: (11 - @index)}
+        });
+    }
+    
+
     &.border-radius {
         & > *:first-child {
             .default(border-top-left-radius);
