@@ -94,8 +94,7 @@
 }
 
 .set-blue() {
-    @base: cornflowerblue;
-    @base: royalblue;
+    @base: average(cornflowerblue, royalblue);
     .set-lumafix(@base; @strength: @color-strength;);
     @blue: @lumafix;
 }
