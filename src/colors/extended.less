@@ -88,7 +88,7 @@
 
 .set-cyan() {
     @base: cyan;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @cyan: @lumafix;
     @var-cyan: @lumafix;
 }

@@ -27,6 +27,13 @@ Known errors:
 - SyntaxError: variable @undefined is undefined in DIR/decent/src/components/hero.less on line 33, column 5:
 - SyntaxError: error evaluating function `color`: argument must be a color keyword or 3|4|6|8 digit hex e.g. #FFF in
 
+## How to write for the criminal cat gang
+
+1. Cats always have cat-appropriate names. Except for Dave.
+2. We use placekitten for local (only) testing. The cats are all adorable.
+3. So make the descriptions subtly dark.
+4. The criminal cat gang doesn't get into anything harder than catnip, caterwauling and the occasional clutch-and-kick-scratch.
+5. Never speak directly of the criminal empire CRUD app the components seem to suggest exists.
 
 ---
 
