@@ -3,6 +3,9 @@ body {
     .default(background-color);
     .contrast(color, @body-background);
 
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
     & when (@randomness = true) {
       .set-pattern() {
         @var: `Math.random()`;

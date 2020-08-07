@@ -46,6 +46,15 @@
       margin-right: auto;
     }
 
+    &.island {
+        .on-tablet({
+            margin: 0;
+            margin-bottom: @gutter;
+            padding: 12% 16%;
+        });
+        
+    }
+
     // this rewrites color- rules to work inside the hero
     .inline-elements({
         each(@semantic-color-names, { 
