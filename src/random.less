@@ -132,7 +132,7 @@
 
 .random-shadowcolor() {
     @randomshadowfade: `Math.random()`;
-    @shadow-color-random: fade(@black, 20% + @randomshadowfade*30);
+    @shadow-color-random: fade(@black, 12% + @randomshadowfade*35);
 }
 
 .random-shadowposition() {
@@ -141,10 +141,11 @@
                     1px 1px,
                     0 0,
                     1px 0,
-                    0 10px,
+                    2px 2px,
                     3px 5px,
-                    -1px 0,
-                    0 -1px;
+                    1px 0,
+                    0 1px,
+                    0 1px;
 
     @length: length(@potentials);
 
@@ -155,7 +156,7 @@
 
 .random-shadowblur() {
     @randomshadowblur: `Math.random()`;
-    @shadow-blur-random: floor(@randomshadowblur*8px);
+    @shadow-blur-random: floor(@randomshadowblur*12px);
 }
 
 

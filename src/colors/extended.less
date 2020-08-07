@@ -14,8 +14,8 @@
     .set-green();
     .set-teal();
     .set-cyan();
-    .set-blue();
     .set-skyblue();
+    .set-blue();
     .set-indigo();
     .set-violet();
     .set-magenta();
@@ -94,8 +94,10 @@
 }
 
 .set-skyblue() {
-    @skyblue: average(@blue, @cyan);
-    @var-skyblue: @skyblue;
+    @base: average(blue, cyan);
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @skyblue: @lumafix;
+    @var-skyblue: @lumafix;
 }
 
 .set-blue() {
@@ -107,14 +109,14 @@
 
 .set-indigo() {
     @base: indigo;
-    .set-lumafix(@base; @strength: @color-strength;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @indigo: @lumafix;
     @var-indigo: @lumafix;
 }
 
 .set-violet() {
     @base: violet;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    .set-lumafix(@base; @strength: @color-strength/2;);
     @violet: @lumafix;
     @var-violet: @lumafix;
 }
@@ -142,7 +144,7 @@
 
 .set-brown() {
     @base: sienna;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @brown: @lumafix;
     @var-brown: @lumafix;
 }

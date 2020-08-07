@@ -16,6 +16,18 @@ A Less library for smarter component styling
 1. Run 'lessc src/index.less docs/css/index.css'.
 2. If JS is enabled for randomness, use 'lessc --js src/index.less docs/css/index.css'
 
+## Less errors and randomness 
+
+1. Some of the random mixins randomly throw errors 
+2. There are a lot of random mixins
+3. Just push on through! It compiles most of the time.
+
+Known errors:
+
+- SyntaxError: variable @undefined is undefined in DIR/decent/src/components/hero.less on line 33, column 5:
+- SyntaxError: error evaluating function `color`: argument must be a color keyword or 3|4|6|8 digit hex e.g. #FFF in
+
+
 ---
 
 # Core ideas
