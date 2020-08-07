@@ -226,7 +226,7 @@
 	}
 
 	.set-success-final() {
-		.set-lumafix(@success-base, @strength: 20%);
+		.set-lumafix(@success-base, @strength: 60%);
 		@success: @lumafix;
 	}
 
@@ -264,12 +264,12 @@
 	}
 
 	.set-failure-final() when (luma(@base-color) > 50%) {
-		.set-lumafix(@failure-base, @base-color, 60%);
+		.set-lumafix(@failure-base, @base-color, 65%);
 		@failure: @lumafix;
 	}
 
 	.set-failure-final() when (default()) {
-		.set-lumafix(@failure-base, @base-color, 30%);
+		.set-lumafix(@failure-base, @base-color, 55%);
 		@failure: @lumafix;
 	}
 
