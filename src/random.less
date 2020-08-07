@@ -129,3 +129,44 @@
     @basefontsize: 16px;
     @font-size-random: @basefontsize + @plusfontsize;
 }
+
+.random-shadowcolor() {
+    @randomshadowfade: `Math.random()`;
+    @shadow-color-random: fade(@black, 20% + @randomshadowfade*30);
+}
+
+.random-shadowposition() {
+    
+    @potentials:    0 1px,
+                    1px 1px,
+                    0 0,
+                    1px 0,
+                    0 10px,
+                    3px 5px,
+                    -1px 0,
+                    0 -1px;
+
+    @length: length(@potentials);
+
+    @random: `Math.random()`;
+    @ff: ceil(@length*@random);
+    @shadow-position-random: extract(@potentials, @ff);
+}
+
+.random-shadowblur() {
+    @randomshadowblur: `Math.random()`;
+    @shadow-blur-random: floor(@randomshadowblur*8px);
+}
+
+
+.random-shadowcolor();
+
+.random-shadowposition();
+
+.random-shadowblur();
+
+
+
+@shadow-color: @shadow-color-random;
+@shadow-position: @shadow-position-random;
+@shadow-blur: @shadow-blur-random;

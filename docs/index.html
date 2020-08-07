@@ -433,8 +433,8 @@
 
           <h2>.card</h2>
           <p>Present information in the popular card format by adding the .card class to a div.</p>
-          <div id="mouser" class="card well">
-            <h4 class="action">The Mouser</h4>
+          <div id="mouser" class="card well info">
+            <h4 class="action box-shadow">The Mouser</h4>
             <img class="float" src="http://placekitten.com/200/200">
             <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
             <footer class="float">
@@ -446,7 +446,9 @@
             <h4 class="text-failure well border">Fuzzy Mittens</h4>
             <div class="two-column">
               <div class="overlay">
+                
                 <img src="http://placekitten.com/300/300">
+                <div class="bar info bottom no-margin fade">He's got the 'nip</div>
               </div>
               <p>Fuzzy runs catnip all through the neighborhood.</p>
             </div>
@@ -669,20 +671,21 @@
           <div class="two-column">
             <div id="mouser" class="card border">
               <h4>The Mouser</h4>
-              <img class="float" src="http://placekitten.com/200/200">
+              <img class="float avatar-width" src="http://placekitten.com/200/200">
               <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
               <footer class="float">
                 <button class="action">Hire</button> <button class="info">Save</button>
               </footer>
             </div>
   
-            <div class="card border">
-              <h4 class="text-failure">Fuzzy Mittens</h4>
-              <img class="float padding-right border-right margin-right" src="http://placekitten.com/300/300">
-              <p>Fuzzy runs catnip all through the neighborhood.</p>
-              <footer class="float">
-                <button class="action">Hire</button> <button class="info">Save</button>
-              </footer>
+            <div id="fuzzy2" class="card border">
+              <div class="overlay">
+                <img src="http://placekitten.com/300/300">
+                <footer class="float bottom right small">
+                  <button class="action">Hire</button> <button class="info">Save</button>
+                </footer>
+              </div>
+              <h1 class="color-failure no-margin-bottom">Fuzzy Mittens</h1>
             </div>
           </div>
 
