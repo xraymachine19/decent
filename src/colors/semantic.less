@@ -185,12 +185,12 @@
 	}
 
 	.set-warning-final() when (@warning-was-yellow = true) {
-		.set-lumafix(@warning-base; @strength: 5%;);
-		@warning: mix(@warning-base, @lumafix, 5%);
+		.set-lumafix(@warning-base; @strength: 12%;);
+		@warning: mix(@warning-base, @lumafix, 12%);
 	}
 
 	.set-warning-final() when (default()) {
-		.set-lumafix(@warning-base; @strength: 10%;);
+		.set-lumafix(@warning-base; @strength: 24%;);
 		@warning: @lumafix;
 	}
 
@@ -264,7 +264,7 @@
 	}
 
 	.set-failure-final() when (luma(@base-color) > 50%) {
-		.set-lumafix(@failure-base, @success, 100%);
+		.set-lumafix(@failure-base, @success, 90%);
 		@failure: @lumafix;
 	}
 
