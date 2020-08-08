@@ -2,7 +2,7 @@
 // these work like semantic colors, but without the semantic meaning 
 
 @base: @base-color;
-@color-strength: 65% + 30%*(unit(luma(@base))/100);
+@color-strength: 75% + 15%*(unit(luma(@base))/100);
 
 .set-extended-colors();
 
@@ -70,7 +70,7 @@
 
 .set-green() {
     @base: forestgreen;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    .set-lumafix(@base; @strength: @color-strength/2;);
     @green: @lumafix;
 }
 
@@ -94,7 +94,7 @@
 
 .set-blue() {
     @base: average(cornflowerblue, royalblue);
-    .set-lumafix(@base; @strength: @color-strength;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @blue: @lumafix;
 }
 
@@ -118,7 +118,7 @@
 
 .set-purple() {
     @base: purple;
-    .set-lumafix(@base; @strength: @color-strength;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @purple: @lumafix;
 }
 

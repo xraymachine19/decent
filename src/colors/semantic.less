@@ -30,48 +30,42 @@
 
 	@offset: 3;
 
-	@action-base: @base-color;
+	// @action-base: @base-color;
 
 	.set-rep-color(@color; @color-wheel;);
 	
 	@number: @rep-color-number;
 
-	// 0 	0
-	// 64	6
-	// 128	12
-	// 192	18
-	// 256 	24
-
 	.set-bases();
 
 	.set-bases() when (@number >= 18) {
+		@action-base: extract(@color-wheel, @number);
 		@reaction-base: extract(@color-wheel, @number - 12);
-		@alt-base: extract(@color-wheel, @number - @offset*2);
 		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 12) and (@number < 18) {
+		@action-base: extract(@color-wheel, @number);
 		@reaction-base: extract(@color-wheel, @number - 12);
-		@alt-base: extract(@color-wheel, @number - @offset*2);
 		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 6) and (@number <= 12) {
+		@action-base: extract(@color-wheel, @number);
 		@reaction-base: extract(@color-wheel, @number + 12);
-		@alt-base: extract(@color-wheel, @number + @offset*2);
 		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
 	.set-bases() when (@number <= 6) {
+		@action-base: extract(@color-wheel, @number);
 		@reaction-base: extract(@color-wheel, @number + 12);
-		@alt-base: extract(@color-wheel, @number + @offset*2);
 		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
 	.set-action();
 	.set-reaction();
-	.set-success();
 	.set-warning();
+	.set-success();
 	.set-info();
 	.set-failure();
 	.set-default();
@@ -171,12 +165,22 @@
 
 	.set-success-final() when (luma(@base-color) < 30%) {
 		.set-lumafix(@success-base, @strength: 85%);
-		@success: @lumafix;
+		@success-final: @lumafix;
 	}
 
 	.set-success-final() when (default()) {
 		.set-lumafix(@success-base, @strength: 67%);
+		@success-final: @lumafix;
+	}
+
+	.bump-success() when (luma(@success-final) < luma(@warning)) {
+		// bump it up to near @warning's brightness if it's not there
+		.set-lumafix(@success-final; @warning; 50%);
 		@success: @lumafix;
+	}
+
+	.bump-success() when (default()) {
+		@success: @info-final;
 	}
 
 	.set-distance-action();
@@ -185,6 +189,7 @@
 	.set-success-base();
 
 	.set-success-final();
+	.bump-success();
 }
 
 .set-failure() {
@@ -213,12 +218,12 @@
 	}
 
 	.set-failure-final() when (luma(@base-color) > 50%) {
-		.set-lumafix(@failure-base, @success, 90%);
+		.set-lumafix(@failure-base, @success, 60%);
 		@failure: @lumafix;
 	}
 
 	.set-failure-final() when (default()) {
-		.set-lumafix(@failure-base, @success, 80%);
+		.set-lumafix(@failure-base, @success, 75%);
 		@failure: @lumafix;
 	}
 
