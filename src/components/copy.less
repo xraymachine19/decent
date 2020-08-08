@@ -1,0 +1,27 @@
+.copy {
+    p {
+        .default(text-indent);
+        text-align: justify;
+        text-align-last: left;
+    }
+
+    &.dropcap {
+        p:first-child {
+            &:extend(.dropcap all);
+        }
+    }
+
+    .on-tablet({
+        &.two-column {
+            display: inherit;
+            column-count: 2;
+        }
+    });
+
+    .on-desktop({
+        &.three-column {
+            display: inherit;
+            column-count: 3;
+        }
+    });
+}

@@ -279,9 +279,9 @@
 }
 
 .set-default() {
-	// default is the color wheel representation of the base color
+	// a nondescript color that blends in and works as a default
 
-	.set-average(@reaction, @info, @warning, @success, @failure;);
+	.set-average(@reaction, @info, @warning, @success, @failure, @gray;);
 	.set-lumafix(@rep-color; @strength: 80%;);
 	@default: mix(@average, @lumafix, 62%);
 }
