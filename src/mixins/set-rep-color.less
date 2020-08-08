@@ -19,8 +19,11 @@
 		@first_win: @index;
 	  }
 
-	  .set-winner() when (@champ = @closer) and (@index = 1) {
+	  .set-winner() when (@champ = @closer) {
 		@winner: @champ;
+	  }
+
+	  .set-winner() when (@index = 1) {
 		@first_win: @index;
 	  }
 

@@ -74,7 +74,6 @@
 .set-default();
 
 .set-action() {
-
 	@action: @base-color;
 }
 
@@ -179,7 +178,7 @@
 	}
 
 	.bump-success() when (default()) {
-		@success: @info-final;
+		@success: @success-final;
 	}
 
 	.set-distance-action();
@@ -289,6 +288,7 @@
 .set-default() {
 	// default is the color wheel representation of the base color
 
+	.set-average(@reaction, @info, @warning, @success, @failure;);
 	.set-lumafix(@rep-color; @strength: 80%;);
-	@default: @lumafix;
+	@default: mix(@average, @lumafix, 62%);
 }
