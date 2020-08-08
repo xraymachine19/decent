@@ -110,7 +110,7 @@
 	// a good second step or confirmation color 
 	// reaction is typically close to being a complement of action 
 
-	.set-lumafix(@reaction-base; @strength: 75%;);
+	.set-lumafix(@reaction-base; @strength: 90%;);
     @reaction: @lumafix;
 }
 
@@ -162,7 +162,7 @@
 	// remember: warning comes before the failure, failure after
 
 	@warning-orange: orange;
-	@warning-yellow: yellow;
+	@warning-yellow: average(yellow, lemonchiffon);
 
 	.set-distance-action() {
 		.set-distance(@warning-orange, @action-base);
@@ -185,8 +185,8 @@
 	}
 
 	.set-warning-final() when (@warning-was-yellow = true) {
-		.set-lumafix(@warning-base; @strength: 12%;);
-		@warning: mix(@warning-base, @lumafix, 12%);
+		.set-lumafix(@warning-base; @strength: 24%;);
+		@warning: mix(@warning-base, @lumafix, 24%);
 	}
 
 	.set-warning-final() when (default()) {
@@ -205,7 +205,7 @@
 	// its green tells users they're good to go 
 
 	@success-green: green;
-	@success-lightgreen: chartreuse;
+	@success-lightgreen: limegreen;
 
 	.set-distance-action() {
 		.set-distance(@success-green, @action-base);
@@ -226,7 +226,7 @@
 	}
 
 	.set-success-final() {
-		.set-lumafix(@success-base, @strength: 75%);
+		.set-lumafix(@success-base, @strength: 67%);
 		@success: @lumafix;
 	}
 
@@ -312,14 +312,25 @@
 
 	.set-info-final() {
 		@bright-info-base: saturate(lighten(@new-info-base, 5%), 5%);
-		.set-lumafix(@bright-info-base; @strength: 50%;);
+		.set-lumafix(@bright-info-base; @strength: 80%;);
+		@info-final: @lumafix;
+	}
+
+	.bump-info() when (luma(@info-final) < luma(@warning)) {
+		// bump it up to at least @warning's brightness if it's not there
+		.set-lumafix(@info-final; @warning; 100%);
 		@info: @lumafix;
+	}
+
+	.bump-info() when (default()) {
+		@info: @info-final;
 	}
 
 	.set-distance-warning();
 	.set-distance-success();
 	.set-new-info-base();
 	.set-info-final();
+	.bump-info();
 }
 
 .set-default() {
