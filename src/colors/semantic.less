@@ -286,9 +286,9 @@
 	// its extra saturation and lightness is good for drawing attention, like
 	// a less urgent warning
 
-	.set-lumafix(@alt-acc-base; @strength: 50%);
-	@alt-acc-base: spin(@info-base, 180);
-	@alt-acc: @lumafix;
+	.set-lumafix(@alt-info-base; @strength: 50%);
+	@alt-info-base: spin(@info-base, 180);
+	@alt-info: @lumafix;
 
 	.set-distance-warning() {
 		.set-distance(@info-base, @warning-base);
@@ -306,13 +306,13 @@
 	}
 
 	.set-new-info-base() when (@distance-warning < 150) or (@distance-success < 150) {
-		@new-info-base: @alt-acc;
+		@new-info-base: @alt-info;
 		@info-was-alternate: true;
 	}
 
 	.set-info-final() {
-		@bright-info-base:lighten(saturate(mix(@lumafix, @new-info-base, 10%), 10%), 10%);
-		.set-lumafix(@bright-info-base; @strength: 20%;);
+		@bright-info-base: saturate(lighten(@new-info-base, 5%), 5%);
+		.set-lumafix(@bright-info-base; @strength: 50%;);
 		@info: @lumafix;
 	}
 
