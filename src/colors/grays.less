@@ -24,7 +24,7 @@
 
 .set-gray-lighter() {
   .set-contrast-ceiling(@gray-base);
-  .set-contrast(@gray-base; @contrast-ceiling*.88; @mode: tint;);
+  .set-contrast(@gray-base; @contrast-ceiling*.92; @mode: tint;);
   @gray-lighter-base: @contrast;
   @gray-lighter: mix(lighten(black, 84%), @gray-lighter-base, @gray-mix);
 }

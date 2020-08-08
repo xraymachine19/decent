@@ -45,7 +45,7 @@
 }
 
 .set-red() {
-    @base: tomato;
+    @base: average(tomato, firebrick);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
     @red: @lumafix;
 }
