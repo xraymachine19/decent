@@ -34,8 +34,7 @@
 .random-background() {
     
     @potentials: @action, @reaction, average(@action, @gray-darker), @gray-darker, @gray-lighter,
-     @info, average(@reaction, @gray-darker), average(@alternate, @gray-darker), @alternate
-     @action, @action, @action, @action;
+     @info, average(@reaction, @gray-darker), @action, @action, @action, @action;
 
     @length: length(@potentials);
 
@@ -51,7 +50,6 @@
                 mix(@white, @ambient, 90%),
                 mix(@white, @action, 90%),
                 mix(@white, @reaction, 90%),
-                mix(@white, @alternate, 90%),
                 mix(@white, @info, 90%),
                 @gray-lighter,
                 @white,
@@ -64,7 +62,6 @@
     //             mix(@black, @ambient, 80%),
     //             mix(@black, @action, 80%),
     //             mix(@black, @reaction, 80%),
-    //             mix(@black, @alternate, 80%),
     //             @white;
     // }
 

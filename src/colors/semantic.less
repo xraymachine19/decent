@@ -74,7 +74,6 @@
 	.set-warning();
 	.set-info();
 	.set-failure();
-	.set-alternate();
 	.set-default();
 }
 
@@ -100,45 +99,6 @@
 
 .set-reaction() when (@base-color = white) { @reaction: black;}
 .set-reaction() when (@base-color = black) { @reaction: white;}
-
-.set-alternate() {
-
-	.set-lumafix(@alt-alt-base; @strength: 50%);
-	@alt-alt-base: spin(@alt-base, 180);
-	@alt-alt: @lumafix;
-
-	.set-distance-info() {
-		.set-distance(@alt-base, @info-base);
-		@distance-info: @distance;
-	}
-
-	.set-distance-success() {
-		.set-distance(@alt-base, @success-base);
-		@distance-success: @distance;
-	}
-
-	.set-alternate-base() {
-		@alternate-base: @alt-base;
-		@alternate-was-alternate: false;
-	}
-
-	.set-alternate-base() when (@distance-info < 100) or (@distance-success < 100) {
-		@alternate-base: @alt-alt;
-		@alternate-was-alternate: true;
-	}
-
-	.set-alternate-final() {
-		.set-lumafix(@alternate-base; @strength: 67%;);
-		@alternate: @lumafix;
-	}
-
-	.set-distance-info();
-	.set-distance-success();
-	.set-alternate-base();
-	.set-alternate-final();
-}
-
-.set-alternate() when (@base-color = white) or (@base-color = black) { @alternate: average(white, black);}
 
 .set-warning() {
 	// warning is a high urgency version of its pairing, info
@@ -326,6 +286,6 @@
 	// default is an average of all of the other semantic colors
 	// it functions as a plain, neutral color within a theme-- a good default
 
-	.set-average(@action, @reaction, @alternate, @info, @warning, @success, @failure;);
+	.set-average(@action, @reaction, @info, @warning, @success, @failure;);
 	@default: @average;
 }
