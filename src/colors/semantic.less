@@ -30,7 +30,7 @@
 
 	@offset: 3;
 
-	// @action-base: @base-color;
+	// @base-color: @base-color;
 
 	.set-rep-color(@base-color; @color-wheel;);
 	
@@ -39,26 +39,18 @@
 	.set-bases();
 
 	.set-bases() when (@number >= 18) {
-		@action-base: @rep-color;
-		@reaction-base: extract(@color-wheel, @number - 12);
 		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 12) and (@number < 18) {
-		@action-base: @rep-color;
-		@reaction-base: extract(@color-wheel, @number - 12);
 		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 6) and (@number <= 12) {
-		@action-base: @rep-color;
-		@reaction-base: extract(@color-wheel, @number + 12);
 		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
 	.set-bases() when (@number <= 6) {
-		@action-base: @rep-color;
-		@reaction-base: extract(@color-wheel, @number + 12);
 		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
@@ -85,6 +77,7 @@
 	// a good second step or confirmation color 
 	// reaction is typically close to being a complement of action 
 
+	@reaction-base: difference(@base-color, white);
 	.set-lumafix(@reaction-base; @strength: 90%;);
     @reaction: @lumafix;
 }
@@ -101,7 +94,7 @@
 	@warning-yellow: average(yellow, lemonchiffon);
 
 	.set-distance-action() {
-		.set-distance(@warning-orange, @action-base);
+		.set-distance(@warning-orange, @base-color);
 		@distance-action: @distance;
 	}
 
@@ -144,7 +137,7 @@
 	@success-lightgreen: limegreen;
 
 	.set-distance-action() {
-		.set-distance(@success-green, @action-base);
+		.set-distance(@success-green, @base-color);
 		@distance-action: @distance;
 	}
 
@@ -198,7 +191,7 @@
 	@failuredarkred: crimson;
 
 	.set-distance-action() {
-		.set-distance(@failure-red, @action-base);
+		.set-distance(@failure-red, @base-color);
 		@distance-action: @distance;
 	}
 

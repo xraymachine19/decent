@@ -1,11 +1,13 @@
 .dropcap {
+    text-indent: 0;
+
     &:first-letter {
-        @size: 4.5em;
+        @size: 4em;
         float: left;
         font-size: @size;
         font-weight: bold;
-        padding: .25em .2em;
+        padding: .2em .2em .1em .2em;
         @height: unit(@size) / @golden-ratio;
-        line-height: @height;
+        line-height: @line-height * 2;
     }
 }

@@ -125,8 +125,8 @@ each(@semantic-color-names, {
   &.color-@{value} { .color-text(@@value);};
 });
 
-// extended color names .colorize() when used as a class
-each(@extended-color-names, { 
+// palette color names .colorize() when used as a class
+each(@palette-color-names, { 
   &.@{value} { .colorize(@@value);};
   &.color-@{value} { .color-text(@@value);};
 });

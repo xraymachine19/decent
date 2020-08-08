@@ -4,9 +4,9 @@
 @base: @base-color;
 @color-strength: 75% + 15%*(unit(luma(@base))/100);
 
-.set-extended-colors();
+.set-palette-colors();
 
-.set-extended-colors() {
+.set-palette-colors() {
     .set-red();
     .set-orange();
     .set-yellow();
@@ -129,5 +129,5 @@
 }
 
 
-@extended-colors: @red, @orange, @yellow, @olive, @green, @teal, @skyblue, @cyan, @blue, @indigo, @violet, @magenta, @purple, @brown;
-@extended-color-names: ~"red", ~"orange", ~"yellow", ~"olive", ~"green", ~"teal", ~"skyblue", ~"cyan", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown";
+@palette-colors: @red, @orange, @yellow, @olive, @green, @teal, @skyblue, @cyan, @blue, @indigo, @violet, @magenta, @purple, @brown;
+@palette-color-names: ~"red", ~"orange", ~"yellow", ~"olive", ~"green", ~"teal", ~"skyblue", ~"cyan", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown";
