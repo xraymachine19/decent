@@ -1,22 +1,6 @@
 .set-color-bases();
 
-// TODO: remove turbo
-
-@faux-simple-color-wheel: 
-		@red,
-		@orange,
-		@yellow,
-		@olive,
-		@green,
-		@teal,
-		@cyan,
-		@skyblue,
-		@blue,
-		@indigo,
-		@purple,
-		@violet;
-
-@faux-color-wheel: 
+@color-wheel: 
 		@red,
 		average(@red, @orange),
 		@orange,
@@ -48,7 +32,7 @@
 
 	@action-base: @base-color;
 
-	.set-rep-color(@color; @faux-color-wheel;);
+	.set-rep-color(@color; @color-wheel;);
 	
 	@number: @rep-color-number;
 
@@ -61,27 +45,27 @@
 	.set-bases();
 
 	.set-bases() when (@number >= 18) {
-		@reaction-base: extract(@faux-color-wheel, @number - 12);
-		@alt-base: extract(@faux-color-wheel, @number - @offset*2);
-		@info-base: extract(@faux-color-wheel, @number - @offset);
+		@reaction-base: extract(@color-wheel, @number - 12);
+		@alt-base: extract(@color-wheel, @number - @offset*2);
+		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 12) and (@number < 18) {
-		@reaction-base: extract(@faux-color-wheel, @number - 12);
-		@alt-base: extract(@faux-color-wheel, @number - @offset*2);
-		@info-base: extract(@faux-color-wheel, @number - @offset);
+		@reaction-base: extract(@color-wheel, @number - 12);
+		@alt-base: extract(@color-wheel, @number - @offset*2);
+		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 6) and (@number <= 12) {
-		@reaction-base: extract(@faux-color-wheel, @number + 12);
-		@alt-base: extract(@faux-color-wheel, @number + @offset*2);
-		@info-base: extract(@faux-color-wheel, @number + @offset);
+		@reaction-base: extract(@color-wheel, @number + 12);
+		@alt-base: extract(@color-wheel, @number + @offset*2);
+		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
 	.set-bases() when (@number <= 6) {
-		@reaction-base: extract(@faux-color-wheel, @number + 12);
-		@alt-base: extract(@faux-color-wheel, @number + @offset*2);
-		@info-base: extract(@faux-color-wheel, @number + @offset);
+		@reaction-base: extract(@color-wheel, @number + 12);
+		@alt-base: extract(@color-wheel, @number + @offset*2);
+		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
 	.set-action();
@@ -225,7 +209,12 @@
 		@success-base: @success-green;
 	}
 
-	.set-success-final() {
+	.set-success-final() when (luma(@base-color) < 30%) {
+		.set-lumafix(@success-base, @strength: 85%);
+		@success: @lumafix;
+	}
+
+	.set-success-final() when (default()) {
 		.set-lumafix(@success-base, @strength: 67%);
 		@success: @lumafix;
 	}
