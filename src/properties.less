@@ -3,6 +3,8 @@
 
 // eg '.default(padding);' is equivalent to 'padding: @padding;'
 
+// Property values here aren't exactly always defaults but they're close.
+
 @test: 'test';
 
 @css-property-names: background,
@@ -307,22 +309,22 @@ box-sizing;
 @page-break-inside: auto; // Insert a page breaks inside an element.
 
 //Table Properties
-@border-collapse: @test; // Specifies whether table cell borders are connected or separated.
-@border-spacing: @test; // Sets the spacing between the borders of adjacent table cells.
-@caption-side: @test; // Specify the position of table's caption.
-@empty-cells: @test; // Show or hide borders and backgrounds of empty table cells.
-@table-layout: @test; // Specifies a table layout algorithm.
+@border-collapse: collapse; // Specifies whether table cell borders are connected or separated.
+@border-spacing: @padding/2; // Sets the spacing between the borders of adjacent table cells.
+@caption-side: left; // Specify the position of table's caption.
+@empty-cells: hide; // Show or hide borders and backgrounds of empty table cells.
+@table-layout: auto; // Specifies a table layout algorithm.
 
 // Text Properties
-@direction: @test; // Define the text direction/writing direction.
-@tab-size: @test; // Specifies the length of the tab character.
-@text-align: @test; // Sets the horizontal alignment of inline content.
-@text-align-last: @test; // Specifies how the last line of a block or a line right before a forced line break is aligned when text-align is justify.
-@text-decoration: @test; // Specifies the decoration added to text.
-@text-decoration-color: @test; // Specifies the color of the text-decoration-line.
-@text-decoration-line: @test; // Specifies what kind of line decorations are added to the element.
-@text-decoration-style: @test; // Specifies the style of the lines specified by the text-decoration-line property
-@text-indent: @test; // Indent the first line of text.
+@direction: ltr; // Define the text direction/writing direction.
+@tab-size: 2; // Specifies the length of the tab character.
+@text-align: left; // Sets the horizontal alignment of inline content.
+@text-align-last: center; // Specifies how the last line of a block or a line right before a forced line break is aligned when text-align is justify.
+@text-decoration: @text-decoration-line @text-decoration-color @text-decoration-style; // Specifies the decoration added to text.
+@text-decoration-color: @default; // Specifies the color of the text-decoration-line.
+@text-decoration-line: underline; // Specifies what kind of line decorations are added to the element.
+@text-decoration-style: solid; // Specifies the style of the lines specified by the text-decoration-line property
+@text-indent: @tab-size * 1ch; // Indent the first line of text.
 @text-justify: @test; // Specifies the justification method to use when the text-align property is set to justify.
 @text-overflow: @test; // Specifies how the text content will be displayed, when it overflows the block containers.
 @text-shadow: @test; // Applies one or more shadows to the text content of an element.

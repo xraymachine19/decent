@@ -1,5 +1,11 @@
 p {
-    margin-bottom: 1em;
+    @p-margin-bottom: 1em;
+    .default(text-indent);
+    margin-bottom: @p-margin-bottom;
+
+    &.gutter-bottom {
+        margin-bottom: @p-margin-bottom * @golden-ratio;
+    }
 
     .semantic-classes({
         padding: @text-padding;

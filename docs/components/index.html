@@ -1,0 +1,533 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Components | Decent CSS</title>
+  <meta name="description" content="Components for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="black inner-page-width">
+      <div class="bar">
+        <a href="../"><h4>Decent</h4></a>
+        <ul class="bar top right padding">
+          <li><a href="../components/">Components</a></li>
+          <li><a href="../patterns/">Patterns</a></li>
+          <li><a href="../tutorial/">Tutorial</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section class="hero action border-bottom">
+        <h1 class="feature no-margin-bottom">Components</h1>
+        <p class="gutter-bottom">Perfect composable classes in any color.</p>
+      </section>
+        <section id="components">
+
+          <p>Okay, maybe it <em>is</em> another component library. A little bit. These are just to get you started on your own set.</p>
+
+          <p>Decent works great with any Javascript project... because it doesn't include any Javascript of its own, and therefore can't conflict with whatever JS approach your project uses.</p>
+
+          <p>Decent's components are written to be simple and composable, meaning they can usually be used with the other component classes, or with CSS property-name classes.</p>
+
+          <h2>.feature</h2>
+          <p>Boost an element's font-size and give it generous padding.</p>
+          <p class="feature">This <strong>.feature</strong> element is awesome.</p>
+
+          <h2>.matte</h2>
+          <p>The matte component presents the inner content on a raised, textured surface.</p>
+          <div class="border padding">
+            <p>This unfortunate content has no matte. It only has a div with "border" and "padding" classes.</p>
+          </div>
+
+          <div class="matte">
+            <p>This lucky content is presented on the matte component, put on a pedestal above the surrounding content.</p>
+          </div>
+
+          <div class="matte feature">
+            <h3>Mattes can be feature elements too.</h3>
+            <p>This lucky content is presented on the matte component, put on a pedestal above the surrounding content.</p>
+          </div>
+
+          <h2>.well</h2>
+
+          <p>Wells work a whole lot like mattes. Instead of having a raised, textured appearance, they have a lowered, textured appearance.</p>
+
+          <div class="well">
+            <p>This lucky content is presented in the well component, lowered safely away from the surrounding content.</p>
+          </div>
+
+          <p>You could probably put a matte inside of a well.</p>
+
+          <div class="well">
+            <p>This lucky content is presented on the matte component, lowered safely away from the surrounding content.</p>
+            <p class="matte">This second paragraph is a matte.</p>
+          </div>
+
+          <h2>.island</h2>
+          <p>Give an element generous margins so that it appears as an island.</p>
+
+          <div>
+            <p class="island">This is a paragraph and an island element. Islands basically just have a bunch of margin.</p>
+          </div>
+
+          <p class="island matter border">This is a paragraph and an island element. Islands basically just have a bunch of margin.</p>
+
+          <h2>.card</h2>
+          <p>Present information in the popular card format by adding the .card class to a div.</p>
+          <div id="mouser" class="card well info">
+            <h4 class="action box-shadow">The Mouser</h4>
+            <img class="float" src="http://placekitten.com/200/200">
+            <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
+            <footer class="float">
+              <button class="action">Hire</button> <button class="info">Save</button>
+            </footer>
+          </div>
+
+          <div class="card matte">
+            <h4 class="text-failure well border">Fuzzy Mittens</h4>
+            <div class="two-column">
+              <div class="overlay">
+                
+                <img src="http://placekitten.com/300/300">
+                <div class="bar info bottom no-margin fade">He's got the 'nip</div>
+              </div>
+              <p>Fuzzy runs catnip all through the neighborhood.</p>
+            </div>
+            <footer class="hero action text-center">
+              <button class="success">Hire</button> &nbsp; <button class="info">Save</button>
+            </footer>
+          </div>
+
+          <p>Cards with an img or .overlay component up front will feature it.</p>
+
+          <div class="two-column">
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/500/500">
+                <footer class="bottom right">
+                  <button class="yellow">Hire</button> <button class="blue">Save</button>
+                </footer>
+              </div>
+              <h4>Dog</h4>
+              <p>His name is ironic or something. Don't cross him. His meow is worse than his bite.</p>
+            </div>
+
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/400/400">
+                <footer class="top left">
+                  <button class="action">Hire</button> <button class="info">Save</button>
+                </footer>
+              </div>
+              <h4>Scratches</h4>
+              <p>Nobody knows if his name refers to the scratches that cover his body, or those he's dished out to others. Everyone knows better than to ask.</p>
+            </div>
+          </div>
+
+          <h2>.dropcap</h2>
+
+          <p class="dropcap">Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly.</p>
+
+          <h2>.pagination</h2>
+
+          <p>The pagination component turns a ul into a navigable list of pages.</p>
+
+          <ul class="pagination border">
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+          </ul>
+
+          <ul class="pagination well">
+            <li>
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+          </ul>
+          
+
+          <h2>.group</h2>
+
+          <p>The .group class groups like things inside of it.</p>
+
+          <ul class="group">
+            <li>Apples</li>
+            <li>Oranges</li>
+            <li>Apricots</li>
+            <li>Watermelons</li>
+            <li>Kiwis</li>
+          </ul>
+
+          <ol class="group">
+            <li>Apples</li>
+            <li>Oranges</li>
+            <li>Apricots</li>
+            <li>Watermelons</li>
+            <li>Kiwis</li>
+          </ol>
+
+          <p>ul and ol .group components work well with the border class:</p>
+
+          <div class="two-column">
+            <ul class="group border">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Watermelons</li>
+              <li>Kiwis</li>
+            </ul>
+
+            <ol class="group border border-radius">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Watermelons</li>
+              <li>Kiwis</li>
+            </ol>
+          </div>
+
+          <p>Groups work on buttons:</p>
+          <p class="group">
+            <button class="info">Info</button>
+            <button class="warning">Warning</button>
+          </p>
+
+          <div class="group border-radius border">
+            <button class="action">Action</button>
+            <button class="reaction">Reaction</button>
+          </div>
+
+          <div class="two-column">
+            <div class="group border-radius border">
+              <button>Deploy Fuzzy</button>
+              <button>Deploy Scratches</button>
+              <button>Deploy Mouser</button>
+            </div>
+
+            <div class="group border">
+              <button class="info">Menus</button>
+              <button class="info">Journals</button>
+              <button class="info">Diaries</button>
+            </div>
+
+          </div>
+
+          <aside>
+            <p class="info"><strong>Note:</strong> The border class works because <em>any CSS property</em> works as a class name, outputting the default value from <strong>properties.less</strong>.</p>
+          </aside>
+          
+
+          <h2>.hero</h2>
+
+          <p>The hero class is usually one of the first elements on the page, outside of the normal section flow. It's full-width and heavily emphasizes all of the content within. It has a colored, patterned background.</p>
+
+          <div class="hero reaction">
+            <h1>The hero class is loud and gets attention.</h1>
+            <p class="feature">Body copy should <em>probably</em> have a <strong>.feature</strong> class to match the size.</p>
+            <p>Normal paragraphs will be a bit bigger too, though.</p>
+            <p class="text-center"><button class="info">Sign up now</button></p>
+          </div>
+
+          <p>As a direct descendant of the body element, the hero component takes up the full page width and commands more attention.</p>
+
+          <aside class="hero matte card reaction">
+            <p class="feature"><strong>.hero</strong> doesn't need to be the first element, or even applied to a div. It works with other classes too.</p>
+          </aside>
+
+          <h2>.bar</h2>
+
+          <p>The bar component turns things into bars.</p>
+
+          <div class="bar action">
+            <p>A paragraph inside a bar. <button class="info">Wow!</button></p>
+          </div>
+
+          <p>Bars don't have a max-width and they don't exceed their line-height.</p>
+          
+          <p>Bars compose with the <strong>.group</strong> class.</p>
+
+          <p>Just the div:</p>
+          <div>
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group:</p>
+
+          <div class="group">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group and border:</p>
+
+          <div class="group border">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group, border and border-radius:</p>
+
+          <div class="group border border-radius">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>bar:</p>
+
+          <div class="bar">
+            <button class="action">Send Fuzzy</button>
+            <button class="action">Send Scratches</button>
+            <button class="failure">Cancel</button>
+          </div>
+
+          <p>group, bar and no-shadows:</p>
+
+          <div class="group bar no-shadows">
+            <button class="action">Send Fuzzy</button><button class="action">Send Scratches</button><button class="failure">Cancel</button>
+          </div>
+
+          <p>group, bar, border, border-radius and island:</p>
+
+          <div class="group bar border border-radius island">
+            <button class="action">Send Fuzzy</button><button class="action">Send Scratches</button><button class="failure">Cancel</button>
+          </div>
+
+          <h2>.two-column</h2>
+
+          <p>The two-column container will cause its contents to display as two columns.</p>
+
+          <div class="two-column">
+            <div id="mouser" class="card border">
+              <h4>The Mouser</h4>
+              <img class="float avatar-width" src="http://placekitten.com/200/200">
+              <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
+              <footer class="float">
+                <button class="action">Hire</button> <button class="info">Save</button>
+              </footer>
+            </div>
+  
+            <div id="fuzzy2" class="card border">
+              <div class="overlay">
+                <img src="http://placekitten.com/300/300">
+                <footer class="float bottom right small">
+                  <button class="action">Hire</button> <button class="info">Save</button>
+                </footer>
+              </div>
+              <h1 class="color-failure no-margin-bottom">Fuzzy Mittens</h1>
+            </div>
+          </div>
+
+          <h2>.three-column</h2>
+
+          <p>The three-column container will cause its contents to display as three columns.</p>
+
+          <div class="three-column">
+            <ol class="group border">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Pears</li>
+              <li>Kiwis</li>
+            </ol>
+            <ol class="group well">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Pears</li>
+              <li>Kiwis</li>
+            </ol>
+            <ol class="group matte">
+              <li>Apples</li>
+              <li>Oranges</li>
+              <li>Apricots</li>
+              <li>Pears</li>
+              <li>Kiwis</li>
+            </ol>
+          </div>
+
+          <h2>.golden-column</h2>
+
+          <p>The golden-column component organizes child elements into two columns, proportioned to the golden ratio.</p>
+
+          <div class="golden-column">
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/600/400">
+                <div class="group bar top right border">
+                  <button class="action">Hire</button>
+                  <button class="action">Save</button>
+                  <button class="failure">Block</button>
+                </div>
+              </div>
+              <h4 class="text-failure">Fuzzy Mittens</h4>
+              <p>Fuzzy runs catnip all through the neighborhood.</p>
+              
+            </div>
+            <div class="well">
+              <ol class="group">
+                <li>OG Mouse</li>
+                <li>Red dot</li>
+                <li>Purr kush</li>
+                <li>Whiskertwitch</li>
+                <li>Sidegarden</li>
+              </ol>
+              <p>Fuzzy carries only the finest strains of catnip.</p>
+            </div>
+            
+          </div>
+
+
+
+        </section>
+
+        <section>
+          <h2>'No' classes</h2>
+
+          <p>Want less of something? The "no" utility classes help.</p>
+
+          <p>A plain ol' card:</p>
+          <div class="card">
+            <div class="overlay">
+              <img src="http://placekitten.com/340/140">
+              <span class="feature badge top right">A+!</span>
+            </div>
+            <ul class="group">
+              <li>Test 1</li>
+              <li>Test 2</li>
+              <li>Test 3</li>
+            </ul>
+            <p class="feature text-center">Summary results:</p>
+            <p>You did okay.</p>
+            <button class="failure feature full-width">Accept my fate</button>
+          </div>
+
+          <div class="card no-shadow">
+            <div class="overlay">
+              <img src="http://placekitten.com/340/140">
+              <span class="feature badge top right">A+!</span>
+            </div>
+            <ul class="group">
+              <li>Test 1</li>
+              <li>Test 2</li>
+              <li>Test 3</li>
+            </ul>
+            <p class="feature text-center">Summary results:</p>
+            <p>You did okay.</p>
+            <button class="failure feature full-width">Accept my fate</button>
+          </div>
+
+          <div class="card no-shadows">
+            <div class="overlay">
+              <img src="http://placekitten.com/340/140">
+              <span class="feature badge top right">A+!</span>
+            </div>
+            <ul class="group">
+              <li>Test 1</li>
+              <li>Test 2</li>
+              <li>Test 3</li>
+            </ul>
+            <p class="feature text-center">Summary results:</p>
+            <p>You did okay.</p>
+            <button class="failure feature full-width">Accept my fate</button>
+          </div>
+        </section>
+
+
+        <section>
+
+          <h2 id="button_gallery">Some buttons</h2>
+          <p class="text-center">
+            <button class="action">Action</button>
+            <button class="reaction">Reaction</button>
+          </p>
+          <p class="text-center">
+            <button class="info">Info</button>
+            <button class="warning">Warning</button>
+          </p>
+          <p class="text-center">
+            <button class="success">Success</button>
+            <button class="failure">Failure</button>
+          </p>
+          <p class="text-center">
+            <button class="default">Default</button>
+            <button>No class</button>
+          </p>
+      </section>
+
+      <section id="colors" class="color-palette">
+        <h2>Some unofficial colors</h2>
+        <p>These won't actually have class support in the final version.</p>
+        <div class="ambient">ambient</div>
+        <div class="base-color">base-color</div>
+        <p class="clearfix"></p>
+
+        <h2><a href="#colors">Semantic colors</a></h2>
+        <div class="action">action</div>
+        <div class="reaction">reaction</div>
+        <div class="info icon-info">info</div>
+        <div class="warning">warning</div>
+        <div class="success">success</div>
+        <div class="failure">failure</div>
+        <div class="default">default</div>
+        <p class="clearfix"></p>
+
+        <h2>Some extended colors</h2>
+        <div class="red">red</div>
+        <div class="orange">orange</div>
+        <div class="yellow">yellow</div>
+        <div class="olive">olive</div>
+        <div class="green">green</div>
+        <div class="teal">teal</div>
+        <div class="cyan">cyan</div>
+        <div class="skyblue">skyblue</div>
+        <div class="blue">blue</div>
+        <div class="indigo">indigo</div>
+        <div class="purple">purple</div>
+        <div class="violet">violet</div>
+        <div class="magenta">magenta</div>
+        <div class="white">white</div>
+        <div class="gray">gray</div>
+        <div class="black">black</div>
+        <div class="brown">brown</div>
+        <p class="clearfix"></p>
+
+        <h2>Some grays</h2>
+        <div class="gray-lighter">gray-lighter</div>
+        <div class="gray-light">gray-light</div>
+        <div class="gray-medium">gray-medium</div>
+        <div class="gray-dark">gray-dark</div>
+        <div class="gray-darker">gray-darker</div>
+        <p class="clearfix"></p>
+      </section>
+
+      <section>
+        <img src="../decent-logo.svg" class="logo">
+      </section>
+    </main>
+    
+
+</body>
+</html>
