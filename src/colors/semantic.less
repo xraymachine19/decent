@@ -32,51 +32,50 @@
 
 	// @action-base: @base-color;
 
-	.set-rep-color(@color; @color-wheel;);
+	.set-rep-color(@base-color; @color-wheel;);
 	
 	@number: @rep-color-number;
 
 	.set-bases();
 
 	.set-bases() when (@number >= 18) {
-		@action-base: extract(@color-wheel, @number);
+		@action-base: @rep-color;
 		@reaction-base: extract(@color-wheel, @number - 12);
 		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 12) and (@number < 18) {
-		@action-base: extract(@color-wheel, @number);
+		@action-base: @rep-color;
 		@reaction-base: extract(@color-wheel, @number - 12);
 		@info-base: extract(@color-wheel, @number - @offset);
 	}
 
 	.set-bases() when (@number > 6) and (@number <= 12) {
-		@action-base: extract(@color-wheel, @number);
+		@action-base: @rep-color;
 		@reaction-base: extract(@color-wheel, @number + 12);
 		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
 	.set-bases() when (@number <= 6) {
-		@action-base: extract(@color-wheel, @number);
+		@action-base: @rep-color;
 		@reaction-base: extract(@color-wheel, @number + 12);
 		@info-base: extract(@color-wheel, @number + @offset);
 	}
 
-	.set-action();
-	.set-reaction();
-	.set-warning();
-	.set-success();
-	.set-info();
-	.set-failure();
-	.set-default();
+	
 }
 
-.set-action() {
-	// action means "do something," it's great for submit buttons
-	// it's usually pretty close to the base color 
+.set-action();
+.set-reaction();
+.set-warning();
+.set-success();
+.set-info();
+.set-failure();
+.set-default();
 
-	.set-lumafix(@action-base);
-	@action: @lumafix;
+.set-action() {
+
+	@action: @base-color;
 }
 
 .set-action() when (@base-color = white) { @action: white;}
@@ -288,9 +287,8 @@
 }
 
 .set-default() {
-	// default is an average of all of the other semantic colors
-	// it functions as a plain, neutral color within a theme-- a good default
+	// default is the color wheel representation of the base color
 
-	.set-average(@action, @reaction, @info, @warning, @success, @failure;);
-	@default: @average;
+	.set-lumafix(@rep-color; @strength: 80%;);
+	@default: @lumafix;
 }

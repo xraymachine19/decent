@@ -14,8 +14,9 @@
 
 	  .set-closer-farther-hue(@color, @champ, @contender);
 
-	  .set-winner() when (@champ = @closer) {
-		@winner: @champ;
+	  .set-winner() when (@contender = @closer) {
+		@winner: @contender;
+		@first_win: @index;
 	  }
 
 	  .set-winner() when (@champ = @closer) and (@index = 1) {
@@ -23,9 +24,8 @@
 		@first_win: @index;
 	  }
 
-	  .set-winner() when (@contender = @closer) {
-		@winner: @contender;
-		@first_win: @index;
+	  .set-winner() when (default()) {
+		@winner: @champ;
 	  }
 	  
 	  .set-winner();
@@ -38,14 +38,12 @@
 	}
 
 	.tournament(@champ, @contender, @index) when (@index > @iterations) {
-
 	  @rep-color: @champ;   
-	  @rep-color-number: @first_win;
-
 	}
 
 	@first-champ: extract(@list, 1);
 	@first-contender: extract(@list, 2);
 
 	.tournament(@first-champ, @first-contender, 1);
+	@rep-color-number: @first_win;
 }
