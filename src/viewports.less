@@ -1,3 +1,8 @@
+.on-phone(@rules) {
+   @media screen and (max-width: ~"calc(@{tablet-width} - 1px") { @rules();}
+   // TODO: test this
+}
+
 .on-tablet(@rules) {
    @media screen and (min-width: @tablet-width) { @rules();}
 }

@@ -4,6 +4,11 @@
 @base: @base-color;
 @color-strength: 75% + 15%*(unit(luma(@base))/100);
 
+
+@compare-mix: 80%;
+@compare-color: mix(screen(@ambient, @lumafix), overlay(@ambient, @lumafix), 50%);
+
+
 .set-palette-colors();
 
 .set-palette-colors() {
@@ -44,88 +49,99 @@
     @dark: @contrast;
 }
 
+
 .set-red() {
     @base: average(tomato, firebrick);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @red: @lumafix;
+    @red: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-orange() {
     @base: orange;
     .set-lumafix(@base; @strength: @color-strength/3;);
-    @orange: @lumafix;
+    @orange: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-yellow() {
     @base: yellow;
     .set-lumafix(@base; @strength: @color-strength/4;);
-    @yellow: @lumafix;
+    @yellow: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-olive() {
-    @base: olive;
+    @base: average(olive, olivedrab);
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @olive: @lumafix;
+    @olive: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-green() {
     @base: forestgreen;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @green: @lumafix;
+    @green: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-teal() {
     @base: teal;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @teal: @lumafix;
+    @teal: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-cyan() {
     @base: cyan;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @cyan: @lumafix;
+    @cyan: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-skyblue() {
-    @base: average(lightskyblue, skyblue);
+    @base: skyblue;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @skyblue: @lumafix;
+    @skyblue: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-blue() {
     @base: average(cornflowerblue, royalblue);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @blue: @lumafix;
+    @blue: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-indigo() {
     @base: indigo;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @indigo: @lumafix;
+    @indigo: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-violet() {
     @base: violet;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @violet: @lumafix;
+    @violet: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-magenta() {
     @base: magenta;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @magenta: @lumafix;
+    @magenta: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-purple() {
     @base: purple;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @purple: @lumafix;
+    @purple: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-brown() {
     @base: sienna;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @brown: @lumafix;
+    .set-lumafix(@base; @strength: @color-strength*(5/6););
+	@brown-base: mix(@lumafix, @compare-color, @compare-mix);
+	.bump-brown();
+	
+	.bump-brown() when (luma(@brown-base) < luma(@gray)) {
+		.set-lumafix(@brown-base, @gray);
+		@brown: @lumafix;
+	}
+
+	.bump-brown() when (default()) {
+		@brown: @brown-base;
+	}
 }
 
 // grays 
@@ -145,11 +161,19 @@
 
 
 .set-white() {
-	@white: mix(white, @base-color, 99%);
+	// @white: mix(white, @base-color, 99%);
+
+	@base: white;
+    .set-lumafix(@base; @strength: 10%;);
+    @white: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-black() {
-	@black: mix(black, @base-color, 80%);
+	// @black: mix(black, @base-color, 80%);
+
+	@base: black;
+    .set-lumafix(@base; @strength: 10%;);
+    @black: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-gray-lighter() {
@@ -290,8 +314,8 @@
 	// its orange/yellow is a complement to info's teal/blue
 	// remember: warning comes before the failure, failure after
 
-	@warning-orange: orange;
-	@warning-yellow: average(yellow, lemonchiffon);
+	@warning-orange: @orange;
+	@warning-yellow: @yellow;
 
 	.set-distance-action() {
 		.set-distance(@warning-orange, @base-color);
@@ -303,24 +327,18 @@
 		@distance-reaction: @distance;
 	}
 
-	.set-warning-base() when (@distance-action < 70) or (@distance-reaction < 70) {
+	.set-warning-base() when (@distance-action < 100) or (@distance-reaction < 100) {
 		@warning-base: @warning-yellow;
-		@warning-was-yellow: true;
+		
 	}
 
 	.set-warning-base() when (default()) {
 		@warning-base: @warning-orange;
-		@warning-was-yellow: false;
-	}
 
-	.set-warning-final() when (@warning-was-yellow = true) {
-		.set-lumafix(@warning-base; @strength: 24%;);
-		@warning: mix(@warning-base, @lumafix, 24%);
 	}
 
 	.set-warning-final() when (default()) {
-		.set-lumafix(@warning-base; @strength: 24%;);
-		@warning: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+		@warning: @warning-base;
 	}
 
 	.set-distance-action();
@@ -387,35 +405,29 @@
 	// success's opposite and complement, failure's red tells the user something is wrong 
 	// good for negative server responses, missing info, or drawing attention to faults
 
-	@failure-red: tomato;
-	@failuredarkred: crimson;
+	@failure-red: @red;
+	@failure-violet: @violet;
 
 	.set-distance-action() {
-		.set-distance(@failure-red, @base-color);
+		.set-distance(@failure-red, @action);
 		@distance-action: @distance;
 	}
 
 	.set-distance-reaction() {
-		.set-distance(@failure-red, @reaction-base);
+		.set-distance(@failure-red, @reaction);
 		@distance-reaction: @distance;
 	}
 
-	.set-failure-base() when (@distance-action < 100) or (@distance-reaction < 100) {
-		@failure-base: @failuredarkred;
+	.set-failure-base() when (@distance-action < 70) or (@distance-reaction < 70) {
+		@failure-base: @failure-violet;
 	}
 
 	.set-failure-base() when (default()) {
 		@failure-base: @failure-red;
 	}
 
-	.set-failure-final() when (luma(@base-color) > 50%) {
-		.set-lumafix(@failure-base, @success, 60%);
-		@failure: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
-	}
-
 	.set-failure-final() when (default()) {
-		.set-lumafix(@failure-base, @success, 75%);
-		@failure: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+		@failure: @failure-base;
 	}
 
 	.set-distance-action();
@@ -456,9 +468,7 @@
 	}
 
 	.set-info-final() {
-		@bright-info-base: saturate(lighten(@new-info-base, 5%), 5%);
-		.set-lumafix(@bright-info-base; @strength: 80%;);
-		@info-final: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+		@info-final: mix(@new-info-base, overlay(@ambient, @new-info-base), 90%);
 	}
 
 	.bump-info() when (luma(@info-final) < luma(@warning)) {

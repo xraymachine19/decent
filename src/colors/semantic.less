@@ -102,8 +102,8 @@
 	// its orange/yellow is a complement to info's teal/blue
 	// remember: warning comes before the failure, failure after
 
-	@warning-orange: orange;
-	@warning-yellow: average(yellow, lemonchiffon);
+	@warning-orange: @orange;
+	@warning-yellow: @yellow;
 
 	.set-distance-action() {
 		.set-distance(@warning-orange, @base-color);
@@ -115,7 +115,7 @@
 		@distance-reaction: @distance;
 	}
 
-	.set-warning-base() when (@distance-action < 70) or (@distance-reaction < 70) {
+	.set-warning-base() when (@distance-action < 100) or (@distance-reaction < 100) {
 		@warning-base: @warning-yellow;
 		@warning-was-yellow: true;
 	}
@@ -126,13 +126,11 @@
 	}
 
 	.set-warning-final() when (@warning-was-yellow = true) {
-		.set-lumafix(@warning-base; @strength: 24%;);
-		@warning: mix(@warning-base, @lumafix, 24%);
+		@warning: @warning-base;
 	}
 
 	.set-warning-final() when (default()) {
-		.set-lumafix(@warning-base; @strength: 24%;);
-		@warning: @lumafix;
+		@warning: @warning-base;
 	}
 
 	.set-distance-action();
@@ -199,43 +197,44 @@
 	// success's opposite and complement, failure's red tells the user something is wrong 
 	// good for negative server responses, missing info, or drawing attention to faults
 
-	@failure-red: tomato;
-	@failuredarkred: crimson;
+	// @failure-red: tomato;
+	// @failuredarkred: crimson;
 
-	.set-distance-action() {
-		.set-distance(@failure-red, @base-color);
-		@distance-action: @distance;
-	}
+	// .set-distance-action() {
+	// 	.set-distance(@failure-red, @base-color);
+	// 	@distance-action: @distance;
+	// }
 
-	.set-distance-reaction() {
-		.set-distance(@failure-red, @reaction-base);
-		@distance-reaction: @distance;
-	}
+	// .set-distance-reaction() {
+	// 	.set-distance(@failure-red, @reaction-base);
+	// 	@distance-reaction: @distance;
+	// }
 
-	.set-failure-base() when (@distance-action < 100) or (@distance-reaction < 100) {
-		@failure-base: @failuredarkred;
-	}
+	// .set-failure-base() when (@distance-action < 100) or (@distance-reaction < 100) {
+	// 	@failure-base: @failuredarkred;
+	// }
 
-	.set-failure-base() when (default()) {
-		@failure-base: @failure-red;
-	}
+	// .set-failure-base() when (default()) {
+	// 	@failure-base: @failure-red;
+	// }
 
-	.set-failure-final() when (luma(@base-color) > 50%) {
-		.set-lumafix(@failure-base, @success, 60%);
-		@failure: @lumafix;
-	}
+	// .set-failure-final() when (luma(@base-color) > 50%) {
+	// 	.set-lumafix(@failure-base, @success, 60%);
+	// 	@failure: @lumafix;
+	// }
 
-	.set-failure-final() when (default()) {
-		.set-lumafix(@failure-base, @success, 75%);
-		@failure: @lumafix;
-	}
+	// .set-failure-final() when (default()) {
+	// 	.set-lumafix(@failure-base, @success, 75%);
+	// 	@failure: @lumafix;
+	// }
 
-	.set-distance-action();
-	.set-distance-reaction();
+	// .set-distance-action();
+	// .set-distance-reaction();
 
-	.set-failure-base();
+	// .set-failure-base();
 
-	.set-failure-final();
+	// .set-failure-final();
+	@failure: @red;
 }
 
 .set-info() {
