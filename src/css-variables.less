@@ -3,29 +3,42 @@
         --@{value}: @@value;
     });
 
-    each(@gray-names, {
-        --@{value}: @@value;
-    });
-
     each(@palette-color-names, {
         --@{value}: @@value;
     });
 
-    --margin: @margin;
+    each(@gray-names, {
+        --@{value}: @@value;
+    });
 
-    --padding: @padding;
-
+    --base-color: @base-color;
+    --body-background: @action;
+    --main-background: @white;
+    --text-contrast: @text-contrast;
+    --ambient: @ambient;
+    --golden-ratio: @golden-ratio;
+    --shadow-color: @shadow-color;
+    --shadow-position: @shadow-position;
+    --shadow-blur: @shadow-blur;
+    --pi: @pi;
+    --text-measure: @text-measure;
+    --text-padding: @text-padding;
+    --text-padding-top: @text-padding-top;
+    --text-padding-right: @text-padding-right;
+    --text-padding-bottom: @text-padding-bottom;
+    --text-padding-left: @text-padding-left;
     --gutter: @gutter;
+    --page-width: @page-width;
+    --aside-width: @aside-width;
+    --column-width: @column-width;
+    --avatar-width: @avatar-width;
+    --icon-width: @icon-width;
+    --full-width: @full-width;
+    --grid-width: @grid-width;
+    --tablet: @tablet;
+    --desktop: @desktop;
 
-    --background-color: @background-color;
-
-    --gutter: @gutter;
-
-    --box-shadow: @box-shadow;
-
-    --gutter: @gutter;
-
-
-
-    --main-bg-color: coral;
+    each(@css-property-names, { 
+        --@{value}: @@value;
+    });
 }

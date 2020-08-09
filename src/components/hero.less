@@ -33,11 +33,11 @@
     .pattern(@pattern; @hero-background; 1.1;);
 
     // this generates a pattern background for each semantic color
-    each(@semantic-color-names, {
-        @color: @@value;
-        @color-name: @value;
-        &.@{color-name} { .pattern(@pattern; @color; 1.1;);}
-    });
+    // each(@semantic-color-names, {
+    //     @color: @@value;
+    //     @color-name: @value;
+    //     &.@{color-name} { .pattern(@pattern; @color; 1.1;);}
+    // });
   
     // a wider max-width for everything inside the hero
     > * {
@@ -60,11 +60,11 @@
     }
 
     // this rewrites color- rules to work inside the hero
-    .inline-elements({
-        each(@semantic-color-names, { 
-            &.color-@{value} { .color-text(@@value; @hero-background);};
-        });
-    });
+    // .inline-elements({
+    //     each(@semantic-color-names, { 
+    //         &.color-@{value} { .color-text(@@value; @hero-background);};
+    //     });
+    // });
 
     .button-elements({
         font-size: 125%;
