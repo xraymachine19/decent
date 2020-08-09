@@ -11,10 +11,13 @@
 @import (reference) "colors/palette";
 @import (reference) "colors/semantic";
 
-@import (reference) "patterns"; 
+@import "patterns"; 
 @import (reference) "mixins/mixins";
 
-@import (reference) "random";
+& when (@randomness = true) {
+    @import (reference) "random";
+}
+
 
 // css output
 // edit these files directly to change the appearance of HTML elements

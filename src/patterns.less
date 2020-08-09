@@ -87,36 +87,40 @@ x-equals,
 yyy,
 zig-zag;
 
-each(@patterns-all, {
-    // this outputs everything in an escaped SVG format
-    // .invoke-pattern(@value);
-    // this is just for the demo site
-    // .@{value} {
+.output-patterns() when (@output-patterns = true) {
+    each(@patterns-all, {
+        // this outputs everything in an escaped SVG format
+        // .invoke-pattern(@value);
+        // this is just for the demo site
+        .@{value} {
 
-    //     .set-color-random() {
-    //         @potentials:    @color-wheel;
+            .set-color-random() {
+                @potentials:    @color-wheel;
 
-    //         @length: length(@potentials);
+                @length: length(@potentials);
 
-    //         @random: `Math.random()`;
-    //         @sc: ceil(@length*@random);
-    //         @color-random: extract(@potentials, @sc);
-    //     }
+                @random: `Math.random()`;
+                @sc: ceil(@length*@random);
+                @color-random: extract(@potentials, @sc);
+            }
 
-    //     .set-color-random();
+            .set-color-random();
 
-    //     .pattern(@value; @color-random;);
+            .pattern(@value; @color-random;);
 
-    //     &:after {
-    //         content: ".pattern(@{value}, @{color-random});";
-    //     }
-    // }
-});
+            &:after {
+                content: ".pattern(@{value}, @{color-random});";
+            }
+        }
+    });
 
-.invoke-pattern(@pattern-name) {
-    // this makes the pattern name into a class, which sets the pattern as a background
-    // .@{pattern-name} { background: data-uri('image/svg+xml;charset=UTF-8', 'svg/@{pattern-name}.svg')}
+    .invoke-pattern(@pattern-name) {
+        // this makes the pattern name into a class, which sets the pattern as a background
+        // .@{pattern-name} { background: data-uri('image/svg+xml;charset=UTF-8', 'svg/@{pattern-name}.svg')}
+    }
 }
+
+.output-patterns();
 
 .pattern(@pattern-name: anchors-away; @base: @background-color; @contrast: 1.125;) {
     @anchors-away: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%20width%3D%2280%22%20height%3D%2280%22%3E%3Cpath%20fill%3D%22@{fg}%22%20d%3D%22M14%2016H9v-2h5V9.87a4%204%200%201%201%202%200V14h5v2h-5v15.95A10%2010%200%200%200%2023.66%2027l-3.46-2%208.2-2.2-2.9%205a12%2012%200%200%201-21%200l-2.89-5%208.2%202.2-3.47%202A10%2010%200%200%200%2014%2031.95V16zm40%2040h-5v-2h5v-4.13a4%204%200%201%201%202%200V54h5v2h-5v15.95A10%2010%200%200%200%2063.66%2067l-3.47-2%208.2-2.2-2.88%205a12%2012%200%200%201-21.02%200l-2.88-5%208.2%202.2-3.47%202A10%2010%200%200%200%2054%2071.95V56zm-39%206a2%202%200%201%201%200-4%202%202%200%200%201%200%204zm40-40a2%202%200%201%201%200-4%202%202%200%200%201%200%204zM15%208a2%202%200%201%200%200-4%202%202%200%200%200%200%204zm40%2040a2%202%200%201%200%200-4%202%202%200%200%200%200%204z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E";
