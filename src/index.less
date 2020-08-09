@@ -1,26 +1,16 @@
 // environment
-// all of these files only output variables/mixins for the environment, no CSS rules
 
-@import (reference) "properties";
-@import (reference) "settings";
-
-@import (reference) "viewports";
-@import (reference) "targets";
-
-@import (reference) "colors/grays";
-@import (reference) "colors/palette";
-@import (reference) "colors/semantic";
-
+@import "properties";
+@import "settings";
+@import "viewports";
+@import "targets";
+@import "colors";
 @import "patterns"; 
-@import (reference) "mixins/mixins";
-
-& when (@randomness = true) {
-    @import (reference) "random";
-}
+@import "mixins/mixins";
+@import "random";
 
 
 // css output
-// edit these files directly to change the appearance of HTML elements
 
 @import "reset";
 
@@ -116,13 +106,10 @@
 
     padding: @text-padding;
 
-    min-width: @avatar-width;
-    max-width: 100%;
+    width: 100%;
 
     .default(border-width);
     .default(border-radius);
-
-    width: @aside-width;
 
     &:last-child {
         .clearfix();

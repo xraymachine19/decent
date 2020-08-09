@@ -1,9 +1,8 @@
 .well {
-    .set-lumafix(@main-background, @gray-lighter);
-    @well-background: @lumafix;
+    @well-background: @gray-lighter;
     .default(padding);
     .default(border-radius);
-    .pattern(texture; @well-background;);
+    .pattern(@well-pattern; @well-background;);
     box-shadow: inset @box-shadow;
 
     &.card {

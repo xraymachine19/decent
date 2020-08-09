@@ -11,19 +11,17 @@
 // rules for button elements
 
 .button-elements({
-    // .default(border);
-    border: none;
     .default(border-radius);
-    // .default(font-size);
-    font-size: inherit;
     .default(box-shadow);
   
     display: inline;
-    font-family: inherit;
-    padding: 1em / @golden-ratio !important;
+    font: inherit;
+    padding: 1em / @golden-ratio;
+    border: none;
+    .default(border-width);
     .button-color(@default);
     max-width: @aside-width;
-    line-height: inherit;
+    line-height: 1;
     text-align: center;
     vertical-align: middle;
     background-image: none;
@@ -40,10 +38,6 @@
       transform: scale(.99);
       box-shadow: none;
     }
-
-    .on-tablet({
-      width: auto;
-    });
 
     each(@semantic-color-names, {
       @color: @@value;

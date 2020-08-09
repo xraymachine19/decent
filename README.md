@@ -16,6 +16,13 @@ A Less library for smarter component styling
 1. Run 'lessc src/index.less docs/css/index.css'.
 2. If JS is enabled for randomness, use 'lessc --js src/index.less docs/css/index.css'
 
+## Dev settings
+
+In **settings.less**, you'll find two settings of note in compiling:
+
+- @output-patterns: This outputs all the demo pattern CSS. It's *over 300kb*.
+- @randomness: This enables randomness in a bunch of variables. Great for testing.
+
 ## Less errors and randomness 
 
 1. Some of the random mixins randomly throw errors 

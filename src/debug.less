@@ -4,13 +4,13 @@
 // show which elements didn't make the contrast standard (in debug)
 // this is useful for figuring out which background colors have failed
 // in WCAG AAA level contrast standards (7 for normal text)
-.apply-contrast() when (@contrast-ratio < @standard) 
-    and (@debug = true) 
-    and (@property = color) {
-    &:after {
-        content:"Under standard! (@{contrast-ratio} < @{contrast-standard})";
-        font-size: 80%;
-        background: @failure;
-        color: white;
-    }
-}
+// .apply-contrast() when (@contrast-ratio < @standard) 
+//     and (@debug = true) 
+//     and (@property = color) {
+//     &:after {
+//         content:"Under standard! (@{contrast-ratio} < @{contrast-standard})";
+//         font-size: 80%;
+//         background: @failure;
+//         color: white;
+//     }
+// }

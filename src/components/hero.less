@@ -15,7 +15,7 @@
     .set-pattern() when (@randomness = true) {
         .set-random-pattern(@pattern-list) {
             @random: `Math.random()`;
-            @length: length(@pattern-list);
+            @length: length(@pattern-list) - 1; // TODO: look into randomness bugs
             @the-pattern: floor(@random*@length);
             @random-pattern: extract(@pattern-list, @the-pattern);
         }
@@ -25,7 +25,7 @@
     }
 
     .set-pattern() when (@randomness = false) {
-        @pattern: topography;
+        @pattern: @hero-pattern;
     }
 
     .set-pattern();
@@ -72,5 +72,9 @@
 
     .on-tablet({
         padding: @gutter;
+    });
+
+    .on-desktop({
+        padding: @gutter * 2;
     });
 }
