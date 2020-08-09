@@ -1,3 +1,15 @@
+// everything defined here is considered a button within the project
+
+.button-elements(@rules) {
+  button,
+  .button, 
+  input[type="button"],
+  input[type="submit"] 
+  { @rules();}
+}
+
+// rules for button elements
+
 .button-elements({
     // .default(border);
     border: none;
@@ -11,7 +23,7 @@
     padding: 1em / @golden-ratio !important;
     .button-color(@default);
     max-width: @aside-width;
-    line-height: 1;
+    line-height: inherit;
     text-align: center;
     vertical-align: middle;
     background-image: none;
@@ -39,6 +51,8 @@
     });
 });
 
+// button-color handles all the button color rules
+
 .button-color(@color) {
   // .contrast(color, @color);
   // background: @color;
@@ -48,18 +62,17 @@
 
   .set-contrast-ceiling(@color);
 
+  // preferentially tint if we can
   .color() when (@contrast-ceiling > 3) {
     color: white;
   }
 
+  // if not, shade with higher contrast
   .color() when (default()) {
     .contrast(color; @color; 4.5; shade;);
   }
 
   .color();
   background-color: @color;
-  // .set-lumafix(@color, @gray-dark);
-  // border-color:@lumafix;
-  // .pattern(texture; @color;);
   .contrast(border-color; @color; 1.5; shade;);
 }

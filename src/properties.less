@@ -271,7 +271,7 @@ box-sizing;
 @list-style-type: disc; // Specifies the marker style for a list-item.
 
 //Margin Properties
-@margin: 1em; // Sets the margin on all four sides of the element.
+@margin: @padding; // Sets the margin on all four sides of the element.
 @margin-bottom: @margin; // Sets the bottom margin of the element.
 @margin-left: @margin; // Sets the left margin of the element.
 @margin-right: @margin; // Sets the right margin of the element.
@@ -280,7 +280,7 @@ box-sizing;
 //Multi-column Layout Properties
 @column-count: auto; // Specifies the number of columns in a multi-column element.
 @column-fill: balance; // Specifies how columns will be filled.
-@column-gap: @margin; // Specifies the gap between the columns in a multi-column element.
+@column-gap: @gutter; // Specifies the gap between the columns in a multi-column element.
 @column-rule: @column-rule-width @column-rule-style @column-rule-color; // Specifies a straight line, or "rule", to be drawn between each column in a multi-column element.
 @column-rule-color: @border-color; // Specifies the color of the rules drawn between columns in a multi-column layout.
 @column-rule-style: @border-style; // Specifies the style of the rule drawn between the columns in a multi-column layout.
@@ -297,7 +297,7 @@ box-sizing;
 @outline-width: @border-width; // Sets the width of the outline.
 
 // Padding Properties
-@padding: 1rem * @golden-ratio; // Sets the padding on all four sides of the element.
+@padding: floor(1rem * @golden-ratio); // Sets the padding on all four sides of the element.
 @padding-bottom: @padding; // Sets the padding to the bottom side of an element.
 @padding-left: @padding; // Sets the padding to the left side of an element.
 @padding-right: @padding; // Sets the padding to the right side of an element.

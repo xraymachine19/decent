@@ -63,22 +63,8 @@
     // the actual CSS output for this whole mixin is this one line
 	.apply-contrast(@contrast-ratio, @tone, @index) when (default()) {
         @{property}: @contrast;
-
-        // show which elements didn't make the contrast standard (in debug)
-        // this is useful for figuring out which background colors have failed
-        // in WCAG AAA level contrast standards (7 for normal text)
-        & when (@contrast-ratio < @standard) 
-           and (@debug = true) 
-           and (@property = color) {
-            &:after {
-                content:"Under standard! (@{contrast-ratio} < @{contrast-standard})";
-                font-size: 80%;
-                background: @failure;
-                color: white;
-            }
-        }
     }
-    
+
     // this works like .set-tone if no mode is specified
     .tone(@compare);
     

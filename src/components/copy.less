@@ -1,4 +1,8 @@
 .copy {
+    @lh: 1.85;
+
+    line-height: @lh;
+
     p {
         .default(text-indent);
         text-align: justify;
@@ -8,20 +12,28 @@
     &.dropcap {
         p:first-child {
             &:extend(.dropcap all);
+            
+            &:first-letter {
+                line-height: 2*@lh;
+            }
         }
     }
 
     .on-tablet({
+
         &.two-column {
             display: inherit;
             column-count: 2;
+            .default(column-gap);
         }
     });
 
     .on-desktop({
+        
         &.three-column {
             display: inherit;
             column-count: 3;
+            .default(column-gap);
         }
     });
 }

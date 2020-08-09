@@ -137,48 +137,15 @@
 
           <h2>.copy</h2>
 
-          <p>The .copy component lays out the paragraphs inside it like copy.</p>
-
-          <div class="copy">
+          <p>The .copy component lays out the paragraphs inside it like copy. Here it is with the <strong>.two-column</strong> and <strong>.dropcap</strong> component:</p>
+          <div class="copy two-column dropcap">
             <p>Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly. When paragraphs are long enough, the text will run under the first letter. Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly. When paragraphs are long enough, the text will run under the first letter.
             </p>
             <p>Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly. When paragraphs are long enough, the text will run under the first letter.</p>
           </div>
 
-          <p>It supports the <strong>.two-column</strong> and the <strong>.dropcap</strong> component.</p>
-          <div class="copy two-column small dropcap">
-            <p>Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly. When paragraphs are long enough, the text will run under the first letter. Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly. When paragraphs are long enough, the text will run under the first letter.
-            </p>
-            <p>Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly. When paragraphs are long enough, the text will run under the first letter.</p>
-          </div>
 
-          <h2>.pagination</h2>
-
-          <p>The pagination component turns a ul into a navigable list of pages.</p>
-
-          <ul class="pagination border">
-            <li>
-              <a href="#">1</a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-          </ul>
-
-          <ul class="pagination well">
-            <li>
-              <a href="#">1</a>
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-          </ul>
+          
           
 
           <h2>.group</h2>
@@ -260,7 +227,7 @@
             <h1>The hero class is loud and gets attention.</h1>
             <p class="feature">Body copy should <em>probably</em> have a <strong>.feature</strong> class to match the size.</p>
             <p>Normal paragraphs will be a bit bigger too, though.</p>
-            <p class="text-center"><button class="info">Sign up now</button></p>
+            <p class="text-align-center"><button class="info">Sign up now</button></p>
           </div>
 
           <p>As a direct descendant of the body element, the hero component takes up the full page width and commands more attention.</p>
@@ -331,6 +298,20 @@
           <div class="group bar border border-radius island">
             <button class="skyblue">Send Fuzzy</button><button class="skyblue">Send Scratches</button><button class="failure">Cancel</button>
           </div>
+
+          <p>Bars work for pagination too:</p>
+
+          <ul id="pagination" class="well bar">
+            <li>
+              <a href="#pagination" class="button">1</a>
+            </li>
+            <li>
+              <a href="#pagination" class="button">2</a>
+            </li>
+            <li>
+              <a href="#pagination" class="button">3</a>
+            </li>
+          </ul>
 
           <h2>.two-column</h2>
 
@@ -423,54 +404,25 @@
         <section>
           <h2>'No' classes</h2>
 
-          <p>Want less of something? The "no" utility classes help.</p>
+          <p>Tweak the appearance of your HTML with the no- utility classes.</p>
 
-          <p>A plain ol' card:</p>
-          <div class="card">
-            <div class="overlay">
-              <img src="http://placekitten.com/340/140">
-              <span class="feature badge top right">A+!</span>
-            </div>
-            <ul class="group">
-              <li>Test 1</li>
-              <li>Test 2</li>
-              <li>Test 3</li>
-            </ul>
-            <p class="feature text-center">Summary results:</p>
-            <p>You did okay.</p>
-            <button class="failure feature full-width">Accept my fate</button>
-          </div>
+          <dl>
+            <dt>.no-margin</dt>
+            <dd>Remove an element's margin. Also supports -top, -bottom, -left, and -right suffixes.</dd>
+            <dt>.no-padding</dt>
+            <dd>Remove an element's padding. Also supports -top, -bottom, -left, and -right suffixes.</dd>
+            <dt>.no-shadow</dt>
+            <dd>Remove an element's shadow.</dd>
+            <dt>.no-shadows</dt>
+            <dd>Remove an element's shadow, and the shadows of its children elements.</dd>
+          </dl>
 
-          <div class="card no-shadow">
-            <div class="overlay">
-              <img src="http://placekitten.com/340/140">
-              <span class="feature badge top right">A+!</span>
-            </div>
-            <ul class="group">
-              <li>Test 1</li>
-              <li>Test 2</li>
-              <li>Test 3</li>
-            </ul>
-            <p class="feature text-center">Summary results:</p>
-            <p>You did okay.</p>
-            <button class="failure feature full-width">Accept my fate</button>
-          </div>
+          <p>The others should be self-explanatory:</p>
 
-          <div class="card no-shadows">
-            <div class="overlay">
-              <img src="http://placekitten.com/340/140">
-              <span class="feature badge top right">A+!</span>
-            </div>
-            <ul class="group">
-              <li>Test 1</li>
-              <li>Test 2</li>
-              <li>Test 3</li>
-            </ul>
-            <p class="feature text-center">Summary results:</p>
-            <p>You did okay.</p>
-            <button class="failure feature full-width">Accept my fate</button>
-          </div>
-        </section>
+          <ul>
+            <li>no-</li>
+          </ul>
+          
 
 
         <section>

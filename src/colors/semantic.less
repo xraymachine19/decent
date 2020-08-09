@@ -281,7 +281,7 @@
 .set-default() {
 	// a nondescript color that blends in and works as a default
 
-	.set-average(@reaction, @info, @warning, @success, @failure, @gray;);
+	.set-average(@reaction, @info, @warning, @success, @failure;);
 	.set-lumafix(@rep-color; @strength: 80%;);
 	@default: mix(@average, @lumafix, 62%);
 }

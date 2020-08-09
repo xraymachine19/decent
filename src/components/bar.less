@@ -1,14 +1,12 @@
 .bar {
     position: relative;
     .default(line-height);
-    line-height: 1;
+    line-height: @golden-ratio;
     max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 
-    padding: @padding / @golden-ratio;
-
-    .bar {
-        padding: 0;
-    }
+    padding: @padding @padding/@golden-ratio;
 
     .top, .bottom, .left, .right {
         float: left;
@@ -18,11 +16,13 @@
     > * {
         display: inline;
         width: auto;
-        .default(max-width);
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        margin-right: @padding;
-        padding: @text-padding;
+        margin-right: @text-padding-right;
+
+        &:first-child {
+            margin-left: 0;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -37,10 +37,17 @@
         width: auto;
         display: inline;
         margin-bottom: 0;
+        .small;
+
+        &:last-child {
+            margin-top: 0;
+        }
     });
 
     li {
         border-bottom: none;
+        margin: 0;
+        padding: 0;
     }
 
     &.border-radius {

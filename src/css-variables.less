@@ -1,0 +1,31 @@
+:root {
+    each(@semantic-color-names, {
+        --@{value}: @@value;
+    });
+
+    each(@gray-names, {
+        --@{value}: @@value;
+    });
+
+    each(@palette-color-names, {
+        --@{value}: @@value;
+    });
+
+    --margin: @margin;
+
+    --padding: @padding;
+
+    --gutter: @gutter;
+
+    --background-color: @background-color;
+
+    --gutter: @gutter;
+
+    --box-shadow: @box-shadow;
+
+    --gutter: @gutter;
+
+
+
+    --main-bg-color: coral;
+}
