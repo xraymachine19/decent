@@ -1,9 +1,39 @@
 // makes any element into the given color
 
 .colorize(@background; @colorize-contrast: @text-contrast; @property: color; @mode: auto;) {
-    background-color: @background;
+    // background-color: @background;
     .contrast(color; @background; @colorize-contrast;);
     .contrast(border-color; @background; @colorize-contrast/6; shade;);
+
+    .output() when (@output-variables = true) {
+        each(@semantic-color-names, {
+            & when (@background = @@value) {
+                @var: @{value};
+                background-color: ~"var(--@{value})";
+            }
+        });
+    
+        each(@palette-color-names, {
+            & when (@background = @@value) {
+                @var: @{value};
+                background-color: ~"var(--@{value})";
+            }
+        });
+    
+        each(@gray-names, {
+            & when (@background = @@value) {
+              @var: @{value};
+              background-color: ~"var(--@{value})";
+            }
+        });
+    }
+
+    .output() when (default()) {
+        background-color: @background;
+    }
+
+    .output();
+    
 
     .debug() when (@debug = true) {
         @luma: round(luma(@background), 2);
