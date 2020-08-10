@@ -2,18 +2,17 @@
 
 @import "properties";
 @import "settings";
-@import "viewports";
-@import "targets";
 @import "colors";
 @import "patterns"; 
+@import "targets";
 @import "mixins/mixins";
-@import "random";
-
+@import "random"; // dev only
 
 // css output
 
 @import "reset";
 
+@import "css-variables";
 @import "property-classes";
 
 @import "elements/body";
@@ -59,47 +58,18 @@
 @import "utilities";
 @import "no";
 @import "debug";
-@import "css-variables";
-
-.set-closer-farther-hue(@teal, @blue, @cyan);
-
-.cyan-before();
-
-.cyan-before() when (@closer = @teal) { .cyan:before { content:"teal w";}}
-
-.cyan-before() when (@closer = @cyan) { .cyan:before { content:"cyan w";}}
-
-.cyan-before() when (@closer = @blue) { .cyan:before { content:"blue w";}}
-
-// button.warning {
-//     &:before {
-//         content:"";
-//         float: left;
-//         margin-top: -2px;
-//         margin-right: @padding*.6;
-//         .icon(alert-triangle; @warning;);
-//     }
-// }
-
-// button.failure {
-//     &:before {
-//         content:"";
-//         float: left;
-//         margin-top: -2px;
-//         margin-right: @padding*.6;
-//         .icon(alert-triangle; @failure;);
-//     }
-// }
-
-
-.ambient { .colorize(@ambient);}
-.base-color { .colorize(@base-color);}
 
 // add any other Less/CSS here
 
 
+
+
+// demo site CSS
+
+.ambient { .colorize(@ambient);}
+.base-color { .colorize(@base-color);}
+
 .color-palette div {
-    // color palette
     float: left;
 
     margin-right: @padding/3;
@@ -159,34 +129,3 @@
         padding: @text-padding;
     }
 }
-
-.icon {
-    @width: @line-height;
-    @spacer: 222px;
-
-    float: left;
-    display: block;
-    position: relative;
-    width: @width;
-    height: @width;
-    padding: @padding;
-    margin: @padding;
-    margin-right: @spacer;
-    background: transparent;
-    background-repeat: no-repeat;
-    color: @action;
-
-    &:after {
-        width: @spacer;
-        font-size: 85%;
-        position: absolute;
-        bottom: 0;
-        left: @width + 10px;
-    }
-
-    &:last-child {
-        .clearfix();
-    }
-}
-
-#icon_library { display: none;}

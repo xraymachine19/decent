@@ -1,4 +1,5 @@
 // TODO: namespace these
+// TODO: dump icons
 
 #icons {
 
@@ -553,3 +554,38 @@ wifi;
 
 
 }
+
+
+// orphaned icon stuff
+
+
+.icon {
+    @width: @line-height;
+    @spacer: 222px;
+
+    float: left;
+    display: block;
+    position: relative;
+    width: @width;
+    height: @width;
+    padding: @padding;
+    margin: @padding;
+    margin-right: @spacer;
+    background: transparent;
+    background-repeat: no-repeat;
+    color: @action;
+
+    &:after {
+        width: @spacer;
+        font-size: 85%;
+        position: absolute;
+        bottom: 0;
+        left: @width + 10px;
+    }
+
+    &:last-child {
+        .clearfix();
+    }
+}
+
+#icon_library { display: none;}

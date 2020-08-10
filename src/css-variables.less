@@ -1,26 +1,17 @@
 :root {
+    --base-color: @base-color;
+    --body-background: @action;
+    --main-background: @white;
+
     each(@semantic-color-names, {
         --@{value}: @@value;
     });
 
-    each(@palette-color-names, {
-        --@{value}: @@value;
-    });
-
-    each(@gray-names, {
-        --@{value}: @@value;
-    });
-
-    --base-color: @base-color;
-    --body-background: @action;
-    --main-background: @white;
     --text-contrast: @text-contrast;
     --ambient: @ambient;
-    --golden-ratio: @golden-ratio;
     --shadow-color: @shadow-color;
     --shadow-position: @shadow-position;
     --shadow-blur: @shadow-blur;
-    --pi: @pi;
     --text-measure: @text-measure;
     --text-padding: @text-padding;
     --text-padding-top: @text-padding-top;
@@ -38,9 +29,13 @@
     --tablet-width: @tablet-width;
     --desktop-width: @desktop-width;
 
+    each(@palette-color-names, {
+        --@{value}: @@value;
+    });
 
-
-
+    each(@gray-names, {
+        --@{value}: @@value;
+    });
 
     each(@css-property-names, { 
         --@{value}: @@value;

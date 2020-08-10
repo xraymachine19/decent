@@ -2,7 +2,7 @@
 @debug: false;
 @randomness: true; .set-random-color();
 @base-color: @random-color;
-@output-patterns: true;
+@output-patterns: false;
 
 // basics
 
@@ -25,7 +25,7 @@
 @ambient: screen(screen(@base-color, @base-color), @base-color);
 @golden-ratio: 1.618;
 @pi: 3.14159;
-@shadow-color: fade(difference(@white, @ambient), 22.5%);
+@shadow-color: fade(difference(white, @ambient), 22.5%);
 @shadow-position: 0 1px;
 @shadow-blur: 2px;
 

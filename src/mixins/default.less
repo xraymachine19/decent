@@ -6,5 +6,7 @@
 }
 
 .default(@attribute) when (default()) {
-    @{attribute}: @@attribute;
+    // @{attribute}: @@attribute;
+    @var: ~"--@{attribute}";
+    @{attribute}: var(@var);
 }

@@ -5,9 +5,12 @@ each(@css-property-names, {
     @property: @value;
     @attribute: @@value;
   
-    &.@{property} { 
-      @{property}: @attribute;
+    .@{property} { 
+      // @{property}: @attribute;
+      .default(@property);
     };
+
+
 });
 
 // semantic classes defaults 

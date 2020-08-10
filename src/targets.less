@@ -59,3 +59,24 @@
         @rules();
     }
 }
+
+// these parametric mixins allow you to target a specific size viewport
+
+.on-phone(@rules) {
+    @media screen and (max-width: ~"calc(@{tablet-width} - 1px") { @rules();}
+    // TODO: test this
+ }
+ 
+ .on-tablet(@rules) {
+    @media screen and (min-width: @tablet-width) { @rules();}
+ }
+ 
+ .on-desktop(@rules) {
+    @media screen and (min-width: @desktop-width) { @rules();}
+ }
+
+ // target print
+ 
+ .in-print(@rules) {
+    @media print { @rules();}
+ }

@@ -9,17 +9,11 @@
 .headline-elements({
   .default(font-family);
   font-weight: bold;
-  margin-top: 1em / @golden-ratio;
+  margin-top: 1em * @golden-ratio;
   margin-bottom: 1em / @golden-ratio;
   letter-spacing: -.025em;
   color: inherit;
   line-height: @golden-ratio;
-  
-  max-width: @max-width;
-
-  p + &, aside + &, div + &, section + &, ul + &, ol + & {
-    margin-top: 1.5em;
-  }
 
   &:first-child {
     margin-top: 0;

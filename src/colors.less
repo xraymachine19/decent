@@ -3,6 +3,7 @@
 
 @base: @base-color;
 @color-strength: 75% + 15%*(unit(luma(@base))/100);
+@ambient-mix: 84%;
 
 
 @compare-mix: 80%;
@@ -56,85 +57,85 @@
 .set-red() {
     @base: average(tomato, firebrick);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @red: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @red: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-orange() {
     @base: orange;
     .set-lumafix(@base; @strength: @color-strength/3;);
-    @orange: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @orange: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-yellow() {
     @base: yellow;
     .set-lumafix(@base; @strength: @color-strength/4;);
-    @yellow: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @yellow: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-olive() {
     @base: average(olive, olivedrab);
     .set-lumafix(@base; @strength: @color-strength/3;);
-    @olive: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @olive: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-green() {
     @base: forestgreen;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @green: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @green: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-teal() {
     @base: teal;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @teal: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @teal: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-cyan() {
     @base: cyan;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @cyan: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @cyan: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-skyblue() {
     @base: skyblue;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @skyblue: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @skyblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-blue() {
     @base: average(cornflowerblue, royalblue);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @blue: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @blue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-indigo() {
     @base: indigo;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-	@indigo: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+	@indigo: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-violet() {
     @base: violet;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @violet: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @violet: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-magenta() {
     @base: magenta;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @magenta: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @magenta: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-purple() {
     @base: purple;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @purple: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @purple: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-brown() {
     @base: sienna;
     .set-lumafix(@base; @strength: @color-strength*(5/6););
-	@brown-base: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+	@brown-base: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 	.bump-brown();
 
 	.bump-brown() when (luma(@brown-base) > luma(@indigo)) {
@@ -150,20 +151,26 @@
 .set-pink() {
     @base: pink;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @pink: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @pink: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-lime() {
     @base: lime;
     .set-lumafix(@base; @strength: @color-strength/3;);
-    @lime: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @lime: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-navy() {
     @base: navy;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @navy: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @navy: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
+
+// scarlet
+// crimson 
+// orangered
+// lemon 
+
 
 
 // grays 
@@ -326,7 +333,7 @@
 
 	@reaction-base: difference(@base-color, white);
 	.set-lumafix(@reaction-base; @strength: 90%;);
-    @reaction: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+    @reaction: @lumafix;
 }
 
 .set-reaction() when (@base-color = white) { @reaction: black;}
@@ -402,18 +409,18 @@
 
 	.set-success-final() when (luma(@base-color) < 30%) {
 		.set-lumafix(@success-base, @green, @strength: 85%);
-		@success-final: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+		@success-final: @lumafix;
 	}
 
 	.set-success-final() when (default()) {
 		.set-lumafix(@success-base, @green, @strength: 40%);
-		@success-final: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+		@success-final: @lumafix;
 	}
 
 	.bump-success() when (luma(@success-final) < luma(@warning)) {
 		// bump it up to near @warning's brightness if it's not there
 		.set-lumafix(@success-final; @warning; 50%);
-		@success: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
+		@success: @lumafix;
 	}
 
 	.bump-success() when (default()) {
