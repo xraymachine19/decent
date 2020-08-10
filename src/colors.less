@@ -25,7 +25,10 @@
     .set-violet();
     .set-magenta();
     .set-purple();
-    .set-brown();
+	.set-brown();
+	.set-pink();
+	.set-lime();
+	.set-navy();
 }
 
 .set-lighter(@color) {
@@ -143,6 +146,25 @@
 		@brown: @brown-base;
 	}
 }
+
+.set-pink() {
+    @base: pink;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @pink: mix(@lumafix, @compare-color, @compare-mix);
+}
+
+.set-lime() {
+    @base: lime;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @lime: mix(@lumafix, @compare-color, @compare-mix);
+}
+
+.set-navy() {
+    @base: navy;
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    @navy: mix(@lumafix, @compare-color, @compare-mix);
+}
+
 
 // grays 
 
