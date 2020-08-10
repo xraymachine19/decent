@@ -133,9 +133,9 @@
     .set-lumafix(@base; @strength: @color-strength*(5/6););
 	@brown-base: mix(@lumafix, @compare-color, @compare-mix);
 	.bump-brown();
-	
-	.bump-brown() when (luma(@brown-base) < luma(@gray)) {
-		.set-lumafix(@brown-base, @gray);
+
+	.bump-brown() when (luma(@brown-base) > luma(@indigo)) {
+		.set-lumafix(@brown-base, @indigo);
 		@brown: @lumafix;
 	}
 

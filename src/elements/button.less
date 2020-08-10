@@ -11,14 +11,15 @@
 // rules for button elements
 
 .button-elements({
+    .default(border-style);
+    .default(border-width);
     .default(border-radius);
     .default(box-shadow);
   
     display: inline;
     font: inherit;
     padding: 1em / @golden-ratio;
-    border: none;
-    .default(border-width);
+    
     .button-color(@default);
     max-width: @aside-width;
     line-height: 1;
