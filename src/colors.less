@@ -31,110 +31,110 @@
 	.set-navy();
 }
 
-.set-lighter(@color) {
-    .set-contrast-ceiling(@color);
-    .set-contrast(@color; @contrast-ceiling/2; @mode: tint;);
-    @lighter: @contrast;
-}
-.set-light(@color) {
-    .set-contrast-ceiling(@color);
-    .set-contrast(@color; @contrast-ceiling/3; @mode: tint;);
-    @light: @contrast;
-}
-.set-darker(@color) {
-    .set-contrast-ceiling(@color);
-    .set-contrast(@color; @contrast-ceiling/2; @mode: shade;);
-    @darker: @contrast;
-}
-.set-dark(@color) {
-    .set-contrast-ceiling(@color);
-    .set-contrast(@color; @contrast-ceiling/3; @mode: shade;);
-    @dark: @contrast;
-}
+// .set-lighter(@color) {
+//     .set-contrast-ceiling(@color);
+//     .set-contrast(@color; @contrast-ceiling/2; @mode: tint;);
+//     @lighter: @contrast;
+// }
+// .set-light(@color) {
+//     .set-contrast-ceiling(@color);
+//     .set-contrast(@color; @contrast-ceiling/3; @mode: tint;);
+//     @light: @contrast;
+// }
+// .set-darker(@color) {
+//     .set-contrast-ceiling(@color);
+//     .set-contrast(@color; @contrast-ceiling/2; @mode: shade;);
+//     @darker: @contrast;
+// }
+// .set-dark(@color) {
+//     .set-contrast-ceiling(@color);
+//     .set-contrast(@color; @contrast-ceiling/3; @mode: shade;);
+//     @dark: @contrast;
+// }
 
 
 .set-red() {
     @base: average(tomato, firebrick);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @red: mix(@lumafix, @compare-color, @compare-mix);
+    @red: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-orange() {
     @base: orange;
     .set-lumafix(@base; @strength: @color-strength/3;);
-    @orange: mix(@lumafix, @compare-color, @compare-mix);
+    @orange: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-yellow() {
     @base: yellow;
     .set-lumafix(@base; @strength: @color-strength/4;);
-    @yellow: mix(@lumafix, @compare-color, @compare-mix);
+    @yellow: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-olive() {
     @base: average(olive, olivedrab);
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @olive: mix(@lumafix, @compare-color, @compare-mix);
+    @olive: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-green() {
     @base: forestgreen;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @green: mix(@lumafix, @compare-color, @compare-mix);
+    @green: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-teal() {
     @base: teal;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @teal: mix(@lumafix, @compare-color, @compare-mix);
+    @teal: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-cyan() {
     @base: cyan;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @cyan: mix(@lumafix, @compare-color, @compare-mix);
+    @cyan: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-skyblue() {
     @base: skyblue;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @skyblue: mix(@lumafix, @compare-color, @compare-mix);
+    @skyblue: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-blue() {
     @base: average(cornflowerblue, royalblue);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @blue: mix(@lumafix, @compare-color, @compare-mix);
+    @blue: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-indigo() {
     @base: indigo;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @indigo: mix(@lumafix, @compare-color, @compare-mix);
+	@indigo: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-violet() {
     @base: violet;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @violet: mix(@lumafix, @compare-color, @compare-mix);
+    @violet: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-magenta() {
     @base: magenta;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @magenta: mix(@lumafix, @compare-color, @compare-mix);
+    @magenta: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-purple() {
     @base: purple;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @purple: mix(@lumafix, @compare-color, @compare-mix);
+    @purple: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-brown() {
     @base: sienna;
     .set-lumafix(@base; @strength: @color-strength*(5/6););
-	@brown-base: mix(@lumafix, @compare-color, @compare-mix);
+	@brown-base: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 	.bump-brown();
 
 	.bump-brown() when (luma(@brown-base) > luma(@indigo)) {
@@ -150,19 +150,19 @@
 .set-pink() {
     @base: pink;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @pink: mix(@lumafix, @compare-color, @compare-mix);
+    @pink: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-lime() {
     @base: lime;
     .set-lumafix(@base; @strength: @color-strength/3;);
-    @lime: mix(@lumafix, @compare-color, @compare-mix);
+    @lime: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 .set-navy() {
     @base: navy;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @navy: mix(@lumafix, @compare-color, @compare-mix);
+    @navy: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 }
 
 
