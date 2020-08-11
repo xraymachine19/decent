@@ -13,12 +13,6 @@ each(@css-property-names, {
 
 });
 
-// semantic classes defaults 
-
-// .semantic-classes({
-//     .default(padding);
-// });
-
 // rules for block level elements
 
 .block-level-elements({
@@ -39,12 +33,14 @@ each(@css-property-names, {
 
 // width classes also work similarly
 
-.icon-width { width: @icon-width;}
+.icon-width { max-width: @icon-width;}
 
-.avatar-width { width: @avatar-width;}
+.avatar-width { max-width: @avatar-width;}
 
 .aside-width { max-width: @aside-width;}
 
 .column-width { max-width: @column-width;}
+
+.page-width { max-width: @page-width;}
 
 .full-width { width: @full-width;}

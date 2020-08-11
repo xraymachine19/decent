@@ -3,7 +3,7 @@
 
     @subtle-patterns: bamboo, charlie-brown, diagonal-lines, endless-clouds, eyes,
     falling-triangles, glamorous, graph-paper, heavy-rain, i-like-food, jigsaw, 
-    morphing-diamonds, parkay-floor, pixel-dots, rain, signal, texture, tiny-checkers,
+    morphing-diamonds, parkay-floor, pixel-dots, rain, signal, texture, tiny-checkers, 
     volcano-lamp, zig-zag;
   
     font-size: 110%;
@@ -15,9 +15,9 @@
     .set-pattern() when (@randomness = true) {
         .set-random-pattern(@pattern-list) {
             @random: `Math.random()`;
-            @length: length(@pattern-list) - 1; // TODO: look into randomness bugs
+            @length: length(@pattern-list);
             @the-pattern: floor(@random*@length);
-            @random-pattern: extract(@pattern-list, @the-pattern);
+            @random-pattern: extract(@pattern-list, @the-pattern - 1);
         }
 
         .set-random-pattern(@subtle-patterns);

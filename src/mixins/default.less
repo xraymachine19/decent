@@ -1,12 +1,31 @@
-// indicates a default attribute by intent
+// indicates a default CSS property by intent
 // any valid CSS property will work
+// outputs a reference to the custom CSS property
 
-.default(@attribute) when (@attribute = color) {
-    .contrast(@attribute; @background-color;);
+.default(@css-property) when (@css-property = color) {
+    .contrast(@css-property; @background-color;);
 }
 
-.default(@attribute) when (default()) {
-    // @{attribute}: @@attribute;
-    @var: ~"--@{attribute}";
-    @{attribute}: var(@var);
+.default(@css-property) when (isList(@css-property)) {
+    each(@css-property, {
+        @reference: ~"--@{value}";
+        @{value}: var(@reference);
+    });
+}
+
+.default(@css-property; ...) {
+    each(@arguments, {
+        @reference: ~"--@{value}";
+        @{value}: var(@reference);
+    });
+}
+
+.default(@css-property) when (@css-property = text-padding) {
+    @reference: ~"--@{css-property}";
+    @{css-property}: var(@reference);
+}
+
+.default(@css-property) when (default()) {
+    @reference: ~"--@{css-property}";
+    @{css-property}: var(@reference);
 }

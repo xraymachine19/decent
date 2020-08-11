@@ -3,11 +3,8 @@ form {
 }
 
 input {
-    .default(font-family);
-    .default(font-size);
-    .default(line-height);
-    .default(border);
-    .default(border-radius);
+    .default(font-family, font-size, line-height);
+    .default(border, border-radius);
 
     .contrast(color; @main-background; 9;);
     padding: @text-padding;

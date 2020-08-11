@@ -62,8 +62,6 @@
 // add any other Less/CSS here
 
 
-
-
 // demo site CSS
 
 .ambient { .colorize(@ambient);}
@@ -79,43 +77,12 @@
 
     width: 100%;
 
-    .default(border-width);
-    .default(border-radius);
+    .default(border-width, border-radius);
 
     &:last-child {
         .clearfix();
     }
 }
-
-.less_logo {
-    // @logo: data-uri("less_logo.png");
-
-    display: block;
-    max-width: 100%;
-    // height: image-height("less_logo.png")/4;
-    // background: @logo;
-    // background-size: 100% 100%;
-    // margin: 0 auto;
-    margin-right: 12px;
-}
-
-.powered-by {
-    display: block;
-    font-size: 90%;
-    text-decoration: none;
-    margin: 0 auto;
-    max-width: 120px;
-    padding: @padding/2;
-    .contrast(color, @info);
-}
-
-.logo {
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    max-width: floor(@aside-width/2);
-    // max-width: image-width("less_logo.png")/4;
-  }
 
 .pattern-example {
     width: 100%;

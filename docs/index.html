@@ -14,7 +14,7 @@
 </head>
 
 <body class="gutter-top">
-    <nav class="action top bar sticky inner-page-width">
+    <nav class="action top bar fixed inner-page-width full-width">
         <a href="">
           <h4>Decent</h4>
         </a>
@@ -25,23 +25,41 @@
         </ul>
     </nav>
     <main>
-      <section class="hero gutter-top border-bottom">
-        <h1>Decent isn't <em>another component library</em>, it's an environment for making one of your own.</h1>
+      <section class="hero gutter-top border-bottom inner-page-width">
+        <h1 class="column-width">Decent isn't <em>another component library</em>, it's an environment for making one of your own.</h1>
       
         <p class="feature column-width margin-auto">The Decent Framework makes using your own CSS-based style&nbsp;library easier than using Bigcorp's latest shovelware.</p>
 
         <div class="text-align-center">
           Start your UI revolution here:
         </div>
-        <div class="two-column aside-width margin-auto">
-          <a class="button reaction" href="https://github.com/xraymachine19/decent">Get the code</a>
+        <div class="two-column column-width margin-auto">
+          <a class="button action" href="https://github.com/xraymachine19/decent">Get the code</a>
           
           <a class="button info" href="tutorial/">Read the docs</a>
         </div>
 
-        <div class="text-align-center feature-links">
-          <a class="powered-by" href="http://www.lesscss.org" >Powered by <img src="less_logo.png" class="less_logo"></a>
+        <div class="text-align-center aside-width margin-auto">
+          <a href="http://www.lesscss.org" ><small>Powered by</small><br><img src="less_logo.png" class="avatar-width padding"></a>
         </div>
+      </section>
+
+      <section>
+        <h1>From <em>a</em> to <em>z-index</em>, Decent supports all HTML elements and all CSS properties.</h1>
+        <p>You might not have known about the <code>kbd</code> HTML element, but your Decent project does.</p>
+        <p>It's even got a dedicated <strong>kbd.less</strong> file:</p>
+        <pre>kbd {
+    .default(border-radius);
+    .colorize(@black, 9);
+    padding: @text-padding;
+}</pre>
+      <p>In Decent, <em>every</em> HTML element has its own file, meaning all of HTML is fully supported right out of the box. Each element is handily organized into its own file, quickly accessible with <kbd>Ctrl + P</kbd> (That's the kbd element, by the way).</p>
+      <p>CSS properties are fully supported by way of Less variables in <strong>properties.less</strong> and the <strong>.default()</strong> mix-in, seen above in <code>kbd</code>.</p>
+      <p>The .default() mix-in takes any CSS property and outputs it as a CSS custom variable, meaning everyone on your project can use the framework-like features of Decent, even if they write only CSS and not Less.</p>
+      <pre>border-radius: var(--border-radius);</pre>
+      <p>The <strong>:root</strong> element will contain your project's reference to a default border-radius value.</p>
+      <p>To reuse "border-radius" yet again, your project will also have out-of-the-box support for using any CSS property as a class name, again applying the default value.</p>
+      <p>This makes it easy for other sites&mdash; or other parts of your own site&mdash; to use your prescribed defaults and values.</p>
       </section>
         
         <section>
@@ -174,7 +192,7 @@
         </section>
         
       <section>
-        <img src="decent-logo.svg" class="logo">
+        <img src="decent-logo.svg" class="avatar-width margin-auto">
       </section>
     </main>
     

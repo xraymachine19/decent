@@ -31,7 +31,6 @@ In **settings.less**, you'll find two settings of note in compiling:
 
 Known errors:
 
-- SyntaxError: variable @undefined is undefined in DIR/decent/src/components/hero.less on line 33, column 5:
 - SyntaxError: error evaluating function `color`: argument must be a color keyword or 3|4|6|8 digit hex e.g. #FFF in
 
 ## How to write for the criminal cat gang

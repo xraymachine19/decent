@@ -11,9 +11,7 @@
 // rules for button elements
 
 .button-elements({
-    .default(border-style);
-    .default(border-width);
-    .default(border-radius);
+    .default(border-style, border-width, border-radius);
     .default(box-shadow);
   
     display: inline;
@@ -21,10 +19,13 @@
     padding: 1em / @golden-ratio;
     
     .button-color(@default);
+    .set-lumafix(@default, @gray);
+    border-color: @lumafix;
     max-width: @aside-width;
     line-height: 1;
     text-align: center;
     vertical-align: middle;
+    background-color: @default;
     background-image: none;
     outline: none;
     white-space: nowrap;
@@ -69,5 +70,5 @@
 
   .color();
 
-  .contrast(border-color; @button-color; 1.5; shade;);
+  // .contrast(border-color; @button-color; 1.5; shade;);
 }

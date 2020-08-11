@@ -243,7 +243,9 @@ zig-zag;
 
 .pattern(@pattern-name: anchors-away; @color: @background-color; @pattern-contrast: 1.125;) {
     .colorize(@color);
+    pattern-name: @pattern-name;
     .set-pattern(@pattern-name; @color; @pattern-contrast;);
     background-image: @pattern;
     .default(background-position);
+    
 }
