@@ -9,6 +9,7 @@
 
     .set-tone(@color, @compare);
 
+    // tinting
     .lumafix(@color-to-fix, @compare, @index) when (@index <= @iterations)
                                         and (luma(@color-to-fix) < luma(@compare))
                                         and (@tone = white) {
@@ -16,6 +17,7 @@
         .lumafix(@new-color, @compare, @index + 1);
     }
 
+    // shading
     .lumafix(@color-to-fix, @compare, @index) when (@index <= @iterations)
                                         and (luma(@color-to-fix) > luma(@compare))
                                         and (@tone = black) {
