@@ -4,7 +4,7 @@
 
 // TODO: fix @rep-color-number, which only works once now
 
-@import (reference) "set-closer-farther-hue";
+@import (reference) "set-closer-farther";
 
 .set-rep-color(@color, @list) {
 	
@@ -12,7 +12,7 @@
 
 	.tournament(@champ, @contender, @index) when (@index <= @iterations) {
 
-	  .set-closer-farther-hue(@color, @champ, @contender);
+	  .set-closer-farther(@color, @champ, @contender, @mode: hue);
 
 	  .set-winner() when (@contender = @closer) {
 		@winner: @contender;

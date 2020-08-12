@@ -494,12 +494,10 @@
 
 	.set-new-info-base() {
 		@new-info-base: @info-base;
-		@info-was-alternate: false;
 	}
 
 	.set-new-info-base() when (@distance-warning < 150) or (@distance-success < 150) {
 		@new-info-base: @alt-info;
-		@info-was-alternate: true;
 	}
 
 	.set-info-final() {

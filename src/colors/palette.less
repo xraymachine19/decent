@@ -306,17 +306,10 @@
 
 	.set-warning-base() when (@distance-action < 70) or (@distance-reaction < 70) {
 		@warning-base: @warning-yellow;
-		@warning-was-yellow: true;
 	}
 
 	.set-warning-base() when (default()) {
 		@warning-base: @warning-orange;
-		@warning-was-yellow: false;
-	}
-
-	.set-warning-final() when (@warning-was-yellow = true) {
-		.set-lumafix(@warning-base; @strength: 24%;);
-		@warning: mix(@warning-base, @lumafix, 24%);
 	}
 
 	.set-warning-final() when (default()) {
@@ -448,12 +441,10 @@
 
 	.set-new-info-base() {
 		@new-info-base: @info-base;
-		@info-was-alternate: false;
 	}
 
 	.set-new-info-base() when (@distance-warning < 150) or (@distance-success < 150) {
 		@new-info-base: @alt-info;
-		@info-was-alternate: true;
 	}
 
 	.set-info-final() {

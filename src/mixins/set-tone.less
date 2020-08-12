@@ -1,5 +1,10 @@
-// sets variable @tone to white or black, depending on which is better for text contrast
+// sets variable @tone to white or black
+// depending on which is better for text contrast
 
 .set-tone(@color) {
   @tone: contrast(@color, black, white, 50%);
+}
+
+.set-tone(@color, @compare) {
+  @tone: if(luma(@color) > luma(@compare), black, white);
 }
