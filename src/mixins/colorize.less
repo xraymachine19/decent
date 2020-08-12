@@ -2,9 +2,10 @@
 
 .colorize(@background; @colorize-contrast: @text-contrast; @property: color; @mode: auto;) {
     background-color: @background;
-    .contrast(color; @background; @colorize-contrast;);
-    .set-lumafix(@background; average(@gray, @gray-dark););
-    border-color: @lumafix;
+
+    .contrast(color; @background; @colorize-contrast; @mode);
+    .set-contrast(@background; @colorize-contrast/3; @mode: tint;);
+    border-color: @contrast;
 
     .debug() when (@debug = true) {
         @luma: round(luma(@background), 2);

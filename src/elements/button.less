@@ -11,7 +11,7 @@
 // rules for button elements
 
 .button-elements({
-    .default(border-style, border-width, border-radius);
+    .default(border-style, border-radius);
     .default(box-shadow);
   
     display: inline;
@@ -20,6 +20,7 @@
     
     .button-color(@default);
     .set-lumafix(@default, @gray);
+    border-width: 0;
     border-color: @lumafix;
     max-width: @aside-width;
     line-height: 1;
@@ -39,6 +40,10 @@
     &:active {
       transform: scale(.99);
       box-shadow: none;
+    }
+
+    &.border {
+      border-width: @border-width;
     }
 
     each(@semantic-color-names, {
@@ -61,11 +66,13 @@
   // preferentially tint if we can
   .color() when (@contrast-ceiling > 3) {
     color: white;
+    background-color: @button-color;
   }
 
   // if not, shade with higher contrast
   .color() when (default()) {
     .contrast(color; @button-color; 4.5; shade;);
+    background-color: @button-color;
   }
 
   .color();

@@ -5,8 +5,6 @@
 
 // Property values here aren't exactly always defaults but they're close.
 
-@test: 'test';
-
 @css-property-names: background,
 background-attachment,
 background-clip,
@@ -167,15 +165,15 @@ box-shadow,
 box-sizing;
 
 // Animation Properties
-// @animation: @test; // Specifies the keyframe-based animations.
-// @animation-delay: @test; // Specifies when the animation will start.
-// @animation-direction: @test; // Specifies whether the animation should play in reverse on alternate cycles or not.
-// @animation-duration: @test; // Specifies the number of seconds or milliseconds an animation should take to complete one cycle.
-// @animation-fill-mode: @test; // Specifies how a CSS animation should apply styles to its target before and after it is executing.
-// @animation-iteration-count: @test; // Specifies the number of times an animation cycle should be played before stopping.
-// @animation-name: @test; // Specifies the name of @keyframes defined animations that should be applied to the selected element.
-// @animation-play-state: @test; // Specifies whether the animation is running or paused.
-// @animation-timing-function: @test; // Specifies how a CSS animation should progress over the duration of each cycle.
+@animation: @animation-name @animation-duration @animation-timing-function; // Specifies the keyframe-based animations.
+@animation-delay: 1s; // Specifies when the animation will start.
+@animation-direction: normal; // Specifies whether the animation should play in reverse on alternate cycles or not.
+@animation-duration: 1s; // Specifies the number of seconds or milliseconds an animation should take to complete one cycle.
+@animation-fill-mode: forwards; // Specifies how a CSS animation should apply styles to its target before and after it is executing.
+@animation-iteration-count: 1; // Specifies the number of times an animation cycle should be played before stopping.
+@animation-name: none; // Specifies the name of @keyframes defined animations that should be applied to the selected element.
+@animation-play-state: running; // Specifies whether the animation is running or paused.
+@animation-timing-function: linear; // Specifies how a CSS animation should progress over the duration of each cycle.
 
 // Background Properties
 @background: @background-color; // Defines a variety of background properties within one declaration.
@@ -335,7 +333,7 @@ box-sizing;
 @word-spacing: normal; // Sets the spacing between words.
 @white-space: nowrap; // Specifies how white space inside the element is handled.
 @word-break: break-all; // Specifies how to break lines within words.
-@word-wrap: @test; // Specifies whether to break words when the content overflows the boundaries of its container.
+@word-wrap: break-word; // Specifies whether to break words when the content overflows the boundaries of its container.
 
 // Transform Properties
 @backface-visibility: visible; // Specifies whether or not the "back" side of a transformed element is visible when facing the user.
@@ -359,7 +357,7 @@ box-sizing;
 @right: 0; // Specify the location of the right edge of the positioned element.
 @bottom: 0; // Specify the location of the bottom edge of the positioned element.
 @left: 0; // Specify the location of the left edge of the positioned element.
-@float: right; // Specifies whether or not a box should float.
+@float: left; // Specifies whether or not a box should float.
 @clear: both; // Specifies the placement of an element in relation to floating elements.
 @z-index: 10; // Specifies a layering or stacking order for positioned elements.
 @overflow: show; // Specifies the treatment of content that overflows the element's box.

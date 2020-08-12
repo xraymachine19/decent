@@ -2,7 +2,7 @@
 @debug: false;
 @randomness: true; .set-random-color();
 @base-color: @random-color;
-@output-patterns: false;
+@output-patterns: true;
 @output-variables: true; // under construction
 
 // basics
@@ -12,8 +12,8 @@
 @main-background: @white;
 @margin: 3rem;
 @padding: 2rem;
-@font-size: 1.2rem;
-@line-height: 1.2rem * 1.8;
+@font-size: 1.2em;
+@line-height: 1.8;
 
 // patterns
 @body-pattern: anchors-away;
@@ -22,7 +22,7 @@
 
 // design variables
 
-@text-contrast: 9; // 4.5 is level II, 7 is level III per WCAG standards for body text
+@text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
 @ambient: screen(screen(@base-color, @base-color), @base-color);
 @golden-ratio: 1.618;
 @pi: 3.14159;
@@ -39,6 +39,7 @@
 @text-padding-bottom: .22em;
 @text-padding-left: @text-padding-right;
 @gutter: @margin * @golden-ratio;
+@nav-gutter: @text-padding-top + @font-size/10 + @text-padding-bottom;
 
 // widths
 @page-width: @column-width * @golden-ratio; // TODO: deprecate old layout vars

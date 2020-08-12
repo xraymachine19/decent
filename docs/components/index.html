@@ -13,10 +13,8 @@
 </head>
 
 <body class="gutter-top">
-  <nav class="action top bar fixed inner-page-width full-width small">
-    <a href="../">
-      <h4>Decent</h4>
-    </a>
+  <nav class="action top bar fixed inner-page-width full-width border-bottom">
+    <h4><a href="../">Decent</a></h4>
     <ul class="bar top right">
       <li><strong>Components</strong></li>
       <li><a href="../patterns/">Patterns</a></li>
@@ -24,7 +22,7 @@
     </ul>
 </nav>
     <main>
-      <section class="hero border-bottom">
+      <section class="hero border-bottom inner-page-width">
         <h1 class="feature no-margin-bottom">Components</h1>
         <p class="gutter-bottom">Perfect composable classes in any color.</p>
       </section>
@@ -94,27 +92,28 @@
 
           <h2>.card</h2>
           <p>Present information in the popular card format by adding the .card class to a div.</p>
-          <div id="mouser" class="card well info">
-            <h4 class="action box-shadow">The Mouser</h4>
+
+          <div id="mouser" class="card">
+            <h4 class="action">The Mouser</h4>
             <img class="float" src="http://placekitten.com/200/200">
             <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
-            <footer class="float">
+            <footer class="two-column">
               <button class="action">Hire</button> <button class="info">Save</button>
             </footer>
           </div>
 
           <div class="card matte">
-            <h4 class="text-failure well border">Fuzzy Mittens</h4>
+            <h2 class="color-failure">Fuzzy Mittens</h2>
             <div class="two-column">
               <div class="overlay">
                 
                 <img src="http://placekitten.com/300/300">
-                <div class="bar info bottom no-margin fade">He's got the 'nip</div>
+                <div class="bar black bottom no-margin fade small">Fuzzy M.</div>
               </div>
               <p>Fuzzy runs catnip all through the neighborhood.</p>
             </div>
-            <footer class="hero action text-center">
-              <button class="success">Hire</button> &nbsp; <button class="info">Save</button>
+            <footer class="stack">
+              <button class="success">Hire</button><button class="info">Save</button>
             </footer>
           </div>
 
