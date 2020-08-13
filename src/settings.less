@@ -2,8 +2,8 @@
 @debug: false;
 @randomness: true; .set-random-color();
 @base-color: @random-color;
-@output-patterns: true;
-@output-variables: true; // under construction
+@output-patterns: false;
+@output-variables: false; // under construction
 
 // basics
 
@@ -21,7 +21,6 @@
 @hero-pattern: charlie-brown;
 
 // design variables
-
 @text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
 @ambient: screen(screen(@base-color, @base-color), @base-color);
 @golden-ratio: 1.618;
@@ -30,25 +29,24 @@
 @shadow-position: 0 1px;
 @shadow-blur: 2px;
 
-// layout settings
-// TODO: make this its own file
-@text-measure: 75; // TODO: the typographic base for width isn't working
+// text settings
+@text-measure: 75;
 @text-padding: @text-padding-top @text-padding-right @text-padding-bottom @text-padding-left;
 @text-padding-top: .18em;
 @text-padding-right: .2em*@golden-ratio;
 @text-padding-bottom: .22em;
 @text-padding-left: @text-padding-right;
 @gutter: @margin * @golden-ratio;
-@nav-gutter: @text-padding-top + @font-size/10 + @text-padding-bottom;
 
 // widths
-@page-width: @column-width * @golden-ratio; // TODO: deprecate old layout vars
-@aside-width: floor(@max-width / @golden-ratio);
+// these are based on @text-measure by default
+@page-width: @max-width * @golden-ratio;
+@aside-width: @max-width / @golden-ratio;
 @column-width: @max-width;
 @avatar-width: 10rem;
-@icon-width: 1rem;
+@icon-width: 2.4rem;
 @full-width: 100%;
-@grid-width: @page-width/12; // TODO: figure out an emergent grid-width system that uses gutter, padding
+@grid-width: @page-width/12; 
 @tablet-width:        ~"calc(@{column-width} + @{gutter})";
 @desktop-width:       ~"calc(@{page-width} + @{gutter})";
 

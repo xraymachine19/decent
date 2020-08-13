@@ -1,5 +1,7 @@
 // utility classes
 
+// .inner-*-width classes set a faux-inner-width using padding and calc()
+
 .inner-max-width {
   @half-max-width: @max-width/2;
   @padding: ~"calc(50% - @{half-max-width})";
@@ -7,11 +9,11 @@
   padding-left: @padding;
   padding-right: @padding;
 
-  .right {
+  > .right {
     right: @padding;
   }
 
-  .left {
+  > .left {
     left: @padding;
   }
 }
@@ -28,11 +30,11 @@
     padding-left: @padding;
     padding-right: @padding;
     
-    .right {
+    > .right {
       right: @padding;
     }
   
-    .left {
+    > .left {
       left: @padding;
     }
   });
@@ -50,18 +52,14 @@
     padding-left: @padding;
     padding-right: @padding;
 
-    .right {
+    > .right {
       right: @padding;
     }
   
-    .left {
+    > .left {
       left: @padding;
     }
   });
-}
-
-.nav-gutter {
-  padding-top: @nav-gutter;
 }
 
 .big {
@@ -138,6 +136,10 @@
 
 .inset {
   box-shadow: inset @box-shadow;
+}
+
+.viewport-height {
+  height: 100vh;
 }
 
 .inverted {}

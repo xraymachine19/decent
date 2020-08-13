@@ -13,20 +13,33 @@
 
 </head>
 
-<body class="nav-gutter">
+<body>
+    <div class="overlay absolute bottom black fade border">
+      <div class="matte">
+        <p>Hey it's a paragraph in a modal maybe</p>
+      </div>
+    </div>
+
+
+    <div class="top bar"></div>
     <nav class="action top bar fixed inner-page-width full-width border-bottom">
         <h4><a href="">Decent</a></h4>
         <ul class="bar top right">
-          <li><a href="components/">Components</a></li>
+          <li><a href="composables/">Composables</a></li>
           <li><a href="patterns/">Patterns</a></li>
           <li><a href="tutorial/">Tutorial</a></li>
         </ul>
     </nav>
     <main>
+      <section>
+        <h2>Just seeing what this looks like...</h2>
+        <p>Maybe there's a paragraph. And a button?</p>
+        <p><button>Okay!</button></p>
+      </section>
       <section class="hero border-bottom inner-page-width">
-        <h1 class="column-width margin-auto">Decent isn't <em>another component library</em>, it's an environment for making one of your own.</h1>
+        <h1 class="column-width margin-auto">Decent does all the boring CSS stuff for you.</h1>
       
-        <p class="feature column-width margin-auto">The Decent Framework makes using your own CSS-based style&nbsp;library easier than using Bigcorp's latest shovelware.</p>
+        <p class="feature column-width margin-auto">Built for the <strong>decent</strong>ralized web, Decent makes your CSS codebase <em>awesome</em>.</p>
 
         <div class="text-align-center">
           Start your UI revolution here:
@@ -58,6 +71,10 @@
       <p>The <strong>:root</strong> element will contain your project's reference to a default border-radius value.</p>
       <p>To reuse "border-radius" yet again, your project will also have out-of-the-box support for using any CSS property as a class name, again applying the default value.</p>
       <p>This makes it easy for other sites&mdash; or other parts of your own site&mdash; to use your prescribed defaults and values.</p>
+      </section>
+
+      <section class="black bar feature inner-page-width text-align-center">
+        <h4>Just seeing what this looks like...</h4> <button class="reaction">Okay!</button>
       </section>
         
         <section>
@@ -128,64 +145,77 @@
         </section>
         
         <section id="colors" class="color-palette">
-          <h2>Some unofficial colors</h2>
-          <p>These won't actually have class support in the final version.</p>
-          <div class="ambient">ambient</div>
-          <div class="base-color">base-color</div>
+          <h1>Unique colors</h1>
+          <p>Every color in a Decent palette also doubles as a CSS class and/or a Less variable. The palette is based on a base color:</p>
+          <div class="aside-width base-color margin-auto">base-color</div>
+          <p>Here, it's given to you. But in your own project you can define it to be whatever you want.</p>
           <p class="clearfix"></p>
-
+          
           <h2><a href="#colors">Semantic colors</a></h2>
 
-          <p>
-            <div class="action">action</div>
-          <div class="reaction">reaction</div>
-          </p>
-
-          <p><div class="info icon-info">info</div>
-            <div class="warning">warning</div>
-            
-          </p>
-
-          <p>
-            <div class="success">success</div>
-          <div class="failure">failure</div>
-          </p>
-          <div class="default">default</div>
+          <p>Semantic colors are designed to be one-word and self-explanatory. Each has a corresponding Less variable (or CSS custom property).</p>
+          <div class="two-column">
+            <div>
+              <div class="action">action</div>
+              <div class="reaction">reaction</div>
+              <div class="success">success</div>
+              <div class="failure">failure</div>
+            </div>
+            <div>
+              <div class="info">info</div>
+              <div class="warning">warning</div>
+              <div class="default">default</div>
+              <div class="ambient">ambient</div>
+              
+            </div>
+          </div>
           <p class="clearfix"></p>
             
           <h2>Palette</h2>
-            <div class="red">red</div>
-            <div class="orange">orange</div>
-            <div class="yellow">yellow</div>
-            <div class="olive">olive</div>
-            <div class="green">green</div>
-            <div class="teal">teal</div>
-            <div class="cyan">cyan</div>
-            <div class="skyblue">skyblue</div>
-            <div class="blue">blue</div>
-            <div class="indigo">indigo</div>
-            <div class="purple">purple</div>
-            <div class="violet">violet</div>
-            
-            <div class="white">white</div>
-            <div class="gray">gray</div>
-            <div class="black">black</div>
-            <div class="brown">brown</div>
-            <div class="magenta">magenta</div>
-            <div class="pink">pink</div>
-            <div class="lime">lime</div>
-            <div class="navy">navy</div>
+          <p>Every Decent project ships with a unique 24-color palette, tailored to the base color you give it.</p>
+          <div class="three-column">
+            <div>
+              <div class="red">red</div>
+              <div class="orange">orange</div>
+              <div class="yellow">yellow</div>
+              <div class="olive">olive</div>
             </div>
-
-
-          
+            <div>
+              <div class="green">green</div>
+              <div class="teal">teal</div>
+              <div class="cyan">cyan</div>
+              <div class="skyblue">skyblue</div>
+            </div>
+            <div>
+              <div class="blue">blue</div>
+              <div class="indigo">indigo</div>
+              <div class="purple">purple</div>
+              <div class="violet">violet</div>
+            </div>
+          </div>
+          <div class="three-column">
+            <div>
+              <div class="black">black</div>
+              <div class="gray">gray</div>
+              <div class="white">white</div>
+              <div class="brown">brown</div>
+            </div>
+            <div>
+              <div class="magenta">magenta</div>
+              <div class="pink">pink</div>
+              <div class="lime">lime</div>
+              <div class="navy">navy</div>
+            </div>
+            <div>
+              <div class="gray-lighter">gray-lighter</div>
+              <div class="gray-light">gray-light</div>
+              <div class="gray-dark">gray-dark</div>
+              <div class="gray-darker">gray-darker</div>
+            </div>
+          </div>
 
           <h2>Some grays</h2>
-          <div class="gray-lighter">gray-lighter</div>
-          <div class="gray-light">gray-light</div>
-          <div class="gray-medium">gray-medium</div>
-          <div class="gray-dark">gray-dark</div>
-          <div class="gray-darker">gray-darker</div>
+         
           <p class="clearfix"></p>
         </section>
         

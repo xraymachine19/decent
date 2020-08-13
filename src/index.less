@@ -40,22 +40,23 @@
 @import "elements/textarea";
 // TODO: support all HTML elements or have etc file
 
-@import "components/hero";
-@import "components/group";
-@import "components/bar";
-@import "components/tray";
-@import "components/stack";
-@import "components/feature";
-@import "components/card";
-@import "components/matte";
-@import "components/well";
-@import "components/island";
-@import "components/badge";
-@import "components/dropcap";
-@import "components/copy";
-@import "components/two-column";
-@import "components/three-column";
-@import "components/golden-column";
+@import "composables/hero";
+@import "composables/group";
+@import "composables/bar";
+@import "composables/tray";
+@import "composables/stack";
+@import "composables/feature";
+@import "composables/card";
+@import "composables/matte";
+@import "composables/well";
+@import "composables/island";
+@import "composables/overlay";
+@import "composables/badge";
+@import "composables/dropcap";
+@import "composables/copy";
+@import "composables/two-column";
+@import "composables/three-column";
+@import "composables/golden-column";
 
 @import "utilities";
 @import "no";
@@ -70,10 +71,8 @@
 .base-color { .colorize(@base-color);}
 
 .color-palette div {
-    float: left;
 
-    margin-right: @padding/3;
-    margin-bottom: @padding/3;
+    margin-bottom: @padding/2;
 
     padding: @text-padding;
 

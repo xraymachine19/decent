@@ -1,0 +1,25 @@
+.overlay {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    > * {
+        position: absolute;
+        padding: @padding;
+    }
+
+    img {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+}
