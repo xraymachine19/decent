@@ -11,7 +11,8 @@
 // rules for button elements
 
 .button-elements({
-    .default(border-style, border-radius);
+    .default(border-style);
+    .default(border-radius);
     .default(box-shadow);
   
     display: inline;
@@ -45,11 +46,6 @@
     &.border {
       border-width: @border-width;
     }
-
-    each(@semantic-color-names, {
-      @color: @@value;
-      &.@{value} { .button-color(@color);}
-    });
 });
 
 // button-color handles all the button color rules

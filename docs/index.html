@@ -14,14 +14,6 @@
 </head>
 
 <body>
-    <div class="overlay absolute bottom black fade border">
-      <div class="matte">
-        <p>Hey it's a paragraph in a modal maybe</p>
-      </div>
-    </div>
-
-
-    <div class="top bar"></div>
     <nav class="action top bar fixed inner-page-width full-width border-bottom">
         <h4><a href="">Decent</a></h4>
         <ul class="bar top right">
@@ -30,12 +22,8 @@
           <li><a href="tutorial/">Tutorial</a></li>
         </ul>
     </nav>
+    <div class="top bar"></div>
     <main>
-      <section>
-        <h2>Just seeing what this looks like...</h2>
-        <p>Maybe there's a paragraph. And a button?</p>
-        <p><button>Okay!</button></p>
-      </section>
       <section class="hero border-bottom inner-page-width">
         <h1 class="column-width margin-auto">Decent does all the boring CSS stuff for you.</h1>
       
@@ -53,6 +41,12 @@
         <div class="text-align-center aside-width margin-auto">
           <a href="http://www.lesscss.org" ><small>Powered by</small><br><img src="less_logo.png" class="avatar-width padding"></a>
         </div>
+      </section>
+
+      <section>
+        <h2>Just seeing what this looks like...</h2>
+        <p>Maybe there's a paragraph. And a button?</p>
+        <p><button>Okay!</button></p>
       </section>
 
       <section>
@@ -154,6 +148,8 @@
           <h2><a href="#colors">Semantic colors</a></h2>
 
           <p>Semantic colors are designed to be one-word and self-explanatory. Each has a corresponding Less variable (or CSS custom property).</p>
+
+          <p>Every Decent project supports a 32-color palette, based on the <span class="base-color text-padding">base-color</span>:</p>
           <div class="two-column">
             <div>
               <div class="action">action</div>
@@ -170,9 +166,6 @@
             </div>
           </div>
           <p class="clearfix"></p>
-            
-          <h2>Palette</h2>
-          <p>Every Decent project ships with a unique 24-color palette, tailored to the base color you give it.</p>
           <div class="three-column">
             <div>
               <div class="red">red</div>
@@ -207,14 +200,18 @@
               <div class="navy">navy</div>
             </div>
             <div>
-              <div class="gray-lighter">gray-lighter</div>
-              <div class="gray-light">gray-light</div>
-              <div class="gray-dark">gray-dark</div>
-              <div class="gray-darker">gray-darker</div>
+              <div class="drab">drab</div>
+              <div class="lemon">lemon</div>
+              <div class="orangered">orangered</div>
+              <div class="aqua">aqua</div>
             </div>
           </div>
 
           <h2>Some grays</h2>
+          <div class="gray-lighter">gray-lighter</div>
+              <div class="gray-light">gray-light</div>
+              <div class="gray-dark">gray-dark</div>
+              <div class="gray-darker">gray-darker</div>
          
           <p class="clearfix"></p>
         </section>

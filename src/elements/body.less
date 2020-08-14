@@ -1,5 +1,6 @@
 body {
-    .default(font-family, background-color);
+    .default(font-family);
+    .default(background-color);
     .contrast(color, @body-background);
 
     overflow-y: scroll;
@@ -23,7 +24,8 @@ body {
     line-height: @line-height * .9;
 
     .on-tablet({
-      .default(font-size, line-height);
+      .default(font-size);
+      .default(line-height);
     });
   }
   

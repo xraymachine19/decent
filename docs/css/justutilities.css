@@ -1,0 +1,100 @@
+.display {
+    display: var(--display);
+  }
+  .position {
+    position: var(--position);
+  }
+  .top {
+    top: var(--top);
+  }
+  .right {
+    right: var(--right);
+  }
+  .bottom {
+    bottom: var(--bottom);
+  }
+  .left {
+    left: var(--left);
+  }
+  .float {
+    float: var(--float);
+  }
+  .clear {
+    clear: var(--clear);
+  }
+  .z-index {
+    z-index: var(--z-index);
+  }
+  .overflow {
+    overflow: var(--overflow);
+  }
+  .overflow-x {
+    overflow-x: var(--overflow-x);
+  }
+  .overflow-y {
+    overflow-y: var(--overflow-y);
+  }
+  .resize {
+    resize: var(--resize);
+  }
+  .clip {
+    clip: var(--clip);
+  }
+  .visibility {
+    visibility: var(--visibility);
+  }
+  .cursor {
+    cursor: var(--cursor);
+  }
+  .box-shadow {
+    box-shadow: var(--box-shadow);
+  }
+  .box-sizing {
+    box-sizing: var(--box-sizing);
+  }
+  p,
+  ol,
+  ul,
+  pre,
+  blockquote,
+  div,
+  form,
+  main,
+  section,
+  table {
+    margin-bottom: var(--margin-bottom);
+  }
+  .gutter {
+    margin: 56.63px;
+  }
+  .gutter-top {
+    margin-top: 56.63px;
+  }
+  .gutter-right {
+    margin-right: 56.63px;
+  }
+  .gutter-bottom {
+    margin-bottom: 56.63px;
+  }
+  .gutter-left {
+    margin-left: 56.63px;
+  }
+  .icon-width {
+    max-width: 2.4rem;
+  }
+  .avatar-width {
+    max-width: 10rem;
+  }
+  .aside-width {
+    max-width: 30.90234858rem;
+  }
+  .column-width {
+    max-width: 50rem;
+  }
+  .page-width {
+    max-width: 80.9rem;
+  }
+  .full-width,
+  .stack > * {
+    width: 100%;
+  }

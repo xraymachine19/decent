@@ -3,7 +3,7 @@
 
 // TODO: namespace these
 
-@patterns-all: anchors-away,
+@patterns-all: square, anchors-away,
 architect,
 autumn,
 aztec,
@@ -177,29 +177,29 @@ zig-zag;
 .output-patterns() when (@output-patterns = true) {
     each(@patterns-all, {
         // this outputs everything in an escaped SVG format
-        // .invoke-pattern(@value);
+        .invoke-pattern(@value);
         // this is just for the demo site
-        .@{value} {
+        // .@{value} {
 
-            .set-color-random() {
-                @potentials:    @color-wheel;
+        //     .set-color-random() {
+        //         @potentials:    @color-wheel;
 
-                @length: length(@potentials);
+        //         @length: length(@potentials);
 
-                @random: `Math.random()`;
-                @sc: ceil(@length*@random);
-                @color-random: extract(@potentials, @sc);
-            }
+        //         @random: `Math.random()`;
+        //         @sc: ceil(@length*@random);
+        //         @color-random: extract(@potentials, @sc);
+        //     }
 
-            .set-color-random();
+        //     .set-color-random();
 
-            .pattern(@value; @color-random;);
-            // background-image: @pattern;
+        //     .pattern(@value; @color-random;);
+        //     // background-image: @pattern;
 
-            &:after {
-                content: ".pattern(@{value}, @{color-random});";
-            }
-        }
+        //     &:after {
+        //         content: ".pattern(@{value}, @{color-random});";
+        //     }
+        // }
     });
 
     .invoke-pattern(@pattern-name) {

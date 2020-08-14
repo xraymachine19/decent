@@ -4,7 +4,7 @@
     --main-background: @white;
 
     each(@semantic-color-names, {
-        --@{value}: @@value;
+        --@{value}: @value;
     });
 
     --text-contrast: @text-contrast;
@@ -30,14 +30,14 @@
     --desktop-width: @desktop-width;
 
     each(@palette-color-names, {
-        --@{value}: @@value;
+        --@{value}: @value;
     });
 
     each(@gray-names, {
-        --@{value}: @@value;
+        --@{value}: @value;
     });
 
     each(@css-property-names, { 
-        --@{value}: @@value;
+        --@{value}: @value;
     });
 }

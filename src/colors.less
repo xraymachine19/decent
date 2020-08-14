@@ -21,6 +21,10 @@
 @palette-colors: @red, @orange, @yellow, @olive, @green, @teal, @skyblue, @cyan, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
 @palette-color-names: ~"red", ~"orange", ~"yellow", ~"olive", ~"green", ~"teal", ~"skyblue", ~"cyan", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
 
+@palette-colors: @red, @orangered, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aqua, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
+@palette-color-names: ~"red", ~"orangered", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aqua", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
+
+
 // create palette colors
 
 .set-palette-colors();
@@ -43,6 +47,10 @@
 	.set-pink();
 	.set-lime();
 	.set-navy();
+	.set-drab();
+	.set-lemon();
+	.set-orangered();
+	.set-aqua();
 }
 
 .set-red() {
@@ -89,7 +97,7 @@
 
 .set-skyblue() {
     @base: skyblue;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength/3;);
     @skyblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -139,6 +147,32 @@
 	}
 }
 
+.set-aqua() {
+	@base: aquamarine;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @aqua: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-orangered() {
+	@base: orangered;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @orangered: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-lemon() {
+	.set-average(lemonchiffon, yellow, yellow, greenyellow;);
+	@base: @average;
+	// @base: average(lemonchiffon, yellow);
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @lemon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-drab() {
+	@base: average(olivedrab, tan);
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @drab: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
 .set-pink() {
     @base: pink;
     .set-lumafix(@base; @strength: @color-strength/2;);
@@ -156,12 +190,6 @@
     .set-lumafix(@base; @strength: @color-strength*(2/3););
     @navy: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
-
-// scarlet
-// crimson 
-// orangered
-// lemon 
-
 
 
 // grays 
