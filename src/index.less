@@ -96,10 +96,11 @@
     }
 }
 
-.color-palette div {
+.color-palette .color {
 
     margin-bottom: @padding/2;
 
+    position: relative;
     padding: @text-padding;
 
     width: 100%;
@@ -107,6 +108,27 @@
     .default(border-width);
     .default(border-radius);
 
+    &:before {
+        display: block;
+        position: absolute;
+        content:"";
+        width: 1em;
+        height: 1em;
+        top: @text-padding-right;
+        right: @text-padding-right;
+        &:extend(.dark);
+    }
+
+    &:after {
+        display: block;
+        position: absolute;
+        content:"";
+        width: 1em;
+        height: 1em;
+        top: @text-padding-right;
+        right: @text-padding-right*2 + 1em;
+        &:extend(.light);
+    }
 
     &:last-child {
         .clearfix();

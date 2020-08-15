@@ -1,12 +1,13 @@
 // dev
 @debug: false;
-@randomness: true; .set-random-color();
-@base-color: @random-color;
-@output-patterns: false;
+@randomness: false; 
+//.set-random-color();
+//@base-color: @random-color;
+@output-patterns: true;
 
 // basics
 
-// @base-color: #bef8ce;
+@base-color: #bef8ce;
 @body-background: @action;
 @main-background: @white;
 @margin: 3rem;
@@ -40,7 +41,7 @@
 // widths
 // these are based on @text-measure by default
 @page-width: @text-measure * 1rem;
-@aside-width: @max-width / @golden-ratio;
+@aside-width: @column-width / @golden-ratio;
 @column-width: @max-width;
 @avatar-width: 10rem;
 @icon-width: 2.4rem;

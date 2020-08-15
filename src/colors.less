@@ -18,8 +18,8 @@
 @gray-names: black, white, gray-lighter, gray-light, gray-medium, ~"gray", gray-dark, gray-darker;
 @grays: @black, @white, @gray-lighter, @gray-light, @gray-medium, @gray, @gray-dark, @gray-darker;
 
-@palette-colors: @hotpink, @neongreen, @khaki, @gold, @silver, @gunmetal, @salmon, @ivory, @lavender, @crimson, @clover, @charcoal, @red, @orangered, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aqua, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
-@palette-color-names: ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"gunmetal", ~"salmon", ~"ivory", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"orangered", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aqua", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
+@palette-colors: @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @cadmium, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @ivory, @lavender, @crimson, @clover, @charcoal, @red, @orangered, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aqua, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
+@palette-color-names: ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"cadmium", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"ivory", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"orangered", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aqua", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
 
 
 // grays 
@@ -124,8 +124,16 @@
 	.set-khaki();
 	.set-gold();
 	.set-silver();
+	.set-bronze();
 	.set-hotpink();
 	.set-neongreen();
+	.set-cobalt();
+	.set-cadmium();
+	.set-coral();
+	.set-peach();
+	.set-turquoise();
+	.set-midnight();
+	.set-ultramarine();
 }
 
 .set-red() {
@@ -153,8 +161,8 @@
 }
 
 .set-green() {
-    @base: forestgreen;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    @base: green;
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @green: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -255,7 +263,7 @@
 }
 
 .set-lime() {
-    @base: lime;
+    @base: average(lime, limegreen);
     .set-lumafix(@base; @strength: @color-strength/3;);
     @lime: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -279,7 +287,7 @@
 
 .set-clover() {
 	@base: average(forestgreen, lawngreen);
-    .set-lumafix(@base; @gray-dark; @strength: @color-strength/2;);
+    .set-lumafix(@base; @gray-dark; @strength: @color-strength*(2/3););
     @clover: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -297,12 +305,12 @@
 
 .set-salmon() {
     @base: salmon;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength/3;);
     @salmon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-gunmetal() {
-    .set-average(darkslategray, @navy, @gray-darker, @black;);
+    .set-average(steelblue, gray, black;);
     .set-lumafix(@average; @strength: @color-strength/4;);
     @gunmetal: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -314,7 +322,7 @@
 }
 
 .set-gold() {
-    @base: gold;
+    @base: average(gold, yellow);
     .set-lumafix(@base; @strength: @color-strength/4;);
     @gold: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -325,6 +333,12 @@
     @silver: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
+.set-bronze() {
+    @base: mix(peru, gold, 80%);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @bronze: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
 .set-hotpink() {
     @base: hotpink;
     .set-lumafix(@base; @strength: @color-strength/3;);
@@ -332,7 +346,7 @@
 }
 
 .set-neongreen() {
-    @base: chartreuse;
+    @base: #39FF14;
     .set-lumafix(@base; @strength: @color-strength/4;);
 	@neongreen: 
 	mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
@@ -340,13 +354,55 @@
 
 .set-cobalt() {
     @base: average(mediumblue, dodgerblue);
-    .set-lumafix(@base; @strength: @color-strength/3;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @cobalt: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-// hotpink
-// neongreen
+.set-cadmium() {
+    @base: #E30022;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @cadmium: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
 
+.set-coral() {
+    @base: coral;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @coral: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-peach() {
+    @base: peachpuff;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @peach: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-turquoise() {
+    @base: turquoise;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @turquoise: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-midnight() {
+    .set-average(@black, @navy, @purple, @gray-darker;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+	@midnight: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+	@midnight: @average;
+}
+
+.set-ultramarine() {
+    @base: #120A8F;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @ultramarine: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+
+// scarlet
+// cream 
+// almond
+// cornhusk
+// 
+// seafoam
+// moon
 
 // semantic colors 
 
