@@ -1,9 +1,9 @@
 .well {
-    @well-background: @gray-lighter;
+    @well-background: @default;
     .default(border-radius);
     .default(padding);
     .default(margin-bottom);
-    .pattern(@well-pattern; @well-background;);
+    .colorize(@well-background);
     box-shadow: inset @box-shadow;
 
     &.card {

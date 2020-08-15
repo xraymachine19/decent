@@ -1,13 +1,9 @@
 // this outputs every CSS property as a class, with its
 // value as the default value found in properties.less
 
-each(@css-property-names, { 
-    @property: @value;
-    @attribute: @@value;
-  
-    .@{property} { 
-      // @{property}: @attribute;
-      //.default(@property);
+each(@css-property-names, {   
+    .@{value} { 
+      @{value}: @value;
     };
 });
 

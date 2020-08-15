@@ -70,6 +70,32 @@
 .ambient { .colorize(@ambient);}
 .base-color { .colorize(@base-color);}
 
+.text-on-blue {
+    .contrast(color, blue);
+}
+
+#blue_headline_example {
+    .contrast(color, blue, 3);
+}
+
+#blue_headline_example2 {
+    .contrast(color, blue, 3);
+    p {
+        border-style: solid;
+        border-width: 1px;
+        .contrast(border-color, blue, 9);
+    }
+}
+
+#blue_headline_example3 {
+    .contrast(color, blue, 3);
+    p {
+        border-style: solid;
+        border-width: 1px;
+        .contrast(border-color, blue, 9, shade);
+    }
+}
+
 .color-palette div {
 
     margin-bottom: @padding/2;

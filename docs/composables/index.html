@@ -21,33 +21,47 @@
         <li><a href="../tutorial/">Tutorial</a></li>
       </ul>
   </nav>
-  <section class="hero border-bottom inner-page-width">
-    <h1 class="feature no-margin-bottom">Composables</h1>
-    <p class="gutter-bottom">Perfect composable classes in any color.</p>
-  </section>
-    <div class="golden-column reverse inner-page-width">
-      <div>
-    <nav>
-      <ul>
-        <li>A link</li>
-        <li>A link</li>
-        <li>A link</li>
+  <div class="top bar full-width gutter-bottom"></div>
 
+  <section class="hero border-bottom inner-page-width">
+    <h1>Composables</h1>
+    <p>Perfect composable classes in any color.</p>
+  </section>
+    <div class="grid inner-page-width">
+      <div class="grid-width-three">
+    <nav>
+      <ul class="group padding darker">
+        <li><a href="#card">card</a>
+        <li><a href="#hero">hero</a>
+        <li><a href="#group">group</a>
+        <li><a href="#bar">bar</a>
+        <li><a href="#feature">feature</a>
+        <li><a href="#matte">matte</a>
+        <li><a href="#matte">well</a>
+        <li><a href="#island">island</a>
+        <li><a href="#overlay">overlay</a>
+        <li><a href="#badge">badge</a>
+        <li><a href="#dropcap">dropcap</a>
+        <li><a href="#copy">copy</a>
+        <li><a href="#two-column">two-column</a>
+        <li><a href="#three-column">three-column</a>
+        <li><a href="#golden-column">golden-column</a>
+        
       </ul>
     </nav>
     </div>
-    <div>
+    <div class="grid-width-nine">
     <main>
         <section id="composables">
           <p>More and more the internet is made of components. They're usually defined with three parts: Style, markup and code. <strong>Composables</strong> fill the style role, designed to work with any markup and code.</p>
           <p>Like how React is "just the V" in MVC, Decent is just the styling for components.</p>
           <p>Composable CSS classes are written to be simple and work with the other composable classes, or with Decent's CSS property-name utility classes and color palette classes.</p>
 
-          <h2>.card</h2>
+          <h2 id="card">.card</h2>
           <p>Present information in the popular card format by adding the .card class to a div.</p>
 
           <div id="mouser" class="card">
-            <h4 class="action">The Mouser</h4>
+            <h4 class="action light">The Mouser</h4>
             <div class="golden-column">
               <div>
                 <img src="http://placekitten.com/400/400">
@@ -102,11 +116,11 @@
             </div>
           </div>
 
-          <h2>.dropcap</h2>
+          <h2 id="dropcap">.dropcap</h2>
 
           <p class="dropcap aside-width margin-auto text-align-justify">Any paragraph element can take the dropcap class to have a cool-looking dropcap like this one. Dropcaps generally need longer paragraphs to not look silly. When paragraphs are long enough, the text will run under the first letter.</p>
 
-          <h2>.copy</h2>
+          <h2 id="copy">.copy</h2>
 
           <p>The .copy component lays out the paragraphs inside it like copy. Here it is with the <strong>.two-column</strong> and <strong>.dropcap</strong> component:</p>
           <div class="copy two-column dropcap">
@@ -116,12 +130,12 @@
           </div>
 
 
-          <h2>.feature</h2>
+          <h2 id="feature">.feature</h2>
           <p>Boost an element's font-size and give it generous padding.</p>
           <p class="feature">This <strong>.feature</strong> element is awesome.</p>
           
 
-          <h2>.group</h2>
+          <h2 id="group">.group</h2>
 
           <p>The .group class groups like things inside of it.</p>
 
@@ -191,7 +205,7 @@
             <p class="info"><strong>Note:</strong> The border class works because <em>any CSS property</em> works as a class name, outputting the default value from <strong>properties.less</strong>.</p>
           </aside>
 
-          <h2>.hero</h2>
+          <h2 id="hero">.hero</h2>
 
           <p>The hero class is usually one of the first elements on the page, outside of the normal section flow. It's full-width and heavily emphasizes all of the content within. It has a colored, patterned background.</p>
 
@@ -208,7 +222,7 @@
             <p class="feature"><strong>.hero</strong> doesn't need to be the first element, or even applied to a div. It works with other classes too.</p>
           </aside>
 
-          <h2>.matte and .well</h2>
+          <h2 id="matte">.matte and .well</h2>
           <p>The matte component presents the inner content on a raised, textured surface. The well does the same but lowers it.</p>
           <div class="border padding">
             <p>Here's a normal div with <em>border</em> and <em>padding</em> classes.</p>
@@ -224,7 +238,7 @@
             <h3 class="text-align-center">This well has a <em>.text-align-center</em> headline in it.</h3>
           </div>
 
-          <h2>.island</h2>
+          <h2 id="island">.island</h2>
           <p>Give an element generous margins so that it appears as an island.</p>
 
           <div>
@@ -237,7 +251,7 @@
 
           
 
-          <h2>.bar</h2>
+          <h2 id="bar">.bar</h2>
 
           <p>The bar component turns things into bars.</p>
 
@@ -314,7 +328,7 @@
             </li>
           </ul>
 
-          <h2>.two-column</h2>
+          <h2 id="two-column">.two-column</h2>
 
           <p>The two-column container will cause its contents to display as two columns.</p>
 
@@ -339,7 +353,7 @@
             </div>
           </div>
 
-          <h2>.three-column</h2>
+          <h2 id="three-column">.three-column</h2>
 
           <p>The three-column container will cause its contents to display as three columns.</p>
 
@@ -367,7 +381,7 @@
             </ol>
           </div>
 
-          <h2>.golden-column</h2>
+          <h2 id="golden-column">.golden-column</h2>
 
           <p>The golden-column component organizes child elements into two columns, proportioned to the golden ratio.</p>
 
@@ -398,7 +412,7 @@
             
           </div>
 
-          <h2>.grid</h2>
+          <h2 id="grid">.grid</h2>
           <p>The <em>.grid</em> and <em>.grid-width-[number]</em> classes make for a simple, easy-to-use grid system based on CSS's grid system. The numbers are spelled out. There aren't any numerals in Decent's composable class names.</p>
 
           <p>The grid is based on a twelve-column grid.</p>

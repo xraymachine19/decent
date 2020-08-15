@@ -3,7 +3,6 @@
 @randomness: true; .set-random-color();
 @base-color: @random-color;
 @output-patterns: false;
-@output-variables: false; // under construction
 
 // basics
 
@@ -40,7 +39,7 @@
 
 // widths
 // these are based on @text-measure by default
-@page-width: @max-width * @golden-ratio;
+@page-width: @text-measure * 1rem;
 @aside-width: @max-width / @golden-ratio;
 @column-width: @max-width;
 @avatar-width: 10rem;

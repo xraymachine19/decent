@@ -18,6 +18,10 @@
         }
     }
 
+    &.padding {
+        .default(padding);
+    }
+
     &.border {
         border-width: 0;
 
@@ -26,7 +30,7 @@
         }
 
         > li {
-            .default(border-bottom);
+            border-bottom: @border-width @border-style currentColor;
 
             &:last-child {
                 border-bottom-width: 0;

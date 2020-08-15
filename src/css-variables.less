@@ -30,7 +30,7 @@
     --desktop-width: @desktop-width;
 
     each(@palette-color-names, {
-        --@{value}: @value;
+        --@{value}: @@value;
     });
 
     each(@gray-names, {

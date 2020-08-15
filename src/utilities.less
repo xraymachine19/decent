@@ -62,6 +62,15 @@
   });
 }
 
+.inner-gutter {
+  padding: @gutter;
+}
+
+.reset {
+  // all: unset;
+  all: initial;
+}
+
 .big {
   font-size: 125%;
 }
@@ -150,18 +159,94 @@
   opacity: .8;
 }
 
+.light {
+  @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
+  @pattern-base: @bg;
+
+  @fill-opacity: .08;
+
+  @fg-base: @ambient;
+
+  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
+  @fg-red: floor(red(@fg-base));
+  @fg-green: floor(green(@fg-base));
+  @fg-blue: floor(blue(@fg-base));
+  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
+
+  @pattern: url("data:image/svg+xml,@{pattern-base}");
+
+  background-image: @pattern;
+}
+
+.lighter {
+  @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
+  @pattern-base: @bg;
+
+  @fill-opacity: .16;
+
+  @fg-base: @ambient;
+
+  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
+  @fg-red: floor(red(@fg-base));
+  @fg-green: floor(green(@fg-base));
+  @fg-blue: floor(blue(@fg-base));
+  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
+
+  @pattern: url("data:image/svg+xml,@{pattern-base}");
+
+  background-image: @pattern;
+}
+
+.dark {
+  @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
+  @pattern-base: @bg;
+
+  @fill-opacity: .1;
+
+  @fg-base: @black;
+
+  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
+  @fg-red: floor(red(@fg-base));
+  @fg-green: floor(green(@fg-base));
+  @fg-blue: floor(blue(@fg-base));
+  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
+
+  @pattern: url("data:image/svg+xml,@{pattern-base}");
+
+  background-image: @pattern;
+}
+
+.darker {
+  @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
+  @pattern-base: @bg;
+
+  @fill-opacity: .2;
+
+  @fg-base: @black;
+
+  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
+  @fg-red: floor(red(@fg-base));
+  @fg-green: floor(green(@fg-base));
+  @fg-blue: floor(blue(@fg-base));
+  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
+
+  @pattern: url("data:image/svg+xml,@{pattern-base}");
+
+  background-image: @pattern;
+}
+
 @grid-width: (@page-width - @text-padding-right*11)/12;
 
 
 .grid {
   display: grid;
   grid-gap: @padding;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .grid-width {
   // width: @grid-width;
-  grid-column-end: span 1;
+  grid-column-end: span 1 / span 1;
 }
 .grid-width-one {
   &:extend(.grid-width);
@@ -201,37 +286,37 @@
 // }
 
 .grid-width-two {
-  grid-column-end: span 2;
+  grid-column: auto / span 2;
 }
 .grid-width-three {
-  grid-column-end: span 3;
+  grid-column: auto / span 3;
 }
 .grid-width-four {
-  grid-column-end: span 4;
+  grid-column: auto / span 4;
 }
 .grid-width-five {
-  grid-column-end: span 5;
+  grid-column: auto / span 5;
 }
 .grid-width-six {
-  grid-column-end: span 6;
+  grid-column: auto / span 6;
 }
 .grid-width-seven {
-  grid-column-end: span 7;
+  grid-column: auto / span 7;
 }
 .grid-width-eight {
-  grid-column-end: span 8;
+  grid-column: auto / span 8;
 }
 .grid-width-nine {
-  grid-column-end: span 9;
+  grid-column: auto / span 9;
 }
 .grid-width-ten {
-  grid-column-end: span 10;
+  grid-column: auto / span 10;
 }
 .grid-width-eleven {
-  grid-column-end: span 11;
+  grid-column: auto / span 11;
 }
 .grid-width-twelve {
-  grid-column-end: span 12;
+  grid-column: auto / span 12;
 }
 
 .ascii {
