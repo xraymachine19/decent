@@ -246,87 +246,51 @@
 
 @grid-width: (@page-width - @text-padding-right*11)/12;
 
-
-.grid {
-  display: grid;
-  grid-gap: @padding;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid-width {
-  // width: @grid-width;
-  grid-column-end: span 1 / span 1;
-}
-.grid-width-one {
-  &:extend(.grid-width);
-}
-// .grid-width-two {
-//   width: @grid-width*2 + @text-padding-right;
-// }
-// .grid-width-three {
-//   width: @grid-width*3 + @text-padding-right*2;
-// }
-// .grid-width-four {
-//   width: @grid-width*4 + @text-padding-right*3;
-// }
-// .grid-width-five {
-//   width: @grid-width*5 + @text-padding-right*4;
-// }
-// .grid-width-six {
-//   width: @grid-width*6 + @text-padding-right*5;
-// }
-// .grid-width-seven {
-//   width: @grid-width*7 + @text-padding-right*6;
-// }
-// .grid-width-eight {
-//   width: @grid-width*8 + @text-padding-right*7;
-// }
-// .grid-width-nine {
-//   width: @grid-width*9 + @text-padding-right*8;
-// }
-// .grid-width-ten {
-//   width: @grid-width*10 + @text-padding-right*9;
-// }
-// .grid-width-eleven {
-//   width: @grid-width*11 + @text-padding-right*10;
-// }
-// .grid-width-twelve {
-//   width: @grid-width*12 + @text-padding-right*11;
-// }
-
-.grid-width-two {
-  grid-column: auto / span 2;
-}
-.grid-width-three {
-  grid-column: auto / span 3;
-}
-.grid-width-four {
-  grid-column: auto / span 4;
-}
-.grid-width-five {
-  grid-column: auto / span 5;
-}
-.grid-width-six {
-  grid-column: auto / span 6;
-}
-.grid-width-seven {
-  grid-column: auto / span 7;
-}
-.grid-width-eight {
-  grid-column: auto / span 8;
-}
-.grid-width-nine {
-  grid-column: auto / span 9;
-}
-.grid-width-ten {
-  grid-column: auto / span 10;
-}
-.grid-width-eleven {
-  grid-column: auto / span 11;
-}
-.grid-width-twelve {
-  grid-column: auto / span 12;
-}
+.on-tablet({
+  .grid {
+    display: grid;
+    grid-gap: @padding;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  
+  .grid-width-one {
+    &:extend(.grid-width);
+  }
+  
+  .grid-width-two {
+    grid-column: auto / span 2;
+  }
+  .grid-width-three {
+    grid-column: auto / span 3;
+  }
+  .grid-width-four {
+    grid-column: auto / span 4;
+  }
+  .grid-width-five {
+    grid-column: auto / span 5;
+  }
+  .grid-width-six {
+    grid-column: auto / span 6;
+  }
+  .grid-width-seven {
+    grid-column: auto / span 7;
+  }
+  .grid-width-eight {
+    grid-column: auto / span 8;
+  }
+  .grid-width-nine {
+    grid-column: auto / span 9;
+  }
+  .grid-width-ten {
+    grid-column: auto / span 10;
+  }
+  .grid-width-eleven {
+    grid-column: auto / span 11;
+  }
+  .grid-width-twelve {
+    grid-column: auto / span 12;
+  }
+});
 
 .ascii {
   font-family: @font-family-monospace;

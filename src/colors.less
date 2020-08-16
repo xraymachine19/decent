@@ -18,8 +18,8 @@
 @gray-names: black, white, gray-lighter, gray-light, gray-medium, ~"gray", gray-dark, gray-darker;
 @grays: @black, @white, @gray-lighter, @gray-light, @gray-medium, @gray, @gray-dark, @gray-darker;
 
-@palette-colors: @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @linen, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @almond, @platinum, @moon, @mist, @snow, @plum, @seafoam, @union, @rebel, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @cadmium, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @ivory, @lavender, @crimson, @clover, @charcoal, @red, @orangered, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aqua, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
-@palette-color-names: ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"linen", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"almond", ~"platinum", ~"moon", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"union", ~"rebel", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"cadmium", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"ivory", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"orangered", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aqua", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
+@palette-colors: @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @linen, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @almond, @platinum, @moon, @mist, @snow, @plum, @seafoam, @seagreen, @grapefruit, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @cadmium, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @ivory, @lavender, @crimson, @clover, @charcoal, @red, @orangered, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aqua, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
+@palette-color-names: ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"linen", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"almond", ~"platinum", ~"moon", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"seagreen", ~"grapefruit", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"cadmium", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"ivory", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"orangered", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aqua", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
 
 
 // grays 
@@ -138,8 +138,8 @@
 	.set-tangerine();
 	.set-scarlet();
 	.set-cornhusk();
-	.set-union();
-	.set-rebel();
+	.set-seagreen();
+	.set-grapefruit();
 	.set-plum();
 	.set-seafoam();
 	.set-mist();
@@ -447,16 +447,16 @@
     @cornhusk: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-union() {
-    @base: #45276f;
-    .set-lumafix(@base; @strength: @color-strength/3;);
-    @union: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+.set-seagreen() {
+    @base: average(seagreen, mediumseagreen);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    @seagreen: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-rebel() {
-    @base: #9a8883;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @rebel: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+.set-grapefruit() {
+    .set-average(crimson, tomato, orange, lemonchiffon;);
+    .set-lumafix(@average; @strength: @color-strength/4;);
+    @grapefruit: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-plum() {
@@ -507,13 +507,13 @@
 }
 
 .set-steel() {
-    @base: average(steelblue, gray);
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    @base: average(steelblue, lightsteelblue, gray);
+    .set-lumafix(@base; @strength: @color-strength/3;);
     @steel: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-slate() {
-    .set-average(slateblue, darkslateblue, slategray, darkslategray;);
+    .set-average(slateblue, darkslateblue, slategray, darkslategray, black;);
     .set-lumafix(@average; @strength: @color-strength*(2/3););
     @slate: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -589,13 +589,6 @@
     .set-lumafix(@base; @strength: @color-strength*(2/3););
     @royalpurple: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
-
-
-
-// #F3E5AB
-
-
-
 
 // semantic colors 
 
