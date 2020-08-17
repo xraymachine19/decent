@@ -100,10 +100,6 @@
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -292,6 +288,10 @@
   }
 });
 
+.placeholder {
+  &::before { content: " "; white-space: pre;}
+}
+
 .ascii {
   font-family: @font-family-monospace;
   padding: @text-padding;
@@ -319,7 +319,7 @@
 
 .clearfix {
   clear: both;
-  &:after {
+  &::after {
     display: block;
     clear: both;
     content: "";

@@ -8,7 +8,7 @@ code {
     .pattern(texture; @gray-darker;);
 
     &.terminal { // TODO: make own component?
-        &:before {
+        &::before {
             content: "$ ";
             .color-text(@blue; @gray-darker; 7;);
         }

@@ -52,8 +52,6 @@
 @import "composables/island";
 @import "composables/overlay";
 @import "composables/badge";
-@import "composables/dropcap";
-@import "composables/copy";
 @import "composables/two-column";
 @import "composables/three-column";
 @import "composables/golden-column";
@@ -108,7 +106,7 @@
     .default(border-width);
     .default(border-radius);
 
-    &:before {
+    &::before {
         display: block;
         position: absolute;
         content:"";
@@ -116,10 +114,10 @@
         height: 1em;
         top: @text-padding-right;
         right: @text-padding-right;
-        &:extend(.dark);
+        &:extend(.darker);
     }
 
-    &:after {
+    &::after {
         display: block;
         position: absolute;
         content:"";
@@ -127,7 +125,7 @@
         height: 1em;
         top: @text-padding-right;
         right: @text-padding-right*2 + 1em;
-        &:extend(.light);
+        &:extend(.lighter);
     }
 
     &:last-child {
@@ -140,7 +138,7 @@
     height: 250px;
     .default(margin-bottom);
 
-    &:after {
+    &::after {
         .small;
         .set-tone(@base-color);
         @color: mix(@base-color, @tone, 75%);

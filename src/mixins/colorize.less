@@ -9,7 +9,7 @@
 
     .debug() when (@debug = true) {
         @luma: round(luma(@background), 2);
-        &:after {
+        &::after {
             content:"luma: @{luma}";
             background: black;
             color: white;

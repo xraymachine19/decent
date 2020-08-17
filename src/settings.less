@@ -3,7 +3,7 @@
 @randomness: true; 
 .set-random-color();
 @base-color: @random-color;
-@output-patterns: true;
+@output-patterns: false;
 
 // basics
 
@@ -30,7 +30,7 @@
 @shadow-blur: 2px;
 
 // text settings
-@text-measure: 75;
+@text-measure: 55;
 @text-padding: @text-padding-top @text-padding-right @text-padding-bottom @text-padding-left;
 @text-padding-top: .18em;
 @text-padding-right: .2em*@golden-ratio;
@@ -40,9 +40,9 @@
 
 // widths
 // these are based on @text-measure by default
-@page-width: @text-measure * 1rem;
+@page-width: @column-width * @golden-ratio;
 @aside-width: @column-width / @golden-ratio;
-@column-width: @max-width;
+@column-width: @text-measure * 1rem;
 @avatar-width: 10rem;
 @icon-width: 2.4rem;
 @full-width: 100%;
