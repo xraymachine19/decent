@@ -1,10 +1,9 @@
 .well {
-    @well-background: @default;
     .default(border-radius);
     .default(padding);
     .default(margin-bottom);
-    .colorize(@well-background);
     box-shadow: inset @box-shadow;
+    &:extend(.dark);
 
     &.card {
         padding: 0;

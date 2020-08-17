@@ -18,8 +18,8 @@
 @gray-names: black, white, gray-lighter, gray-light, gray-medium, ~"gray", gray-dark, gray-darker;
 @grays: @black, @white, @gray-lighter, @gray-light, @gray-medium, @gray, @gray-dark, @gray-darker;
 
-@palette-colors: @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @linen, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @almond, @platinum, @moon, @mist, @snow, @plum, @seafoam, @seagreen, @grapefruit, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @cadmium, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @ivory, @lavender, @crimson, @clover, @charcoal, @red, @orangered, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aqua, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
-@palette-color-names: ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"linen", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"almond", ~"platinum", ~"moon", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"seagreen", ~"grapefruit", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"cadmium", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"ivory", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"orangered", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aqua", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
+@palette-colors: @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @graphite, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @bacon, @platinum, @twilight, @mist, @snow, @plum, @seafoam, @seagreen, @grapefruit, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @copper, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @iron, @lavender, @crimson, @clover, @charcoal, @red, @electricblue, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aquamarine, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
+@palette-color-names: ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"graphite", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"bacon", ~"platinum", ~"twilight", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"seagreen", ~"grapefruit", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"copper", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"iron", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"electricblue", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aquamarine", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
 
 
 // grays 
@@ -112,12 +112,12 @@
 	.set-navy();
 	.set-drab();
 	.set-lemon();
-	.set-orangered();
-	.set-aqua();
+	.set-electricblue();
+	.set-aquamarine();
 	.set-charcoal();
 	.set-crimson();
 	.set-clover();
-	.set-ivory();
+	.set-iron();
 	.set-lavender();
 	.set-salmon();
 	.set-gunmetal();
@@ -128,7 +128,7 @@
 	.set-hotpink();
 	.set-neongreen();
 	.set-cobalt();
-	.set-cadmium();
+	.set-copper();
 	.set-coral();
 	.set-peach();
 	.set-turquoise();
@@ -144,15 +144,15 @@
 	.set-seafoam();
 	.set-mist();
 	.set-snow();
-	.set-moon();
+	.set-twilight();
 	.set-platinum();
 	.set-cream();
-	.set-almond();
+	.set-bacon();
 	.set-steel();
 	.set-slate();
 	.set-mint();
 	.set-wheat();
-	.set-linen();
+	.set-graphite();
 	.set-goldenrod();
 	.set-orchid();
 	.set-sand();
@@ -165,7 +165,7 @@
 }
 
 .set-red() {
-    @base: average(tomato, firebrick);
+    @base: red;
     .set-lumafix(@base; @strength: @color-strength/2;);
     @red: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -190,7 +190,7 @@
 
 .set-green() {
     @base: green;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    .set-lumafix(@base; @strength: @color-strength/2;);
     @green: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -207,7 +207,7 @@
 }
 
 .set-skyblue() {
-    @base: skyblue;
+    @base: average(skyblue, deepskyblue);
     .set-lumafix(@base; @strength: @color-strength/2;);
     @skyblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -220,7 +220,7 @@
 
 .set-indigo() {
     @base: indigo;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    .set-lumafix(@base; @strength: @color-strength/2;);
 	@indigo: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -231,7 +231,7 @@
 }
 
 .set-magenta() {
-    @base: magenta;
+    @base: mix(magenta, darkmagenta, 60%);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
     @magenta: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -258,16 +258,16 @@
 	}
 }
 
-.set-aqua() {
+.set-aquamarine() {
 	@base: aquamarine;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @aqua: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+    @aquamarine: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-orangered() {
-	@base: orangered;
-    .set-lumafix(@base; @strength: @color-strength/2;);
-    @orangered: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+.set-electricblue() {
+	.set-average(#7DF9FF, royalblue, cyan;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @electricblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-lemon() {
@@ -285,20 +285,20 @@
 }
 
 .set-pink() {
-    @base: pink;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-average(pink, pink, white;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
     @pink: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-lime() {
-    @base: average(lime, limegreen);
-    .set-lumafix(@base; @strength: @color-strength/3;);
+    .set-average(lime, limegreen, lemonchiffon;);
+    .set-lumafix(@average; @strength: @color-strength/4;);
     @lime: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-navy() {
-    @base: navy;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    @base: mix(navy, steelblue, 67%);
+    .set-lumafix(@base; @strength: @color-strength/2;);
     @navy: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -314,15 +314,15 @@
 }
 
 .set-clover() {
-	@base: average(forestgreen, lawngreen);
-    .set-lumafix(@base; @gray-dark; @strength: @color-strength*(2/3););
+	.set-average(forestgreen, lawngreen, lime;);
+    .set-lumafix(@average; @gray-dark; @strength: @color-strength/3;);
     @clover: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-ivory() {
-    @base: average(ivory, beige);
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @ivory: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+.set-iron() {
+    .set-average(darkred, brown, darkslategray, black, black;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @iron: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-lavender() {
@@ -345,7 +345,7 @@
 
 .set-khaki() {
     @base: average(khaki, darkkhaki);
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @khaki: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -369,7 +369,7 @@
 
 .set-hotpink() {
     @base: hotpink;
-    .set-lumafix(@base; @strength: @color-strength/3;);
+    .set-lumafix(@base; @strength: @color-strength/4;);
     @hotpink: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -382,14 +382,14 @@
 
 .set-cobalt() {
     @base: average(mediumblue, dodgerblue);
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    .set-lumafix(@base; @strength: @color-strength/3;);
     @cobalt: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-cadmium() {
-    @base: #E30022;
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @cadmium: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+.set-copper() {
+    .set-average(pink, orange, brown;);
+    .set-lumafix(@average; @strength: @color-strength/2;);
+    @copper: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-coral() {
@@ -419,13 +419,13 @@
 
 .set-ultramarine() {
     @base: #120A8F;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength/3;);
     @ultramarine: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-army() {
-    .set-average(forestgreen, darkseagreen, olivedrab;);
-    .set-lumafix(@average; @strength: @color-strength*(2/3););
+    .set-average(forestgreen, darkolivegreen;);
+    .set-lumafix(@average; @strength: @color-strength/2;);
     @army: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -466,13 +466,13 @@
 }
 
 .set-seafoam() {
-    @base: average(cyan, aquamarine);
-    .set-lumafix(@base; @strength: @color-strength/3;);
+    .set-average(cyan, aquamarine, white;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
     @seafoam: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-mist() {
-    .set-average(skyblue, turquoise, white, lavender;);
+    .set-average(skyblue, white, lavender;);
     .set-lumafix(@average; @strength: @color-strength/6;);
     @mist: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -483,9 +483,10 @@
     @snow: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-moon() {
-    .set-average(@gray, @gray, @gray, @gray, @gray, @yellow, @blue;);
-    @moon: @average;
+.set-twilight() {
+    @base: #c55482;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @twilight: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-platinum() {
@@ -495,19 +496,19 @@
 }
 
 .set-cream() {
-    @base: mix(mintcream, lightyellow, 50%);
-    .set-lumafix(@base; @strength: @color-strength/4;);
+    .set-average(mintcream, beige, white;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
     @cream: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-almond() {
-    @base: blanchedalmond;
+.set-bacon() {
+    @base: #a51303;
     .set-lumafix(@base; @strength: @color-strength/2;);
-    @almond: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+    @bacon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-steel() {
-    @base: average(steelblue, lightsteelblue, gray);
+    @base: average(steelblue, lightsteelblue, gray, white);
     .set-lumafix(@base; @strength: @color-strength/3;);
     @steel: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -525,15 +526,15 @@
 }
 
 .set-mint() {
-    @base: average(mintcream, darkturquoise, white);
-    .set-lumafix(@base; @strength: @color-strength/4;);
+    .set-average(mintcream, darkturquoise, white, white;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
     @mint: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-.set-linen() {
-    @base: linen;
-    .set-lumafix(@base; @strength: @color-strength/3;);
-    @linen: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+.set-graphite() {
+	.set-average(black, navy, gray, darkslategray;);
+    .set-lumafix(@average; @strength: @color-strength/4;);
+    @graphite: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-goldenrod() {
@@ -549,13 +550,13 @@
 }
 
 .set-sand() {
-    @base: sandybrown;
-    .set-lumafix(@base; @strength: @color-strength/3;);
+    @base: average(sandybrown, seashell);
+    .set-lumafix(@base; @strength: @color-strength/6;);
     @sand: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-chocolate() {
-    @base: average(chocolate, saddlebrown);
+    @base: average(chocolate, saddlebrown, brown);
     .set-lumafix(@base; @strength: @color-strength/2;);
     @chocolate: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -567,8 +568,8 @@
 }
 
 .set-strawberry() {
-    .set-average(hotpink, hotpink, white, #dd0515;);
-    .set-lumafix(@average; @strength: @color-strength/3;);
+    .set-average(hotpink, white, #dd0515;);
+    .set-lumafix(@average; @strength: @color-strength/2;);
     @strawberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -580,15 +581,18 @@
 
 .set-tan() {
     @base: tan;
-    .set-lumafix(@base; @strength: @color-strength/3;);
+    .set-lumafix(@base; @strength: @color-strength/4;);
     @tan: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-royalpurple() {
     @base: rebeccapurple;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    .set-lumafix(@base; @strength: @color-strength/3;);
     @royalpurple: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
+
+// iron 
+// copper
 
 // semantic colors 
 

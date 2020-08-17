@@ -100,6 +100,8 @@
 
     position: relative;
     padding: @text-padding;
+    overflow: hidden;
+    text-align: center;
 
     width: 100%;
 
@@ -110,22 +112,22 @@
         display: block;
         position: absolute;
         content:"";
-        width: 1em;
-        height: 1em;
-        top: @text-padding-right;
-        right: @text-padding-right;
-        &:extend(.darker);
+        width: 31%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        &:extend(.dark);
     }
 
     &::after {
         display: block;
         position: absolute;
         content:"";
-        width: 1em;
-        height: 1em;
-        top: @text-padding-right;
-        right: @text-padding-right*2 + 1em;
-        &:extend(.lighter);
+        width: 31%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &:extend(.light);
     }
 
     &:last-child {

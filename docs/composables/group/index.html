@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The .group composable | Decent CSS</title>
+  <meta name="description" content="The group composable for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="action top bar fixed inner-page-width full-width border-bottom">
+        <h4><a href="../../">Decent CSS</a></h4>
+        <ul class="bar top right">
+            <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
+            <li><a href="../../mixins/">Mixins</a></li>
+            <li><a href="../../colors/">Colors</a></li>
+            <li><a href="../../how-to/">How-to</a></li>
+        </ul>
+    </nav>
+    <div class="bar full-width gutter-bottom placeholder"></div>
+    <main>
+        <div class="hero inner-column-width">
+            <h1>.group</h1>
+            <p>Groups buttons and list items into a singular unit.</p>
+        </div>
+        <div class="grid inner-page-width">
+            <div class="grid-width-three">
+                <nav>
+                    <ul class="group action padding dark">
+                        <li><a href="../card">card</a>
+                        <li><a href="../hero">hero</a>
+                        <li><a href="../group">group</a>
+                        <li><a href="../bar">bar</a>
+                        <li><a href="../feature">feature</a>
+                        <li><a href="../matte">matte</a>
+                        <li><a href="../well">well</a>
+                        <li><a href="../island">island</a>
+                        <li><a href="../overlay">overlay</a>
+                        <li><a href="../badge">badge</a>
+                        
+                        
+                        <li><a href="../two-column">two-column</a>
+                        <li><a href="../three-column">three-column</a>
+                        <li><a href="../golden-column">golden-column</a>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="grid-width-nine">
+                <section id="reference">
+                    <p>The .group class groups like things inside of it.</p>
+                </section>
+                <section id="examples">
+
+
+                    <ul class="group">
+                    <li>Apples</li>
+                    <li>Oranges</li>
+                    <li>Apricots</li>
+                    <li>Watermelons</li>
+                    <li>Kiwis</li>
+                    </ul>
+
+                    <ol class="group">
+                    <li>Apples</li>
+                    <li>Oranges</li>
+                    <li>Apricots</li>
+                    <li>Watermelons</li>
+                    <li>Kiwis</li>
+                    </ol>
+
+                    <p>ul and ol .group composables work well with the border class:</p>
+
+                    <div class="two-column">
+                    <ul class="group border">
+                        <li>Apples</li>
+                        <li>Oranges</li>
+                        <li>Apricots</li>
+                        <li>Watermelons</li>
+                        <li>Kiwis</li>
+                    </ul>
+
+                    <ol class="group border border-radius">
+                        <li>Apples</li>
+                        <li>Oranges</li>
+                        <li>Apricots</li>
+                        <li>Watermelons</li>
+                        <li>Kiwis</li>
+                    </ol>
+                    </div>
+
+                    <p>Groups work on buttons:</p>
+                    <p class="group">
+                    <button class="info">Info</button>
+                    <button class="warning">Warning</button>
+                    </p>
+
+                    <div class="group border-radius border">
+                    <button class="action">Action</button>
+                    <button class="reaction">Reaction</button>
+                    </div>
+
+                    <div class="two-column">
+                    <div class="group border-radius border">
+                        <button>Deploy Fuzzy</button>
+                        <button>Deploy Scratches</button>
+                        <button>Deploy Mouser</button>
+                    </div>
+
+                    <div class="group border">
+                        <button class="info">Menus</button>
+                        <button class="info">Journals</button>
+                        <button class="info">Diaries</button>
+                    </div>
+
+                    </div>
+
+                    <aside>
+                    <p class="info text-padding"><strong>Note:</strong> The border class works because <em>any CSS property</em> works as a class name, outputting the default value from <strong>properties.less</strong>.</p>
+                    </aside>
+
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+</body>
+</html>

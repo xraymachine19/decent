@@ -14,17 +14,18 @@
 
 <body>
     <nav class="action top bar fixed inner-page-width full-width border-bottom">
-        <h4><a href="../../">Decent</a></h4>
+        <h4><a href="../../">Decent CSS</a></h4>
         <ul class="bar top right">
             <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
             <li><a href="../../mixins/">Mixins</a></li>
             <li><a href="../../colors/">Colors</a></li>
-            <li><a href="../../tutorial/">Tutorial</a></li>
+            <li><a href="../../how-to/">How-to</a></li>
         </ul>
     </nav>
     <div class="bar full-width gutter-bottom placeholder"></div>
     <main>
-        <div class="hero inner-page-width">
+        <div class="hero inner-column-width">
             <h1>.bar</h1>
             <p>A horizontal bar with relative positioning and alignment rules for children elements.</p>
         </div>
@@ -38,12 +39,12 @@
                         <li><a href="../bar">bar</a>
                         <li><a href="../feature">feature</a>
                         <li><a href="../matte">matte</a>
-                        <li><a href="../matte">well</a>
+                        <li><a href="../well">well</a>
                         <li><a href="../island">island</a>
                         <li><a href="../overlay">overlay</a>
                         <li><a href="../badge">badge</a>
-                        <li><a href="../dropcap">dropcap</a>
-                        <li><a href="../copy">copy</a>
+                        
+                        
                         <li><a href="../two-column">two-column</a>
                         <li><a href="../three-column">three-column</a>
                         <li><a href="../golden-column">golden-column</a>
@@ -54,10 +55,81 @@
             
             <div class="grid-width-nine">
                 <section id="reference">
-                    
+                    <p>The bar component turns things into bars.</p>
                 </section>
                 <section id="examples">
+                    <div class="bar action">
+                    <p>A paragraph inside a bar. <button class="info">Wow!</button></p>
+                    </div>
 
+                    <p>Bars don't have a max-width and they don't exceed their line-height.</p>
+                    
+                    <p>Bars compose with the <strong>.group</strong> class.</p>
+
+                    <p>Just the div:</p>
+                    <div>
+                    <button class="action">Send Fuzzy</button>
+                    <button class="action">Send Scratches</button>
+                    <button class="failure">Cancel</button>
+                    </div>
+
+                    <p>group:</p>
+
+                    <div class="group">
+                    <button class="yellow">Send Fuzzy</button>
+                    <button class="yellow">Send Scratches</button>
+                    <button class="failure">Cancel</button>
+                    </div>
+
+                    <p>group and border:</p>
+
+                    <div class="group border">
+                    <button class="orange">Send Fuzzy</button>
+                    <button class="orange">Send Scratches</button>
+                    <button class="failure">Cancel</button>
+                    </div>
+
+                    <p>group, border and border-radius:</p>
+
+                    <div class="group border border-radius">
+                    <button class="action">Send Fuzzy</button>
+                    <button class="action">Send Scratches</button>
+                    <button class="failure">Cancel</button>
+                    </div>
+
+                    <p>bar:</p>
+
+                    <div class="bar">
+                    <button class="action">Send Fuzzy</button>
+                    <button class="action">Send Scratches</button>
+                    <button class="failure">Cancel</button>
+                    </div>
+
+                    <p>group, bar and no-shadows:</p>
+
+                    <div class="group bar no-shadows">
+                    <button class="action">Send Fuzzy</button><button class="action">Send Scratches</button><button class="failure">Cancel</button>
+                    </div>
+
+                    <p>group, bar, border, border-radius and feature:</p>
+
+                    <div class="group bar border border-radius feature">
+                    <button class="skyblue">Fuzzy</button><button class="skyblue">Scratches</button><button class="failure">Cancel</button>
+                    </div>
+
+                    <p>Bars work for pagination too:</p>
+
+                    <ul id="pagination" class="well bar">
+                    <li>
+                        <a href="#pagination" class="button">1</a>
+                    </li>
+                    <li>
+                        <a href="#pagination" class="button">2</a>
+                    </li>
+                    <li>
+                        <a href="#pagination" class="button">3</a>
+                    </li>
+                    </ul>
                 </section>
             </div>
         </div>

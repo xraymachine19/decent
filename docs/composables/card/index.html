@@ -14,19 +14,20 @@
 
 <body>
     <nav class="action top bar fixed inner-page-width full-width border-bottom">
-        <h4><a href="../../">Decent</a></h4>
+        <h4><a href="../../">Decent CSS</a></h4>
         <ul class="bar top right">
             <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
             <li><a href="../../mixins/">Mixins</a></li>
             <li><a href="../../colors/">Colors</a></li>
-            <li><a href="../../tutorial/">Tutorial</a></li>
+            <li><a href="../../how-to/">How-to</a></li>
         </ul>
     </nav>
     <div class="bar full-width gutter-bottom placeholder"></div>
     <main>
-        <div class="hero inner-page-width">
+        <div class="hero inner-column-width">
             <h1>.card</h1>
-            <p>A card component with an all-margins paradigm, a look that stands out from the rest of the page, and relative positioning.</p>
+            <p>A card with an all-margins paradigm, a look that stands out from the rest of the page, and relative positioning.</p>
         </div>
         <div class="grid inner-page-width">
             <div class="grid-width-three">
@@ -38,12 +39,12 @@
                         <li><a href="../bar">bar</a>
                         <li><a href="../feature">feature</a>
                         <li><a href="../matte">matte</a>
-                        <li><a href="../matte">well</a>
+                        <li><a href="../well">well</a>
                         <li><a href="../island">island</a>
                         <li><a href="../overlay">overlay</a>
                         <li><a href="../badge">badge</a>
-                        <li><a href="../dropcap">dropcap</a>
-                        <li><a href="../copy">copy</a>
+                        
+                        
                         <li><a href="../two-column">two-column</a>
                         <li><a href="../three-column">three-column</a>
                         <li><a href="../golden-column">golden-column</a>
@@ -54,10 +55,65 @@
             
             <div class="grid-width-nine">
                 <section id="reference">
-                    
+                    <p>Present information in the popular card format by adding the .card class to an element.</p>
                 </section>
                 <section id="examples">
 
+          <div id="mouser" class="card">
+            <h4 class="action light">The Mouser</h4>
+            <div class="golden-column">
+              <div>
+                <img src="http://placekitten.com/400/400">
+              </div>
+              <div>
+                <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
+              </div>
+            </div>
+            <footer class="two-column">
+              <button class="action">Hire</button> <button class="info">Save</button>
+            </footer>
+          </div>
+
+          <div class="card matte">
+            <h2 class="color-failure">Fuzzy Mittens</h2>
+            <div class="two-column">
+              <div class="overlay">
+                
+                <img src="http://placekitten.com/300/300">
+                <div class="bar black bottom no-margin fade small">Fuzzy M.</div>
+              </div>
+              <p>Fuzzy runs catnip all through the neighborhood.</p>
+            </div>
+            <footer class="stack">
+              <button class="success">Hire</button><button class="info">Save</button>
+            </footer>
+          </div>
+
+          <p>Cards with an img or .overlay component up front will feature it.</p>
+
+          <div class="two-column">
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/500/500">
+                <footer class="bottom right">
+                  <button class="yellow">Hire</button> <button class="blue">Save</button>
+                </footer>
+              </div>
+              <h4>Dog</h4>
+              <p>His name is ironic or something. Don't cross him. His meow is worse than his bite.</p>
+            </div>
+
+            <div class="card">
+              <div class="overlay">
+                <img src="http://placekitten.com/400/400">
+                <footer class="top left">
+                  <button class="action">Hire</button> <button class="info">Save</button>
+                </footer>
+              </div>
+              <h4>Scratches</h4>
+              <p>Nobody knows if his name refers to the scratches that cover his body, or those he's dished out to others. Everyone knows better than to ask.</p>
+            </div>
+          </div>
                 </section>
             </div>
         </div>
