@@ -1,10 +1,13 @@
 pre {
-    overflow: hidden;
     padding: @text-padding;
-    box-shadow: inset @box-shadow;
     font-family: @font-family-monospace;
+    overflow: hidden;
     .default(border-radius);
-    .colorize(@charcoal);
+    .colorize(@graphite);
+
+    &.white-space, &.word-break {
+        white-space: pre-wrap;
+    }
 
     > code {
         background: transparent;

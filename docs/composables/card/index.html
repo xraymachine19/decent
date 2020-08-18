@@ -55,66 +55,131 @@
             
             <div class="grid-width-nine">
                 <section id="reference">
-                    <p>Present information in the popular card format by adding the .card class to an element.</p>
+                    
                 </section>
                 <section id="examples">
+                  <h2>Examples</h2>
+                  <h3>Basic cards</h3>
+                  <p>Cards give children elements uniform spacing and have a max-width of an aside:</p>
+                  <div class="card">
+                    <h3>Welcome to the club.</h3>
+                    <p>Don't forget to validate parking!</p>
+                  </div>
 
-          <div id="mouser" class="card">
-            <h4 class="action light">The Mouser</h4>
-            <div class="golden-column">
-              <div>
-                <img src="http://placekitten.com/400/400">
+                  
+                  <pre class="small aside-width margin-auto white-space">&lt;div class="card"&gt;
+  &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
+  &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+                  <p>Elements in cards bleed to the edges, so headlines with color classes will look like this:</p>
+
+                  <div class="card">
+                    <h3 class="info">Welcome to the club.</h3>
+                    <p>Don't forget to validate parking!</p>
+                  </div>
+
+                  <pre class="small aside-width margin-auto white-space">&lt;div class="card"&gt;
+  &lt;h3 class="info"&gt;Welcome to the club.&lt;/h3&gt;
+  &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+                  <p>Cards support the other composables, so you can make them into a matte or well:</p>
+
+                  <div class="two-column">
+                    <div>
+                      <div class="card well">
+                        <h3>Welcome to the club.</h3>
+                        <p>Don't forget to validate parking!</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card matte">
+                        <h3>Welcome to the club.</h3>
+                        <p>Don't forget to validate parking!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="two-column">
+                    <div>
+                      <pre class="small aside-width margin-auto white-space">&lt;div class="card well"&gt;
+  &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
+  &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                    <div>
+                      <pre class="small aside-width margin-auto white-space">&lt;div class="card matte"&gt;
+  &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
+  &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                  </div>
+
+                  <h2>Advanced cards</h2>
+
+                  <h3>Card layout</h3>
+
+                  <p>In general, cards stack their child elements. But Decent's layout composables can be used to achieve more complicated layouts:</p>
+
+                  <div id="mouser" class="card">
+                  <h4 class="action light">The Mouser</h4>
+                  <div class="golden-column">
+                    <div>
+                      <img src="http://placekitten.com/400/400">
+                    </div>
+                    <div>
+                      <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
+                    </div>
+                  </div>
+                  <footer class="two-column">
+                    <button class="action">Hire</button> <button class="info">Save</button>
+                  </footer>
               </div>
-              <div>
-                <p>If there's a rat about, the criminal cat gang goes to The Mouser.</p>
-              </div>
-            </div>
-            <footer class="two-column">
-              <button class="action">Hire</button> <button class="info">Save</button>
-            </footer>
-          </div>
 
-          <div class="card matte">
-            <h2 class="color-failure">Fuzzy Mittens</h2>
-            <div class="two-column">
-              <div class="overlay">
-                
-                <img src="http://placekitten.com/300/300">
-                <div class="bar black bottom no-margin fade small">Fuzzy M.</div>
-              </div>
-              <p>Fuzzy runs catnip all through the neighborhood.</p>
-            </div>
-            <footer class="stack">
-              <button class="success">Hire</button><button class="info">Save</button>
-            </footer>
-          </div>
-
-          <p>Cards with an img or .overlay component up front will feature it.</p>
-
-          <div class="two-column">
-            <div class="card">
-              <div class="overlay">
-                <img src="http://placekitten.com/500/500">
-                <footer class="bottom right">
-                  <button class="yellow">Hire</button> <button class="blue">Save</button>
+              <div class="card matte">
+                <h2 class="color-failure">Fuzzy Mittens</h2>
+                <div class="two-column">
+                  <div class="overlay">
+                    
+                    <img src="http://placekitten.com/300/300">
+                    <div class="bar black bottom no-margin fade small">Fuzzy M.</div>
+                  </div>
+                  <p>Fuzzy runs catnip all through the neighborhood.</p>
+                </div>
+                <footer class="stack">
+                  <button class="success">Hire</button><button class="info">Save</button>
                 </footer>
               </div>
-              <h4>Dog</h4>
-              <p>His name is ironic or something. Don't cross him. His meow is worse than his bite.</p>
-            </div>
 
-            <div class="card">
-              <div class="overlay">
-                <img src="http://placekitten.com/400/400">
-                <footer class="top left">
-                  <button class="action">Hire</button> <button class="info">Save</button>
-                </footer>
+              <h3>Featuring content</h3>
+
+              <p>Cards with an img or .overlay component up front will feature it, making it fill the full width of the card. The overlay component can be good for putting information or buttons in useful spots on the feature image.</p>
+
+              <div class="two-column">
+                <div class="card">
+                  <div class="overlay">
+                    <img src="http://placekitten.com/500/500">
+                    <footer class="bottom right">
+                      <button class="yellow">Hire</button> <button class="blue">Save</button>
+                    </footer>
+                  </div>
+                  <h4>Dog</h4>
+                  <p>His name is ironic or something. Don't cross him. His meow is worse than his bite.</p>
+                </div>
+
+                <div class="card">
+                  <div class="overlay">
+                    <img src="http://placekitten.com/400/400">
+                    <footer class="top left">
+                      <button class="action">Hire</button> <button class="info">Save</button>
+                    </footer>
+                  </div>
+                  <h4>Scratches</h4>
+                  <p>Nobody knows if his name refers to the scratches that cover his body, or those he's dished out to others. Everyone knows better than to ask.</p>
+                </div>
               </div>
-              <h4>Scratches</h4>
-              <p>Nobody knows if his name refers to the scratches that cover his body, or those he's dished out to others. Everyone knows better than to ask.</p>
-            </div>
-          </div>
-                </section>
+              </section>
             </div>
         </div>
     </main>

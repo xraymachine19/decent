@@ -55,21 +55,32 @@
             
             <div class="grid-width-nine">
                 <section id="reference">
-                    <p>The hero class is usually one of the first elements on the page, outside of the normal section flow. It's full-width and heavily emphasizes all of the content within. It has a colored, patterned background.</p>
+                    
                 </section>
                 <section id="examples">
-                    <div class="hero reaction">
+                    <h2>Examples</h2>
+                    <h3>Basic heros</h3>
+                    <div class="hero">
                         <h1>The hero class is loud and gets attention.</h1>
                         <p class="feature">Body copy should <em>probably</em> have a <strong>.feature</strong> class to match the size.</p>
-                        <p>Normal paragraphs will be a bit bigger too, though.</p>
-                        <p class="text-align-center"><button class="info">Sign up now</button></p>
+                        <p class="text-align-center feature"><button class="reaction">Buttons too!</button></p>
                     </div>
 
-                    <p>As a direct descendant of the body element, the hero component takes up the full page width and commands more attention.</p>
+                    <pre class="white-space">&lt;div class="hero"&gt;
+    &lt;h1&gt;The hero class is loud and gets attention.&lt;/h1&gt;
+    &lt;p class="feature"&gt;Body copy should &lt;em&gt;probably&lt;/em&gt; have a &lt;strong&gt;.feature&lt;/strong&gt; class to match the size.&lt;/p&gt;
+    &lt;p class="text-align-center feature"&gt;&lt;button class="reaction"&gt;Buttons too!&lt;/button&gt;&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+                    <p>The hero unit draws attention through color and pattern. It does so even on smaller hero composables, like this card:</p>
 
                     <aside class="hero matte card reaction">
                         <p class="feature"><strong>.hero</strong> doesn't need to be the first element, or even applied to a div. It works with other classes too.</p>
                     </aside>
+
+                    <pre class="white-space">&lt;aside class="hero matte card reaction"&gt;
+    &lt;p class="feature"&gt;&lt;strong&gt;.hero&lt;/strong&gt; doesn't need to be the first element, or even applied to a div. It works with other classes too.&lt;/p&gt;
+&lt;/aside&gt;</pre>
                 </section>
             </div>
         </div>
