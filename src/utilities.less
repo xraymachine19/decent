@@ -337,9 +337,3 @@ each(@palette-color-names, {
   &.@{value} { .colorize(@@value);};
   &.color-@{value} { .color-text(@@value);};
 });
-
-// gray color names .colorize() when used as a class
-each(@gray-names, { 
-  &.@{value} { .colorize(@@value);}
-  &.color-@{value} { .color-text(@@value);};
-;});

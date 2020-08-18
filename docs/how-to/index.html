@@ -24,8 +24,8 @@
     </ul>
 </nav>
     <main>
-      <div class="top bar full-width gutter-bottom placeholder"></div>
-      <section class="hero inner-column-width">
+      <div class="top bar full-width margin-bottom placeholder"></div>
+      <section class="hero">
         <h1>How to</h1>
         <p>You'll be writing Decent CSS in no time.</p>
       </section>
@@ -42,46 +42,7 @@
           </nav>
         </div>
         <div class="grid-width-nine">
-          <section id="how_to">
-            <h1 class="code-line" data-line-start=2 data-line-end=3><a id="First_know_Less_2"></a>First, know Less</h1>
-            <p class="has-line-data" data-line-start="4" data-line-end="5">If you don’t know Less, the preprocessor for CSS, you should. Decent is written in Less.</p>
-            <p class="has-line-data" data-line-start="6" data-line-end="7">Here’s a quick tutorial if you don’t know it.</p>
-            <p class="has-line-data" data-line-start="8" data-line-end="9">Variables look like this:</p>
-            <pre><code><span class="">p</span> {
-      <span class="">@variable-name</span>: #000000;
-      <span class="">color</span>: <span class="">@variable-name</span>;
-  }</code></pre>
-            <p class="has-line-data" data-line-start="15" data-line-end="16">They’re set with the @ symbol. The above outputs:</p>
-            <pre><code>p { color: #000000;}</code></pre>
-            <p class="has-line-data" data-line-start="19" data-line-end="20">Next, you can nest rules inside of each other:</p>
-            <pre><code>p {
-      @variable-name: #ffffff;
-      span { 
-          color: @variable-name;
-      }
-  }</code></pre>
-            <p class="has-line-data" data-line-start="28" data-line-end="29">This lets you quickly write and organize rules in a codebase. The above outputs:</p>
-            <pre><code>p span { color: #ffffff;}</code></pre>
-            <p class="has-line-data" data-line-start="32" data-line-end="33">There you go! That covers about 90% of the Less you will ever write. It has tons and tons great features besides these, though, and great docs to go with it. But if you know CSS and the above, then you know Less. Welcome to the club!</p>
-  </section>
-  <section> 
-            <h1 class="code-line" data-line-start=35 data-line-end=36><a id="Wait_what_about_Sass_35"></a>Wait, what about Sass?</h1>
-            <p class="has-line-data" data-line-start="37" data-line-end="38">We get it. A lot of people “moved on” to Sass.</p>
-            <p class="has-line-data" data-line-start="39" data-line-end="40">We didn’t. And here’s why: Less is declarative and Sass is imperative.</p>
-            <p class="has-line-data" data-line-start="41" data-line-end="42">Some people see Sass and think, “Great, a handy imperative layer in which to write and output code!”</p>
-            <p class="has-line-data" data-line-start="43" data-line-end="44">We get that too. We’re just not those people. Generally, this group of people is looking to <em>not</em> write CSS. We even love that, in spirit. The best line of code is the line of code you don’t have to write.</p>
-            <p class="has-line-data" data-line-start="45" data-line-end="46">But sometimes you do have to write and organize a whole lot of CSS into one codebase with variable outputs, different windows into your app’s UI world.</p>
-            <p class="has-line-data" data-line-start="47" data-line-end="48">For this, we find Less’s declarative nature and lazy loading to be the optimal solution. We think of the imperative layer as constantly geting in our way. Less enhances and celebrates CSS. It doesn’t apologize for its declarative nature.</p>
-            <p class="has-line-data" data-line-start="49" data-line-end="50">Still, if you know Sass, then you can use Decent pretty comfortably. The tutorial above covers most of the daily use difference. Just pretend you’re tweeting!</p>
-          </section>
-          <section> 
-            
-            <h1 class="code-line" data-line-start=51 data-line-end=52><a id="Seriously_though_No_Sass_51"></a>Seriously, though. No Sass?</h1>
-            <p class="has-line-data" data-line-start="53" data-line-end="54">No Sass. We’ve heard the features argument. It’s more about the paradigm for us.</p>
-            <p class="has-line-data" data-line-start="55" data-line-end="56">If you want an example, check out this codepen. One of the two examples will make sense to you. If the boxes are green, you must go lean! (…er stylesheets)</p>
-            <p class="has-line-data" data-line-start="57" data-line-end="58">If you’re constantly fighting to namespace components and cart around CSS in Javascript, you might be downstream of this problem. Decent lets you build a modern UI style codebase with centralized style controls and easy support for building multiple app/experience/portal targets.</p>
-            <p class="has-line-data" data-line-start="59" data-line-end="60">A single Decent codebase can put out consistent looks/stylesheets for your web app, your Electron app, your marketing page and your Myspace widget (or more recent technology). All without running into those weird global scope issues as the codebase gets more complex. All without walking on eggshells around that global scope after being tortured by Kafkaesque errors.</p>
-          </section>
+          
           <section> 
             
             <h1 class="code-line" data-line-start=61 data-line-end=62><a id="How_do_I_get_started_61"></a>How do I get started?</h1>

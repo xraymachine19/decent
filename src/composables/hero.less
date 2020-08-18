@@ -5,12 +5,9 @@
     falling-triangles, glamorous, graph-paper, heavy-rain, i-like-food, jigsaw, 
     morphing-diamonds, parkay-floor, pixel-dots, rain, signal, texture, tiny-checkers, 
     volcano-lamp, zig-zag;
-  
-    font-size: 110%;
-    padding: @padding;
-    width: 100%;
-    max-width: none;
-    margin-bottom: @gutter;
+    
+    padding: @gutter;
+    margin-bottom: @margin;
   
     .set-pattern() when (@randomness = true) {
         .set-random-pattern(@pattern-list) {
@@ -51,23 +48,4 @@
             padding: 12% 16%;
         });
     }
-
-    // this rewrites color- rules to work inside the hero
-    // .inline-elements({
-    //     each(@semantic-color-names, { 
-    //         &.color-@{value} { .color-text(@@value; @hero-background);};
-    //     });
-    // });
-
-    .button-elements({
-        font-size: 125%;
-    });
-
-    .on-tablet({
-        padding: @gutter;
-    });
-
-    .on-desktop({
-        padding: @gutter * 2;
-    });
 }

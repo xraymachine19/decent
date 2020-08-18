@@ -15,77 +15,9 @@
 @semantic-class-names:   @semantic-color-names;
 @semantic-colors:   @action, @reaction, @info, @warning, @success, @failure, @default;
 
-@gray-names: black, white, gray-lighter, gray-light, gray-medium, ~"gray", gray-dark, gray-darker;
-@grays: @black, @white, @gray-lighter, @gray-light, @gray-medium, @gray, @gray-dark, @gray-darker;
+@palette-colors: @nightshade, @lily, @emerald, @ruby, @amethyst, @sapphire, @sunset, @moonlight, @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @graphite, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @bacon, @platinum, @twilight, @mist, @snow, @plum, @seafoam, @seagreen, @grapefruit, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @copper, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @iron, @lavender, @crimson, @clover, @charcoal, @red, @electricblue, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aquamarine, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy, @black, @white, @gray;
 
-@palette-colors: @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @graphite, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @bacon, @platinum, @twilight, @mist, @snow, @plum, @seafoam, @seagreen, @grapefruit, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @copper, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @iron, @lavender, @crimson, @clover, @charcoal, @red, @electricblue, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aquamarine, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy;
-@palette-color-names: ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"graphite", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"bacon", ~"platinum", ~"twilight", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"seagreen", ~"grapefruit", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"copper", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"iron", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"electricblue", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aquamarine", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy";
-
-
-// grays 
-
-@gray-mix: 30%;
-@gray-base: desaturate(@base-color, 85%);
-@gray-medium: mix(lighten(black, 50%), @gray-base, @gray-mix);
-@gray: @gray-medium;
-
-.set-white();
-.set-gray-lighter();
-.set-gray-light();
-
-.set-black();
-.set-gray-darker();
-.set-gray-dark();
-
-
-.set-white() {
-	// @white: mix(white, @base-color, 99%);
-
-	@base: white;
-    .set-lumafix(@base; @strength: 10%;);
-    @white: mix(@lumafix, @compare-color, @compare-mix);
-}
-
-.set-black() {
-	// @black: mix(black, @base-color, 80%);
-
-	@base: black;
-    .set-lumafix(@base; @strength: 10%;);
-    @black: mix(@lumafix, @compare-color, @compare-mix);
-}
-
-.set-gray-lighter() {
-  .set-contrast-ceiling(@gray-base);
-  .set-contrast(@gray-base; @contrast-ceiling*.92; @mode: tint;);
-  @gray-lighter-base: @contrast;
-  @gray-lighter: mix(lighten(black, 84%), @gray-lighter-base, @gray-mix);
-}
-
-.set-gray-light() {
-  @gray-light-base: mix(@gray-base, @gray-lighter, 67%);
-  @gray-light: mix(lighten(black, 75%), @gray-light-base, @gray-mix);
-}
-
-.set-gray-dark() {
-  @gray-dark-base: mix(@gray-base, @gray-darker, 67%);
-  @gray-dark: mix(lighten(black, 25%), @gray-dark-base, @gray-mix);
-}
-
-.set-gray-darker() {
-  .set-contrast-floor(@gray-base);
-  .set-contrast(@gray-base; @contrast-floor*.5; @mode: shade;);
-  @gray-darker-base: @contrast;
-  @gray-darker: mix(lighten(black, 16%), @gray-darker-base, @gray-mix);
-}
-
-
-@grey-lighter: @gray-lighter;
-@grey-light: @gray-light;
-@grey-medium: @gray-medium;
-@grey: @gray;
-@grey-dark: @gray-dark;
-@grey-darker: @gray-darker;
-
+@palette-color-names: ~"nightshade", ~"lily", ~"emerald", ~"ruby", ~"amethyst", ~"sapphire", ~"sunset", ~"moonlight", ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"graphite", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"bacon", ~"platinum", ~"twilight", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"seagreen", ~"grapefruit", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"copper", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"iron", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"electricblue", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aquamarine", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy", ~"black", ~"white", ~"gray";
 
 
 // create palette colors
@@ -93,6 +25,9 @@
 .set-palette-colors();
 
 .set-palette-colors() {
+	.set-white();
+	.set-black();
+	.set-gray();
     .set-red();
     .set-orange();
     .set-yellow();
@@ -162,6 +97,33 @@
 	.set-olivedrab();
 	.set-tan();
 	.set-royalpurple();
+	.set-sunset();
+	.set-moonlight();
+	.set-sapphire();
+	.set-emerald();
+	.set-ruby();
+	.set-amethyst();
+	.set-lily();
+	.set-nightshade();
+
+}
+
+.set-white() {
+	@base: white;
+    .set-lumafix(@base; @strength: 10%;);
+    @white: mix(@lumafix, @compare-color, @compare-mix);
+}
+
+.set-black() {
+	@base: black;
+    .set-lumafix(@base; @strength: 10%;);
+    @black: mix(@lumafix, @compare-color, @compare-mix);
+}
+
+.set-gray() {
+	@base: gray;
+    .set-lumafix(@base; @strength: 10%;);
+    @gray: mix(@lumafix, @compare-color, @compare-mix);
 }
 
 .set-red() {
@@ -231,7 +193,7 @@
 }
 
 .set-magenta() {
-    @base: mix(magenta, darkmagenta, 60%);
+    @base: mix(magenta, darkmagenta, 67%);
     .set-lumafix(@base; @strength: @color-strength*(2/3););
     @magenta: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -303,19 +265,20 @@
 }
 
 .set-charcoal() {
-	.set-average(@black, @brown, @gray;);
-	@charcoal: @average;
+	.set-average(black, black, darkslategray, brown, burlywood;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @charcoal: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-crimson() {
 	@base: average(crimson, darkred);
-    .set-lumafix(@base; @gray-dark; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength/2;);
     @crimson: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-clover() {
 	.set-average(forestgreen, lawngreen, lime;);
-    .set-lumafix(@average; @gray-dark; @strength: @color-strength/3;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
     @clover: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -411,8 +374,8 @@
 }
 
 .set-midnight() {
-    .set-average(@black, @navy, @purple, @gray-darker;);
-    .set-lumafix(@average; @strength: @color-strength/3;);
+    .set-average(black, navy, purple, darkslategray;);
+    .set-lumafix(@average; @strength: @color-strength/2;);
 	@midnight: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 	@midnight: @average;
 }
@@ -550,8 +513,8 @@
 }
 
 .set-sand() {
-    @base: average(sandybrown, seashell);
-    .set-lumafix(@base; @strength: @color-strength/6;);
+    .set-average(sandybrown, seashell, ivory;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
     @sand: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -591,8 +554,96 @@
     @royalpurple: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
-// iron 
-// copper
+.set-sunset() {
+    .set-average(orange, orangered, red, gold, white;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @sunset: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-moonlight() {
+    .set-average(white, white, white, gray, purple, blue, yellow;);
+    .set-lumafix(@average; @ambient; @strength: @color-strength/2;);
+    @moonlight: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-sapphire() {
+    @base: mix(#0F52BA, hardlight(@ambient, #0F52BA), 70%);
+    .set-lumafix(@base; @strength: @color-strength/6;);
+    @sapphire: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-emerald() {
+	@base: mix(#00743e, hardlight(@ambient, #00743e), 80%);
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @emerald: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-ruby() {
+	@base: mix(#a7003c, hardlight(@ambient, #a7003c), 80%);
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @ruby: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-amethyst() {
+	@base: mix(#7a40a7, hardlight(@ambient, #7a40a7), 60%);
+    .set-lumafix(@base; @strength: @color-strength/6;);
+    @amethyst: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-lily() {
+    @base: #f3c6ee;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @lily: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-nightshade() {
+    @base: #361468;
+    .set-lumafix(@base; @strength: @color-strength/5;);
+    @nightshade: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+
+
+// raspberry
+// blueberry
+// blackberry
+// cranberry
+
+// barn 
+
+// parsley
+
+// burgundy
+
+// sierra
+// sandstone
+// granite
+// clay
+
+
+
+// tin 
+// rust 
+
+// beige
+
+
+
+// reno 
+// chicago
+// fargo
+// minnesota
+
+
+// denim
+// cinnamon
+// honey
+// pumpkin
+// eggplant
+// moss
+// carnation
+
+
 
 // semantic colors 
 
@@ -669,7 +720,7 @@
 	
 	.bump-action() when (luma(@action) < 30%) {
 		// bump it up to at least @warning's brightness if it's not there
-		.set-lumafix(@base-color; @gray-light; 100%);
+		.set-lumafix(@base-color; @red; 80%);
 		@action: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
 	}
 

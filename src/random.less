@@ -33,8 +33,7 @@
 
 .random-background() {
     
-    @potentials: @action, @reaction, average(@action, @gray-darker), @gray-darker, @gray-lighter,
-     @info, average(@reaction, @gray-darker), @action, @action, @action, @action;
+    @potentials: @action, @reaction, @reaction, @action, @action, @action;
 
     @length: length(@potentials);
 
@@ -51,19 +50,10 @@
                 mix(@white, @action, 90%),
                 mix(@white, @reaction, 90%),
                 mix(@white, @info, 90%),
-                @gray-lighter,
                 @white,
                 @white,
                 @white;
     }
-
-    // .set-potentials() when (default()) {
-    //     @potentials: @gray-dark,
-    //             mix(@black, @ambient, 80%),
-    //             mix(@black, @action, 80%),
-    //             mix(@black, @reaction, 80%),
-    //             @white;
-    // }
 
     .set-potentials();
 
@@ -122,8 +112,8 @@
 
 .random-fontsize() {
     @randomfontsize: `Math.random()`;
-    @plusfontsize: floor(@randomfontsize*10);
-    @basefontsize: 16px;
+    @plusfontsize: floor(@randomfontsize*14);
+    @basefontsize: 12px;
     @font-size-random: @basefontsize + @plusfontsize;
 }
 
