@@ -1,6 +1,6 @@
 // color creation variables
 @color-strength: 75% + 15%*(unit(luma(@base-color))/100);
-@ambient-mix: 84%;
+@ambient-mix: 70%;
 @compare-mix: 80%;
 @compare-color: mix(screen(@ambient, @lumafix), overlay(@ambient, @lumafix), 50%);
 
@@ -146,7 +146,7 @@
 
 .set-olive() {
     @base: average(olive, olivedrab);
-    .set-lumafix(@base; @strength: @color-strength/3;);
+    .set-lumafix(@base; @strength: @color-strength/2;);
     @olive: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -620,7 +620,7 @@
 // granite
 // clay
 
-
+// manganese
 
 // tin 
 // rust 

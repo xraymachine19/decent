@@ -1,5 +1,4 @@
 .hero {
-    @hero-background: @action;
 
     @subtle-patterns: bamboo, charlie-brown, diagonal-lines, endless-clouds, eyes,
     falling-triangles, glamorous, graph-paper, heavy-rain, i-like-food, jigsaw, 
@@ -27,7 +26,7 @@
 
     .set-pattern();
 
-    .pattern(@pattern; @hero-background; 1.1;);
+    .pattern(@pattern; @black; 1.1;);
 
     // this generates a pattern background for each semantic color
     // each(@semantic-color-names, {
@@ -36,16 +35,20 @@
     //     &.@{color-name} { .pattern(@pattern; @color; 1.1;);}
     // });
 
+    .button-elements({
+        font-size: 125%;
+    });
+
     p {
         text-indent: 0;
     }
 
     &.island {
-        margin: 0;
+        margin: 0 auto;
         margin-bottom: @gutter;
 
         .on-tablet({
-            padding: 12% 16%;
+            padding: 8% 16%;
         });
     }
 }
