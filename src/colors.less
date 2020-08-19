@@ -1,6 +1,6 @@
 // color creation variables
 @color-strength: 75% + 15%*(unit(luma(@base-color))/100);
-@ambient-mix: 70%;
+@ambient-mix: 80%;
 @compare-mix: 80%;
 @compare-color: mix(screen(@ambient, @lumafix), overlay(@ambient, @lumafix), 50%);
 
@@ -9,15 +9,15 @@
 // decent uses name lists any time a variable name also needs to be a class name
 // variable lists: like the name lists, but these refer to the actual color, not the name
 
-// removing names here will remove support for that semantic class
+// removing names here will remove support for that semantic class 
 
 @semantic-color-names:   action, reaction, info, warning, success, failure, default;
 @semantic-class-names:   @semantic-color-names;
 @semantic-colors:   @action, @reaction, @info, @warning, @success, @failure, @default;
 
-@palette-colors: @nightshade, @lily, @emerald, @ruby, @amethyst, @sapphire, @sunset, @moonlight, @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @graphite, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @bacon, @platinum, @twilight, @mist, @snow, @plum, @seafoam, @seagreen, @grapefruit, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @copper, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @iron, @lavender, @crimson, @clover, @charcoal, @red, @electricblue, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aquamarine, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy, @black, @white, @gray;
+@palette-colors: @cinnamon, @pumpkin, @eggplant, @almond, @sandstone, @granite, @clay, @manganese, @cloudwhite, @iceblue, @saddlebrown, @barnred, @raspberry, @blueberry, @blackberry, @cranberry, @nightshade, @lily, @emerald, @ruby, @amethyst, @sapphire, @sunset, @moonlight, @tan, @royalpurple, @olivedrab, @chocolate, @vanilla, @strawberry, @orchid, @sand, @graphite, @goldenrod, @mint, @wheat, @steel, @slate, @cream, @bacon, @platinum, @twilight, @mist, @snow, @plum, @seafoam, @seagreen, @grapefruit, @cornhusk, @scarlet, @tangerine, @army, @ultramarine, @midnight, @turquoise, @peach, @coral, @cobalt, @copper, @hotpink, @neongreen, @khaki, @gold, @silver, @bronze, @gunmetal, @salmon, @iron, @lavender, @crimson, @clover, @charcoal, @red, @electricblue, @orange, @yellow, @lemon, @olive, @drab, @green, @teal, @aquamarine, @cyan, @skyblue, @blue, @indigo, @violet, @magenta, @purple, @brown, @pink, @lime, @navy, @black, @white, @gray;
 
-@palette-color-names: ~"nightshade", ~"lily", ~"emerald", ~"ruby", ~"amethyst", ~"sapphire", ~"sunset", ~"moonlight", ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"graphite", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"bacon", ~"platinum", ~"twilight", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"seagreen", ~"grapefruit", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"copper", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"iron", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"electricblue", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aquamarine", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy", ~"black", ~"white", ~"gray";
+@palette-color-names: ~"cinnamon", ~"pumpkin", ~"eggplant", ~"almond", ~"sandstone", ~"granite", ~"clay", ~"manganese", ~"cloudwhite", ~"iceblue", ~"saddlebrown", ~"barnred", ~"raspberry", ~"blueberry", ~"blackberry", ~"cranberry", ~"nightshade", ~"lily", ~"emerald", ~"ruby", ~"amethyst", ~"sapphire", ~"sunset", ~"moonlight", ~"tan", ~"royalpurple", ~"olivedrab", ~"chocolate", ~"vanilla", ~"strawberry", ~"orchid", ~"sand", ~"graphite", ~"goldenrod", ~"mint", ~"wheat", ~"steel", ~"slate", ~"cream", ~"bacon", ~"platinum", ~"twilight", ~"mist", ~"snow", ~"plum", ~"seafoam", ~"seagreen", ~"grapefruit", ~"cornhusk", ~"scarlet", ~"tangerine", ~"army", ~"ultramarine", ~"midnight", ~"turquoise", ~"peach", ~"coral", ~"cobalt", ~"copper", ~"hotpink", ~"neongreen", ~"khaki", ~"gold", ~"silver", ~"bronze", ~"gunmetal", ~"salmon", ~"iron", ~"lavender", ~"crimson", ~"clover", ~"charcoal", ~"red", ~"electricblue", ~"orange", ~"yellow", ~"lemon", ~"olive", ~"drab", ~"green", ~"teal", ~"aquamarine", ~"cyan", ~"skyblue", ~"blue", ~"indigo", ~"violet", ~"magenta", ~"purple", ~"brown", ~"pink", ~"lime", ~"navy", ~"black", ~"white", ~"gray";
 
 
 // create palette colors
@@ -105,7 +105,22 @@
 	.set-amethyst();
 	.set-lily();
 	.set-nightshade();
-
+	.set-raspberry();
+	.set-blueberry();
+	.set-blackberry();
+	.set-cranberry();
+	.set-barnred();
+	.set-saddlebrown();
+	.set-iceblue();
+	.set-cloudwhite();
+	.set-manganese();
+	.set-sandstone();
+	.set-granite();
+	.set-clay();
+	.set-cinnamon();
+	.set-pumpkin();
+	.set-eggplant();
+	.set-almond();
 }
 
 .set-white() {
@@ -146,19 +161,19 @@
 
 .set-olive() {
     @base: average(olive, olivedrab);
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
     @olive: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-green() {
     @base: green;
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength/4;);
     @green: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
 .set-teal() {
     @base: teal;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    .set-lumafix(@base; @strength: @color-strength/2;);
     @teal: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -176,7 +191,7 @@
 
 .set-blue() {
     @base: average(cornflowerblue, royalblue);
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength/3;);
     @blue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -266,7 +281,7 @@
 
 .set-charcoal() {
 	.set-average(black, black, darkslategray, brown, burlywood;);
-    .set-lumafix(@average; @strength: @color-strength/3;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
     @charcoal: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -374,8 +389,8 @@
 }
 
 .set-midnight() {
-    .set-average(black, navy, purple, darkslategray;);
-    .set-lumafix(@average; @strength: @color-strength/2;);
+    .set-average(black, navy, purple, darkslategray, white;);
+    .set-lumafix(@average; @strength: @color-strength*(2/3););
 	@midnight: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 	@midnight: @average;
 }
@@ -477,7 +492,7 @@
 }
 
 .set-slate() {
-    .set-average(slateblue, darkslateblue, slategray, darkslategray, black;);
+    .set-average(slateblue, darkslateblue, slategray, darkslategray, darkslategray, black;);
     .set-lumafix(@average; @strength: @color-strength*(2/3););
     @slate: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -496,7 +511,7 @@
 
 .set-graphite() {
 	.set-average(black, navy, gray, darkslategray;);
-    .set-lumafix(@average; @strength: @color-strength/4;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
     @graphite: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -520,7 +535,7 @@
 
 .set-chocolate() {
     @base: average(chocolate, saddlebrown, brown);
-    .set-lumafix(@base; @strength: @color-strength/2;);
+    .set-lumafix(@base; @strength: @color-strength/4;);
     @chocolate: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
@@ -585,7 +600,7 @@
 }
 
 .set-amethyst() {
-	@base: mix(#7a40a7, hardlight(@ambient, #7a40a7), 60%);
+	@base: mix(#9555c5, hardlight(@ambient, #9555c5), 60%);
     .set-lumafix(@base; @strength: @color-strength/6;);
     @amethyst: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
@@ -602,47 +617,132 @@
     @nightshade: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 }
 
+.set-raspberry() {
+    @base: #b70a21;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @raspberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-blueberry() {
+    @base: #476791;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @blueberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-blackberry() {
+    @base: #332f49;
+    .set-lumafix(@base; @strength: @color-strength/6;);
+    @blackberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-cranberry() {
+    @base: #921125;
+    .set-lumafix(@base; @strength: @color-strength/5;);
+    @cranberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-barnred() {
+    @base: #aa3535;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @barnred: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-saddlebrown() {
+    @base: saddlebrown;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @saddlebrown: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-iceblue() {
+    @base: mix(#0087a8, white, 20%);
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @iceblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-cloudwhite() {
+    @base: mix(deepskyblue, white, 6%);
+    .set-lumafix(@base; @strength: @color-strength/6;);
+    @cloudwhite: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-manganese() {
+    @base: #027cf6;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @manganese: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-sandstone() {
+    @base: average(#bd9e70, seashell);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @sandstone: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-granite() {
+    @base: #d1b9b4;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @granite: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-clay() {
+    @base: #a96135;
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    @clay: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-cinnamon() {
+    @base: #9d652a;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @cinnamon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-pumpkin() {
+    @base: #dd7b0c;
+    .set-lumafix(@base; @strength: @color-strength/6;);
+    @pumpkin: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-eggplant() {
+    @base: #ad2064;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @eggplant: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
+
+.set-almond() {
+    @base: blanchedalmond;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @almond: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
 
 
-// raspberry
-// blueberry
-// blackberry
-// cranberry
-
-// barn 
-
-// parsley
-
-// burgundy
-
-// sierra
-// sandstone
-// granite
-// clay
-
-// manganese
-
-// tin 
-// rust 
-
-// beige
 
 
+// denim
+// cotton
+// canvas
+// velvet
 
 // reno 
 // chicago
 // fargo
 // minnesota
 
+// burgundy
+// rust 
+// beige
+// sierra
 
-// denim
-// cinnamon
-// honey
-// pumpkin
-// eggplant
 // moss
-// carnation
+// parsley
 
+// honey
+
+// carnation
+// buttercup
+// mintjulip
+// lilac
+
+// onyx
+// garnet
 
 
 // semantic colors 

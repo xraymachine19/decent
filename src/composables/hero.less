@@ -6,7 +6,7 @@
     volcano-lamp, zig-zag;
     
     padding: @gutter;
-    margin-bottom: @margin;
+    .default(margin-bottom);
   
     .set-pattern() when (@randomness = true) {
         .set-random-pattern(@pattern-list) {
