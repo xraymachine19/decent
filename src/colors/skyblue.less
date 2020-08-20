@@ -1,0 +1,12 @@
+.set-skyblue() {
+    @base: average(skyblue, deepskyblue);
+    @modifier: 1/2;
+    .set-color-base(@base, @modifier);
+    @skyblue: @color-base;
+
+    & when (@output-color-classes = true) {
+        .skyblue { .colorize(@skyblue);}
+    }
+}
+
+.set-skyblue();

@@ -1,0 +1,12 @@
+.set-white() {
+    @base: white;
+    @modifier: 1/24;
+    .set-color-base(@base, @modifier);
+    @white: @color-base;
+
+    & when (@output-color-classes = true) {
+        .white { .colorize(@white);}
+    }
+}
+
+.set-white();

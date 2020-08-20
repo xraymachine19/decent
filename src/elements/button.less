@@ -60,7 +60,7 @@
   .set-contrast-ceiling(@button-color);
 
   // preferentially tint if we can
-  .color() when (@contrast-ceiling > 3) {
+  .color() when (@contrast-ceiling > 3.3) {
     color: white;
     background-color: @button-color;
   }

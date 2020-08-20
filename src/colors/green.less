@@ -1,0 +1,12 @@
+.set-green() {
+    @base: green;
+    @modifier: 1/4;
+    .set-color-base(@base, @modifier);
+    @green: @color-base;
+
+    & when (@output-color-classes = true) {
+        .green { .colorize(@green);}
+    }
+}
+
+.set-green();

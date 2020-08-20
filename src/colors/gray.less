@@ -1,0 +1,12 @@
+.set-gray() {
+    @base: gray;
+    @modifier: 1/2;
+    .set-color-base(@base, @modifier);
+    @gray: @color-base;
+
+    & when (@output-color-classes = true) {
+        .gray { .colorize(@gray);}
+    }
+}
+
+.set-gray();

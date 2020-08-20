@@ -168,9 +168,9 @@
   @light-bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
   @pattern-base: @light-bg;
 
-  @fill-opacity: .12;
+  @fill-opacity: .14;
 
-  @fg-base: @white;
+  @fg-base: white;
 
   // we need the foreground color inside the SVG to be in rgb(r,g,b) format
   @fg-red: floor(red(@fg-base));
@@ -187,7 +187,7 @@
   @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
   @pattern-base: @bg;
 
-  @fill-opacity: .24;
+  @fill-opacity: .28;
 
   @fg-base: white;
 
@@ -208,7 +208,7 @@
 
   @fill-opacity: .07;
 
-  @fg-base: @black;
+  @fg-base: black;
 
   // we need the foreground color inside the SVG to be in rgb(r,g,b) format
   @fg-red: floor(red(@fg-base));
@@ -333,7 +333,7 @@ each(@semantic-color-names, {
 });
 
 // palette color names .colorize() when used as a class
-each(@palette-color-names, { 
-  &.@{value} { .colorize(@@value);};
-  &.color-@{value} { .color-text(@@value);};
-});
+// each(@palette-color-names, { 
+//   &.@{value} { .colorize(@@value);};
+//   &.color-@{value} { .color-text(@@value);};
+// });

@@ -1,0 +1,13 @@
+.set-cream() {
+    .set-average(mintcream, beige, white;);
+    @base: @average;
+    @modifier: 1/6;
+    .set-color-base(@base, @modifier);
+    @cream: @color-base;
+
+    & when (@output-color-classes = true) {
+        .cream { .colorize(@cream);}
+    }
+}
+
+.set-cream();

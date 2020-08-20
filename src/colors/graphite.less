@@ -1,0 +1,13 @@
+.set-graphite() {
+    .set-average(black, navy, gray, darkslategray;);
+    @base: @average;
+    @modifier: 1/6;
+    .set-color-base(@base, @modifier);
+    @graphite: @color-base;
+
+    & when (@output-color-classes = true) {
+        .graphite { .colorize(@graphite);}
+    }
+}
+
+.set-graphite();

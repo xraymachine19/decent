@@ -1,0 +1,12 @@
+.set-yellow() {
+    @base: yellow;
+    @modifier: 1/4;
+    .set-color-base(@base, @modifier);
+    @yellow: @color-base;
+
+    & when (@output-color-classes = true) {
+        .yellow { .colorize(@yellow);}
+    }
+}
+
+.set-yellow();

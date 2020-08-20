@@ -1,0 +1,12 @@
+.set-crimson() {
+    @base: average(crimson, darkred);
+    @modifier: 1/2;
+    .set-color-base(@base, @modifier);
+    @crimson: @color-base;
+
+    & when (@output-color-classes = true) {
+        .crimson { .colorize(@crimson);}
+    }
+}
+
+.set-crimson();

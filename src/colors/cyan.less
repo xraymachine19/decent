@@ -1,0 +1,12 @@
+.set-cyan() {
+    @base: cyan;
+    @modifier: 1/2;
+    .set-color-base(@base, @modifier);
+    @cyan: @color-base;
+
+    & when (@output-color-classes = true) {
+        .cyan { .colorize(@cyan);}
+    }
+}
+
+.set-cyan();

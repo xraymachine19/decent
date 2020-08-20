@@ -25,7 +25,7 @@
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
     <main>
-        <section class="hero feature red">
+        <section class="hero feature skyblue">
             <h1>.group</h1>
             <p>Groups buttons and list items into a singular unit.</p>
         </section>
@@ -55,26 +55,39 @@
             
             <div class="grid-width-nine">
                 <section id="reference">
-                    <p>The .group class groups like things inside of it.</p>
+                    <h2>Details</h2>
+                    <div id="arguments">
+                        <ul>
+                            <li><strong>filename</strong>: /composables/group.less</li>
+                            <li><strong>settings</strong>: none</li>
+                            <li><strong>defaults</strong>: margin-bottom, aside-width, no-padding</li>
+                        </ul>
+                    </div>
+                    <div class="margin-auto gutter no-margin-bottom text-align-center">
+                        <span class="badge info">composable</span>
+                    </div>
                 </section>
                 <section id="examples">
-
-
+                    <h2>Examples</h2>
+                    <p>The .group class groups like things inside of it.</p>
                     <ul class="group">
-                    <li>Apples</li>
-                    <li>Oranges</li>
-                    <li>Apricots</li>
-                    <li>Watermelons</li>
-                    <li>Kiwis</li>
+                        <li>Apples</li>
+                        <li>Oranges</li>
+                        <li>Apricots</li>
+                        <li>Watermelons</li>
+                        <li>Kiwis</li>
                     </ul>
 
-                    <ol class="group">
-                    <li>Apples</li>
-                    <li>Oranges</li>
-                    <li>Apricots</li>
-                    <li>Watermelons</li>
-                    <li>Kiwis</li>
-                    </ol>
+                    <pre>&lt;ul class="group"&gt;
+    &lt;li&gt;Apples&lt;/li&gt;
+    &lt;li&gt;Oranges&lt;/li&gt;
+    &lt;li&gt;Apricots&lt;/li&gt;
+    &lt;li&gt;Watermelons&lt;/li&gt;
+    &lt;li&gt;Kiwis&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                    <p>It's most often used for buttons and lists.</p>
+                    
 
                     <p>ul and ol .group composables work well with the border class:</p>
 
@@ -97,10 +110,17 @@
                     </div>
 
                     <p>Groups work on buttons:</p>
-                    <p class="group">
-                    <button class="info">Info</button>
-                    <button class="warning">Warning</button>
-                    </p>
+                    <ol class="group">
+                        <button>Mince</button>
+                        <button>Rinse</button>
+                        <button>Balance</button>
+                    </ol>
+
+                    <pre>&lt;ol class="group"&gt;
+    &lt;button&gt;Mince&lt;/button&gt;
+    &lt;button&gt;Rinse&lt;/button&gt;
+    &lt;button&gt;Balance&lt;/button&gt;
+&lt;/ol&gt;</pre>
 
                     <div class="group border-radius border">
                     <button class="action">Action</button>
@@ -109,9 +129,9 @@
 
                     <div class="two-column">
                     <div class="group border-radius border">
-                        <button>Deploy Fuzzy</button>
-                        <button>Deploy Scratches</button>
-                        <button>Deploy Mouser</button>
+                        <button class="action">Deploy Fuzzy</button>
+                        <button class="action">Deploy Scratches</button>
+                        <button class="action">Deploy Mouser</button>
                     </div>
 
                     <div class="group border">

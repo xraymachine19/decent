@@ -1,0 +1,13 @@
+.set-clover() {
+    .set-average(forestgreen, lawngreen, lime;);
+    @base: @average;
+    @modifier: 1/2;
+    .set-color-base(@base, @modifier);
+    @clover: @color-base;
+
+    & when (@output-color-classes = true) {
+        .clover { .colorize(@clover);}
+    }
+}
+
+.set-clover();

@@ -1,0 +1,13 @@
+.set-charcoal() {
+    .set-average(black, black, darkslategray, brown, burlywood;);
+    @base: @average;
+    @modifier: 1/6;
+    .set-color-base(@base, @modifier);
+    @charcoal: @color-base;
+
+    & when (@output-color-classes = true) {
+        .charcoal { .colorize(@charcoal);}
+    }
+}
+
+.set-charcoal();

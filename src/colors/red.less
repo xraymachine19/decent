@@ -1,0 +1,12 @@
+.set-red() {
+    @base: red;
+    @modifier: 1/2;
+    .set-color-base(@base, @modifier);
+    @red: @color-base;
+
+    & when (@output-color-classes = true) {
+        .red { .colorize(@red);}
+    }
+}
+
+.set-red();

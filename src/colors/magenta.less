@@ -1,0 +1,12 @@
+.set-magenta() {
+    @base: mix(magenta, darkmagenta, 67%);
+    @modifier: 2/3;
+    .set-color-base(@base, @modifier);
+    @magenta: @color-base;
+
+    & when (@output-color-classes = true) {
+        .magenta { .colorize(@magenta);}
+    }
+}
+
+.set-magenta();

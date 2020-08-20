@@ -4,6 +4,7 @@
 .set-random-color();
 @base-color: @random-color;
 @output-patterns: false;
+@output-color-classes: true;
 
 // basics
 
@@ -27,6 +28,12 @@
 @shadow-color: fade(difference(white, @ambient), 22.5%);
 @shadow-position: 0 1px;
 @shadow-blur: 2px;
+
+// color mixing settings
+@color-strength: 75% + 15%*(unit(luma(@base-color))/100);
+@ambient-mix: 80%;
+@compare-mix: 80%;
+@compare-color: mix(screen(@ambient, @lumafix), overlay(@ambient, @lumafix), 50%);
 
 // text settings
 @text-measure: 55;

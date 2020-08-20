@@ -1,0 +1,12 @@
+.set-olive() {
+    @base: olive;
+    @modifier: 2/3;
+    .set-color-base(@base, @modifier);
+    @olive: @color-base;
+
+    & when (@output-color-classes = true) {
+        .olive { .colorize(@olive);}
+    }
+}
+
+.set-olive();
