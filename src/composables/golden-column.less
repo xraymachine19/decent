@@ -1,4 +1,7 @@
 .golden-column {
+
+    @golden-column-gap: @padding;
+
     > * {
         margin-bottom: @margin;
         max-width: none;
@@ -7,7 +10,7 @@
     .on-tablet({
         display: grid;
         grid-template-columns: 1fr*@golden-ratio 1fr;
-        grid-gap: @padding;
+        grid-gap: @golden-column-gap;
 
         &.reverse {
             grid-template-columns: 1fr 1fr*@golden-ratio;
