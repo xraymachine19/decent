@@ -5,7 +5,7 @@
     morphing-diamonds, parkay-floor, pixel-dots, rain, signal, texture, tiny-checkers, 
     volcano-lamp, zig-zag;
     
-    padding: @gutter*2;
+    padding: @gutter @gutter*@golden-ratio;
     .default(margin-bottom);
   
     .set-pattern() when (@randomness = true) {

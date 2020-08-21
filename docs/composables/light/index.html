@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The .well composable | Decent CSS</title>
+  <meta name="description" content="The well composable for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="action top bar fixed inner-page-width full-width border-bottom">
+        <h4><a href="../../">Decent CSS</a></h4>
+        <ul class="bar top right">
+            <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
+            <li><a href="../../mixins/">Mixins</a></li>
+            <li><a href="../../colors/">Colors</a></li>
+            <li><a href="../../how-to/">How-to</a></li>
+        </ul>
+    </nav>
+    <div class="bar full-width margin-bottom placeholder"></div>
+    <main>
+        <section class="hero feature skyblue">
+            <h1>.light</h1>
+            <p>Makes the background perceptibly lighter.</p>
+        </section>
+        <div class="grid inner-page-width">
+            <div class="grid-width-three">
+                <nav>
+                    <ul class="group action padding dark">
+                        <li><a href="../card">card</a>
+                        <li><a href="../hero">hero</a>
+                        <li><a href="../group">group</a>
+                        <li><a href="../light">light</a>
+<li><a href="../dark">dark</a>
+
+                        <li><a href="../feature">feature</a>
+                        <li><a href="../matte">matte</a>
+                        <li><a href="../well">well</a>
+                        <li><a href="../island">island</a>
+                        <li><a href="../overlay">overlay</a>
+                        <li><a href="../badge">badge</a>
+                        
+                        
+                        <li><a href="../two-column">two-column</a>
+                        <li><a href="../three-column">three-column</a>
+                        <li><a href="../golden-column">golden-column</a>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="grid-width-nine">
+                <section id="reference">
+                    <h2>Details</h2>
+                    <div id="arguments">
+                        <ul>
+                            <li><strong>filename</strong>: /composables/light.less</li>
+                            <li><strong>settings</strong>: fill-opacity, pattern-base, output-lighter</li>
+                            <li><strong>defaults</strong>: none</li>
+                        </ul>
+                    </div>
+                    <div class="margin-auto gutter no-margin-bottom text-align-center">
+                        <span class="badge info">composable</span> &middot; <span class="badge action">works with colors</span>
+                    </div>
+                </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <p>The <strong>.light</strong> composable makes an element lighter. It works well with color classes, for easy-to-use class pairings like "light skyblue":</p>
+
+                    <p class="skyblue padding">The only acceptable form of wrestling is gator wrestling.</p>
+
+                    <pre class="white-space">&lt;p class="skyblue padding"&gt;The only acceptable form of wrestling is gator wrestling.&lt;/p&gt;</pre>
+
+                    <p>With the <strong>.light</strong> class, the paragraph becomes lighter.</p>
+                    <p class="light skyblue padding">The only acceptable form of wrestling is gator wrestling.</p>
+
+                    <pre class="white-space">&lt;p class="light skyblue padding"&gt;The only acceptable form of wrestling is gator wrestling.&lt;/p&gt;</pre>
+
+                    <p>If the output-lighter setting is set to <em>true</em>, then the <strong>.lighter</strong> class will work too:</p>
+
+                    <p class="lighter skyblue padding">The only acceptable form of wrestling is gator wrestling.</p>
+
+                    <pre class="white-space">&lt;p class="lighter skyblue padding"&gt;The only acceptable form of wrestling is gator wrestling.&lt;/p&gt;</pre>
+
+                    <p>This composable sets the background-image property, so it may have problems with elements that use a background-image.</p>
+
+                    <h2>Color examples</h2>
+
+                    <div class="two-column">
+                        <ul class="group">
+                            <li class="charcoal lighter">charcoal lighter</li>
+                            <li class="charcoal light">charcoal light</li>
+                            <li class="charcoal">charcoal</li>
+                            <li class="charcoal dark">charcoal dark</li>
+                            <li class="charcoal darker">charcoal darker</li>
+                        </ul>
+                        <ul class="group">
+                            <li class="olive lighter">olive lighter</li>
+                            <li class="olive light">olive light</li>
+                            <li class="olive">olive</li>
+                            <li class="olive dark">olive dark</li>
+                            <li class="olive darker">olive darker</li>
+                        </ul>
+                    </div>
+
+                    <div class="two-column">
+                        <ul class="group">
+                            <li class="cobalt lighter">cobalt lighter</li>
+                            <li class="cobalt light">cobalt light</li>
+                            <li class="cobalt">cobalt</li>
+                            <li class="cobalt dark">cobalt dark</li>
+                            <li class="cobalt darker">cobalt darker</li>
+                        </ul>
+                        <ul class="group">
+                            <li class="orange lighter">orange lighter</li>
+                            <li class="orange light">orange light</li>
+                            <li class="orange">orange</li>
+                            <li class="orange dark">orange dark</li>
+                            <li class="orange darker">orange darker</li>
+                        </ul>
+                    </div>
+                    
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+</body>
+</html>
