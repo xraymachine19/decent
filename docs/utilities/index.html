@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="action top bar fixed inner-page-width full-width border-bottom">
+  <nav class="top bar dark black fixed inner-page-width full-width">
       <h4><a href="../">Decent CSS</a></h4>
       <ul class="bar top right">
         <li><a href="../composables/">Composables</a></li>
@@ -23,25 +23,97 @@
         <li><a href="../how-to/">How-to</a></li>
       </ul>
   </nav>
-  <div class="top bar full-width margin-bottom placeholder"></div>
+  <div class="top bar dark black full-width margin-bottom placeholder"></div>
 
-  <section class="hero feature charcoal">
+  <section class="hero darker feature charcoal">
     <h1>Utilities</h1>
-    <p>Use utility classes to shape your pages in the HTML.</p>
+    <p>The best CSS is CSS you can use without writing more.</p>
   </section>
     <div class="grid inner-page-width">
       <div class="grid-width-three">
     <nav>
       <ul class="group action padding dark">
-        <li><a href="css-classes">CSS classes</a>
-        
+        <li><a href="css-properties">CSS properties</a></li>
+        <li><a href="utility-classes">Utility classes</a></li>
+        <li><a href="color-classes">Color classes</a></li>
+        <li><a href="nullifiers">Nullifiers</a></li>
+        <li><a href="text-align">text-align</a></li>
+        <li><a href="placeholder">placeholder</a></li>
+        <li><a href="inner-x-width">inner-x-width</a></li>
+        <li><a href="gutter">gutter</a></li>
+        <li><a href="font-family">font-family</a></li>
       </ul>
     </nav>
     </div>
     <div class="grid-width-nine">
     <main>
         <section id="utilities">
-          
+          <pre>
+            .reset {
+              all: initial;
+            }
+            .big {
+              font-size: 125%;
+            }
+            .small {
+              font-size: 90%;
+              line-height: 1.62;
+            }
+            .text-padding {
+              padding: 0.18em 0.3236em 0.22em 0.3236em;
+            }
+            .block {
+              display: block;
+            }
+            .inline {
+              display: inline;
+            }
+            .table {
+              display: table;
+            }
+            .flex {
+              display: flex;
+            }
+            .inline-block {
+              display: inline-block;
+            }
+            .static {
+              position: static;
+            }
+            .absolute {
+              position: absolute;
+            }
+            .relative {
+              position: relative;
+            }
+            .fixed {
+              position: fixed;
+            }
+            .transparent {
+              color: inherit;
+              position: ;
+              background: transparent;
+            }
+            .float-right {
+              float: right;
+            }
+            .float-left {
+              float: left;
+            }
+            .margin-auto {
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .inset {
+              box-shadow: inset 1px 1px 7px rgba(11, 3, 3, 0.37848245);
+            }
+            .viewport-height {
+              height: 100vh;
+            }
+            .fade {
+              opacity: 0.8;
+            }
+          </pre>
         </section>
     </main>
     </div>

@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>CSS properties | Decent CSS</title>
+  <meta name="description" content="CSS property classes for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+  <nav class="top bar dark black fixed inner-page-width full-width">
+      <h4><a href="../../">Decent CSS</a></h4>
+      <ul class="bar top right">
+        <li><a href="../../composables/">Composables</a></li>
+        <li><strong>Utilities</strong></li>
+        <li><a href="../../mixins/">Mixins</a></li>
+        <li><a href="../../colors/">Colors</a></li>
+        <li><a href="../../how-to/">How-to</a></li>
+      </ul>
+  </nav>
+  <div class="top bar dark black full-width margin-bottom placeholder"></div>
+
+  <section class="hero darker feature charcoal">
+    <h1>CSS properties</h1>
+    <p>If CSS supports it, then HTML does now too.</p>
+  </section>
+    <div class="grid inner-page-width">
+      <div class="grid-width-three">
+    <nav>
+      <ul class="group action padding dark">
+        <li><a href="css-properties">CSS properties</a></li>
+        <li><a href="utility-classes">Utility classes</a></li>
+        <li><a href="color-classes">Color classes</a></li>
+        <li><a href="nullifiers">Nullifiers</a></li>
+        <li><a href="text-align">text-align</a></li>
+        <li><a href="placeholder">placeholder</a></li>
+        <li><a href="inner-x-width">inner-x-width</a></li>
+        <li><a href="gutter">gutter</a></li>
+        <li><a href="font-family">font-family</a></li>
+      </ul>
+    </nav>
+    </div>
+    <div class="grid-width-nine">
+    <main>
+        <section id="utilities">
+            <h2>Every property a class</h2>
+            <p>All CSS properties are represented by a Less variable which contains its default project setting value.</p>
+            <p>ALl CSS properties also have a class which applies that same value.</p>
+
+            <p>In other words, your project has:</p>
+
+            <ul>
+                <li>a <strong>@padding-right</strong> variable available in the Less</li>
+                <li>a <strong>.padding-right</strong> class available in the HTML</li>
+                <li>a <strong>--padding-right</strong> custom property in the CSS</li>
+            </ul>
+
+            <p>The point here is to reuse CSS conventions instead of adding new ones. If you know CSS, then you know most of Decent's utilities.</p>
+
+            <h2>CSS defaults vs. project defaults</h2>
+            <p>The CSS spec too has default values for elements. These are different from the <em>project-level defaults</em> found in properties.less. Although sometimes there can be some overlap.</p>
+            <p>The CSS default is the value displayed without any rules given to it. The project default is the intended default value for when rules are given.</p>
+            <p>The CSS default value for <em>margin</em> is zero. The value for @margin or .margin is probably higher. It's essentially the default for when the rule <em>is</em> set, vs. CSS's default for when the rule isn't.</p>
+
+            <h2>Trimming CSS class support</h2>
+            <p>You can edit which CSS properties are output to the CSS by editing the @css-property-names list.</p>
+        </section>
+    </main>
+    </div>
+    </div>
+
+</body>
+</html>
