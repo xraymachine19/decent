@@ -1,0 +1,12 @@
+@reaction-success: contrast(@success, spin(@base-color, 180), spin(@base-color, 300));
+@reaction-warning: contrast(@warning, spin(@base-color, 180), spin(@base-color, 60));
+
+.set-reaction() {
+    @reaction-base: contrast(@base-color, @reaction-warning, @reaction-success, 50%);
+    .set-lumafix(@reaction-base; @strength: 80%;);
+    @reaction: @lumafix;
+}
+
+.set-reaction();
+
+.reaction { .colorize(@reaction);}

@@ -3,9 +3,13 @@
     --body-background: @action;
     --main-background: @white;
 
-    each(@semantic-color-names, {
-        --@{value}: @value;
-    });
+    --action: @action;
+    --reaction: @reaction;
+    --info: @info;
+    --warning: @warning;
+    --success: @success;
+    --failure: @failure;
+    --default: @default;
 
     --text-contrast: @text-contrast;
     --ambient: @ambient;

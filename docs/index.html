@@ -20,13 +20,12 @@
           <li><a href="composables/">Composables</a></li>
           <li><a href="utilities/">Utilities</a></li>
           <li><a href="mixins/">Mixins</a></li>
-          <li><a href="colors/">Colors</a></li>
           <li><a href="how-to/">How-to</a></li>
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
     <main>
-      <section class="hero darker feature">
+      <section class="hero action well feature">
         <h1>Decent does all the boring CSS stuff for you.</h1>
       
         <p class="feature">Built for the <strong>decent</strong>ralized web, Decent makes your CSS codebase <em>awesome</em>.</p>
@@ -62,6 +61,33 @@
       <p>To reuse "border-radius" yet again, your project will also have out-of-the-box support for using any CSS property as a class name, again applying the default value.</p>
       <p>This makes it easy for other sites&mdash; or other parts of your own site&mdash; to use your prescribed defaults and values.</p>
       </section>
+
+
+      <div class="golden-column reverse inner-page-width">
+        <div class="justify-content flex flex-direction">
+          <h2 class="text-padding text-shadow">From <em>a</em> to <em>z-index</em>, Decent supports all HTML elements and all CSS properties.</h2>
+        </div>
+        <div>
+          <section>
+          <p>You might not have known about the <code>kbd</code> HTML element, but your Decent project does.</p>
+        <p>It's even got a dedicated <strong>kbd.less</strong> file:</p>
+        <pre>kbd {
+    .default(border-radius);
+    .colorize(@black, 9);
+    padding: @text-padding;
+}</pre>
+      <p>In Decent, <em>every</em> HTML element has its own file, meaning all of HTML is fully supported right out of the box. Each element is handily organized into its own file, quickly accessible with <kbd>Ctrl + P</kbd> (That's the kbd element, by the way).</p>
+      <p>CSS properties are fully supported by way of Less variables in <strong>properties.less</strong> and the <strong>.default()</strong> mix-in, seen above in <code>kbd</code>.</p>
+      <p>The .default() mix-in takes any CSS property and outputs it as a CSS custom variable, meaning everyone on your project can use the framework-like features of Decent, even if they write only CSS and not Less.</p>
+      <pre>border-radius: var(--border-radius);</pre>
+      <p>The <strong>:root</strong> element will contain your project's reference to a default border-radius value.</p>
+      <p>To reuse "border-radius" yet again, your project will also have out-of-the-box support for using any CSS property as a class name, again applying the default value.</p>
+      <p>This makes it easy for other sites&mdash; or other parts of your own site&mdash; to use your prescribed defaults and values.</p>
+      </section>
+        </div>
+        
+        
+      </div>
         
         <section class="column-width">
           <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="decentless_0"></a>decent.less</h1>

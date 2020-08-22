@@ -218,7 +218,7 @@ zig-zag;
     
     // .set-contrast(@base; @pattern-contrast;);
     // .set-tone(@background-color);
-    @fg-base: mix(@black, softlight(@ambient, @black), 67%);
+    @fg-base: @black;
   
     // we need the foreground color inside the SVG to be in rgb(r,g,b) format
     @fg-red: floor(red(@fg-base));

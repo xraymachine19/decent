@@ -243,14 +243,14 @@ box-sizing;
 @align-content: stretch; // Specifies the alignment of flexible container's items within the flex container.
 @align-items: stretch; // Specifies the default alignment for items within the flex container.
 @align-self: auto; // Specifies the alignment for selected items within the flex container.
-@flex: 0 1 auto; // Specifies the components of a flexible length.
+@flex: @flex-grow @flex-shrink @flex-basis; // Specifies the components of a flexible length.
 @flex-basis: auto; // Specifies the initial main size of the flex item.
-@flex-direction: row; // Specifies the direction of the flexible items.
-@flex-flow: row nowrap; // A shorthand property for the flex-direction and the flex-wrap properties.
+@flex-direction: column; // Specifies the direction of the flexible items.
+@flex-flow: @flex-direction @flex-wrap; // A shorthand property for the flex-direction and the flex-wrap properties.
 @flex-grow: 0; // Specifies how the flex item will grow relative to the other items inside the flex container.
 @flex-shrink: 1; // Specifies how the flex item will shrink relative to the other items inside the flex container.
 @flex-wrap: nowrap; // Specifies whether the flexible items should wrap or not.
-@justify-content: flex-start; // Specifies how flex items are aligned along the main axis of the flex container after any flexible lengths and auto margins have been resolved.
+@justify-content: center; // Specifies how flex items are aligned along the main axis of the flex container after any flexible lengths and auto margins have been resolved.
 @order: 0; // Specifies the order in which a flex items are displayed and laid out within a flex container.
 
 // Font Properties

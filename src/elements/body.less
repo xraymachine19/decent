@@ -1,6 +1,6 @@
 body {
     .default(font-family);
-    .default(background-color);
+    background-color: @body-background;
     .contrast(color, @body-background);
 
     overflow-y: scroll;
@@ -17,7 +17,7 @@ body {
     }
 
     & when (@randomness = false) {
-      .pattern(@body-pattern; @base-color;);
+      .pattern(@body-pattern; @body-background;);
     }
       
     font-size: @font-size * .9;

@@ -1,11 +1,11 @@
 // makes any element into the given color
 
 .colorize(@background; @colorize-contrast: @text-contrast; @property: color; @mode: auto;) {
-    background-color: @background;
 
+    @borders: true;
+
+    background-color: @background;
     .contrast(color; @background; @colorize-contrast; @mode);
-    .set-contrast(@background; @colorize-contrast/3; @mode: tint;);
-    border-color: @contrast;
 
     .debug() when (@debug = true) {
         @luma: round(luma(@background), 2);

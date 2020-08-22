@@ -1,0 +1,6 @@
+@success-reaction: contrast(@reaction, @green, @blue);
+@success-info: contrast(@info, @green, @clover);
+
+@success: contrast(@base-color, @success-info, @success-reaction, 50%);
+
+.success { .colorize(@success);}

@@ -341,15 +341,3 @@
     content: "";
   }
 }
-
-// semantic color names .colorize() when used as a class
-each(@semantic-color-names, { 
-  &.@{value} { .colorize(@@value);};
-  &.color-@{value} { .color-text(@@value);};
-});
-
-// palette color names .colorize() when used as a class
-// each(@palette-color-names, { 
-//   &.@{value} { .colorize(@@value);};
-//   &.color-@{value} { .color-text(@@value);};
-// });

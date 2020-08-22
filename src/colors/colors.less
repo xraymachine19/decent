@@ -1,8 +1,16 @@
 
+// @semantic-color-names:   action, reaction, info, warning, success, failure, default;
+// @semantic-class-names:   @semantic-color-names;
+// @semantic-colors:   @action, @reaction, @info, @warning, @success, @failure, @default;
 
-@semantic-color-names:   action, reaction, info, warning, success, failure, default;
-@semantic-class-names:   @semantic-color-names;
-@semantic-colors:   @action, @reaction, @info, @warning, @success, @failure, @default;
+@semantic-color-names: action, reaction;
+
+.set-color-base(@base, @modifier) {
+	// @base is the core of the color
+	// @modifier is how much it's lumafixed toward the theme
+	.set-lumafix(@base; @strength: @color-strength*@modifier;);
+    @color-base: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+}
 
 @import "white";
 @import "black";
@@ -22,16 +30,30 @@
 
 @import "gray";
 @import "brown";
-
 @import "magenta";
 @import "lavender";
 @import "cream";
 @import "charcoal";
-
 @import "crimson";
 @import "clover";
 @import "cobalt";
 @import "graphite";
+
+
+
+
+
+
+
+
+
+@import "action";
+@import "reaction";
+@import "info";
+@import "warning";
+@import "success";
+@import "failure";
+@import "default";
 
 
 // carnation
@@ -62,245 +84,8 @@
 // honey
 
 
-.set-color-base(@base, @modifier) {
-	.set-lumafix(@base; @strength: @color-strength*@modifier;);
-    @color-base: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-}
+
 
 
 // onyx
 // garnet
-
-.set-action();
-.set-reaction();
-
-.set-info();
-.set-warning();
-.set-success();
-
-.set-failure();
-.set-default();
-
-.set-action() {
-	@action: @base-color;
-	
-	.bump-action() when (luma(@action) < 30%) {
-		// bump it up to at least @warning's brightness if it's not there
-		.set-lumafix(@base-color; @red; 80%);
-		@action: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
-	}
-
-	.bump-action() when (default()) {
-		@action: mix(@base-color, overlay(@ambient, @lumafix), 90%);
-	}
-
-	.bump-action();
-}
-
-.set-action() when (@base-color = white) { @action: white;}
-.set-action() when (@base-color = black) { @action: black;}
-
-.set-reaction() {
-	// reaction is for responding, usually after an action
-	// a good second step or confirmation color 
-	// reaction is typically close to being a complement of action 
-
-	@reaction-base: difference(@base-color, white);
-	.set-lumafix(@reaction-base; @strength: 90%;);
-    @reaction: @lumafix;
-}
-
-.set-reaction() when (@base-color = white) { @reaction: black;}
-.set-reaction() when (@base-color = black) { @reaction: white;}
-
-.set-warning() {
-	// warning is a high urgency version of its pairing, info
-	// its orange/yellow is a complement to info's teal/blue
-	// remember: warning comes before the failure, failure after
-
-	@warning-orange: @orange;
-	@warning-yellow: @yellow;
-
-	.set-distance-action() {
-		.set-distance(@warning-orange, @base-color);
-		@distance-action: @distance;
-	}
-
-	.set-distance-reaction() {
-		.set-distance(@warning-orange, @reaction-base);
-		@distance-reaction: @distance;
-	}
-
-	.set-warning-base() when (@distance-action < 100) or (@distance-reaction < 100) {
-		@warning-base: @warning-yellow;
-		
-	}
-
-	.set-warning-base() when (default()) {
-		@warning-base: @warning-orange;
-
-	}
-
-	.set-warning-final() when (luma(@warning-base) < luma(@info)) {
-		.set-lumafix(@warning-base; @info; 100%;);
-		@warning: @lumafix;
-	}
-
-	.set-warning-final() when (default()) {
-		@warning: @warning-base;
-	}
-
-	.set-distance-action();
-	.set-distance-reaction();
-	.set-warning-base();
-	.set-warning-final();
-}
-
-.set-success() {
-	// success indicates that an action worked or a positive response came through
-	// its green tells users they're good to go 
-
-	@success-green: @green;
-	@success-lightgreen: @skyblue;
-
-	.set-distance-action() {
-		.set-distance(@success-green, @base-color);
-		@distance-action: @distance;
-	}
-
-	.set-distance-reaction() {
-		.set-distance(@success-green, @reaction-base);
-		@distance-reaction: @distance;
-	}
-
-	.set-success-base() when (@distance-action < 100) or (@distance-reaction < 100) {
-		@success-base: @success-lightgreen;
-	}
-
-	.set-success-base() when (default()) {
-		@success-base: @success-green;
-	}
-
-	.set-success-final() when (luma(@base-color) < 30%) {
-		.set-lumafix(@success-base, @green, @strength: 85%);
-		@success-final: @lumafix;
-	}
-
-	.set-success-final() when (default()) {
-		.set-lumafix(@success-base, @green, @strength: 40%);
-		@success-final: @lumafix;
-	}
-
-	.bump-success() when (luma(@success-final) < luma(@warning)) {
-		// bump it up to near @warning's brightness if it's not there
-		.set-lumafix(@success-final; @warning; 50%);
-		@success: @lumafix;
-	}
-
-	.bump-success() when (default()) {
-		@success: @success-final;
-	}
-
-	.set-distance-action();
-	.set-distance-reaction();
-
-	.set-success-base();
-
-	.set-success-final();
-	.bump-success();
-}
-
-.set-failure() {
-	// success's opposite and complement, failure's red tells the user something is wrong 
-	// good for negative server responses, missing info, or drawing attention to faults
-
-	@failure-red: @red;
-	@failure-violet: @violet;
-
-	.set-distance-action() {
-		.set-distance(@failure-red, @action);
-		@distance-action: @distance;
-	}
-
-	.set-distance-reaction() {
-		.set-distance(@failure-red, @reaction);
-		@distance-reaction: @distance;
-	}
-
-	.set-failure-base() when (@distance-action < 70) or (@distance-reaction < 70) {
-		@failure-base: @failure-violet;
-	}
-
-	.set-failure-base() when (default()) {
-		@failure-base: @failure-red;
-	}
-
-	.set-failure-final() when (default()) {
-		@failure: @failure-base;
-	}
-
-	.set-distance-action();
-	.set-distance-reaction();
-
-	.set-failure-base();
-
-	.set-failure-final();
-}
-
-.set-info() {
-	// info is meant to be used sparingly with @action, @reaction and @alternate 
-	// its extra saturation and lightness is good for drawing attention, like
-	// a less urgent warning
-
-	@info-base: @blue;
-
-	.set-lumafix(@alt-info-base; @strength: 50%);
-	@alt-info-base: spin(@info-base, 180);
-	@alt-info: @lumafix;
-
-	.set-distance-warning() {
-		.set-distance(@info-base, @orange);
-		@distance-warning: @distance;
-	}
-
-	.set-distance-success() {
-		.set-distance(@info-base, @green);
-		@distance-success: @distance;
-	}
-
-	.set-new-info-base() {
-		@new-info-base: @info-base;
-	}
-
-	.set-new-info-base() when (@distance-warning < 150) or (@distance-success < 150) {
-		@new-info-base: @alt-info;
-	}
-
-	.set-info-final() {
-		@info-final: mix(@new-info-base, overlay(@ambient, @new-info-base), 90%);
-	}
-
-	.bump-info() when (luma(@info-final) < luma(@orange)) {
-		// bump it up to at least @orange's brightness if it's not there
-		.set-lumafix(@info-final; @orange; 100%);
-		@info: mix(@lumafix, overlay(@ambient, @lumafix), 90%);
-	}
-
-	.bump-info() when (default()) {
-		@info: @info-final;
-	}
-
-	.set-distance-warning();
-	.set-distance-success();
-	.set-new-info-base();
-	.set-info-final();
-	.bump-info();
-}
-
-.set-default() {
-	// a nondescript color that blends in and works as a default
-
-	.set-average(@reaction, @info, @warning, @success, @failure;);
-	.set-lumafix(@average; @strength: 80%;);
-	@default: mix(@average, mix(@lumafix, overlay(@ambient, @lumafix), 90%), 62%);
-}

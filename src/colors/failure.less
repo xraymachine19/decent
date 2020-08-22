@@ -1,0 +1,6 @@
+@failure-action: contrast(@action, @red, @purple, 80%);
+@failure-reaction: contrast(@reaction, @red, @crimson, 80%);
+
+@failure: contrast(@base-color, @failure-reaction, @failure-action, 50%);
+
+.failure { .colorize(@failure);}
