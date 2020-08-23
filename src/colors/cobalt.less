@@ -1,6 +1,6 @@
 .set-cobalt() {
-    @base: average(mediumblue, dodgerblue);
-    @modifier: 1/3;
+    @base: mix(mediumblue, dodgerblue, 75%);
+    @modifier: 1/4;
     .set-color-base(@base, @modifier);
     @cobalt: @color-base;
 

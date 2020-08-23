@@ -1,0 +1,11 @@
+.set-granite() {
+    @base: #d1b9b4;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @granite: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .granite { .colorize(@granite);}
+    }
+}
+
+.set-granite();

@@ -1,0 +1,11 @@
+.set-navy() {
+    @base: mix(navy, steelblue, 67%);
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @navy: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .navy { .colorize(@navy);}
+    }
+}
+
+.set-navy();

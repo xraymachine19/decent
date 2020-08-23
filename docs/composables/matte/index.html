@@ -70,16 +70,33 @@
                     </div>
                 </section>
                 <section id="examples">
-                    <h2 id="matte">.matte and .well</h2>
-                    <p>The matte component presents the inner content on a raised, textured surface. The well does the same but lowers it.</p>
-                    <div class="border padding">
-                        <p>Here's a normal div with <em>border</em> and <em>padding</em> classes.</p>
-                    </div>
+                    <h2>Examples</h2>
+                    <p>The matte component presents the inner content on a raised, lightened surface.</p>
 
                     <div class="matte">
-                        <p>Here, another paragraph is presented inside of a div with the <em>matte</em> class.</p>
+                        <p>Here, a paragraph is presented inside of a div with the <em>matte</em> class.</p>
                     </div>
 
+                    <div class="border padding">
+                        <p>Here's the same div, but with the border and padding classes.</p>
+                    </div>
+
+                    <p>Mattes work with colors, light & dark, and the .texture composable.</p>
+
+                    <div class="three-column">
+                        <div class="matte skyblue">
+                            <h3>Hey!</h3>
+                            <p>This is a .skyblue matte.</p>
+                        </div>
+                        <div class="matte red texture">
+                            <h3>Hey!</h3>
+                            <p>This is a .red .texture matte.</p>
+                        </div>
+                        <div class="card matte dark skyblue texture no-padding">
+                            <h3 class="black">Hey!</h3>
+                            <p>This is a .skyblue .dark .texture .card .no-padding matte with a .black h3.</p>
+                        </div>
+                    </div>
                     
                 </section>
             </div>

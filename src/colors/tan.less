@@ -1,0 +1,11 @@
+.set-tan() {
+    @base: tan;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @tan: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .tan { .colorize(@tan);}
+    }
+}
+
+.set-tan();

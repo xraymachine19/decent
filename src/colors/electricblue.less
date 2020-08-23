@@ -1,0 +1,11 @@
+.set-electricblue() {
+	.set-average(#7DF9FF, royalblue, cyan;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @electricblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .electricblue { .colorize(@electricblue);}
+    }
+}
+
+.set-electricblue();

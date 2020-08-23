@@ -1,3 +1,8 @@
-@default: mix(@base-color, @gray, 50%);
+.set-default() {
+    .set-average(@action, @reaction, @info, @warning, @success, @failure;);
+    @default: @average;
+}
+
+.set-default();
 
 .default { .colorize(@default);}

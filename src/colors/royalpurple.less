@@ -1,0 +1,11 @@
+.set-royalpurple() {
+    @base: rebeccapurple;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @royalpurple: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .royalpurple { .colorize(@royalpurple);}
+    }
+}
+
+.set-royalpurple();

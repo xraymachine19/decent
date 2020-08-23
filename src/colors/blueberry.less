@@ -3,9 +3,9 @@
     .set-lumafix(@base; @strength: @color-strength/4;);
     @blueberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 
-    // &:extend(:root) {
-    //     --@{value}: @@value;
-    // }
+    & when (@output-color-classes = true) {
+        .blueberry { .colorize(@blueberry);}
+    }
 }
 
 .set-blueberry();

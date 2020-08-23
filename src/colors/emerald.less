@@ -1,0 +1,11 @@
+.set-emerald() {
+	@base: mix(#00743e, hardlight(@ambient, #00743e), 80%);
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @emerald: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .emerald { .colorize(@emerald);}
+    }
+}
+
+.set-emerald();

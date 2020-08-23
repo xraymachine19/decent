@@ -1,0 +1,12 @@
+.set-lemon() {
+	.set-average(lemonchiffon, yellow, yellow, greenyellow, greenyellow;);
+	@base: @average;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @lemon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .lemon { .colorize(@lemon);}
+    }
+}
+
+.set-lemon();

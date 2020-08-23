@@ -1,0 +1,11 @@
+.set-orchid() {
+    @base: average(orchid, mediumorchid);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @orchid: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .orchid { .colorize(@orchid);}
+    }
+}
+
+.set-orchid();

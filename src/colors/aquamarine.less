@@ -1,0 +1,11 @@
+.set-aquamarine() {
+	@base: aquamarine;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @aquamarine: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .aquamarine { .colorize(@aquamarine);}
+    }
+}
+
+.set-aquamarine();

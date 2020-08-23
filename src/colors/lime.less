@@ -1,0 +1,11 @@
+.set-lime() {
+    .set-average(lime, limegreen, lemonchiffon;);
+    .set-lumafix(@average; @strength: @color-strength/4;);
+    @lime: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .lime { .colorize(@lime);}
+    }
+}
+
+.set-lime();

@@ -1,0 +1,11 @@
+.set-steel() {
+    @base: average(steelblue, lightsteelblue, gray, white);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @steel: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .steel { .colorize(@steel);}
+    }
+}
+
+.set-steel();

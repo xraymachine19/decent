@@ -1,0 +1,11 @@
+.set-peach() {
+    @base: peachpuff;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @peach: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .peach { .colorize(@peach);}
+    }
+}
+
+.set-peach();

@@ -1,0 +1,11 @@
+.set-raspberry() {
+    @base: #bc081c;
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    @raspberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .raspberry { .colorize(@raspberry);}
+    }
+}
+
+.set-raspberry();

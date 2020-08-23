@@ -1,0 +1,12 @@
+.set-salmon() {
+    @base: salmon;
+    .set-average(salmon, salmon, hotpink;);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @salmon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .salmon { .colorize(@salmon);}
+    }
+}
+
+.set-salmon();

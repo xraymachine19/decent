@@ -1,0 +1,11 @@
+.set-copper() {
+    .set-average(pink, orange, darkorange, brown;);
+    .set-lumafix(@average; @strength: @color-strength/2;);
+    @copper: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .copper { .colorize(@copper);}
+    }
+}
+
+.set-copper();

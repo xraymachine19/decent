@@ -1,0 +1,11 @@
+.set-ruby() {
+	@base: mix(#a7003c, hardlight(@ambient, #a7003c), 80%);
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @ruby: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .ruby { .colorize(@ruby);}
+    }
+}
+
+.set-ruby();

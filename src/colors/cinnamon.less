@@ -1,0 +1,11 @@
+.set-cinnamon() {
+    @base: #9d652a;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @cinnamon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .cinnamon { .colorize(@cinnamon);}
+    }
+}
+
+.set-cinnamon();

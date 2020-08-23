@@ -1,0 +1,11 @@
+.set-scarlet() {
+    @base: #FF2400;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @scarlet: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .scarlet { .colorize(@scarlet);}
+    }
+}
+
+.set-scarlet();

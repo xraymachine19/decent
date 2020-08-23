@@ -1,0 +1,11 @@
+.set-ultramarine() {
+    @base: #120A8F;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @ultramarine: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .ultramarine { .colorize(@ultramarine);}
+    }
+}
+
+.set-ultramarine();

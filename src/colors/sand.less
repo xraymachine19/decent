@@ -1,0 +1,11 @@
+.set-sand() {
+    .set-average(sandybrown, seashell, ivory, orange, tan;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
+    @sand: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .sand { .colorize(@sand);}
+    }
+}
+
+.set-sand();

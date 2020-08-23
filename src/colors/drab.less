@@ -1,0 +1,11 @@
+.set-drab() {
+	@base: average(olivedrab, tan);
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @drab: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .drab { .colorize(@drab);}
+    }
+}
+
+.set-drab();

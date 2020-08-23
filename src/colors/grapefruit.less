@@ -1,0 +1,11 @@
+.set-grapefruit() {
+    @base: #d61b38;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @grapefruit: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .grapefruit { .colorize(@grapefruit);}
+    }
+}
+
+.set-grapefruit();

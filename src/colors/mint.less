@@ -1,0 +1,11 @@
+.set-mint() {
+    .set-average(mintcream, darkturquoise, white, white;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
+    @mint: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .mint { .colorize(@mint);}
+    }
+}
+
+.set-mint();

@@ -1,0 +1,11 @@
+.set-hotpink() {
+    @base: hotpink;
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @hotpink: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .hotpink { .colorize(@hotpink);}
+    }
+}
+
+.set-hotpink();

@@ -1,0 +1,11 @@
+.set-sunset() {
+    .set-average(orange, orangered, red, gold, white;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @sunset: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .sunset { .colorize(@sunset);}
+    }
+}
+
+.set-sunset();

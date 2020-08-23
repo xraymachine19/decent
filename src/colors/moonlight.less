@@ -1,0 +1,11 @@
+.set-moonlight() {
+    .set-average(white, white, white, gray, purple, blue, yellow;);
+    .set-lumafix(@average; @ambient; @strength: @color-strength/2;);
+    @moonlight: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .moonlight { .colorize(@moonlight);}
+    }
+}
+
+.set-moonlight();

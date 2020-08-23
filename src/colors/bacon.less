@@ -1,0 +1,11 @@
+.set-bacon() {
+    @base: #a51303;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @bacon: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .bacon { .colorize(@bacon);}
+    }
+}
+
+.set-bacon();

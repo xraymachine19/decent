@@ -1,0 +1,11 @@
+.set-tangerine() {
+    @base: mix(orange, pink, 70%);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @tangerine: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .tangerine { .colorize(@tangerine);}
+    }
+}
+
+.set-tangerine();

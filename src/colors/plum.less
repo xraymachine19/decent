@@ -1,0 +1,11 @@
+.set-plum() {
+    @base: plum;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @plum: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .plum { .colorize(@plum);}
+    }
+}
+
+.set-plum();

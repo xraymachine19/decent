@@ -1,0 +1,11 @@
+.set-seagreen() {
+    @base: average(seagreen, mediumseagreen);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @seagreen: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .seagreen { .colorize(@seagreen);}
+    }
+}
+
+.set-seagreen();

@@ -1,0 +1,11 @@
+.set-sandstone() {
+    @base: average(#bd9e70, seashell);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @sandstone: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .sandstone { .colorize(@sandstone);}
+    }
+}
+
+.set-sandstone();

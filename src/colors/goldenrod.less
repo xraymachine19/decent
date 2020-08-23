@@ -1,0 +1,11 @@
+.set-goldenrod() {
+    @base: average(gold, goldenrod);
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @goldenrod: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .goldenrod { .colorize(@goldenrod);}
+    }
+}
+
+.set-goldenrod();

@@ -1,0 +1,11 @@
+.set-chocolate() {
+    @base: average(chocolate, saddlebrown, brown);
+    .set-lumafix(@base; @strength: @color-strength/4;);
+    @chocolate: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .chocolate { .colorize(@chocolate);}
+    }
+}
+
+.set-chocolate();

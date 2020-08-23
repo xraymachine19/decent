@@ -1,0 +1,11 @@
+.set-pink() {
+    .set-average(pink, pink, white;);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @pink: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .pink { .colorize(@pink);}
+    }
+}
+
+.set-pink();

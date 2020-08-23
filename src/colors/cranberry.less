@@ -1,0 +1,11 @@
+.set-cranberry() {
+    @base: #921125;
+    .set-lumafix(@base; @strength: @color-strength/5;);
+    @cranberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .cranberry { .colorize(@cranberry);}
+    }
+}
+
+.set-cranberry();

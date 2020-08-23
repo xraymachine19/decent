@@ -1,0 +1,11 @@
+.set-clay() {
+    @base: #a96135;
+    .set-lumafix(@base; @strength: @color-strength*(2/3););
+    @clay: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .clay { .colorize(@clay);}
+    }
+}
+
+.set-clay();
