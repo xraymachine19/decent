@@ -1,0 +1,11 @@
+.set-lilac() {
+    @base: #aa56c2;
+    .set-lumafix(@base; @strength: @color-strength/2;);
+    @lilac: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .lilac { .colorize(@lilac);}
+    }
+}
+
+.set-lilac();

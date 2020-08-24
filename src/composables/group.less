@@ -31,6 +31,7 @@
 
         > li {
             border-bottom: @border-width @border-style currentColor;
+            border-image: @border-image;
 
             &:last-child {
                 border-bottom-width: 0;
@@ -58,6 +59,7 @@
 
     li {
         .default(border-bottom);
+        border-image: @border-image;
         padding: @text-padding;
 
         &:last-child {

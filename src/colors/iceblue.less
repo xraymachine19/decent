@@ -1,7 +1,7 @@
 .set-iceblue() {
     @base: mix(#0087a8, white, 20%);
     .set-lumafix(@base; @strength: @color-strength/4;);
-    @iceblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+    @iceblue: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
 
     & when (@output-color-classes = true) {
         .iceblue { .colorize(@iceblue);}

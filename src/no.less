@@ -29,6 +29,11 @@
 
 .no-border {
     border: none;
+
+    &s {
+        &:extend(.no-border);
+        & > * { &:extend(.no-border);}
+    }
 }
 
 .no-background {

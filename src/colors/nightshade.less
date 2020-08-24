@@ -1,6 +1,6 @@
 .set-nightshade() {
     @base: #361468;
-    .set-lumafix(@base; @strength: @color-strength/5;);
+    .set-lumafix(@base; @strength: @color-strength/4;);
     @nightshade: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 
     & when (@output-color-classes = true) {

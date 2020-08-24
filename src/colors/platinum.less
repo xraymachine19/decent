@@ -1,7 +1,7 @@
 .set-platinum() {
     @base: #E5E4E2;
     .set-lumafix(@base; @strength: @color-strength/4;);
-    @platinum: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+    @platinum: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
 
     & when (@output-color-classes = true) {
         .platinum { .colorize(@platinum);}

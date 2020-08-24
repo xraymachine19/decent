@@ -13,7 +13,9 @@
         grid-gap: @golden-column-gap;
 
         &.reverse {
+            display: grid;
             grid-template-columns: 1fr 1fr*@golden-ratio;
+            grid-gap: @golden-column-gap;
         }
     });
 }

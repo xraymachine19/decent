@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Testing grounds for decent.less</title>
+  <title>Decent CSS</title>
   <meta name="description" content="Testing grounds for decent.less">
   <meta name="author" content="Rex Riepe">
 
@@ -44,32 +44,9 @@
         </div>
       </section>
 
-      <section class="column-width">
-        <div class="well">
-          <p>It's a well!</p>
-        </div>
-        <div class="well texture">
-          <p>It's a well!</p>
-        </div>
-        <div class="well texture dark crimson">
-          <p>It's a well!</p>
-        </div>
-        <div class="well texture darker">
-          <p>It's a well!</p>
-        </div>
-        <div class="well clover darker">
-          <p>It's a well!</p>
-        </div>
-        <div class="well blue">
-          <p>It's a well!</p>
-        </div>
-        <div class="well blue lighter texture">
-          <p>It's a well!</p>
-        </div>
-        <div class="well texture light skyblue">
-          <p>It's a well!</p>
-        </div>
-        <h1>From <em>a</em> to <em>z-index</em>, Decent supports all HTML elements and all CSS properties.</h1>
+      <section>
+        <div class="inner-column-width">
+          <h1>From <em>a</em> to <em>z-index</em>, Decent supports all HTML elements and all CSS properties.</h1>
         <p>You might not have known about the <code>kbd</code> HTML element, but your Decent project does.</p>
         <p>It's even got a dedicated <strong>kbd.less</strong> file:</p>
         <pre>kbd {
@@ -77,6 +54,8 @@
     .colorize(@black, 9);
     padding: @text-padding;
 }</pre>
+        </div>
+        
       <p>In Decent, <em>every</em> HTML element has its own file, meaning all of HTML is fully supported right out of the box. Each element is handily organized into its own file, quickly accessible with <kbd>Ctrl + P</kbd> (That's the kbd element, by the way).</p>
       <p>CSS properties are fully supported by way of Less variables in <strong>properties.less</strong> and the <strong>.default()</strong> mix-in, seen above in <code>kbd</code>.</p>
       <p>The .default() mix-in takes any CSS property and outputs it as a CSS custom variable, meaning everyone on your project can use the framework-like features of Decent, even if they write only CSS and not Less.</p>

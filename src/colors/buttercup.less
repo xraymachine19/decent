@@ -1,0 +1,11 @@
+.set-buttercup() {
+    .set-average(#f2e509, #f2e509, yellow, white;);
+    .set-lumafix(@average; @strength: @color-strength/6;);
+    @buttercup: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .buttercup { .colorize(@buttercup);}
+    }
+}
+
+.set-buttercup();

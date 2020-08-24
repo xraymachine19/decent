@@ -1,0 +1,14 @@
+
+
+
+.set-bluejay() {
+    @base: #30639d;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @bluejay: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .bluejay { .colorize(@bluejay);}
+    }
+}
+
+.set-bluejay();

@@ -1,8 +1,8 @@
-.set-color-base(@base, @modifier) {
+.set-color-base(@base, @luma-modifier, @ambient-modifier: 1) {
 	// @base is the core of the color
-	// @modifier is how much it's lumafixed toward the theme
-	.set-lumafix(@base; @strength: @color-strength*@modifier;);
-    @color-base: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+	// @luma-modifier is how much it's lumafixed toward the theme
+	.set-lumafix(@base; @strength: @color-strength*@luma-modifier;);
+    @color-base: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*@ambient-modifier);
 }
 
 // used in building other colors
@@ -126,20 +126,25 @@
 @import "cinnamon";
 @import "pumpkin";
 @import "eggplant";
-@import "almond";
-
-// carnation
-// buttercup
-// mintjulip
-// nightshade
-
-// burgundy
-// rust 
-// beige
-// sierra
+@import "butter";
+@import "sunflower";
+@import "garnet";
+@import "rust";
+@import "onyx";
+@import "pewter";
+@import "buttercup";
+@import "rose";
+@import "lilac";
+@import "raven";
+@import "flamingo";
+@import "robin";
+@import "bluejay";
+@import "mango";
+@import "coconut";
+@import "kiwi";
+@import "banana";
 
 // denim
-// cotton
 // canvas
 // velvet
 
@@ -149,10 +154,7 @@
 // minnesota
 
 
-
 // moss
 // parsley
-
 // honey
-// onyx
-// garnet
+// periwinkle

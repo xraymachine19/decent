@@ -1,7 +1,7 @@
 .set-cornhusk() {
     .set-average(yellow, green, lemonchiffon;);
-    .set-lumafix(@average; @strength: @color-strength/4;);
-    @cornhusk: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+    .set-lumafix(@average; @strength: @color-strength/3;);
+    @cornhusk: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
 
     & when (@output-color-classes = true) {
         .cornhusk { .colorize(@cornhusk);}

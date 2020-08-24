@@ -1,0 +1,11 @@
+.set-rust() {
+    @base: #813f2d;
+    .set-lumafix(@base; @strength: @color-strength/3;);
+    @rust: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .rust { .colorize(@rust);}
+    }
+}
+
+.set-rust();

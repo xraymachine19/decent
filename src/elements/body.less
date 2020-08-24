@@ -1,24 +1,26 @@
 body {
     .default(font-family);
-    background-color: @body-background;
-    .contrast(color, @body-background);
+    // background-color: @body-background;
+    // .contrast(color, @body-background);
 
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 
-    & when (@randomness = true) {
-      .set-pattern() {
-        @var: `Math.random()`;
-        @length: length(@patterns-all);
-        @random: floor(@var*@length);
-        .pattern(extract(@patterns-all, @random));
-      }
-      .set-pattern();
-    }
+    // & when (@randomness = true) {
+    //   .set-pattern() {
+    //     @var: `Math.random()`;
+    //     @length: length(@patterns-all);
+    //     @random: floor(@var*@length);
+    //     .pattern(extract(@patterns-all, @random));
+    //   }
+    //   .set-pattern();
+    // }
 
-    & when (@randomness = false) {
-      .pattern(@body-pattern; @body-background;);
-    }
+    // & when (@randomness = false) {
+    //   .pattern(@body-pattern; @body-background;);
+    // }
+
+    .colorize(@white);
       
     font-size: @font-size * .9;
     line-height: @line-height * .9;

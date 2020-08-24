@@ -1,7 +1,9 @@
 .set-crimson() {
     @base: average(crimson, darkred);
     @modifier: 1/5;
-    .set-color-base(@base, @modifier);
+    @ambient: 1.1;
+    
+    .set-color-base(@base, @modifier, @ambient);
     @crimson: @color-base;
 
     & when (@output-color-classes = true) {

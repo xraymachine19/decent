@@ -1,0 +1,11 @@
+.set-raven() {
+    @base: average(#152949, black);
+    .set-lumafix(@base; @strength: @color-strength/6;);
+    @raven: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .raven { .colorize(@raven);}
+    }
+}
+
+.set-raven();
