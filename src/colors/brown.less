@@ -3,8 +3,8 @@
     @modifier: 1/3;
     @ambient: 1.1;
     
-    .set-color-base(@base, @modifier, @ambient);
-    @brown: @color-base;
+    .set-color(~"brown", @base, @modifier, @ambient);
+    @brown: @color;
 
     & when (@output-color-classes = true) {
         .brown { .colorize(@brown);}

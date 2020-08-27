@@ -1,11 +1,7 @@
 .set-blueberry() {
     @base: mix(#476791, cyan, 80%);
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @blueberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .blueberry { .colorize(@blueberry);}
-    }
+    .set-color(blueberry, @base, 1/4);
+    @blueberry: @color;
 }
 
 .set-blueberry();

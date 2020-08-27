@@ -1,11 +1,7 @@
 .set-army() {
     .set-average(forestgreen, darkolivegreen;);
-    .set-lumafix(@average; @strength: @color-strength/2;);
-    @army: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .army { .colorize(@army);}
-    }
+    .set-color(army, @average, 1/2);
+    @army: @color;
 }
 
 .set-army();

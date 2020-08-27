@@ -3,8 +3,8 @@
     @modifier: 1/5;
     @ambient: 1.1;
     
-    .set-color-base(@base, @modifier, @ambient);
-    @crimson: @color-base;
+    .set-color(~"crimson", @base, @modifier, @ambient);
+    @crimson: @color;
 
     & when (@output-color-classes = true) {
         .crimson { .colorize(@crimson);}

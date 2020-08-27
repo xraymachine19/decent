@@ -1,8 +1,8 @@
 .set-indigo() {
     @base: indigo;
     @modifier: 1/4;
-    .set-color-base(@base, @modifier);
-    @indigo: @color-base;
+    .set-color(~"indigo", @base, @modifier);
+    @indigo: @color;
 
     & when (@output-color-classes = true) {
         .indigo { .colorize(@indigo);}

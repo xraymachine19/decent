@@ -1,8 +1,8 @@
 .set-orange() {
     @base: orange;
     @modifier: 1/4;
-    .set-color-base(@base, @modifier);
-    @orange: @color-base;
+    .set-color(~"orange", @base, @modifier);
+    @orange: @color;
 
     & when (@output-color-classes = true) {
         .orange { .colorize(@orange);}

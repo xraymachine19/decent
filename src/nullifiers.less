@@ -1,0 +1,56 @@
+.no-directional(@property) {
+    @{property}: 0;
+
+    &-top { @{property}-top: 0;}
+    &-right { @{property}-right: 0;}
+    &-bottom { @{property}-bottom: 0;}
+    &-left { @{property}-left: 0;}
+}
+
+.no-padding { .no-directional(padding);}
+.no-margin { .no-directional(margin);}
+
+.no-margin-bottom > * { margin-bottom: 0;};
+
+.no-box-shadow { box-shadow: unset;}
+.no-text-shadow { text-shadow: unset;}
+
+.no-shadow {
+    &:extend(.no-box-shadow);
+    &:extend(.no-text-shadow);
+
+    &s {
+        &:extend(.no-shadow);
+        * {
+            &:extend(.no-shadow);
+        }
+    }
+}
+
+.no-border {
+    border: none;
+
+    &s {
+        &:extend(.no-border);
+        & > * { &:extend(.no-border);}
+    }
+}
+
+.no-background {
+    background: transparent;
+}
+
+.no-text-indent {
+    text-indent: 0;
+}
+
+.no-text-align {
+    text-align: initial;
+}
+
+.no-user-select {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

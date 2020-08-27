@@ -1,5 +1,5 @@
 .set-tangerine() {
-    @base: mix(orange, pink, 70%);
+    @base: mix(orange, pink, 75%);
     .set-lumafix(@base; @strength: @color-strength/4;);
     @tangerine: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
 

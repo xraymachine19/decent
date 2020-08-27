@@ -1,8 +1,8 @@
 .set-teal() {
     @base: teal;
     @modifier: 1/2;
-    .set-color-base(@base, @modifier);
-    @teal: @color-base;
+    .set-color(~"teal", @base, @modifier);
+    @teal: @color;
 
     & when (@output-color-classes = true) {
         .teal { .colorize(@teal);}

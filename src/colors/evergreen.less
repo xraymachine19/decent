@@ -1,0 +1,11 @@
+.set-evergreen() {
+    @base: #3e530c;
+    .set-lumafix(@base; @strength: @color-strength/5;);
+    @evergreen: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
+
+    & when (@output-color-classes = true) {
+        .evergreen { .colorize(@evergreen);}
+    }
+}
+
+.set-evergreen();

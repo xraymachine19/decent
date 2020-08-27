@@ -4,49 +4,17 @@
         @mode: auto;
         ) {
 
-    // This works like .contrast()
-    // instead of setting a property to a color, it sets @contrast
+    // sets variable @contrast to a contrastful version of 
+    // @color that meets the @contrast-standard
 
-	@start: 0%;
-    @iterations: 100;
-    
-    // this expression describes the contrasting color that will be used for text
-	@contrast-expression: mix(@tone, @color, @start + @index);
-    @index: 1;
+    @iterations: 10;
 
-    // these settings will get PERFECT contrast ratio results, or pretty close
-    // uncomment them here to override the above, but beware huge compile times
-    // @start: 0;
-    // @iterations: 1000;
-    // @contrast: mix(@tone, @color, @start + @index*.1);
+    .set-tone(@color);
+    @contrast: @tone;
 
+    // @targets: range(1, @contrast-target, @contrast-target/@iterations);
 
-    // tone is the color mixed into the background to lighten or darken the text
-    
-    .tone(@color) when (@mode = tint) { @tone: @white;}
+    // .find-contrast(@contrast-ratio, @index) when (@index < @iterations) and (@contrast-ratio < @contrast-standard) {
 
-	.tone(@color) when (@mode = shade) { @tone: @black;}
-
-	.tone(@color) when (default()) { .set-tone(@color);}
-
-    // this iterator does the work of finding the contrastful fill
-    .apply-contrast(@contrast-ratio, @tone, @index)
-       when (@contrast-ratio < @contrast-standard) 
-		and (@index < @iterations) { 
-        // this sets a new @contrast-ratio
-        .set-contrast-ratio(@color, @contrast-expression); 
-        // this runs the next iteration
-		.apply-contrast(@contrast-ratio; @tone; @index + 1);
-	}
-
-    // the actual CSS output for this whole mixin is this one line
-	.apply-contrast(@contrast-ratio, @tone, @index) when (default()) {
-        @contrast: @contrast-expression;
-    }
-    
-    // this works like .set-tone if no mode is specified
-    .tone(@color);
-    
-    // output the text color rule
-    .apply-contrast(1, @tone, 1);
+    // }
 }

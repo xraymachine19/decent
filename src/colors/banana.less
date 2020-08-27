@@ -1,11 +1,7 @@
 .set-banana() {
-    @base: average(#efd46a, yellow);
-    .set-lumafix(@base; @strength: @color-strength/5;);
-    @banana: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-
-    & when (@output-color-classes = true) {
-        .banana { .colorize(@banana);}
-    }
+    @base: average(#edef6a, yellow);
+    .set-color(banana, @base, 1/6, 1.1);
+    @banana: @color;
 }
 
 .set-banana();

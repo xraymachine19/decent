@@ -1,5 +1,5 @@
 .set-raspberry() {
-    @base: #bc081c;
+    @base: #bb2032;
     .set-lumafix(@base; @strength: @color-strength*(2/3););
     @raspberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
 

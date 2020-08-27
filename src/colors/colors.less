@@ -1,16 +1,25 @@
-.set-color-base(@base, @luma-modifier, @ambient-modifier: 1) {
+.set-color(@color-name, @base, @luma-modifier: 1/2, @ambient-modifier: 1) {
 	// @base is the core of the color
 	// @luma-modifier is how much it's lumafixed toward the theme
 	.set-lumafix(@base; @strength: @color-strength*@luma-modifier;);
-    @color-base: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*@ambient-modifier);
+    @color: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*@ambient-modifier);
+
+	& when (@output-color-classes = true) {
+        .@{color-name} { .colorize(@base);}
+    }
 }
 
 // used in building other colors
-@import "white";
-@import "black";
+// @import "white";
+// @import "black";
 @import "ambient";
+@white: mix(white, @base-color, 96%);
+@black: mix(black, @base-color, 80%);
 
-// roygbiv
+.white {.colorize(@white);}
+.black {.colorize(@black);}
+
+// color wheel colors
 @import "red";
 @import "orange";
 @import "yellow";
@@ -24,7 +33,7 @@
 @import "purple";
 @import "violet";
 
-// extended palette
+// default colors
 @import "gray";
 @import "brown";
 @import "magenta";
@@ -36,7 +45,7 @@
 @import "cobalt";
 @import "graphite";
 
-// semantic
+// semantic colors
 @import "action";
 @import "reaction";
 @import "info";
@@ -45,9 +54,7 @@
 @import "failure";
 @import "default";
 
-
-// expanded
-
+// expanded colors
 @import "lime";
 @import "navy";
 @import "drab";
@@ -101,7 +108,7 @@
 @import "vanilla";
 @import "strawberry";
 @import "olivedrab";
-@import "tan";
+@import "evergreen";
 @import "royalpurple";
 @import "sunset";
 @import "moonlight";
@@ -147,6 +154,7 @@
 // denim
 // canvas
 // velvet
+// wool
 
 // reno 
 // chicago

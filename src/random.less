@@ -2,8 +2,6 @@
 @font-family: @font-family-random;
 // .random-background();
 
-.random-main-background();
-@main-background: @main-background-random;
 .random-padding();
 @padding: @padding-random;
 .random-margin();
@@ -18,6 +16,7 @@
 .random-fontfamily() {
     
     @potentials:    @font-family-serif,
+                    @font-family-sans-serif,
                     @font-family-sans-serif,
                     @font-family-sans-serif,
                     @font-family-monospace,
@@ -40,28 +39,6 @@
     @random: `Math.random()`;
     @bg: ceil(@length*@random);
     @background-random: extract(@potentials, @bg);
-}
-
-.random-main-background() {
-    
-    .set-potentials() {
-                @potentials: @white,
-                mix(@white, @ambient, 96%),
-                mix(@white, @action, 96%),
-                mix(@white, @reaction, 96%),
-                mix(@white, @info, 96%),
-                @white,
-                @white,
-                @white;
-    }
-
-    .set-potentials();
-
-    @length: length(@potentials);
-
-    @random: `Math.random()`;
-    @bg: ceil(@length*@random);
-    @main-background-random: extract(@potentials, @bg);
 }
 
 

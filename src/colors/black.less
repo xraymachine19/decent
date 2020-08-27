@@ -1,12 +1,8 @@
 .set-black() {
     @base: black;
-    @modifier: 1/12;
-    .set-color-base(@base, @modifier);
-    @black: @color-base;
-
-    & when (@output-color-classes = true) {
-        .black { .colorize(@black);}
-    }
+    @modifier: 1/24;
+    .set-color(~"black", @base, @modifier);
+    @black: @color;
 }
 
 .set-black();

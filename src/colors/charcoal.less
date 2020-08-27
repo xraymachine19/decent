@@ -2,8 +2,8 @@
     .set-average(black, black, darkslategray, brown, burlywood;);
     @base: @average;
     @modifier: 1/6;
-    .set-color-base(@base, @modifier);
-    @charcoal: @color-base;
+    .set-color(charcoal, @base, @modifier);
+    @charcoal: @color;
 
     & when (@output-color-classes = true) {
         .charcoal { .colorize(@charcoal);}

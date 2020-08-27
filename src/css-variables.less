@@ -1,4 +1,4 @@
-:root {
+:root when (@output-css-variables = true) {
     --base-color: @base-color;
     --body-background: @action;
     --main-background: @white;
@@ -38,6 +38,6 @@
     // });
 
     each(@css-property-names, { 
-        --@{value}: @value;
+        --@{value}: @@value;
     });
 }

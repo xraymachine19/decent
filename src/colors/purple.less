@@ -1,8 +1,8 @@
 .set-purple() {
     @base: purple;
     @modifier: 1/2;
-    .set-color-base(@base, @modifier);
-    @purple: @color-base;
+    .set-color(~"purple", @base, @modifier);
+    @purple: @color;
 
     & when (@output-color-classes = true) {
         .purple { .colorize(@purple);}

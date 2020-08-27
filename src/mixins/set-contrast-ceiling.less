@@ -1,9 +1,0 @@
-@import (reference) "set-contrast-ratio";
-
-// sets the variable @ceiling to the contrast ratio between the color and white
-// this can be used to figure out how much "room" there is for tinting
-
-.set-contrast-ceiling(@color) {
-    .set-contrast-ratio(@color, white);
-    @contrast-ceiling: @contrast-ratio;
-}

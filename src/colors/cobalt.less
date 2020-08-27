@@ -1,8 +1,8 @@
 .set-cobalt() {
     @base: mix(mediumblue, dodgerblue, 75%);
     @modifier: 1/3;
-    .set-color-base(@base, @modifier);
-    @cobalt: @color-base;
+    .set-color(cobalt, @base, @modifier);
+    @cobalt: @color;
 
     & when (@output-color-classes = true) {
         .cobalt { .colorize(@cobalt);}

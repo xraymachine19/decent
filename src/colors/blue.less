@@ -1,12 +1,8 @@
 .set-blue() {
     .set-average(blue, cornflowerblue, royalblue;);
     @modifier: 1/3;
-    .set-color-base(@average, @modifier);
-    @blue: @color-base;
-
-    & when (@output-color-classes = true) {
-        .blue { .colorize(@blue);}
-    }
+    .set-color(~"blue", @average, @modifier);
+    @blue: @color;
 }
 
 .set-blue();

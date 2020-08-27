@@ -176,6 +176,8 @@ zig-zag;
 @yyy: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2260%22%20height%3D%2296%22%20viewBox%3D%220%200%2060%2096%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill-opacity%3D%22@{fill-opacity}%22%20fill%3D%22@{fg}%22%3E%3Cpath%20d%3D%22M36%2010a6%206%200%200%201%2012%200v12a6%206%200%200%201-6%206%206%206%200%200%200-6%206%206%206%200%200%201-12%200%206%206%200%200%200-6-6%206%206%200%200%201-6-6V10a6%206%200%201%201%2012%200%206%206%200%200%200%2012%200zm24%2078a6%206%200%200%201-6-6%206%206%200%200%200-6-6%206%206%200%200%201-6-6V58a6%206%200%201%201%2012%200%206%206%200%200%200%206%206v24zM0%2088V64a6%206%200%200%200%206-6%206%206%200%200%201%2012%200v12a6%206%200%200%201-6%206%206%206%200%200%200-6%206%206%206%200%200%201-6%206z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 @zig-zag: "%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%2240px%22%20height%3D%2212px%22%20viewBox%3D%220%200%2040%2012%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%2040.1%20(33804)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Ezig-zag%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill-opacity%3D%22@{fill-opacity}%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22zig-zag%22%20fill%3D%22@{fg}%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M2.84217094e-14%2C6.17157288%20L6.17157288%2C0%20L11.8284271%2C0%20L0%2C11.8284271%20L2.84217094e-14%2C6.17157288%20L2.84217094e-14%2C6.17157288%20Z%20M40%2C11.8284271%20L28.1715729%2C0%20L33.8284271%2C3.55271368e-15%20L40%2C6.17157288%20L40%2C11.8284271%20L40%2C11.8284271%20Z%20M6.17157288%2C12%20L18.1715729%2C0%20L21.8284271%2C0%20L33.8284271%2C12%20L28.1715729%2C12%20L20%2C3.82842712%20L11.8284271%2C12%20L6.17157288%2C12%20L6.17157288%2C12%20Z%20M18.1715729%2C12%20L20%2C10.1715729%20L21.8284271%2C12%20L18.1715729%2C12%20L18.1715729%2C12%20Z%22%20id%3D%22Combined-Shape%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E";
 
+
+
 .output-patterns() when (@output-patterns = true) {
     each(@patterns-all, {
         // this outputs everything in an escaped SVG format
@@ -252,4 +254,46 @@ zig-zag;
     background-image: @pattern;
     // .default(background-position);
     
+}
+
+
+
+.pegboard(@base: @base-color; @scale: 1;) {
+    .set-tone(@base);
+
+    .colors() when (@tone = white) {
+        .set-a-color(@base);
+        @board-base: average(@base, @a-color);
+        @shadow-base: @base;
+        @highlight-base: @a-color;
+    }
+
+    .colors() when (default()) {
+        .set-c-color(@base);
+        @board-base: average(@base, @c-color);
+        @shadow-base: @c-color;
+        @highlight-base: @base;
+    }
+
+    .colors();
+
+    @board-red: round(red(@board-base));
+    @board-green: round(green(@board-base));
+    @board-blue: round(blue(@board-base));
+    @board: ~"rgb(@{board-red},@{board-green},@{board-blue})";
+
+    @shadow-red: round(red(@shadow-base));
+    @shadow-green: round(green(@shadow-base));
+    @shadow-blue: round(blue(@shadow-base));
+    @shadow: ~"rgb(@{shadow-red},@{shadow-green},@{shadow-blue})";
+
+    @highlight-red: round(red(@highlight-base));
+    @highlight-green: round(green(@highlight-base));
+    @highlight-blue: round(blue(@highlight-base));
+    @highlight: ~"rgb(@{highlight-red},@{highlight-green},@{highlight-blue})";
+
+    @width: 15px;
+    @height: @width;
+    background-image: url("data:image/svg+xml,@{pattern-pegboard}");
+    background-size: (@scale * @width), (@scale * @height);
 }

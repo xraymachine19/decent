@@ -1,9 +1,0 @@
-@import (reference) "set-contrast-ratio";
-
-// sets the variable @ceiling to the contrast ratio between the color and black
-// this can be used to figure out how much "room" there is for shading
-
-.set-contrast-floor(@color) {
-    .set-contrast-ratio(@color, black);
-    @contrast-floor: @contrast-ratio;
-}

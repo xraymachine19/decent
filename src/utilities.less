@@ -76,8 +76,8 @@
 }
 
 .small {
-  font-size: 90%;
-  line-height: @line-height*.90;
+  font-size: 87.5%;
+  line-height: @line-height*.875;
 }
 
 .text-padding {
@@ -122,7 +122,6 @@
 
 .transparent {
   color: inherit;
-  position: ;
   background: transparent;
 }
 
@@ -155,137 +154,6 @@
   opacity: .8;
 }
 
-
-.on-mobile({
-  .tablet {
-    > * {
-      .full-width;
-    }
-  }
-});
-
-.light {
-  @light-bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
-  @pattern-base: @light-bg;
-
-  @fill-opacity: .11;
-
-  @fg-base: white;
-
-  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
-  @fg-red: floor(red(@fg-base));
-  @fg-green: floor(green(@fg-base));
-  @fg-blue: floor(blue(@fg-base));
-  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
-
-  @pattern: url("data:image/svg+xml,@{pattern-base}");
-
-  background-image+: @pattern;
-}
-
-.lighter {
-  @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
-  @pattern-base: @bg;
-
-  @fill-opacity: .22;
-
-  @fg-base: white;
-
-  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
-  @fg-red: floor(red(@fg-base));
-  @fg-green: floor(green(@fg-base));
-  @fg-blue: floor(blue(@fg-base));
-  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
-
-  @pattern: url("data:image/svg+xml,@{pattern-base}");
-
-  background-image+: @pattern;
-}
-
-.dark {
-  @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
-  @pattern-base: @bg;
-
-  @fill-opacity: .06;
-
-  @fg-base: black;
-
-  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
-  @fg-red: floor(red(@fg-base));
-  @fg-green: floor(green(@fg-base));
-  @fg-blue: floor(blue(@fg-base));
-  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
-
-  @pattern: url("data:image/svg+xml,@{pattern-base}");
-
-  background-image+: @pattern;
-}
-
-.darker {
-  @bg: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
-  @pattern-base: @bg;
-
-  @fill-opacity: .12;
-
-  @fg-base: black;
-
-  // we need the foreground color inside the SVG to be in rgb(r,g,b) format
-  @fg-red: floor(red(@fg-base));
-  @fg-green: floor(green(@fg-base));
-  @fg-blue: floor(blue(@fg-base));
-  @fg: ~"rgb(@{fg-red},@{fg-green},@{fg-blue})";
-
-  @pattern: url("data:image/svg+xml,@{pattern-base}");
-
-  background-image+: @pattern;
-}
-
-.on-tablet({
-  .grid {
-    display: grid;
-    grid-gap: @margin;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-  
-  .grid-width-one {
-    &:extend(.grid-width);
-  }
-  
-  .grid-width-two {
-    grid-column: auto / span 2;
-  }
-  .grid-width-three {
-    grid-column: auto / span 3;
-  }
-  .grid-width-four {
-    grid-column: auto / span 4;
-  }
-  .grid-width-five {
-    grid-column: auto / span 5;
-  }
-  .grid-width-six {
-    grid-column: auto / span 6;
-  }
-  .grid-width-seven {
-    grid-column: auto / span 7;
-  }
-  .grid-width-eight {
-    grid-column: auto / span 8;
-  }
-  .grid-width-nine {
-    grid-column: auto / span 9;
-  }
-  .grid-width-ten {
-    grid-column: auto / span 10;
-  }
-  .grid-width-eleven {
-    grid-column: auto / span 11;
-  }
-  .grid-width-twelve {
-    grid-column: auto / span 12;
-  }
-});
-
 .serif, .font-family-serif {
   font-family: @font-family-serif;
 }
@@ -317,18 +185,6 @@
   background-image+: @pattern;
     .dark;
   }
-
-  &.lighter {
-    .set-pattern(texture);
-  background-image+: @pattern;
-    .lighter;
-  }
-
-  &.darker {
-    .set-pattern(texture);
-  background-image+: @pattern;
-    .darker;
-  }
 }
 
 .ascii {
@@ -356,7 +212,7 @@
 
 .hide, .hidden { display: none !important;}
 
-.clearfix {
+.clearfix, .clear {
   clear: both;
   &::after {
     display: block;

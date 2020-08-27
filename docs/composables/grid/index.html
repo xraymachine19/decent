@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The .grid composable | Decent CSS</title>
+  <meta name="description" content="The grid composable for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="top bar dark black fixed inner-page-width full-width">
+        <h4><a href="../../">Decent CSS</a></h4>
+        <ul class="bar top right">
+            <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
+            <li><a href="../../mixins/">Mixins</a></li>
+            
+            <li><a href="../../how-to/">How-to</a></li>
+        </ul>
+    </nav>
+    <div class="bar full-width margin-bottom placeholder"></div>
+    <main>
+        <section class="darker feature skyblue">
+            <h1>.grid</h1>
+            <p>Organize child elements with a simple grid.</p>
+        </section>
+        <div class="grid inner-page-width">
+            <div class="grid-width-three">
+                <nav>
+                    <ul class="group action padding dark">
+                        <li><a href="../card">card</a></li>
+                        <li><a href="../hero">hero</a></li>
+                        <li><a href="../group">group</a></li>
+                        <li><a href="../light">light</a></li>
+<li><a href="../dark">dark</a></li>
+
+                        <li><a href="../feature">feature</a></li>
+                        <li><a href="../matte">matte</a></li>
+                        <li><a href="../well">well</a></li>
+                        <li><a href="../island">island</a></li>
+                        <li><a href="../overlay">overlay</a></li>
+                        <li><a href="../badge">badge</a></li>
+                        
+                        
+                        <li><a href="../two-column">two-column</a></li>
+                        <li><a href="../three-column">three-column</a></li>
+                        <li><a href="../golden-column">golden-column</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="grid-width-nine">
+                <section id="reference">
+                    <h2>Details</h2>
+                    <div id="arguments">
+                        <ul>
+                            <li><strong>filename</strong>: /composables/grid.less</li>
+                            <li><strong>settings</strong>: none</li>
+                            <li><strong>defaults</strong>: none</li>
+                        </ul>
+                    </div>
+                    <div class="margin-auto gutter no-margin-bottom text-align-center">
+                        <span class="badge info">composable</span> &middot; <span class="badge reaction">layout</span>
+                    </div>
+                </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <p>The <em>.grid</em> and <em>.grid-width-[number]</em> classes make for a simple, easy-to-use grid system based on CSS's grid system. The numbers are spelled out. There aren't any numerals in Decent's composable class names.</p>
+
+                    <p>The grid is based on a twelve-column grid.</p>
+                    
+
+                    <h3>Copying the .three-column composable</h3>
+                    <p>.grid is powerful enough on its own to act like .two-column and three-column. Here's an example of three equal-width .grid-width-four columns:</p>
+
+                    <div class="grid grid-gap-padding">
+                        <div class="grid-width-four info">
+                            .grid-width-four
+                        </div>
+                        <div class="grid-width-four info">
+                            .grid-width-four
+                        </div>
+                        <div class="grid-width-four info">
+                            .grid-width-four
+                        </div>
+                    </div>
+
+                    <pre>&lt;div class="grid grid-gap-padding"&gt;
+    &lt;div class="grid-width-four info"&gt;
+        .grid-width-four
+    &lt;/div&gt;
+    &lt;div class="grid-width-four info"&gt;
+        .grid-width-four
+    &lt;/div&gt;
+    &lt;div class="grid-width-four info"&gt;
+        .grid-width-four
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+
+                    <h3>A narrow sidebar</h3>
+                    <p>Here's a standard sidebar layout:</p>
+                    <div class="grid grid-gap-padding">
+                        <div class="grid-width-nine info">
+                            .grid-width-nine
+                        </div>
+                        <div class="grid-width-three info">
+                            .grid-width-three
+                        </div>
+                    </div>
+
+                    <pre>&lt;div class="grid grid-gap-padding"&gt;
+    &lt;div class="grid-width-nine info"&gt;
+        .grid-width-nine
+    &lt;/div&gt;
+    &lt;div class="grid-width-three info"&gt;
+        .grid-width-three
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                        <h3>More examples</h3>
+                    <div class="grid grid-gap-padding">
+                        <div class="grid-width-six info">
+                            .grid-width-six
+                        </div>
+                        <div class="grid-width-six info">
+                            .grid-width-six
+                        </div>
+                    </div>
+                    <div class="grid grid-gap-padding">
+                        <div class="grid-width-one info">
+                            .grid-width-one
+                        </div>
+                        <div class="grid-width-eleven info">
+                            .grid-width-eleven
+                        </div>
+                    </div>
+                    <div class="grid grid-gap-padding">
+                        <div class="grid-width-eight info">
+                            .grid-width-eight
+                        </div>
+                        <div class="grid-width-four info">
+                            .grid-width-four
+                        </div>
+                    </div>
+
+                    <div class="grid grid-gap-padding">
+                        <div class="grid-width-three info">
+                            .grid-width-three
+                        </div>
+                        <div class="grid-width-four info">
+                            .grid-width-four
+                        </div>
+                        <div class="grid-width-five info">
+                            .grid-width-five
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+</body>
+</html>

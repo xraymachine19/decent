@@ -2,10 +2,6 @@
     @base: #aa3535;
     .set-lumafix(@base; @strength: @color-strength/3;);
     @barnred: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-
-    & when (@output-color-classes = true) {
-        .barnred { .colorize(@barnred);}
-    }
 }
 
 .set-barnred();

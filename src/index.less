@@ -42,24 +42,27 @@
 @import "elements/textarea";
 // TODO: support all HTML elements or have etc file
 
+
+@import "composables/matte";
+@import "composables/well";
+@import "composables/island";
+@import "composables/overlay";
+@import "composables/badge";
+@import "composables/grid";
+@import "composables/two-column";
+@import "composables/three-column";
+@import "composables/golden-column";
 @import "composables/group";
 @import "composables/bar";
 @import "composables/tray";
 @import "composables/stack";
 @import "composables/feature";
 @import "composables/card";
-@import "composables/matte";
-@import "composables/well";
-@import "composables/island";
-@import "composables/overlay";
-@import "composables/hero";
-@import "composables/badge";
-@import "composables/two-column";
-@import "composables/three-column";
-@import "composables/golden-column";
+@import "composables/light";
+@import "composables/dark";
 
 @import "utilities";
-@import "no";
+@import "nullifiers";
 @import "debug";
 
 // add any other Less/CSS here
@@ -117,7 +120,7 @@
         height: 16%;
         bottom: 0;
         right: 0;
-        &:extend(.darker);
+        &:extend(.dark);
     }
 
     &::after {
@@ -128,7 +131,7 @@
         height: 16%;
         top: 0;
         left: 0;
-        &:extend(.lighter);
+        &:extend(.light);
     }
 
     &:last-child {

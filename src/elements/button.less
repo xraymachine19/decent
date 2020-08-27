@@ -1,10 +1,10 @@
 // everything defined here is considered a button within the project
 
 .button-elements(@rules) {
-  button,
-  .button, 
-  input[type="button"],
-  input[type="submit"] 
+  // button,
+  // input[type="button"],
+  // input[type="submit"],
+  .button 
   { @rules();}
 }
 
@@ -16,15 +16,16 @@
     .default(box-shadow);
   
     display: inline;
+    position: relative;
     font: inherit;
-    padding: 1em / @golden-ratio;
+    // padding: 1em / @golden-ratio;
     
     .button-color(@default);
     .set-lumafix(@default, @gray);
     border-width: 0;
     border-color: @lumafix;
     max-width: @aside-width;
-    line-height: 1;
+    line-height: @line-height;
     text-align: center;
     vertical-align: middle;
     background-color: @default;
@@ -57,7 +58,8 @@
 
   // use white text unless the contrast would be too low
 
-  .set-contrast-ceiling(@button-color);
+  .set-contrast-ratio(@button-color, white);
+  @contrast-ceiling: @contrast-ratio;
 
   // preferentially tint if we can
   .color() when (@contrast-ceiling > 3.3) {

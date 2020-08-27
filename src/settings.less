@@ -5,6 +5,8 @@
 @base-color: @random-color;
 @output-patterns: false;
 @output-color-classes: true;
+@output-text-color-classes: true;
+@output-css-variables: false;
 
 @border-image: 10 round url("data:image/svg+xml,@{border-image-base}");
 
@@ -20,11 +22,11 @@
 @padding: 2rem;
 @font-size: 1.2em;
 @line-height: 1.8;
+@font-family: @font-family-sans-serif;
 
 // patterns
 @body-pattern: anchors-away;
 @well-pattern: texture;
-@hero-pattern: charlie-brown;
 
 // design variables
 @text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
