@@ -1,11 +1,7 @@
 .set-garnet() {
     @base: mix(#fd0001, hardlight(@ambient, #fd0001), 70%);
-    .set-lumafix(@base; @strength: @color-strength/5;);
-    @garnet: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .garnet { .colorize(@garnet);}
-    }
+    .set-color(garnet, @base, 1/5);
+    @garnet: @color;
 }
 
 .set-garnet();

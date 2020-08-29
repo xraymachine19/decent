@@ -20,14 +20,9 @@ body {
   //   .pattern(@body-pattern; @body-background;);
   // }
   
-  .colorize(@white);
-    
-  font-size: @font-size * .9;
-  line-height: @line-height * .9;
+  .contrast(@white);
+  background-color: @white;
 
-  .on-tablet({
-    .default(font-size);
-    .default(line-height);
-  });
+  .default(font-size);
+  .default(line-height);
 }
-  

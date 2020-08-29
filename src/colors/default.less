@@ -1,8 +1,11 @@
 .set-default() {
     .set-average(@action, @reaction, @info, @warning, @success, @failure;);
     @default: @average;
+    
+    .default {
+        .contrast(@default);
+        background: @default;
+    }
 }
 
 .set-default();
-
-.default { .colorize(@default);}

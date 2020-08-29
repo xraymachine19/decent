@@ -1,12 +1,4 @@
-// a ruleset mixin targeting all headlines
-
-.headline-elements(@rules) {
-  h1, h2, h3, h4, h5, h6 { @rules();}
-}
-
-// rules for headlines
-
-.headline-elements({
+h1, h2, h3, h4, h5, h6 {
   .default(font-family);
   font-weight: bold;
   margin-top: 1em * @golden-ratio;
@@ -18,7 +10,7 @@
   &:first-child {
     margin-top: 0;
   }
-});
+}
 
 // font sizes
 

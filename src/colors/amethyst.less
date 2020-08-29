@@ -1,7 +1,7 @@
 .set-amethyst() {
-	@base: mix(#b875eb, hardlight(@ambient, #9555c5), 60%);
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @amethyst: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
+    @base: mix(#b875eb, hardlight(@ambient, #9555c5), 60%);
+    .set-color(amethyst, @base, 1/4, 1.1);
+    @amethyst: @color;
 }
 
 .set-amethyst();

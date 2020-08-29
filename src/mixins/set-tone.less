@@ -4,10 +4,54 @@
 @tint: white;
 @shade: black;
 
+// .set-tone(@color) {
+//   @tone: contrast(@color, @shade, @tint, 50%);
+// }
+
 .set-tone(@color) {
-  @tone: contrast(@color, @shade, @tint, 50%);
+  .set-contrast-ceiling() {
+    .set-contrast-ratio(@color, white);
+    @contrast-ceiling: @contrast-ratio;
+  }
+
+  .set-contrast-floor() {
+    .set-contrast-ratio(@color, black);
+    @contrast-floor: @contrast-ratio;
+  }
+
+  .finalize-tone() when (@contrast-floor > @contrast-ceiling) {
+    @tone: black;
+  }
+
+  .finalize-tone() when (default()) {
+    @tone: white;
+  }
+
+  .set-contrast-ceiling();
+  .set-contrast-floor();
+  .finalize-tone();
 }
 
 .set-tone(@color, @compare) {
-  @tone: if(luma(@color) > luma(@compare), @shade, @tint);
+  .set-contrast-ceiling-color() {
+    .set-contrast-ratio(@color, white);
+    @contrast-ceiling-color: @contrast-ratio;
+  }
+
+  .set-contrast-ceiling-compare() {
+    .set-contrast-ratio(@color, white);
+    @contrast-ceiling-compare: @contrast-ratio;
+  }
+
+  .finalize-tone() when (@contrast-ceiling-color > @contrast-ceiling-compare) {
+    @tone: black;
+  }
+
+  .finalize-tone() when (default()) {
+    @tone: white;
+  }
+
+  .set-contrast-ceiling-color();
+  .set-contrast-ceiling-compare();
+  .finalize-tone();
 }

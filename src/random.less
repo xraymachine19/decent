@@ -2,8 +2,8 @@
 @font-family: @font-family-random;
 // .random-background();
 
-.random-padding();
-@padding: @padding-random;
+// .random-padding();
+// @padding: @padding-random;
 .random-margin();
 @margin: @margin-random;
 .random-textmeasure();
@@ -59,12 +59,12 @@
     @random-color: color('#@{escape}');
 }
 
-.random-padding() {
-    @random: `Math.random()`;
-    @plusPadding: floor(@random*15px);
-    @basePadding: 10px;
-    @padding-random: @plusPadding + @basePadding;
-}
+// .random-padding() {
+//     @random: `Math.random()`;
+//     @plusPadding: floor(@random*15px);
+//     @basePadding: 10px;
+//     @padding-random: @plusPadding + @basePadding;
+// }
 
 .random-margin() {
     @random: `Math.random()`;

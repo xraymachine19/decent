@@ -1,11 +1,6 @@
 .set-olivedrab() {
-    @base: olivedrab;
-    .set-lumafix(@base; @strength: @color-strength*(2/3););
-    @olivedrab: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .olivedrab { .colorize(@olivedrab);}
-    }
+    .set-color(~"olivedrab", olivedrab, 2/3);
+    @olivedrab: @color;
 }
 
 .set-olivedrab();

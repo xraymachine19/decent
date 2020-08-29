@@ -1,11 +1,7 @@
 .set-butter() {
     .set-average(#fdf1b7, yellow, white;);
-    .set-lumafix(@average; @strength: @color-strength/6;);
-    @butter: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-
-    & when (@output-color-classes = true) {
-        .butter { .colorize(@butter);}
-    }
+    .set-color(butter, @average, 1/6, 1.1);
+    @butter: @color;
 }
 
 .set-butter();

@@ -3,10 +3,6 @@
     @modifier: 2/3;
     .set-color(~"magenta", @base, @modifier);
     @magenta: @color;
-
-    & when (@output-color-classes = true) {
-        .magenta { .colorize(@magenta);}
-    }
 }
 
 .set-magenta();

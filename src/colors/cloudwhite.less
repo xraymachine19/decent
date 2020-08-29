@@ -1,11 +1,7 @@
 .set-cloudwhite() {
     @base: mix(deepskyblue, white, 4%);
-    .set-lumafix(@base; @strength: @color-strength/6;);
-    @cloudwhite: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .cloudwhite { .colorize(@cloudwhite);}
-    }
+    .set-color(cloudwhite, @base, 1/6);
+    @cloudwhite: @color;
 }
 
 .set-cloudwhite();

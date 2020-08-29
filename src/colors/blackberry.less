@@ -1,7 +1,7 @@
 .set-blackberry() {
     @base: #332f49;
-    .set-lumafix(@base; @strength: @color-strength/6;);
-    @blackberry: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
+    .set-color(blackberry, @base, 1/4, 1.1);
+    @blackberry: @color;
 }
 
 .set-blackberry();

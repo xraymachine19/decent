@@ -1,11 +1,7 @@
 .set-silver() {
     @base: mix(silver, gold, 90%);
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @silver: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .silver { .colorize(@silver);}
-    }
+    .set-color(~"silver", @base, 1/4);
+    @silver: @color;
 }
 
 .set-silver();

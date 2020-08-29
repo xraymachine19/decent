@@ -1,11 +1,7 @@
 .set-seafoam() {
     .set-average(cyan, aquamarine, white;);
-    .set-lumafix(@average; @strength: @color-strength/3;);
-    @seafoam: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .seafoam { .colorize(@seafoam);}
-    }
+    .set-color(seafoam, @average, 1/3);
+    @seafoam: @color;
 }
 
 .set-seafoam();

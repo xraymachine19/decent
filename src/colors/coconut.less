@@ -1,11 +1,7 @@
 .set-coconut() {
-    @base: #f5f3f1;
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @coconut: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-
-    & when (@output-color-classes = true) {
-        .coconut { .colorize(@coconut);}
-    }
+    @base: #bb7d5c;
+    .set-color(coconut, @base, 1/4);
+    @cocounut: @color;
 }
 
 .set-coconut();

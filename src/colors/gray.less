@@ -3,10 +3,6 @@
     @modifier: 1/2;
     .set-color(~"gray", @base, @modifier);
     @gray: @color;
-
-    & when (@output-color-classes = true) {
-        .gray { .colorize(@gray);}
-    }
 }
 
 .set-gray();

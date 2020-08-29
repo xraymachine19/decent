@@ -1,12 +1,7 @@
-
 .set-robin() {
     @base: #dd3d10;
-    .set-lumafix(@base; @strength: @color-strength/3;);
-    @robin: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .robin { .colorize(@robin);}
-    }
+    .set-color(robin, @base, 1/3);
+    @robin: @color;
 }
 
 .set-robin();

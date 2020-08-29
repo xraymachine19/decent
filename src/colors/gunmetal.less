@@ -1,11 +1,7 @@
 .set-gunmetal() {
     .set-average(steelblue, gray, black;);
-    .set-lumafix(@average; @strength: @color-strength/4;);
-    @gunmetal: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .gunmetal { .colorize(@gunmetal);}
-    }
+    .set-color(gunmetal, @average, 1/4);
+    @gunmetal: @color;
 }
 
 .set-gunmetal();

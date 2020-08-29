@@ -1,11 +1,7 @@
 .set-gold() {
     @base: average(gold, yellow);
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @gold: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .gold { .colorize(@gold);}
-    }
+    .set-color(~"gold", @base, 1/4);
+    @gold: @color;
 }
 
 .set-gold();

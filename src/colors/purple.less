@@ -3,10 +3,6 @@
     @modifier: 1/2;
     .set-color(~"purple", @base, @modifier);
     @purple: @color;
-
-    & when (@output-color-classes = true) {
-        .purple { .colorize(@purple);}
-    }
 }
 
 .set-purple();

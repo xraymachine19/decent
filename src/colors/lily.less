@@ -1,11 +1,7 @@
 .set-lily() {
     @base: #f3c6ee;
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @lily: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .lily { .colorize(@lily);}
-    }
+    .set-color(lily, @base, 1/4);
+    @lily: @color;
 }
 
 .set-lily();

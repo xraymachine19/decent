@@ -1,28 +1,42 @@
 // dev
 @debug: false;
-@randomness: true; 
-.set-random-color();
-@base-color: @random-color;
+@randomness: false; 
+// .set-random-color();
+// @base-color: @random-color;
 @output-patterns: false;
 @output-color-classes: true;
 @output-text-color-classes: true;
 @output-css-variables: false;
 
+
+@base-color: rgb(117, 115, 223);
+
 @border-image: 10 round url("data:image/svg+xml,@{border-image-base}");
 
 @border-image-base: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
-
-
 
 // basics
 // @base-color: #83a9dd;
 @body-background: @ambient;
 @main-background: @white;
-@margin: 3rem;
-@padding: 2rem;
-@font-size: 1.2em;
 @line-height: 1.8;
 @font-family: @font-family-sans-serif;
+@padding: 1rem;
+@margin: 2rem;
+@gutter: 4rem;
+
+@aside-width: 400px;
+@text-width: 800px;
+@page-width: 1200px;
+
+@text-measure: 65;
+@text-width: floor(@text-measure * .6rem);
+@aside-width: @text-width / @golden-ratio;
+@page-width: @text-width*@golden-ratio + @gutter;
+
+@gutter: @margin*2;
+
+@full-width: 100%;
 
 // patterns
 @body-pattern: anchors-away;
@@ -42,25 +56,12 @@
 @compare-color: mix(screen(@ambient, @lumafix), overlay(@ambient, @lumafix), 50%);
 
 // text settings
-@text-measure: 55;
 @text-padding: @text-padding-top @text-padding-right @text-padding-bottom @text-padding-left;
 @text-padding-top: .18em;
 @text-padding-right: .2em*@golden-ratio;
 @text-padding-bottom: .22em;
 @text-padding-left: @text-padding-right;
-@gutter: @margin * @golden-ratio;
 
-// widths
-// these are based on @text-measure by default
-@page-width: @column-width * @golden-ratio;
-@aside-width: @column-width / @golden-ratio;
-@column-width: @text-measure * 1rem;
-@avatar-width: 10rem;
-@icon-width: 2.4rem;
-@full-width: 100%;
-@grid-width: @page-width/12; 
-@tablet-width:        ~"calc(@{column-width} + @{gutter})";
-@desktop-width:       ~"calc(@{page-width} + @{gutter})";
 
 // font stacks
 @font-family-monospace: 

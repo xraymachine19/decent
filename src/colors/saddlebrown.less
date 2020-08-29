@@ -1,11 +1,6 @@
 .set-saddlebrown() {
-    @base: saddlebrown;
-    .set-lumafix(@base; @strength: @color-strength/4;);
-    @saddlebrown: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .saddlebrown { .colorize(@saddlebrown);}
-    }
+    .set-color(~"saddlebrown", saddlebrown, 1/5, 1.1);
+    @saddlebrown: @color;
 }
 
 .set-saddlebrown();

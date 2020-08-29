@@ -1,11 +1,7 @@
 .set-rose() {
     @base: #f70f3e;
-    .set-lumafix(@base; @strength: @color-strength/2;);
-    @rose: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .rose { .colorize(@rose);}
-    }
+    .set-color(rose, @base, 1/2);
+    @rose: @color;
 }
 
 .set-rose();

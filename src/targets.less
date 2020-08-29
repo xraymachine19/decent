@@ -63,16 +63,16 @@
 // these parametric mixins allow you to target a specific size viewport
 
 .on-mobile(@rules) {
-    @media screen and (max-width: ~"calc(@{tablet-width} - 1px)") { @rules();}
+    @media screen and (max-width: ~"calc(@{text-width} - 1px)") { @rules();}
     // TODO: test this
  }
  
  .on-tablet(@rules) {
-    @media screen and (min-width: @tablet-width) { @rules();}
+    @media screen and (min-width: ~"calc(@{text-width} + @{gutter})") { @rules();}
  }
  
  .on-desktop(@rules) {
-    @media screen and (min-width: @desktop-width) { @rules();}
+    @media screen and (min-width: ~"calc(@{page-width} + @{gutter})") { @rules();}
  }
 
  // target print

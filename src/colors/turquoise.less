@@ -2,10 +2,6 @@
     @base: turquoise;
     .set-lumafix(@base; @strength: @color-strength/3;);
     @turquoise: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .turquoise { .colorize(@turquoise);}
-    }
 }
 
 .set-turquoise();

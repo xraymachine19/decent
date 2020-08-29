@@ -1,12 +1,7 @@
 .set-neongreen() {
     @base: #39FF14;
-    .set-lumafix(@base; @strength: @color-strength/4;);
-	@neongreen: 
-    mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-    
-    & when (@output-color-classes = true) {
-        .neongreen { .colorize(@neongreen);}
-    }
+    .set-color(neongreen, @base, 1/4, 1.1);
+    @neongreen: @color;
 }
 
 .set-neongreen();

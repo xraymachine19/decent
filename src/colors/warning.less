@@ -1,6 +1,6 @@
-@warning-action: contrast(@action, @orange, @cyan, 20%);
-@warning-info: contrast(@info, @orange, @violet, 20%);
+@warning-action: contrast(@action, @orange, @cyan, 10%);
+@warning-info: contrast(@info, @orange, @violet, 10%);
 
 @warning: contrast(@base-color, @warning-info, @warning-action, 80%);
 
-.warning { .colorize(@warning);}
+.warning { .contrast(@warning); background: @warning;}

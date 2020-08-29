@@ -1,11 +1,7 @@
 .set-iron() {
-    .set-average(darkred, brown, darkslategray, black, black;);
-    .set-lumafix(@average; @strength: @color-strength/4;);
-    @iron: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .iron { .colorize(@iron);}
-    }
+    .set-average(darkred, brown, darkslategray, black;);
+    .set-color(iron, @average, 1/4);
+    @iron: @color;
 }
 
 .set-iron();

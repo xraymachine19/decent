@@ -1,11 +1,7 @@
 .set-mango() {
     @base: #fbe013;
-    .set-lumafix(@base; @strength: @color-strength/6;);
-    @mango: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-
-    & when (@output-color-classes = true) {
-        .mango { .colorize(@mango);}
-    }
+    .set-color(mango, @base, 1/6, 1.1);
+    @mango: @color;
 }
 
 .set-mango();

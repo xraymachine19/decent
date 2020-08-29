@@ -73,3 +73,15 @@
             .set-contrast(@compare, @standard, @mode);
             @{property}: @contrast;
 }
+
+.contrast(
+        @property: color; 
+        @compare: @main-background; 
+        @standard: @text-contrast;        
+        @mode: auto;
+        ) when (isColor(@property)) {
+            .set-contrast(@compare, @standard, @mode);
+            @{property}: @contrast;
+
+            .contrast(color, @property, @standard, @mode);
+}

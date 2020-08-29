@@ -4,20 +4,97 @@
 	.set-lumafix(@base; @strength: @color-strength*@luma-modifier;);
     @color: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*@ambient-modifier);
 
-	& when (@output-color-classes = true) {
-        .@{color-name} { .colorize(@base);}
-    }
+	.set-base-contrast-ceiling() {
+		.set-contrast-ratio(@color, white);
+		@base-contrast-ceiling: @contrast-ratio;
+	}
+
+	.set-base-contrast-ceiling();
+
+	.l() {
+		@compare: if((@base-contrast-ceiling < 3), black, white);
+
+		.set-contrast-ceiling() {
+			.set-contrast-ratio(lighten(@color, 16%), white);
+			@contrast-ceiling: @contrast-ratio;
+		}
+
+		.output-color() when (@contrast-ceiling < 3)
+						and not (@compare = black) {
+			&.light { 
+				color: black;
+			}
+		}
+
+		.output-color() when (@contrast-ceiling >= 3)
+						and not (@compare = white) {
+			&.dark {
+				color: white;
+			}
+		}
+	
+		.set-contrast-ceiling();
+		.output-color();
+	}
+
+	.d() {
+		@compare: if((@base-contrast-ceiling < 3), black, white);
+
+		.set-contrast-ceiling() {
+			.set-contrast-ratio(darken(@color, 16%), white);
+			@contrast-ceiling: @contrast-ratio;
+		}
+
+		.output-color() when (@contrast-ceiling < 3)
+		and not (@compare = black) {
+			&.light { 
+				color: black;
+			}
+		}
+
+		.output-color() when (@contrast-ceiling >= 3)
+		and not (@compare = white) {
+			&.dark {
+				color: white;
+			}
+		}
+	
+		.set-contrast-ceiling();
+		.output-color();
+	}
+
+	& when (@output-color-classes = true) 
+	and (@base-contrast-ceiling < 3) {
+        .@{color-name} { 
+			color: black; 
+			background: @color;
+
+			.l();
+			.d();
+		}
+	}
+
+	& when (@output-color-classes = true) 
+	and (@base-contrast-ceiling >= 3) {
+        .@{color-name} { 
+			color: white; 
+			background: @color;
+
+			.l();
+			.d();
+		}
+	}
 }
 
 // used in building other colors
 // @import "white";
 // @import "black";
 @import "ambient";
-@white: mix(white, @base-color, 96%);
-@black: mix(black, @base-color, 80%);
+@white: mix(white, @base-color, 94%);
+@black: mix(black, @base-color, 75%);
 
-.white {.colorize(@white);}
-.black {.colorize(@black);}
+.white {.contrast(@white); background: @white;}
+.black {.contrast(@black); background: @black;}
 
 // color wheel colors
 @import "red";
@@ -94,7 +171,6 @@
 @import "snow";
 @import "twilight";
 @import "platinum";
-@import "cream";
 @import "bacon";
 @import "steel";
 @import "slate";
@@ -102,7 +178,7 @@
 @import "wheat";
 @import "graphite";
 @import "goldenrod";
-@import "orchid";
+@import "periwinkle";
 @import "sand";
 @import "chocolate";
 @import "vanilla";
@@ -139,7 +215,7 @@
 @import "rust";
 @import "onyx";
 @import "pewter";
-@import "buttercup";
+@import "leafgreen";
 @import "rose";
 @import "lilac";
 @import "raven";

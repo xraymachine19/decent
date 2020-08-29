@@ -3,10 +3,6 @@
     @modifier: 1/3;
     .set-color(~"violet", @base, @modifier);
     @violet: @color;
-
-    & when (@output-color-classes = true) {
-        .violet { .colorize(@violet);}
-    }
 }
 
 .set-violet();

@@ -1,15 +1,15 @@
 .set-contrast(
-        @color: @main-background; 
+        @contrast-color: @main-background; 
         @contrast-standard: @text-contrast;
         @mode: auto;
-        ) {
+        ) when (@mode = auto) {
 
     // sets variable @contrast to a contrastful version of 
     // @color that meets the @contrast-standard
 
     @iterations: 10;
 
-    .set-tone(@color);
+    .set-tone(@contrast-color);
     @contrast: @tone;
 
     // @targets: range(1, @contrast-target, @contrast-target/@iterations);
@@ -18,3 +18,21 @@
 
     // }
 }
+
+
+.set-contrast(
+        @contrast-color: @main-background; 
+        @contrast-standard: @text-contrast;
+        @mode;
+        ) when (@mode = tint) {
+            @contrast: white;
+        }
+    
+
+.set-contrast(
+    @contrast-color: @main-background; 
+    @contrast-standard: @text-contrast;
+    @mode;
+    ) when (@mode = shade) {
+        @contrast: black;
+    }

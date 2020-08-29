@@ -2,20 +2,41 @@
 
     @golden-column-gap: @padding;
 
+    .golden-column() {
+        display: grid;
+        grid-template-columns: 1fr*@golden-ratio 1fr;
+        grid-gap: @golden-column-gap;
+    }
+
+    .golden-column();
+
     > * {
         margin-bottom: @margin;
         max-width: none;
     }
 
-    .on-tablet({
-        display: grid;
-        grid-template-columns: 1fr*@golden-ratio 1fr;
-        grid-gap: @golden-column-gap;
+    &.reverse {
+        grid-template-columns: 1fr 1fr*@golden-ratio;
+    }
 
-        &.reverse {
-            display: grid;
-            grid-template-columns: 1fr 1fr*@golden-ratio;
-            grid-gap: @golden-column-gap;
-        }
-    });
+    &.mobile {
+        & { display: initial;}
+        .on-mobile({
+            .golden-column;
+        });
+    }
+
+    &.tablet {
+        & { display: initial;}
+        .on-tablet({
+            .golden-column;
+        });
+    }
+
+    &.desktop {
+        & { display: initial;}
+        .on-desktop({
+            .golden-column;
+        });
+    }
 }

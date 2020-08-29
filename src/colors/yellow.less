@@ -3,10 +3,6 @@
     @modifier: 1/6;
     .set-color(~"yellow", @base, @modifier);
     @yellow: @color;
-
-    & when (@output-color-classes = true) {
-        .yellow { .colorize(@yellow);}
-    }
 }
 
 .set-yellow();

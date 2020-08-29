@@ -1,11 +1,7 @@
 .set-kiwi() {
     @base: #cdf386;
-    .set-lumafix(@base; @strength: @color-strength/6;);
-    @kiwi: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-
-    & when (@output-color-classes = true) {
-        .kiwi { .colorize(@kiwi);}
-    }
+    .set-color(kiwi, @base, 1/6, 1.1);
+    @kiwi: @color;
 }
 
 .set-kiwi();

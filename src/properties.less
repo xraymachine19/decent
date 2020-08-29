@@ -203,7 +203,7 @@ box-sizing;
 @column-rule-width: @border-width; // Specifies the width of the rule drawn between the columns in a multi-column layout.
 @column-span: 2; // Specifies how many columns an element spans across in a multi-column layout.
 @column-width: auto; // Specifies the optimal width of the columns in a multi-column element.
-@columns: @column-width @column-count; // A shorthand property for setting column-width and column-count properties.
+@columns: @text-width @column-count; // A shorthand property for setting text-width and column-count properties.
 
 // Outline Properties
 @outline: @outline-width @outline-style @outline-color; // Sets the width, style, and color for all four sides of an element's outline.
@@ -213,7 +213,7 @@ box-sizing;
 @outline-width: @border-width; // Sets the width of the outline.
 
 // Padding Properties
-@padding: floor(1rem * @golden-ratio); // Sets the padding on all four sides of the element.
+@padding: round(1rem * @golden-ratio, 2); // Sets the padding on all four sides of the element.
 @padding-bottom: @padding; // Sets the padding to the bottom side of an element.
 @padding-left: @padding; // Sets the padding to the left side of an element.
 @padding-right: @padding; // Sets the padding to the right side of an element.

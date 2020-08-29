@@ -1,11 +1,7 @@
 .set-mist() {
     .set-average(skyblue, white, lavender;);
-    .set-lumafix(@average; @strength: @color-strength/6;);
-    @mist: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
-
-    & when (@output-color-classes = true) {
-        .mist { .colorize(@mist);}
-    }
+    .set-color(mist, @average, 1/6, 1.1);
+    @mist: @color;
 }
 
 .set-mist();

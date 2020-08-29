@@ -1,16 +1,4 @@
-// everything defined here is considered a button within the project
-
-.button-elements(@rules) {
-  // button,
-  // input[type="button"],
-  // input[type="submit"],
-  .button 
-  { @rules();}
-}
-
-// rules for button elements
-
-.button-elements({
+.button {
     .default(border-style);
     .default(border-radius);
     .default(box-shadow);
@@ -24,7 +12,6 @@
     .set-lumafix(@default, @gray);
     border-width: 0;
     border-color: @lumafix;
-    max-width: @aside-width;
     line-height: @line-height;
     text-align: center;
     vertical-align: middle;
@@ -47,33 +34,33 @@
     &.border {
       border-width: @border-width;
     }
-});
 
-// button-color handles all the button color rules
+    // button-color handles all the button color rules
 
-.button-color(@button-color) {
-  // .contrast(color, @button-color);
-  // background: @button-color;
-  // .colorize(@button-color);
+    .button-color(@button-color) {
+      // .contrast(color, @button-color);
+      // background: @button-color;
+      // .contrast(@button-color);
 
-  // use white text unless the contrast would be too low
+      // use white text unless the contrast would be too low
 
-  .set-contrast-ratio(@button-color, white);
-  @contrast-ceiling: @contrast-ratio;
+      .set-contrast-ratio(@button-color, white);
+      @contrast-ceiling: @contrast-ratio;
 
-  // preferentially tint if we can
-  .color() when (@contrast-ceiling > 3.3) {
-    color: white;
-    background-color: @button-color;
-  }
+      // preferentially tint if we can
+      .color() when (@contrast-ceiling > 3.3) {
+        color: white;
+        background-color: @button-color;
+      }
 
-  // if not, shade with higher contrast
-  .color() when (default()) {
-    .contrast(color; @button-color; 4.5; shade;);
-    background-color: @button-color;
-  }
+      // if not, shade with higher contrast
+      .color() when (default()) {
+        .contrast(color; @button-color; 4.5; shade;);
+        background-color: @button-color;
+      }
 
-  .color();
+      .color();
 
-  // .contrast(border-color; @button-color; 1.5; shade;);
+      // .contrast(border-color; @button-color; 1.5; shade;);
+    }
 }

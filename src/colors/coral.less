@@ -1,11 +1,6 @@
 .set-coral() {
-    @base: coral;
-    .set-lumafix(@base; @strength: @color-strength/2;);
-    @coral: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix);
-
-    & when (@output-color-classes = true) {
-        .coral { .colorize(@coral);}
-    }
+    .set-color(~"coral", coral, 1/2);
+    @coral: @color;
 }
 
 .set-coral();

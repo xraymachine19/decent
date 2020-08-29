@@ -5,10 +5,6 @@
     
     .set-color(~"crimson", @base, @modifier, @ambient);
     @crimson: @color;
-
-    & when (@output-color-classes = true) {
-        .crimson { .colorize(@crimson);}
-    }
 }
 
 .set-crimson();
