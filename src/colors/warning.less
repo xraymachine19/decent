@@ -1,6 +1,4 @@
-@warning-action: contrast(@action, @orange, @cyan, 10%);
-@warning-info: contrast(@info, @orange, @violet, 10%);
+@warning: contrast(@base-color, @orange, @violet, 80%);
 
-@warning: contrast(@base-color, @warning-info, @warning-action, 80%);
-
-.warning { .contrast(@warning); background: @warning;}
+.warning when (@warning = @orange) { &:extend(.orange);}
+.warning when (@warning = @violet) { &:extend(.violet);}

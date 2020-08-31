@@ -22,18 +22,18 @@
       <li><a href="../../how-to/">How-to</a></li>
     </ul>
 </nav>
-    <div class="top bar dark black full-width margin-bottom placeholder">
+    <div class="top bar full-width margin-bottom placeholder">
 
     </div>
-    <main>
-      <section class="hero darker feature default">
+    
+      <header class="feature graphite page-width margin-auto">
         <h1>Colors</h1>
         <p>A useful color palette for any base/brand color.</p>
-      </section>
-
-      <div class="grid inner-page-width">
+      </header>
+      <main>
+      <div class="grid inner-page-width tablet">
         <div class="grid-width-three">
-          <nav class="small padding">
+          <nav class="small">
             <h6>Emphasis</h6>
             <ul class="group no-margin-bottom">
               <li><a href="../colors">color</a></li>
@@ -65,8 +65,6 @@
   
             <h6>Decoration</h6>
             <ul class="group no-margin-bottom">
-              <li><a href="../matte">matte</a></li>
-              <li><a href="../matte">well</a></li>
               <li><a href="../badge">badge</a></li>
               <li><a href="../overlay">overlay</a></li>
             </ul>
@@ -79,43 +77,200 @@
             </ul>
           </nav>
         </div>
-        <div class="grid-width-nine">
+        <div class="grid-width-nine inner-text-width tablet">
+          <section id="reference">
+              <h2>Details</h2>
+              <div id="arguments">
+                  <ul>
+                      <li><strong>class</strong>: <em>red, green, blue, etc.</em></li>
+                      <li><strong>settings</strong>: color-strength, ambient-mix</li>
+                      <li><strong>defaults</strong>: none</li>
+                  </ul>
+              </div>
+              <div class="margin-auto gutter text-align-center">
+                  <span class="badge info">composable</span> &middot; <span class="badge reaction">many classes</span>
+              </div>
+          </section>
           <section id="colors" class="color-palette">
-            <h1>Unique colors</h1>
-            <p>Every color in a Decent palette also doubles as a CSS class and/or a Less variable. The palette is based on a base color:</p>
-            <div class="aside-width base-color margin-auto">base-color</div>
+            <h2>Examples</h2>
+            <p>Give elements color by adding a color class:</p>
+
+            <div class="two-column desktop">
+              <div>
+                <p><button>A button!</button></p>
+
+                <pre>&lt;button&gt;
+  A button!
+&lt;/button&gt;</pre>
+              </div>
+              <div>
+                <p><button class="red">A button!</button></p>
+                <pre>&lt;button class="red"&gt;
+  A button!
+&lt;/button&gt;</pre>
+              </div>
+            </div>
+
+            <p>Project colors are generated from one parameter, the <strong>@base-color</strong>.</p>
+
+            <div class="aside-width base-color margin-auto text-padding">base-color</div>
             <p>Here, it's given to you. But in your own project you can define it to be whatever you want.</p>
             <p class="clearfix"></p>
             
             <h2><a href="#colors">Colors</a></h2>
         
-            <p>Every Decent project supports a 32-color palette, based on the <span class="base-color text-padding">base-color</span>:</p>
-            <div class="two-column">
+            <p>Every Decent project supports a 32-color palette, based on the <span class="base-color text-padding">base-color</span>, with an additional four project colors:</p>
+            <div class="three-column small">
               <div>
+                <div>
+                  <div class="color red">red</div>
+                  <div class="color orange">orange</div>
+                  <div class="color yellow">yellow</div>
+                  <div class="color olive">olive</div>
+                </div>
+               
+                
+
+                <div>
+                  <div class="color black">black</div>
+                  <div class="color gray">gray</div>
+                  <div class="color white">white</div>
+                  <div class="color brown">brown</div>
+                </div>
+
+                <div>
+              
+                  <div class="color ruby">ruby</div>
+                  <div class="color onyx">onyx</div>
+                  <div class="color pewter">pewter</div>
+                  <div class="color gunmetal">gunmetal</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div class="color green">green</div>
+                  <div class="color teal">teal</div>
+                  <div class="color cyan">cyan</div>
+                  <div class="color skyblue">skyblue</div>
+                </div>
+                <div>
+                  <div class="color crimson">crimson</div>
+                  <div class="color clover">clover</div>
+                  <div class="color cobalt">cobalt</div>
+                  <div class="color graphite">graphite</div>
+                </div>
+                
+
+                <div>
+                  <div class="color hotpink">hotpink</div>
+                  <div class="color neongreen">neongreen</div>
+                  <div class="color electricblue">electricblue</div>
+                  <div class="color royalpurple">royalpurple</div>
+                </div>
+
                 
               </div>
               <div>
-                
-                
+                <div>
+                  <div class="color blue">blue</div>
+                  <div class="color indigo">indigo</div>
+                  <div class="color purple">purple</div>
+                  <div class="color violet">violet</div>
+                </div>
+
+                <div>
+                  <div class="color magenta">magenta</div>
+                  <div class="color lavender">lavender</div>
+                  <div class="color cream">cream</div>
+                  <div class="color charcoal">charcoal</div>
+                </div>
+
+                <div>
+                  <div class="color action">action</div>
+                  <div class="color reaction">reaction</div>
+                  <div class="color ambient">ambient</div>
+                  <div class="color default">default</div>
+                </div>
               </div>
             </div>
             <p class="clearfix no-margin-bottom"></p>
+
+            <h3>Semantic colors</h3>
+            <p>Four aliased semantic colors are also chosen:</p>
+            <div class="aside-width margin-auto small gutter-bottom">
+              <div class="color info">info</div>
+              <div class="color warning">warning</div>
+              <div class="color success">success</div>
+              <div class="color failure">failure</div>
+            </div>
+
+            <h2>.light and .dark</h2>
+            <p>Color classes compose with the .light and .dark classes:</p>
+
+              <div>
+                <p><button class="light red">A button!</button></p>
+                <pre>&lt;button class="light red"&gt;
+  A button!
+&lt;/button&gt;</pre>
+              </div>
+              <div>
+                <p><button class="dark red">A button!</button></p>
+                <pre>&lt;button class="dark red"&gt;
+  A button!
+&lt;/button&gt;</pre>
+              </div>
+
+            <h2>.texture</h2>
+            <p>Colors compose with <strong>.texture</strong>:</p>
+
+            <div>
+              <p><h3 class="cream text-padding">A cream headline</h3></p>
+              <pre>&lt;h3 class="cream text-padding"&gt;
+Wow!
+&lt;/h3&gt;</pre>
+            </div>
+            <div>
+              <p><h3 class="cream texture text-padding">A textured cream headline</h3></p>
+              <pre>&lt;h3 class="cream texture text-padding"&gt;
+Wow!
+&lt;/h3&gt;</pre>
+            </div>
+
+            <h2>Composability</h2>
+            <p>All three compose together:</p>
+
+            <div class="bar dark blue texture inset">
+              <button class="info">Save</button>
+              <button class="warning">Discard</button>
+            </div>
+
+            <pre>&lt;div class="bar dark blue texture inset"&gt;
+  &lt;button class="info"&gt;Save&lt;/button&gt;
+  &lt;button class="warning"&gt;Discard&lt;/button&gt;
+&lt;/div&gt;</pre>
             
           </section>
         </div>
       </div>
 
+      
+
       <div class="small color-palette padding page-width margin-auto">
         <h2>Palette</h2>
 
-        
+        <div class="color ruby">ruby</div>
+        <div class="color onyx">onyx</div>
+        <div class="color pewter">pewter</div>
+        <div class="color gunmetal">gunmetal</div>
 
-
-
+        <div class="color hotpink">hotpink</div>
+        <div class="color neongreen">neongreen</div>
+        <div class="color electricblue">electricblue</div>
+        <div class="color royalpurple">royalpurple</div>
         
     
-        <div class="two-column no-margin-bottom">
-          <div class="three-column no-margin-bottom">
+        <div class="two-column no-margin-bottom desktop">
+          <div class="three-column no-margin-bottom tablet">
             <div>
               <div class="color red">red</div>
               <div class="color orange">orange</div>
@@ -135,7 +290,7 @@
               <div class="color violet">violet</div>
             </div>
           </div>
-          <div class="three-column no-margin-bottom">
+          <div class="three-column no-margin-bottom tablet">
             <div>
               <div class="color black">black</div>
               <div class="color gray">gray</div>
@@ -160,8 +315,8 @@
           </div>
         </div>
 
-        <div class="two-column no-margin-bottom">
-          <div class="three-column no-margin-bottom">
+        <div class="two-column no-margin-bottom desktop">
+          <div class="three-column no-margin-bottom tablet">
             <div>
               <div class="color mint">mint</div>
               <div class="color vanilla">vanilla</div>
@@ -184,7 +339,7 @@
             
           </div>
 
-          <div class="three-column no-margin-bottom">
+          <div class="three-column no-margin-bottom tablet">
             <div>
               <div class="color pumpkin">pumpkin</div>
               <div class="color eggplant">eggplant</div>
@@ -211,8 +366,8 @@
           
         </div>
 
-        <div class="two-column no-margin-bottom">
-          <div class="three-column no-margin-bottom">
+        <div class="two-column no-margin-bottom desktop">
+          <div class="three-column no-margin-bottom tablet">
             <div>
               <div class="color gold">gold</div>
               <div class="color silver">silver</div>
@@ -229,20 +384,18 @@
             <div>
               <div class="color sapphire">sapphire</div>
               <div class="color emerald">emerald</div>
-              <div class="color ruby">ruby</div>
+              <div class="color garnet">garnet</div>
               <div class="color amethyst">amethyst</div>
             </div>
           </div>
           
-          <div class="three-column no-margin-bottom">
+          <div class="three-column no-margin-bottom tablet">
             
 
             <div>
               
-              <div class="color garnet">garnet</div>
-              <div class="color onyx">onyx</div>
-              <div class="color pewter">pewter</div>
-              <div class="color gunmetal">gunmetal</div>
+              
+              
             </div>
             <div>
               <div class="color slate">slate</div>
@@ -261,8 +414,50 @@
             
     
             
-        <div class="two-column no-margin-bottom">
-          <div class="three-column no-margin-bottom">
+        <div class="two-column no-margin-bottom desktop">
+          <div class="three-column no-margin-bottom tablet">
+            <div>
+              <div class="color wheat">wheat</div>
+              <div class="color cornhusk">cornhusk</div>
+              <div class="color barnred">barnred</div>
+              <div class="color saddlebrown">saddlebrown</div>
+            </div>
+            <div>
+              <div class="color sunset">sunset</div>
+              <div class="color moonlight">moonlight</div>
+              <div class="color twilight">twilight</div>
+              <div class="color midnight">midnight</div>
+            </div>
+            <div>
+              <div class="color mist">mist</div>
+              <div class="color snow">snow</div>
+              <div class="color bubbles">bubbles</div>
+              <div class="color steam">steam</div>
+            </div>
+          </div>
+
+          <div class="three-column no-margin-bottom tablet">
+            <div>
+              
+            </div>
+            <div>
+              <div class="color drab">drab</div>
+              <div class="color olivedrab">olivedrab</div>
+              <div class="color khaki">khaki</div>
+              <div class="color evergreen">evergreen</div>
+            </div>
+            <div>
+              <div class="color army">army</div>
+              <div class="color navy">navy</div>
+              <div class="color scarlet">scarlet</div>
+              <div class="color pink">pink</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="two-column no-margin-bottom desktop">
+          <div class="three-column no-margin-bottom tablet">
+
             <div>
               <div class="color periwinkle">periwinkle</div>
               <div class="color rose">rose</div>
@@ -283,51 +478,7 @@
             </div>
           </div>
 
-          <div class="three-column no-margin-bottom">
-            <div>
-              <div class="color hotpink">hotpink</div>
-              <div class="color neongreen">neongreen</div>
-              <div class="color electricblue">electricblue</div>
-              <div class="color royalpurple">royalpurple</div>
-            </div>
-            <div>
-              <div class="color drab">drab</div>
-              <div class="color olivedrab">olivedrab</div>
-              <div class="color khaki">khaki</div>
-              <div class="color evergreen">evergreen</div>
-            </div>
-            <div>
-              <div class="color army">army</div>
-              <div class="color navy">navy</div>
-              <div class="color scarlet">scarlet</div>
-              <div class="color pink">pink</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="two-column no-margin-bottom">
-          <div class="three-column no-margin-bottom">
-            <div>
-              <div class="color wheat">wheat</div>
-              <div class="color cornhusk">cornhusk</div>
-              <div class="color barnred">barnred</div>
-              <div class="color saddlebrown">saddlebrown</div>
-            </div>
-            <div>
-              <div class="color sunset">sunset</div>
-              <div class="color moonlight">moonlight</div>
-              <div class="color twilight">twilight</div>
-              <div class="color midnight">midnight</div>
-            </div>
-            <div>
-              <div class="color mist">mist</div>
-              <div class="color snow">snow</div>
-              <div class="color iceblue">iceblue</div>
-              <div class="color cloudwhite">cloudwhite</div>
-            </div>
-          </div>
-
-          <div class="three-column no-margin-bottom">
+          <div class="three-column no-margin-bottom tablet">
             
             
             <div>
@@ -365,7 +516,7 @@
         <p class="clearfix no-margin-bottom"></p>
       </div>
 
-      <section>
+      <section class="hide">
         <p class="action padding info">The patterns are from <a href="https://www.heropatterns.com/">Hero Patterns</a>.</p>
         <p>Patterns can be invoked in any color using the .pattern() mixin.</p>
         <p>They aren't available out-of-the-box in the CSS version.</p>
@@ -458,7 +609,6 @@
         <div class="pattern-example zig-zag"></div>
       </section>
     </main>
-    
 
 </body>
 </html>

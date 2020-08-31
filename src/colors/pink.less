@@ -1,7 +1,6 @@
 .set-pink() {
-    @base: pink;
-    .set-lumafix(@base; @strength: @color-strength/3;);
-    @pink: mix(@lumafix, overlay(@ambient, @lumafix), @ambient-mix*1.1);
+    .set-color(~"pink", pink, 1/3, 1.1);
+    @pink: @color;
 }
 
 .set-pink();

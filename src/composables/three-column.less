@@ -1,9 +1,34 @@
 .three-column {
-    .default(margin-bottom);
+    .three-column();
 
-    .on-tablet({
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: @padding;
-    });
+    > * {
+        margin-bottom: @margin;
+    }
+
+    &.mobile {
+        & { display: initial;}
+        .on-mobile({
+            .three-column;
+        });
+    }
+
+    &.tablet {
+        & { display: initial;}
+        .on-tablet({
+            .three-column;
+        });
+    }
+
+    &.desktop {
+        & { display: initial;}
+        .on-desktop({
+            .three-column;
+        });
+    }
+}
+
+.three-column() {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: @padding;
 }

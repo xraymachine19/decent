@@ -1,7 +1,5 @@
 .set-magenta() {
-    @base: mix(magenta, darkmagenta, 67%);
-    @modifier: 2/3;
-    .set-color(~"magenta", @base, @modifier);
+    .set-color(~"magenta", magenta, 1/2, .7);
     @magenta: @color;
 }
 

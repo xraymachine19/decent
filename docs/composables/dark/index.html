@@ -24,14 +24,14 @@
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
+    <section class="graphite feature">
+        <h1>.dark</h1>
+        <p>Makes the background perceptibly darker.</p>
+    </section>
     <main>
-        <section class="hero darker feature skyblue">
-            <h1>.dark</h1>
-            <p>Makes the background perceptibly darker.</p>
-        </section>
         <div class="grid inner-page-width">
             <div class="grid-width-three">
-                <nav class="small padding">
+                <nav class="small">
                     <h6>Emphasis</h6>
                     <ul class="group no-margin-bottom">
                       <li><a href="../colors">color</a></li>
@@ -78,12 +78,12 @@
                   </nav>
             </div>
             
-            <div class="grid-width-nine">
+            <div class="grid-width-nine inner-text-width">
                 <section id="reference">
                     <h2>Details</h2>
                     <div id="arguments">
                         <ul>
-                            <li><strong>filename</strong>: /composables/dark.less</li>
+                            <li><strong>class</strong>: <em>dark</em></li>
                             <li><strong>settings</strong>: fill-opacity, pattern-base, output-darker</li>
                             <li><strong>defaults</strong>: none</li>
                         </ul>
@@ -105,13 +105,7 @@
 
                     <pre class="white-space">&lt;p class="dark green padding"&gt;The only acceptable form of wrestling is gator wrestling.&lt;/p&gt;</pre>
 
-                    <p>If the output-darker setting is set to <em>true</em>, then the <strong>.darker</strong> class will work too:</p>
-
-                    <p class="darker green padding">The only acceptable form of wrestling is gator wrestling.</p>
-
-                    <pre class="white-space">&lt;p class="darker green padding"&gt;The only acceptable form of wrestling is gator wrestling.&lt;/p&gt;</pre>
-
-                    <p>This composable sets the background-image property, so it may have problems with elements that use a background-image.</p>
+                    <p>This composable sets the background-image property, so it may have problems with elements that use a background image.</p>
 
                     <h2>Color examples</h2>
 

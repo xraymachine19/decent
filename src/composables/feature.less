@@ -1,5 +1,19 @@
 .feature {
-    padding: @gutter;
-    font-size: 131%;
+    padding: @padding;
     line-height: @golden-ratio;
+    .default(margin-bottom);
+
+    & > *:first-child {
+        margin-top: 0;
+    }
+
+    .on-tablet({
+        padding: @margin;
+        font-size: 110%;
+    });
+
+    .on-desktop({
+        padding: @gutter;
+        font-size: 120%;
+    });
 }

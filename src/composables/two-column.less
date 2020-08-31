@@ -1,11 +1,34 @@
 .two-column {
+    .two-column();
+
     > * {
         margin-bottom: @margin;
     }
 
-    .on-tablet({
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: @padding;
-    });
+    &.mobile {
+        & { display: initial;}
+        .on-mobile({
+            .two-column;
+        });
+    }
+
+    &.tablet {
+        & { display: initial;}
+        .on-tablet({
+            .two-column;
+        });
+    }
+
+    &.desktop {
+        & { display: initial;}
+        .on-desktop({
+            .two-column;
+        });
+    }
+}
+
+.two-column() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: @padding;
 }

@@ -112,7 +112,7 @@ box-sizing;
 @border-bottom-right-radius: @border-radius; // Defines the shape of the bottom-right border corner of an element.
 @border-bottom-style: @border-style; // Sets the style of the bottom border of an element.
 @border-bottom-width: @border-width; // Sets the width of the bottom border of an element.
-@border-color: currentColor; // Sets the color of the border on all the four sides of an element.
+@border-color: @default; // Sets the color of the border on all the four sides of an element.
 @border-image: none; // Specifies how an image is to be used in place of the border styles.
 @border-image-outset: 0; // Specifies the amount by which the border image area extends beyond the border box.
 @border-image-repeat: stretch; // Specifies whether the image-border should be repeated, rounded or stretched.
@@ -123,7 +123,7 @@ box-sizing;
 @border-left-color: @border-color; // Sets the color of the left border of an element.
 @border-left-style: @border-style; // Sets the style of the left border of an element.
 @border-left-width: @border-width; // Sets the width of the left border of an element.
-@border-radius: 6px; // Defines the shape of the border corners of an element.
+@border-radius: .5em; // Defines the shape of the border corners of an element.
 @border-right: @border; // Sets the width, style, and color of the right border of an element.
 @border-right-color: @border-color; // Sets the color of the right border of an element.
 @border-right-style: @border-style; // Sets the style of the right border of an element.
@@ -196,7 +196,7 @@ box-sizing;
 //Multi-column Layout Properties
 @column-count: auto; // Specifies the number of columns in a multi-column element.
 @column-fill: balance; // Specifies how columns will be filled.
-@column-gap: @text-padding-right*6; // Specifies the gap between the columns in a multi-column element.
+@column-gap: round(@text-padding-right*6, 2); // Specifies the gap between the columns in a multi-column element.
 @column-rule: @column-rule-width @column-rule-style @column-rule-color; // Specifies a straight line, or "rule", to be drawn between each column in a multi-column element.
 @column-rule-color: @border-color; // Specifies the color of the rules drawn between columns in a multi-column layout.
 @column-rule-style: @border-style; // Specifies the style of the rule drawn between the columns in a multi-column layout.

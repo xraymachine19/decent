@@ -11,6 +11,9 @@
 
 	.set-base-contrast-ceiling();
 
+	.set-distance(rgb(64, 129, 126), @color); // used for singling out colors
+	@distance-threshold: 12000; 
+
 	.l() {
 		@compare: if((@base-contrast-ceiling < 3), black, white);
 
@@ -64,7 +67,8 @@
 	}
 
 	& when (@output-color-classes = true) 
-	and (@base-contrast-ceiling < 3) {
+	and (@base-contrast-ceiling < 3) 
+	and (@distance < @distance-threshold) {
         .@{color-name} { 
 			color: black; 
 			background: @color;
@@ -75,7 +79,8 @@
 	}
 
 	& when (@output-color-classes = true) 
-	and (@base-contrast-ceiling >= 3) {
+	and (@base-contrast-ceiling >= 3)
+	and (@distance < @distance-threshold) {
         .@{color-name} { 
 			color: white; 
 			background: @color;
@@ -93,8 +98,8 @@
 @white: mix(white, @base-color, 94%);
 @black: mix(black, @base-color, 75%);
 
-.white {.contrast(@white); background: @white;}
-.black {.contrast(@black); background: @black;}
+.white {.contrast(color, @white); background: @white;}
+.black {.contrast(color, @black); background: @black;}
 
 // color wheel colors
 @import "red";
@@ -121,6 +126,14 @@
 @import "clover";
 @import "cobalt";
 @import "graphite";
+@import "ruby";
+@import "onyx";
+@import "pewter";
+@import "gunmetal";
+@import "hotpink";
+@import "neongreen";
+@import "electricblue";
+@import "royalpurple";
 
 // semantic colors
 @import "action";
@@ -132,100 +145,92 @@
 @import "default";
 
 // expanded colors
-@import "lime";
-@import "navy";
-@import "drab";
-@import "lemon";
-@import "electricblue";
-@import "aquamarine";
-@import "charcoal";
-@import "crimson";
-@import "clover";
-@import "iron";
-@import "lavender";
-@import "salmon";
-@import "gunmetal";
-@import "khaki";
-@import "gold";
-@import "silver";
-@import "bronze";
-@import "hotpink";
-@import "neongreen";
-@import "cobalt";
-@import "copper";
-@import "coral";
-@import "peach";
-@import "turquoise";
-@import "midnight";
-@import "ultramarine";
-@import "army";
-@import "tangerine";
-@import "scarlet";
-@import "pink";
-@import "cornhusk";
-@import "seagreen";
-@import "grapefruit";
-@import "plum";
-@import "seafoam";
-@import "mist";
-@import "snow";
-@import "twilight";
-@import "platinum";
-@import "bacon";
-@import "steel";
-@import "slate";
-@import "mint";
-@import "wheat";
-@import "graphite";
-@import "goldenrod";
-@import "periwinkle";
-@import "sand";
-@import "chocolate";
-@import "vanilla";
-@import "strawberry";
-@import "olivedrab";
-@import "evergreen";
-@import "royalpurple";
-@import "sunset";
-@import "moonlight";
-@import "sapphire";
-@import "emerald";
-@import "ruby";
-@import "amethyst";
-@import "lily";
-@import "nightshade";
-@import "raspberry";
-@import "blueberry";
-@import "blackberry";
-@import "cranberry";
-@import "barnred";
-@import "saddlebrown";
-@import "iceblue";
-@import "cloudwhite";
-@import "manganese";
-@import "sandstone";
-@import "granite";
-@import "clay";
-@import "cinnamon";
-@import "pumpkin";
-@import "eggplant";
-@import "butter";
-@import "sunflower";
-@import "garnet";
-@import "rust";
-@import "onyx";
-@import "pewter";
-@import "leafgreen";
-@import "rose";
-@import "lilac";
-@import "raven";
-@import "flamingo";
-@import "robin";
-@import "bluejay";
-@import "mango";
-@import "coconut";
-@import "kiwi";
-@import "banana";
+// @import "lime";
+// @import "navy";
+// @import "drab";
+// @import "lemon";
+// @import "aquamarine";
+// @import "charcoal";
+// @import "crimson";
+// @import "clover";
+// @import "iron";
+// @import "lavender";
+// @import "salmon";
+// @import "khaki";
+// @import "gold";
+// @import "silver";
+// @import "bronze";
+// @import "cobalt";
+// @import "copper";
+// @import "coral";
+// @import "peach";
+// @import "turquoise";
+// @import "midnight";
+// @import "ultramarine";
+// @import "army";
+// @import "tangerine";
+// @import "scarlet";
+// @import "pink";
+// @import "cornhusk";
+// @import "seagreen";
+// @import "grapefruit";
+// @import "plum";
+// @import "seafoam";
+// @import "mist";
+// @import "snow";
+// @import "twilight";
+// @import "platinum";
+// @import "bacon";
+// @import "steel";
+// @import "slate";
+// @import "mint";
+// @import "wheat";
+// @import "graphite";
+// @import "goldenrod";
+// @import "periwinkle";
+// @import "sand";
+// @import "chocolate";
+// @import "vanilla";
+// @import "strawberry";
+// @import "olivedrab";
+// @import "evergreen";
+// @import "sunset";
+// @import "moonlight";
+// @import "sapphire";
+// @import "emerald";
+// @import "garnet";
+// @import "amethyst";
+// @import "lily";
+// @import "nightshade";
+// @import "raspberry";
+// @import "blueberry";
+// @import "blackberry";
+// @import "cranberry";
+// @import "barnred";
+// @import "saddlebrown";
+// @import "bubbles";
+// @import "steam";
+// @import "manganese";
+// @import "sandstone";
+// @import "granite";
+// @import "clay";
+// @import "cinnamon";
+// @import "pumpkin";
+// @import "eggplant";
+// @import "butter";
+// @import "sunflower";
+// @import "rust";
+// @import "leafgreen";
+// @import "rose";
+// @import "lilac";
+// @import "raven";
+// @import "flamingo";
+// @import "robin";
+// @import "bluejay";
+// @import "mango";
+// @import "coconut";
+// @import "kiwi";
+// @import "banana";
 
 // denim
 // canvas

@@ -1,6 +1,4 @@
-@success-reaction: contrast(@reaction, @green, @blue, 40%);
-@success-info: contrast(@info, @green, @clover, 30%);
+@success: contrast(@base-color, @green, @blue, 80%);
 
-@success: contrast(@base-color, @success-info, @success-reaction, 50%);
-
-.success { .contrast(@success); background: @success;}
+.success when (@success = @green) { &:extend(.green);}
+.success when (@success = @blue) { &:extend(.blue);}

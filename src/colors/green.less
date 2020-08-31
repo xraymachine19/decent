@@ -1,7 +1,5 @@
 .set-green() {
-    @base: green;
-    @modifier: 1/4;
-    .set-color(~"green", @base, @modifier);
+    .set-color(~"green", green, 1/4, .9);
     @green: @color;
 }
 

@@ -24,14 +24,15 @@
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
+    <section class="feature graphite">
+      <h1>.feature</h1>
+      <p>Emphasizes content with padding and larger text size.</p>
+  </section>
     <main>
-        <section class="hero darker feature skyblue">
-            <h1>.feature</h1>
-            <p>Emphasizes content with padding and larger text size.</p>
-        </section>
+        
         <div class="grid inner-page-width">
             <div class="grid-width-three">
-                <nav class="small padding">
+                <nav class="small">
                     <h6>Emphasis</h6>
                     <ul class="group no-margin-bottom">
                       <li><a href="../colors">color</a></li>
@@ -78,12 +79,12 @@
                   </nav>
             </div>
             
-            <div class="grid-width-nine">
+            <div class="grid-width-nine inner-text-width">
                 <section id="reference">
                     <h2>Details</h2>
                     <div id="arguments">
                         <ul>
-                            <li><strong>filename</strong>: /composables/feature.less</li>
+                            <li><strong>class</strong>: <em>feature</em></li>
                             <li><strong>settings</strong>: none</li>
                             <li><strong>defaults</strong>: none</li>
                         </ul>
@@ -96,7 +97,12 @@
                     <h2>Examples</h2>
                     <p>Boost an element's font-size and give it generous padding.</p>
                     <p class="feature">This <strong>.feature</strong> element is awesome.</p>
-                    
+                    <pre class="white-space">&lt;p class="feature"&gt;This &lt;strong&gt;.feature&lt;/strong&gt; element is awesome.&lt;/p&gt;</pre>
+
+                    <h3>Baked-in responsiveness</h3>
+                    <p>Both the padding and font-size increase with each breakpoint. It works better for big elements, but can be used on anything:</p>
+                    <p><button class="feature dark blue">A .feature button</button></p>
+                    <p>The <strong>.feature</strong> class does not support the responsiveness classes of mobile, tablet and desktop.</p>
                 </section>
             </div>
         </div>

@@ -1,3 +1,4 @@
-@info: contrast(@base-color, @skyblue, @indigo);
+@info: contrast(@base-color, @skyblue, @indigo, 80%);
 
-.info { .contrast(@info); background: @info;}
+.info when (@info = @skyblue) { &:extend(.skyblue);}
+.info when (@info = @indigo) { &:extend(.indigo);}

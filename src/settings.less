@@ -1,15 +1,15 @@
 // dev
 @debug: false;
-@randomness: false; 
-// .set-random-color();
-// @base-color: @random-color;
+@randomness: true; 
+.set-random-color();
+@base-color: @random-color;
 @output-patterns: false;
 @output-color-classes: true;
 @output-text-color-classes: true;
 @output-css-variables: false;
 
 
-@base-color: rgb(117, 115, 223);
+// @base-color: rgb(83, 94, 74);
 
 @border-image: 10 round url("data:image/svg+xml,@{border-image-base}");
 
@@ -17,7 +17,7 @@
 
 // basics
 // @base-color: #83a9dd;
-@body-background: @ambient;
+@body-background: @base-color;
 @main-background: @white;
 @line-height: 1.8;
 @font-family: @font-family-sans-serif;
@@ -25,16 +25,10 @@
 @margin: 2rem;
 @gutter: 4rem;
 
-@aside-width: 400px;
-@text-width: 800px;
-@page-width: 1200px;
-
 @text-measure: 65;
 @text-width: floor(@text-measure * .6rem);
-@aside-width: @text-width / @golden-ratio;
-@page-width: @text-width*@golden-ratio + @gutter;
-
-@gutter: @margin*2;
+@aside-width: floor(@text-width / @golden-ratio);
+@page-width: floor(@text-width*@golden-ratio + @gutter);
 
 @full-width: 100%;
 
@@ -52,8 +46,6 @@
 // color mixing settings
 @color-strength: 75% + 15%*(unit(luma(@base-color))/100);
 @ambient-mix: 80%;
-@compare-mix: 80%;
-@compare-color: mix(screen(@ambient, @lumafix), overlay(@ambient, @lumafix), 50%);
 
 // text settings
 @text-padding: @text-padding-top @text-padding-right @text-padding-bottom @text-padding-left;

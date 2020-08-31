@@ -14,12 +14,7 @@
     @contrast-ceiling: @contrast-ratio;
   }
 
-  .set-contrast-floor() {
-    .set-contrast-ratio(@color, black);
-    @contrast-floor: @contrast-ratio;
-  }
-
-  .finalize-tone() when (@contrast-floor > @contrast-ceiling) {
+  .finalize-tone() when (@contrast-ceiling < 3) {
     @tone: black;
   }
 
@@ -28,7 +23,6 @@
   }
 
   .set-contrast-ceiling();
-  .set-contrast-floor();
   .finalize-tone();
 }
 

@@ -5,6 +5,10 @@
     margin: 0;
     .default(margin-bottom);
 
+    &.small {
+        margin-bottom: @gutter;
+    }
+
     &.border-radius {
         & > *:first-child {
             .default(border-top-left-radius);

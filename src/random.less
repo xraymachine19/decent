@@ -1,9 +1,9 @@
 .random-fontfamily();
 @font-family: @font-family-random;
-// .random-background();
+.random-background();
 
-// .random-padding();
-// @padding: @padding-random;
+.random-padding();
+@padding: @padding-random;
 .random-margin();
 @margin: @margin-random;
 .random-textmeasure();
@@ -19,7 +19,6 @@
                     @font-family-sans-serif,
                     @font-family-sans-serif,
                     @font-family-sans-serif,
-                    @font-family-monospace,
                     @font-family-monospace;
 
     @length: length(@potentials);
@@ -59,24 +58,24 @@
     @random-color: color('#@{escape}');
 }
 
-// .random-padding() {
-//     @random: `Math.random()`;
-//     @plusPadding: floor(@random*15px);
-//     @basePadding: 10px;
-//     @padding-random: @plusPadding + @basePadding;
-// }
+.random-padding() {
+    @random: `Math.random()`;
+    @plusPadding: floor(@random*1.5rem);
+    @basePadding: 1rem;
+    @padding-random: @plusPadding + @basePadding;
+}
 
 .random-margin() {
     @random: `Math.random()`;
-    @plusMargin: floor(@random*30px);
-    @baseMargin: 20px;
+    @plusMargin: floor(@random*2rem);
+    @baseMargin: 1rem;
     @margin-random: @plusMargin + @baseMargin;
 }
 
 .random-textmeasure() {
     @random: `Math.random()`;
-    @plustextmeasure: floor(@random*15);
-    @basetextmeasure: 35;
+    @plustextmeasure: floor(@random*35);
+    @basetextmeasure: 45;
     @text-measure-random: @plustextmeasure + @basetextmeasure;
 }
 
