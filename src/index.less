@@ -15,7 +15,6 @@
 
 @import "css-variables";
 @import "reset";
-@import "property-classes";
 
 @import "elements/body";
 @import "elements/main";
@@ -42,35 +41,33 @@
 @import "elements/textarea";
 // TODO: support all HTML elements or have etc file
 
-
-@import "composables/matte";
-@import "composables/well";
-@import "composables/island";
-@import "composables/overlay";
-@import "composables/badge";
 @import "composables/grid";
 @import "composables/two-column";
 @import "composables/three-column";
 @import "composables/golden-column";
 @import "composables/group";
 @import "composables/bar";
-@import "composables/tray";
-@import "composables/stack";
-@import "composables/feature";
 @import "composables/card";
 @import "composables/light";
 @import "composables/dark";
+@import "composables/feature";
+@import "composables/overlay";
+@import "composables/badge";
 
+@import "property-classes";
 @import "utilities";
 @import "nullifiers";
 @import "debug";
+@import "print";
+
+
 
 // add any other Less/CSS here
 
 
 // demo site CSS
 
-.base-color { .contrast(@base-color); background: @base-color;}
+.base-color { .contrast(color, @base-color); background: @base-color;}
 
 .text-on-blue {
     .contrast(color, blue); background: blue;
@@ -114,27 +111,27 @@
     .default(border-width);
     .default(border-radius);
 
-    // &::before {
-    //     display: block;
-    //     position: absolute;
-    //     content:"";
-    //     width: 100%;
-    //     height: 16%;
-    //     bottom: 0;
-    //     right: 0;
-    //     &:extend(.dark);
-    // }
+    &::before {
+        display: block;
+        position: absolute;
+        content:"";
+        width: 100%;
+        height: 16%;
+        bottom: 0;
+        right: 0;
+        &:extend(.dark);
+    }
 
-    // &::after {
-    //     display: block;
-    //     position: absolute;
-    //     content:"";
-    //     width: 100%;
-    //     height: 16%;
-    //     top: 0;
-    //     left: 0;
-    //     &:extend(.light);
-    // }
+    &::after {
+        display: block;
+        position: absolute;
+        content:"";
+        width: 100%;
+        height: 16%;
+        top: 0;
+        left: 0;
+        &:extend(.light);
+    }
 
     &:last-child {
         .clearfix();
@@ -150,7 +147,7 @@
         .small;
         .set-tone(@base-color);
         @color: mix(@base-color, @tone, 75%);
-        .contrast(@color);
+        .contrast(color, @color);
         background: @color;
         padding: @text-padding;
     }

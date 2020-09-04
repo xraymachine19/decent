@@ -13,7 +13,7 @@
   </head>
 
 <body>
-  <nav class="top bar dark black fixed inner-page-width full-width">
+  <nav class="top bar dark action fixed inner-page-width full-width">
     <h4><a href="../../">Decent CSS</a></h4>
     <ul class="bar top right">
       <li><a href="../../composables/">Composables</a></li>
@@ -27,54 +27,64 @@
     </div>
     
       <header class="feature graphite page-width margin-auto">
-        <h1>Colors</h1>
+        <h1>.[color]</h1>
         <p>A useful color palette for any base/brand color.</p>
       </header>
       <main>
-      <div class="grid inner-page-width tablet">
+      <div class="grid inner-page-width desktop">
         <div class="grid-width-three">
-          <nav class="small">
-            <h6>Emphasis</h6>
-            <ul class="group no-margin-bottom">
-              <li><a href="../colors">color</a></li>
-              <li><a href="../light">light</a></li>
-              <li><a href="../dark">dark</a></li>
-              <li><a href="../feature">feature</a></li>
-            </ul>
+          
+          <nav class="small two-column mobile">
+            <div>
+              <h6>Emphasis</h6>
+              <ul class="group no-margin-bottom">
+                <li><a href="../colors">color</a></li>
+                <li><a href="../light">light</a></li>
+                <li><a href="../dark">dark</a></li>
+                <li><a href="../feature">feature</a></li>
+              </ul>
+            </div>
+            <div>
   
-            <h6>Format</h6>
-            <ul class="group no-margin-bottom">
-              <li><a href="../card">card</a></li>
-              <li><a href="../group">group</a></li>
-              <li><a href="../bar">bar</a></li>
-              <li><a href="../button">button</a></li>
-            </ul>
+              <h6>Format</h6>
+              <ul class="group no-margin-bottom">
+                <li><a href="../card">card</a></li>
+                <li><a href="../group">group</a></li>
+                <li><a href="../bar">bar</a></li>
+                <li><a href="../button">button</a></li>
+              </ul>
+            </div>
             
-            <h6>Layout</h6>
-            <ul class="group no-margin-bottom">
-              
-              <li><a href="../grid">grid</a></li>
-              <li><a href="../two-column">two-column</a></li>
-              <li><a href="../three-column">three-column</a></li>
-              <li><a href="../golden-column">golden-column</a></li>
-              <li><a href="../mobile">mobile</a></li>
-              <li><a href="../tablet">tablet</a></li>
-              <li><a href="../desktop">desktop</a></li>
-              
-            </ul>
+            <div>
+              <h6>Layout</h6>
+              <ul class="group no-margin-bottom">
+                
+                <li><a href="../grid">grid</a></li>
+                <li><a href="../two-column">two-column</a></li>
+                <li><a href="../three-column">three-column</a></li>
+                <li><a href="../golden-column">golden-column</a></li>
+                <li><a href="../mobile">mobile</a></li>
+                <li><a href="../tablet">tablet</a></li>
+                <li><a href="../desktop">desktop</a></li>
+                
+              </ul>
   
-            <h6>Decoration</h6>
-            <ul class="group no-margin-bottom">
-              <li><a href="../badge">badge</a></li>
-              <li><a href="../overlay">overlay</a></li>
-            </ul>
+            </div>
+            <div>
+              <h6>Decoration</h6>
+              <ul class="group no-margin-bottom">
+                <li><a href="../badge">badge</a></li>
+                <li><a href="../overlay">overlay</a></li>
+              </ul>
   
-            <h6>HTML</h6>
-            <ul class="group no-margin-bottom">
-              
-              <li><a href="../elements">elements</a></li>
+              <h6>HTML</h6>
+              <ul class="group no-margin-bottom">
+                
+                <li><a href="../elements">elements</a></li>
   
-            </ul>
+              </ul>
+            </div>
+            
           </nav>
         </div>
         <div class="grid-width-nine inner-text-width tablet">
@@ -99,13 +109,13 @@
               <div>
                 <p><button>A button!</button></p>
 
-                <pre>&lt;button&gt;
+                <pre class="white-space">&lt;button&gt;
   A button!
 &lt;/button&gt;</pre>
               </div>
               <div>
                 <p><button class="red">A button!</button></p>
-                <pre>&lt;button class="red"&gt;
+                <pre class="white-space">&lt;button class="red"&gt;
   A button!
 &lt;/button&gt;</pre>
               </div>
@@ -119,81 +129,82 @@
             
             <h2><a href="#colors">Colors</a></h2>
         
-            <p>Every Decent project supports a 32-color palette, based on the <span class="base-color text-padding">base-color</span>, with an additional four project colors:</p>
-            <div class="three-column small">
+            <p>Every Decent project supports a 36-color palette, based on the <span class="base-color badge">base-color</span>, each its own composable class:</p>
+            <div class="three-column tablet small no-margin-bottom">
               <div>
-                <div>
-                  <div class="color red">red</div>
-                  <div class="color orange">orange</div>
-                  <div class="color yellow">yellow</div>
-                  <div class="color olive">olive</div>
-                </div>
-               
-                
-
-                <div>
-                  <div class="color black">black</div>
-                  <div class="color gray">gray</div>
-                  <div class="color white">white</div>
-                  <div class="color brown">brown</div>
-                </div>
-
-                <div>
-              
-                  <div class="color ruby">ruby</div>
-                  <div class="color onyx">onyx</div>
-                  <div class="color pewter">pewter</div>
-                  <div class="color gunmetal">gunmetal</div>
-                </div>
+                <div class="color red">red</div>
+                <div class="color orange">orange</div>
+                <div class="color yellow">yellow</div>
+                <div class="color olive">olive</div>
               </div>
               <div>
-                <div>
-                  <div class="color green">green</div>
-                  <div class="color teal">teal</div>
-                  <div class="color cyan">cyan</div>
-                  <div class="color skyblue">skyblue</div>
-                </div>
-                <div>
-                  <div class="color crimson">crimson</div>
-                  <div class="color clover">clover</div>
-                  <div class="color cobalt">cobalt</div>
-                  <div class="color graphite">graphite</div>
-                </div>
-                
-
-                <div>
-                  <div class="color hotpink">hotpink</div>
-                  <div class="color neongreen">neongreen</div>
-                  <div class="color electricblue">electricblue</div>
-                  <div class="color royalpurple">royalpurple</div>
-                </div>
-
-                
+                <div class="color green">green</div>
+                <div class="color teal">teal</div>
+                <div class="color cyan">cyan</div>
+                <div class="color skyblue">skyblue</div>
               </div>
               <div>
-                <div>
-                  <div class="color blue">blue</div>
-                  <div class="color indigo">indigo</div>
-                  <div class="color purple">purple</div>
-                  <div class="color violet">violet</div>
-                </div>
-
-                <div>
-                  <div class="color magenta">magenta</div>
-                  <div class="color lavender">lavender</div>
-                  <div class="color cream">cream</div>
-                  <div class="color charcoal">charcoal</div>
-                </div>
-
-                <div>
-                  <div class="color action">action</div>
-                  <div class="color reaction">reaction</div>
-                  <div class="color ambient">ambient</div>
-                  <div class="color default">default</div>
-                </div>
+                <div class="color blue">blue</div>
+                <div class="color indigo">indigo</div>
+                <div class="color purple">purple</div>
+                <div class="color violet">violet</div>
               </div>
             </div>
-            <p class="clearfix no-margin-bottom"></p>
+            <div class="three-column tablet small no-margin-bottom">
+              <div>
+                <div class="color black">black</div>
+                <div class="color gray">gray</div>
+                <div class="color white">white</div>
+                <div class="color brown">brown</div>
+              </div>
+              <div>
+                <div class="color hotpink">hotpink</div>
+                <div class="color neongreen">neongreen</div>
+                <div class="color electricblue">electricblue</div>
+                <div class="color royalpurple">royalpurple</div>
+              </div>
+              <div>
+                <div class="color lemon">lemon</div>
+                <div class="color lime">lime</div>
+                <div class="color tangerine">tangerine</div>
+                <div class="color grapefruit">grapefruit</div>
+              </div>    
+            </div>
+            <div class="three-column tablet small no-margin-bottom">
+              <div>
+                <div class="color ruby">ruby</div>
+                <div class="color onyx">onyx</div>
+                <div class="color pewter">pewter</div>
+                <div class="color gunmetal">gunmetal</div>
+              </div>
+              <div>
+                <div class="color magenta">magenta</div>
+                <div class="color lavender">lavender</div>
+                <div class="color cream">cream</div>
+                <div class="color charcoal">charcoal</div>
+              </div>
+
+              <div>
+                <div class="color crimson">crimson</div>
+                <div class="color clover">clover</div>
+                <div class="color cobalt">cobalt</div>
+                <div class="color graphite">graphite</div>
+              </div>
+
+            </div>
+            <p class="clearfix"></p>
+
+            <p>Since the palette uses parametric design, each color is a bit different depending on the base color. If your project switches to a new base color, it will get a new 'cobalt' too.</p>
+
+            <h3>Project colors</h3>
+            <p>Four project colors are generated from the base color:</p>
+            <div class="aside-width margin-auto small gutter-bottom">
+              <div class="color action">action</div>
+              <div class="color reaction">reaction</div>
+              <div class="color ambient">ambient</div>
+              <div class="color shadow">shadow</div>
+              <div class="color default">default</div>
+            </div>
 
             <h3>Semantic colors</h3>
             <p>Four aliased semantic colors are also chosen:</p>
@@ -208,14 +219,14 @@
             <p>Color classes compose with the .light and .dark classes:</p>
 
               <div>
-                <p><button class="light red">A button!</button></p>
-                <pre>&lt;button class="light red"&gt;
+                <p><button class="light grapefruit">A button!</button></p>
+                <pre class="white-space">&lt;button class="light grapefruit"&gt;
   A button!
 &lt;/button&gt;</pre>
               </div>
               <div>
-                <p><button class="dark red">A button!</button></p>
-                <pre>&lt;button class="dark red"&gt;
+                <p><button class="dark grapefruit">A button!</button></p>
+                <pre class="white-space">&lt;button class="dark grapefruit"&gt;
   A button!
 &lt;/button&gt;</pre>
               </div>
@@ -258,70 +269,60 @@ Wow!
       <div class="small color-palette padding page-width margin-auto">
         <h2>Palette</h2>
 
-        <div class="color ruby">ruby</div>
-        <div class="color onyx">onyx</div>
-        <div class="color pewter">pewter</div>
-        <div class="color gunmetal">gunmetal</div>
 
-        <div class="color hotpink">hotpink</div>
-        <div class="color neongreen">neongreen</div>
-        <div class="color electricblue">electricblue</div>
-        <div class="color royalpurple">royalpurple</div>
-        
-    
-        <div class="two-column no-margin-bottom desktop">
-          <div class="three-column no-margin-bottom tablet">
-            <div>
-              <div class="color red">red</div>
-              <div class="color orange">orange</div>
-              <div class="color yellow">yellow</div>
-              <div class="color olive">olive</div>
-            </div>
-            <div>
-              <div class="color green">green</div>
-              <div class="color teal">teal</div>
-              <div class="color cyan">cyan</div>
-              <div class="color skyblue">skyblue</div>
-            </div>
-            <div>
-              <div class="color blue">blue</div>
-              <div class="color indigo">indigo</div>
-              <div class="color purple">purple</div>
-              <div class="color violet">violet</div>
-            </div>
+        <div class="three-column">
+          <div>
+            <div class="color red">red</div>
+            <div class="color orange">orange</div>
+            <div class="color yellow">yellow</div>
+            <div class="color olive">olive</div>
           </div>
-          <div class="three-column no-margin-bottom tablet">
-            <div>
-              <div class="color black">black</div>
-              <div class="color gray">gray</div>
-              <div class="color white">white</div>
-              <div class="color brown">brown</div>
-            </div>
-
-            <div>
-              <div class="color crimson">crimson</div>
-              <div class="color clover">clover</div>
-              <div class="color cobalt">cobalt</div>
-              <div class="color graphite">graphite</div>
-            </div>
-            <div>
-              <div class="color magenta">magenta</div>
-              <div class="color lavender">lavender</div>
-              <div class="color cream">cream</div>
-              <div class="color charcoal">charcoal</div>
-            </div>
-            
-            
+          <div>
+            <div class="color green">green</div>
+            <div class="color teal">teal</div>
+            <div class="color cyan">cyan</div>
+            <div class="color skyblue">skyblue</div>
+          </div>
+          <div>
+            <div class="color blue">blue</div>
+            <div class="color indigo">indigo</div>
+            <div class="color purple">purple</div>
+            <div class="color violet">violet</div>
+          </div>
+        </div>
+        <div class="three-column">
+          <div>
+            <div class="color black">black</div>
+            <div class="color gray">gray</div>
+            <div class="color white">white</div>
+            <div class="color brown">brown</div>
+          </div>
+          <div>
+            <div class="color crimson">crimson</div>
+            <div class="color clover">clover</div>
+            <div class="color cobalt">cobalt</div>
+            <div class="color graphite">graphite</div>
+          </div>
+          <div>
+            <div class="color magenta">magenta</div>
+            <div class="color lavender">lavender</div>
+            <div class="color cream">cream</div>
+            <div class="color charcoal">charcoal</div>
           </div>
         </div>
 
-        <div class="two-column no-margin-bottom desktop">
-          <div class="three-column no-margin-bottom tablet">
+        <div class="three-column">
+          <div>
+              <div class="color ruby">ruby</div>
+              <div class="color onyx">onyx</div>
+              <div class="color pewter">pewter</div>
+              <div class="color gunmetal">gunmetal</div>
+            </div>
             <div>
-              <div class="color mint">mint</div>
-              <div class="color vanilla">vanilla</div>
-              <div class="color strawberry">strawberry</div>
-              <div class="color chocolate">chocolate</div>
+              <div class="color hotpink">hotpink</div>
+              <div class="color neongreen">neongreen</div>
+              <div class="color electricblue">electricblue</div>
+              <div class="color royalpurple">royalpurple</div>
               
             </div>
             <div>
@@ -330,134 +331,10 @@ Wow!
               <div class="color tangerine">tangerine</div>
               <div class="color grapefruit">grapefruit</div>
             </div>
-            <div>
-              <div class="color mango">mango</div>
-              <div class="color coconut">coconut</div>
-              <div class="color kiwi">kiwi</div>
-              <div class="color banana">banana</div>
-            </div>
-            
-          </div>
-
-          <div class="three-column no-margin-bottom tablet">
-            <div>
-              <div class="color pumpkin">pumpkin</div>
-              <div class="color eggplant">eggplant</div>
-              <div class="color cinnamon">cinnamon</div>
-              <div class="color butter">butter</div>
-            </div>
-            <div>
-              <div class="color peach">peach</div> 
-              <div class="color plum">plum</div>
-              <div class="color bacon">bacon</div>
-              <div class="color salmon">salmon</div>
-            </div>
-            <div>
-              <div class="color blueberry">blueberry</div>
-              <div class="color raspberry">raspberry</div>
-              <div class="color blackberry">blackberry</div>
-              <div class="color cranberry">cranberry</div>
-            </div>
-
-            
-            
-            
-          </div>
-          
-        </div>
-
-        <div class="two-column no-margin-bottom desktop">
-          <div class="three-column no-margin-bottom tablet">
-            <div>
-              <div class="color gold">gold</div>
-              <div class="color silver">silver</div>
-              <div class="color bronze">bronze</div>
-              <div class="color platinum">platinum</div>
-            </div>
-            <div>
-              <div class="color copper">copper</div>
-              <div class="color iron">iron</div>
-              <div class="color steel">steel</div>
-              <div class="color rust">rust</div>
-              
-            </div>
-            <div>
-              <div class="color sapphire">sapphire</div>
-              <div class="color emerald">emerald</div>
-              <div class="color garnet">garnet</div>
-              <div class="color amethyst">amethyst</div>
-            </div>
-          </div>
-          
-          <div class="three-column no-margin-bottom tablet">
-            
-
-            <div>
-              
-              
-              
-            </div>
-            <div>
-              <div class="color slate">slate</div>
-              <div class="color sandstone">sandstone</div>
-              <div class="color granite">granite</div>
-              <div class="color clay">clay</div>
-            </div>
-            <div>
-              <div class="color turquoise">turquoise</div>
-              <div class="color aquamarine">aquamarine</div>
-              <div class="color ultramarine">ultramarine</div>
-              <div class="color manganese">manganese</div>
-            </div>
-          </div>
         </div>
             
-    
             
-        <div class="two-column no-margin-bottom desktop">
-          <div class="three-column no-margin-bottom tablet">
-            <div>
-              <div class="color wheat">wheat</div>
-              <div class="color cornhusk">cornhusk</div>
-              <div class="color barnred">barnred</div>
-              <div class="color saddlebrown">saddlebrown</div>
-            </div>
-            <div>
-              <div class="color sunset">sunset</div>
-              <div class="color moonlight">moonlight</div>
-              <div class="color twilight">twilight</div>
-              <div class="color midnight">midnight</div>
-            </div>
-            <div>
-              <div class="color mist">mist</div>
-              <div class="color snow">snow</div>
-              <div class="color bubbles">bubbles</div>
-              <div class="color steam">steam</div>
-            </div>
-          </div>
-
-          <div class="three-column no-margin-bottom tablet">
-            <div>
-              
-            </div>
-            <div>
-              <div class="color drab">drab</div>
-              <div class="color olivedrab">olivedrab</div>
-              <div class="color khaki">khaki</div>
-              <div class="color evergreen">evergreen</div>
-            </div>
-            <div>
-              <div class="color army">army</div>
-              <div class="color navy">navy</div>
-              <div class="color scarlet">scarlet</div>
-              <div class="color pink">pink</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="two-column no-margin-bottom desktop">
-          <div class="three-column no-margin-bottom tablet">
-
+            
             <div>
               <div class="color periwinkle">periwinkle</div>
               <div class="color rose">rose</div>
@@ -476,43 +353,118 @@ Wow!
               <div class="color raven">raven</div>
               <div class="color flamingo">flamingo</div>
             </div>
-          </div>
+            <div>
+              <div class="color mint">mint</div>
+              <div class="color vanilla">vanilla</div>
+              <div class="color strawberry">strawberry</div>
+              <div class="color chocolate">chocolate</div>
+              
+            </div>
+            
+            <div>
+              <div class="color mango">mango</div>
+              <div class="color coconut">coconut</div>
+              <div class="color kiwi">kiwi</div>
+              <div class="color banana">banana</div>
+            </div>
 
-          <div class="three-column no-margin-bottom tablet">
+            <div>
+              <div class="color blueberry">blueberry</div>
+              <div class="color raspberry">raspberry</div>
+              <div class="color blackberry">blackberry</div>
+              <div class="color cranberry">cranberry</div>
+            </div>
+            <div>
+              <div class="color pumpkin">pumpkin</div>
+              <div class="color eggplant">eggplant</div>
+              <div class="color cinnamon">cinnamon</div>
+              <div class="color butter">butter</div>
+            </div>
+            <div>
+              <div class="color peach">peach</div> 
+              <div class="color plum">plum</div>
+              <div class="color bacon">bacon</div>
+              <div class="color salmon">salmon</div>
+            </div>
             
-            
+            <div>
+              <div class="color wheat">wheat</div>
+              <div class="color cornhusk">cornhusk</div>
+              <div class="color barnred">barnred</div>
+              <div class="color saddlebrown">saddlebrown</div>
+            </div>
+            <div>
+              <div class="color gold">gold</div>
+              <div class="color silver">silver</div>
+              <div class="color bronze">bronze</div>
+              <div class="color platinum">platinum</div>
+            </div>
+            <div>
+              <div class="color copper">copper</div>
+              <div class="color iron">iron</div>
+              <div class="color steel">steel</div>
+              <div class="color rust">rust</div>
+              
+            </div>
+
             <div>
               <div class="color sand">sand</div>
               <div class="color coral">coral</div>
               <div class="color seagreen">seagreen</div>
               <div class="color seafoam">seafoam</div>
             </div>
-          
 
+            <div>
+              <div class="color sapphire">sapphire</div>
+              <div class="color emerald">emerald</div>
+              <div class="color garnet">garnet</div>
+              <div class="color amethyst">amethyst</div>
+            </div>
+            <div>
+              <div class="color slate">slate</div>
+              <div class="color sandstone">sandstone</div>
+              <div class="color granite">granite</div>
+              <div class="color clay">clay</div>
+            </div>
+            <div>
+              <div class="color turquoise">turquoise</div>
+              <div class="color aquamarine">aquamarine</div>
+              <div class="color ultramarine">ultramarine</div>
+              <div class="color manganese">manganese</div>
+            </div>
+            <div>
+              <div class="color sunset">sunset</div>
+              <div class="color moonlight">moonlight</div>
+              <div class="color twilight">twilight</div>
+              <div class="color midnight">midnight</div>
+            </div>
+            <div>
+              <div class="color mist">mist</div>
+              <div class="color snow">snow</div>
+              <div class="color bubbles">bubbles</div>
+              <div class="color steam">steam</div>
+            </div>
+            <div>
+              <div class="color army">army</div>
+              <div class="color navy">navy</div>
+              <div class="color scarlet">scarlet</div>
+              <div class="color pink">pink</div>
+            </div>
+            <div>
+              <div class="color drab">drab</div>
+              <div class="color olivedrab">olivedrab</div>
+              <div class="color khaki">khaki</div>
+              <div class="color evergreen">evergreen</div>
+            </div>
+            
             <div>
               <div class="color action">action</div>
               <div class="color reaction">reaction</div>
               <div class="color ambient">ambient</div>
               <div class="color default">default</div>
             </div>
-            
-            <div>
-              <div class="color info">info</div>
-              <div class="color warning">warning</div>
-              <div class="color success">success</div>
-              <div class="color failure">failure</div>
-            </div>
           </div>
-        </div>
-
-
-
-
-
-
-
-
-            
+        </div>     
         <p class="clearfix no-margin-bottom"></p>
       </div>
 

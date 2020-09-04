@@ -135,7 +135,7 @@
 
 .page-width { max-width: @page-width;}
 
-.full-width { max-width: @full-width;}
+.full-width { width: 100%; max-width: @full-width;}
 
 .inner-gutter {
   padding: @gutter;
@@ -153,6 +153,10 @@
 .small {
   font-size: 87.5%;
   line-height: @line-height*.875;
+}
+
+.huge {
+  font-size: 160%;
 }
 
 .text-padding {
@@ -179,8 +183,15 @@
   display: flex;
 }
 
+.text-outline {
+  -webkit-text-stroke: @border-width currentColor;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
 .grid-gap, .grid-gap-padding { grid-gap: @padding;}
 .grid-gap-margin { grid-gap: @margin;}
+.grid-gap-gutter { grid-gap: @gutter;}
 
 .inline-block {
   display: inline-block;
@@ -256,19 +267,24 @@
   &::before { content: " "; white-space: pre;}
 }
 
+.shadow {
+  // TODO: remove
+
+  background: @shadow-color;
+  .contrast(color, @shadow-color);
+}
+
 .texture {
-  .set-pattern(texture);
-  background-image+: @pattern;
+  @pattern-texture: .set-pattern(texture)[@pattern];
+  background-image+: @pattern-texture;
 
   &.light {
-    .set-pattern(texture);
-  background-image+: @pattern;
+    background-image+: @pattern-texture;
     .light;
   }
 
   &.dark {
-    .set-pattern(texture);
-  background-image+: @pattern;
+    background-image+: @pattern-texture;
     .dark;
   }
 }

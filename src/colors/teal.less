@@ -1,8 +1,3 @@
-.set-teal() {
-    @base: teal;
-    @modifier: 1/2;
-    .set-color(~"teal", @base, @modifier);
-    @teal: @color;
-}
+@teal: .set-color(~"teal", teal, 1/2)[];
 
-.set-teal();
+.set-color(~"teal", teal, 1/2, @outputs: true);

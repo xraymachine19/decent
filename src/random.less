@@ -67,15 +67,15 @@
 
 .random-margin() {
     @random: `Math.random()`;
-    @plusMargin: floor(@random*2rem);
-    @baseMargin: 1rem;
+    @plusMargin: floor(@random*1.25rem);
+    @baseMargin: @padding;
     @margin-random: @plusMargin + @baseMargin;
 }
 
 .random-textmeasure() {
     @random: `Math.random()`;
-    @plustextmeasure: floor(@random*35);
-    @basetextmeasure: 45;
+    @plustextmeasure: floor(@random*40);
+    @basetextmeasure: 40;
     @text-measure-random: @plustextmeasure + @basetextmeasure;
 }
 
@@ -88,14 +88,14 @@
 
 .random-fontsize() {
     @randomfontsize: `Math.random()`;
-    @plusfontsize: floor(@randomfontsize*10);
-    @basefontsize: 15px;
+    @plusfontsize: floor(@randomfontsize*9);
+    @basefontsize: 16px;
     @font-size-random: @basefontsize + @plusfontsize;
 }
 
 .random-shadowcolor() {
     @randomshadowfade: `Math.random()`;
-    @shadow-color-random: fade(@black, 12% + @randomshadowfade*35);
+    @shadow-color-random: fade(difference(white, @ambient), 8% + @randomshadowfade*25);
 }
 
 .random-shadowposition() {
@@ -105,7 +105,7 @@
                     1px 1px,
                     1px 1px,
                     1px 1px,
-                    0 0,
+                    1px 1px,
                     1px 0,
                     2px 2px,
                     1px 2px,
@@ -126,7 +126,7 @@
 }
 
 
-.random-shadowcolor();
+// .random-shadowcolor();
 
 .random-shadowposition();
 
@@ -134,6 +134,6 @@
 
 
 
-@shadow-color: @shadow-color-random;
+// @shadow-color: @shadow-color-random;
 @shadow-position: @shadow-position-random;
 @shadow-blur: @shadow-blur-random;

@@ -2,8 +2,6 @@
     // generically groups images, buttons, inputs or lists
 
     padding: 0;
-    margin: 0;
-    .default(margin-bottom);
 
     &.small {
         margin-bottom: @gutter;
@@ -33,7 +31,7 @@
         }
 
         > li {
-            border-bottom: @border-width @border-style currentColor;
+            border-bottom: @border;
 
             &:last-child {
                 border-bottom-width: 0;
@@ -53,10 +51,12 @@
 
     ul& {
         list-style-type: none;
+        margin-left: 0;
     }
 
     ol& {
-        list-style-position: inside;
+        list-style-type: none;
+        margin-left: 0;
     }
 
     li {

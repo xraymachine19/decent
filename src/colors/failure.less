@@ -1,4 +1,3 @@
-@failure: contrast(@base-color, @red, @purple, 80%);
+@failure: @red;
 
-.failure when (@failure = @red) { &:extend(.red);}
-.failure when (@failure = @purple) { &:extend(.purple);}
+.failure { &:extend(.red);}

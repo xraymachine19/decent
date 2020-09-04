@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The .button composable | Decent CSS</title>
+  <meta name="description" content="The button composable for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="top bar dark action fixed inner-page-width full-width">
+        <h4><a href="../../">Decent CSS</a></h4>
+        <ul class="bar top right">
+            <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
+            <li><a href="../../mixins/">Mixins</a></li>
+            
+            <li><a href="../../how-to/">How-to</a></li>
+        </ul>
+    </nav>
+    <div class="bar full-width margin-bottom placeholder"></div>
+    
+    <header class="feature graphite page-width margin-auto">
+        <h1>.button</h1>
+        <p>Make things look like a button</p>
+    </header>
+    <main>
+        
+        <div class="grid inner-page-width desktop">
+            <div class="grid-width-three">
+                <nav class="small two-column mobile">
+                    <div>
+                      <h6>Emphasis</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../colors">color</a></li>
+                        <li><a href="../light">light</a></li>
+                        <li><a href="../dark">dark</a></li>
+                        <li><a href="../feature">feature</a></li>
+                      </ul>
+                    </div>
+                    <div>
+          
+                      <h6>Format</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../card">card</a></li>
+                        <li><a href="../group">group</a></li>
+                        <li><a href="../bar">bar</a></li>
+                        <li><a href="../button">button</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h6>Layout</h6>
+                      <ul class="group no-margin-bottom">
+                        
+                        <li><a href="../grid">grid</a></li>
+                        <li><a href="../two-column">two-column</a></li>
+                        <li><a href="../three-column">three-column</a></li>
+                        <li><a href="../golden-column">golden-column</a></li>
+                        <li><a href="../mobile">mobile</a></li>
+                        <li><a href="../tablet">tablet</a></li>
+                        <li><a href="../desktop">desktop</a></li>
+                        
+                      </ul>
+          
+                    </div>
+                    <div>
+                      <h6>Decoration</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../badge">badge</a></li>
+                        <li><a href="../overlay">overlay</a></li>
+                      </ul>
+          
+                      <h6>HTML</h6>
+                      <ul class="group no-margin-bottom">
+                        
+                        <li><a href="../elements">elements</a></li>
+          
+                      </ul>
+                    </div>
+                    
+                  </nav>
+                </div>
+            
+            <div class="grid-width-nine inner-text-width">
+                <section id="reference">
+                    <h2>Details</h2>
+                    <div id="arguments">
+                        <ul>
+                            <li><strong>class</strong>: <em>button</em></li>
+                            <li><strong>settings</strong>: none</li>
+                            <li><strong>defaults</strong>: border-style, border-radius, box-shadow</li>
+                        </ul>
+                    </div>
+                    <div class="margin-auto gutter text-align-center">
+                        <span class="badge info">composable</span> &middot; <span class="badge success">supports colors</span>
+                    </div>
+                </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <p>It's a button!</p>
+                    <p><button class="button">Click me!</button></p>
+
+                    <pre class="white-space">&lt;button class="button"&gt;Click me!&lt;/button&gt;</pre>
+                    <p>You can add the button class in the HTML or extend it in Less to include the elements you want to consider buttons (like "button" and "input[type='submit']").</p>
+                    <p>Buttons compose with the other composable classes:</p>
+                    <p>
+                      <button class="button dark green">Click me!</button>
+                    </p>
+                    <pre class="white-space">class="button dark green"</pre>
+                    <p>
+                      <button class="button padding texture skyblue">Click me!</button>
+                    </p>
+                    <pre class="white-space">class="button padding texture skyblue"</pre>
+                    <p>
+                      <button class="button action border no-shadow">Click me!</button>
+                    </p>
+                    <pre class="white-space">class="button action border no-shadow"</pre>
+                    <p>
+                      <button class="button big border charcoal monospace">Click me!</button>
+                    </p>
+                    <pre class="white-space">class="button big border charcoal monospace"</pre>
+                    <p>
+                      <button class="button small yellow">Click me!</button>
+                    </p>
+                    <pre class="white-space">class="button small yellow"</pre>
+                    <p>
+                      <button class="button inner-gutter texture big white">Click me!</button>
+                    </p>
+                    <pre class="white-space">class="button inner-gutter texture big white"</pre>
+
+                    <h2>Semantic buttons</h2>
+                    <p>While buttons can be used with any composable classes, they're mostly meant to be used with the project colors:</p>
+
+                    <div class="grid">
+                      <div class="grid-width-three">
+                        <button class="button full-width action">Action</button>
+                      </div>
+                      <div class="grid-width-three">
+                        <button class="button full-width reaction">Reaction</button>
+                      </div>
+                      <div class="grid-width-three">
+                        <button class="button full-width ambient">Ambient</button>
+                      </div>
+                      <div class="grid-width-three">
+                        <button class="button full-width default">Default</button>
+                      </div>
+                    </div>
+
+                    <div class="grid">
+                      <div class="grid-width-three">
+                        <button class="button full-width info">Info</button>
+                      </div>
+                      <div class="grid-width-three">
+                        <button class="button full-width warning">Warning</button>
+                      </div>
+                      <div class="grid-width-three">
+                        <button class="button full-width success">Success</button>
+                      </div>
+                      <div class="grid-width-three">
+                        <button class="button full-width failure">Failure</button>
+                      </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+</body>
+</html>

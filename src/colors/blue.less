@@ -1,7 +1,5 @@
-.set-blue() {
-    .set-average(blue;);
-    .set-color(~"blue", @average, 1/2, .85);
-    @blue: @color;
-}
 
-.set-blue();
+@set-blue: .set-color(~"blue", blue, 1/2, .85)[];
+@blue: e(@set-blue);
+
+.set-color(~"blue", blue, 1/2, .85, @outputs: true);

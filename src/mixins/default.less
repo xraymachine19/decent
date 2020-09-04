@@ -2,10 +2,7 @@
 // any valid CSS property will work
 // outputs a reference to the custom CSS property
 
-// output-variables being set to true makes default use CSS custom properties
-// this option is not generally supported in IE
-
 .default(@css-property) {
-    // @reference: ~"--@{css-property}";z
+    // @reference: ~"--@{css-property}";
     @{css-property}: @@css-property;
 }

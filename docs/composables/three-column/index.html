@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="top bar dark black fixed inner-page-width full-width">
+    <nav class="top bar dark action fixed inner-page-width full-width">
         <h4><a href="../../">Decent CSS</a></h4>
         <ul class="bar top right">
             <li><a href="../../composables/">Composables</a></li>
@@ -24,48 +24,79 @@
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
+    <header class="feature graphite page-width margin-auto">
+        <h1>.three-column</h1>
+        <p>Organize child elements into three columns.</p>
+    </header>
     <main>
-        <section class="hero darker feature skyblue">
-            <h1>.three-column</h1>
-            <p>Organize child elements into three columns.</p>
-        </section>
-        <div class="grid inner-page-width">
+        
+        <div class="grid inner-page-width desktop">
             <div class="grid-width-three">
-                <nav>
-                    <ul class="group action padding dark">
-                        <li><a href="../card">card</a></li>
-                        <li><a href="../hero">hero</a></li>
-                        <li><a href="../group">group</a></li>
+                <nav class="small two-column mobile">
+                    <div>
+                      <h6>Emphasis</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../colors">color</a></li>
                         <li><a href="../light">light</a></li>
-<li><a href="../dark">dark</a></li>
-
+                        <li><a href="../dark">dark</a></li>
                         <li><a href="../feature">feature</a></li>
-                        <li><a href="../matte">matte</a></li>
-                        <li><a href="../well">well</a></li>
-                        <li><a href="../island">island</a></li>
-                        <li><a href="../overlay">overlay</a></li>
-                        <li><a href="../badge">badge</a></li>
+                      </ul>
+                    </div>
+                    <div>
+          
+                      <h6>Format</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../card">card</a></li>
+                        <li><a href="../group">group</a></li>
+                        <li><a href="../bar">bar</a></li>
+                        <li><a href="../button">button</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h6>Layout</h6>
+                      <ul class="group no-margin-bottom">
                         
-                        
+                        <li><a href="../grid">grid</a></li>
                         <li><a href="../two-column">two-column</a></li>
                         <li><a href="../three-column">three-column</a></li>
                         <li><a href="../golden-column">golden-column</a></li>
+                        <li><a href="../mobile">mobile</a></li>
+                        <li><a href="../tablet">tablet</a></li>
+                        <li><a href="../desktop">desktop</a></li>
                         
-                    </ul>
-                </nav>
+                      </ul>
+          
+                    </div>
+                    <div>
+                      <h6>Decoration</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../badge">badge</a></li>
+                        <li><a href="../overlay">overlay</a></li>
+                      </ul>
+          
+                      <h6>HTML</h6>
+                      <ul class="group no-margin-bottom">
+                        
+                        <li><a href="../elements">elements</a></li>
+          
+                      </ul>
+                    </div>
+                    
+                  </nav>
             </div>
             
-            <div class="grid-width-nine">
+            <div class="grid-width-nine inner-text-width">
                 <section id="reference">
                     <h2>Details</h2>
                     <div id="arguments">
                         <ul>
-                            <li><strong>filename</strong>: /composables/three-column.less</li>
+                            <li><strong>class</strong>: <em>three-column</em></li>
                             <li><strong>settings</strong>: none</li>
                             <li><strong>defaults</strong>: none</li>
                         </ul>
                     </div>
-                    <div class="margin-auto gutter no-margin-bottom text-align-center">
+                    <div class="margin-auto gutter text-align-center">
                         <span class="badge info">composable</span> &middot; <span class="badge reaction">layout</span>
                     </div>
 
@@ -81,14 +112,14 @@
                         <li>Pears</li>
                         <li>Kiwis</li>
                     </ol>
-                    <ol class="group well">
+                    <ol class="group action">
                         <li>Apples</li>
                         <li>Oranges</li>
                         <li>Apricots</li>
-                        <li>Pears</li>
+                        <li class="light">Pears</li>
                         <li>Kiwis</li>
                     </ol>
-                    <ol class="group matte">
+                    <ol class="group box-shadow border texture border-radius lavender">
                         <li>Apples</li>
                         <li>Oranges</li>
                         <li>Apricots</li>

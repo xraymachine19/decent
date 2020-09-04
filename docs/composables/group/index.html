@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="top bar dark black fixed inner-page-width full-width">
+    <nav class="top bar dark action fixed inner-page-width full-width">
         <h4><a href="../../">Decent CSS</a></h4>
         <ul class="bar top right">
             <li><a href="../../composables/">Composables</a></li>
@@ -24,48 +24,80 @@
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
+    
+    <header class="feature graphite page-width margin-auto">
+        <h1>.group</h1>
+        <p>Groups buttons and list items into a singular unit.</p>
+    </header>
     <main>
-        <section class="hero darker feature skyblue">
-            <h1>.group</h1>
-            <p>Groups buttons and list items into a singular unit.</p>
-        </section>
-        <div class="grid inner-page-width">
+        
+        <div class="grid inner-page-width desktop">
             <div class="grid-width-three">
-                <nav>
-                    <ul class="group action padding dark">
-                        <li><a href="../card">card</a></li>
-                        <li><a href="../hero">hero</a></li>
-                        <li><a href="../group">group</a></li>
+                <nav class="small two-column mobile">
+                    <div>
+                      <h6>Emphasis</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../colors">color</a></li>
                         <li><a href="../light">light</a></li>
-<li><a href="../dark">dark</a></li>
-
+                        <li><a href="../dark">dark</a></li>
                         <li><a href="../feature">feature</a></li>
-                        <li><a href="../matte">matte</a></li>
-                        <li><a href="../well">well</a></li>
-                        <li><a href="../island">island</a></li>
-                        <li><a href="../overlay">overlay</a></li>
-                        <li><a href="../badge">badge</a></li>
+                      </ul>
+                    </div>
+                    <div>
+          
+                      <h6>Format</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../card">card</a></li>
+                        <li><a href="../group">group</a></li>
+                        <li><a href="../bar">bar</a></li>
+                        <li><a href="../button">button</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h6>Layout</h6>
+                      <ul class="group no-margin-bottom">
                         
-                        
+                        <li><a href="../grid">grid</a></li>
                         <li><a href="../two-column">two-column</a></li>
                         <li><a href="../three-column">three-column</a></li>
                         <li><a href="../golden-column">golden-column</a></li>
+                        <li><a href="../mobile">mobile</a></li>
+                        <li><a href="../tablet">tablet</a></li>
+                        <li><a href="../desktop">desktop</a></li>
                         
-                    </ul>
-                </nav>
-            </div>
+                      </ul>
+          
+                    </div>
+                    <div>
+                      <h6>Decoration</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../badge">badge</a></li>
+                        <li><a href="../overlay">overlay</a></li>
+                      </ul>
+          
+                      <h6>HTML</h6>
+                      <ul class="group no-margin-bottom">
+                        
+                        <li><a href="../elements">elements</a></li>
+          
+                      </ul>
+                    </div>
+                    
+                  </nav>
+                </div>
             
-            <div class="grid-width-nine">
+            <div class="grid-width-nine inner-text-width">
                 <section id="reference">
                     <h2>Details</h2>
                     <div id="arguments">
                         <ul>
-                            <li><strong>filename</strong>: /composables/group.less</li>
+                            <li><strong>class</strong>: <em>group</em></li>
                             <li><strong>settings</strong>: none</li>
-                            <li><strong>defaults</strong>: margin-bottom, aside-width, no-padding</li>
+                            <li><strong>defaults</strong>: aside-width, no-padding</li>
                         </ul>
                     </div>
-                    <div class="margin-auto gutter no-margin-bottom text-align-center">
+                    <div class="margin-auto gutter text-align-center">
                         <span class="badge info">composable</span>
                     </div>
                 </section>
@@ -112,17 +144,18 @@
                     </div>
 
                     <p>Groups work on buttons:</p>
-                    <ol class="group">
-                        <button>Mince</button>
-                        <button>Rinse</button>
-                        <button>Balance</button>
-                    </ol>
 
-                    <pre>&lt;ol class="group"&gt;
+                    <div class="group">
+                        <button class="button">Mince</button>
+                        <button class="button">Rinse</button>
+                        <button class="button">Balance</button>
+                    </div>
+
+                    <pre>&lt;div class="group"&gt;
     &lt;button&gt;Mince&lt;/button&gt;
     &lt;button&gt;Rinse&lt;/button&gt;
     &lt;button&gt;Balance&lt;/button&gt;
-&lt;/ol&gt;</pre>
+&lt;/div&gt;</pre>
 
                     <div class="group border-radius border">
                     <button class="button action">Action</button>

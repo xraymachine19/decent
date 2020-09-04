@@ -1,4 +1,2 @@
-@success: contrast(@base-color, @green, @blue, 80%);
-
-.success when (@success = @green) { &:extend(.green);}
-.success when (@success = @blue) { &:extend(.blue);}
+@success: @green;
+.success { &:extend(.green);}

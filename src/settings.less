@@ -1,5 +1,5 @@
 // dev
-@debug: false;
+@debug: true;
 @randomness: true; 
 .set-random-color();
 @base-color: @random-color;
@@ -7,6 +7,7 @@
 @output-color-classes: true;
 @output-text-color-classes: true;
 @output-css-variables: false;
+@output-expanded-colors: false;
 
 
 // @base-color: rgb(83, 94, 74);
@@ -37,9 +38,10 @@
 @well-pattern: texture;
 
 // design variables
-@text-contrast: 7; // 4.5 is level II, 7 is level III per WCAG standards for body text
+@text-contrast: 3; // 4.5 is level II, 7 is level III per WCAG standards for body text
 @golden-ratio: 1.618;
-@shadow-color: fade(difference(white, @ambient), 22.5%);
+@shadow-color: fade(mix(@black, spin(@ambient, 180), 80%), 100%);
+@shadow-color: fade(mix(@black, difference(@ambient, @white)), 50%);
 @shadow-position: 0 1px;
 @shadow-blur: 2px;
 

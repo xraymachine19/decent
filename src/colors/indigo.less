@@ -1,8 +1,3 @@
-.set-indigo() {
-    @base: indigo;
-    @modifier: 1/4;
-    .set-color(~"indigo", @base, @modifier);
-    @indigo: @color;
-}
+@indigo: .set-color(~"indigo", indigo, 1/4)[];
 
-.set-indigo();
+.set-color(~"indigo", indigo, 1/4, @outputs: true);

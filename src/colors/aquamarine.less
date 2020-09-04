@@ -1,6 +1,3 @@
-.set-aquamarine() {
-    .set-color(~"aquamarine", aquamarine, 1/2, 1.1);
-    @aquamarine: @color;
-}
+@aquamarine: .set-color(~"aquamarine", aquamarine, 1/2, 1.1)[];
 
-.set-aquamarine();
+.set-color(~"aquamarine", aquamarine, 1/2, 1.1, @outputs: true);

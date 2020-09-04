@@ -1,6 +1,6 @@
 .feature {
     padding: @padding;
-    line-height: @golden-ratio;
+    line-height: 1.8;
     .default(margin-bottom);
 
     & > *:first-child {
@@ -8,12 +8,12 @@
     }
 
     .on-tablet({
-        padding: @margin;
+        padding: @padding*1.5;
         font-size: 110%;
     });
 
     .on-desktop({
-        padding: @gutter;
+        padding: @padding*2.5;
         font-size: 120%;
     });
 }

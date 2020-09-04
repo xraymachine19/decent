@@ -8,14 +8,13 @@ button, .button {
     font: inherit;
     padding: @text-padding;
     
-    .button-color(@default);
-    .set-lumafix(@default, @gray);
+    // .button-color(@default);
+    @lumafix: .set-lumafix(@default, @gray)[];
     border-width: 0;
     border-color: @lumafix;
-    line-height: @line-height;
+    line-height: @golden-ratio;
     text-align: center;
     vertical-align: middle;
-    background-color: @default;
     background-image: none;
     outline: none;
     white-space: nowrap;
@@ -40,11 +39,11 @@ button, .button {
     .button-color(@button-color) {
       // .contrast(color, @button-color);
       // background: @button-color;
-      // .contrast(@button-color);
+      // .contrast(color, @button-color);
 
       // use white text unless the contrast would be too low
 
-      .set-contrast-ratio(@button-color, white);
+      @contrast-ratio:.set-contrast-ratio(@button-color, white)[];
       @contrast-ceiling: @contrast-ratio;
 
       // preferentially tint if we can

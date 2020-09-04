@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="top bar dark black fixed inner-page-width full-width">
+    <nav class="top bar dark action fixed inner-page-width full-width">
         <h4><a href="../../">Decent CSS</a></h4>
         <ul class="bar top right">
             <li><a href="../../composables/">Composables</a></li>
@@ -24,48 +24,72 @@
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
-    <main>
-        <section class="hero darker feature skyblue">
-            <h1>.card</h1>
-            <p>A card with an all-margins paradigm, a look that stands out from the rest of the page, and relative positioning.</p>
-        </section>
-        <div class="grid inner-page-width">
-            <div class="grid-width-three">
-                <nav>
-                    <ul class="group action padding dark">
-                        <li><a href="../card">card</a></li>
-                        <li><a href="../hero">hero</a></li>
-                        <li><a href="../group">group</a></li>
-                        <li><a href="../light">light</a></li>
-<li><a href="../dark">dark</a></li>
 
-                        <li><a href="../feature">feature</a></li>
-                        <li><a href="../matte">matte</a></li>
-                        <li><a href="../well">well</a></li>
-                        <li><a href="../island">island</a></li>
-                        <li><a href="../overlay">overlay</a></li>
-                        <li><a href="../badge">badge</a></li>
-                        
-                        
-                        <li><a href="../two-column">two-column</a></li>
-                        <li><a href="../three-column">three-column</a></li>
-                        <li><a href="../golden-column">golden-column</a></li>
-                        
-                    </ul>
-                </nav>
+    <header class="feature graphite page-width margin-auto">
+      <h1>.card</h1>
+      <p>A card with an all-margins paradigm, a look that stands out from the rest of the page, and relative positioning.</p>
+    </header>
+    <main>
+        <div class="grid inner-page-width desktop">
+          <div class="grid-width-three">
+            <nav class="small">
+                <h6>Emphasis</h6>
+                <ul class="group no-margin-bottom">
+                  <li><a href="../colors">color</a></li>
+                  <li><a href="../light">light</a></li>
+                  <li><a href="../dark">dark</a></li>
+                  <li><a href="../feature">feature</a></li>
+                </ul>
+      
+                <h6>Format</h6>
+                <ul class="group no-margin-bottom">
+                  <li><a href="../card">card</a></li>
+                  <li><a href="../group">group</a></li>
+                  <li><a href="../bar">bar</a></li>
+                  <li><a href="../button">button</a></li>
+                </ul>
+                
+                <h6>Layout</h6>
+                <ul class="group no-margin-bottom">
+                  
+                  <li><a href="../grid">grid</a></li>
+                  <li><a href="../two-column">two-column</a></li>
+                  <li><a href="../three-column">three-column</a></li>
+                  <li><a href="../golden-column">golden-column</a></li>
+                  <li><a href="../mobile">mobile</a></li>
+                  <li><a href="../tablet">tablet</a></li>
+                  <li><a href="../desktop">desktop</a></li>
+                  
+                </ul>
+      
+                <h6>Decoration</h6>
+                <ul class="group no-margin-bottom">
+                  
+                  <li><a href="../badge">badge</a></li>
+                  <li><a href="../overlay">overlay</a></li>
+                </ul>
+      
+                <h6>HTML</h6>
+                <ul class="group no-margin-bottom">
+                  
+                  <li><a href="../elements">elements</a></li>
+      
+                </ul>
+              </nav>
             </div>
             
-            <div class="grid-width-nine">
+            <div class="grid-width-nine inner-text-width">
                 <section id="reference">
                   <h2>Details</h2>
                   <div id="arguments">
                       <ul>
-                          <li><strong>filename</strong>: /composables/card.less</li>
+                          <li><strong>class</strong>: <em>card</em></li>
                           <li><strong>settings</strong>: none</li>
-                          <li><strong>defaults</strong>: margin-bottom</li>
+                          <li><strong>defaults</strong>: none</li>
+                          
                       </ul>
                   </div>
-                  <div class="margin-auto gutter no-margin-bottom text-align-center">
+                  <div class="margin-auto gutter text-align-center">
                       <span class="badge info">composable</span> &middot; <span class="badge success">supports colors</span>
                   </div>
               
@@ -73,7 +97,7 @@
                 <section id="examples">
                   <h2>Examples</h2>
                   <h3>Basic cards</h3>
-                  <p>Cards give children elements uniform spacing and have a max-width of an aside:</p>
+                  <p>Cards give children elements uniform spacing and have a default max-width of an aside:</p>
                   <div class="card">
                     <h3>Welcome to the club.</h3>
                     <p>Don't forget to validate parking!</p>
@@ -85,29 +109,27 @@
   &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-                  <p>Elements in cards bleed to the edges, so headlines with color classes will look like this:</p>
-
-                  <div class="card">
-                    <h3 class="info">Welcome to the club.</h3>
+                  <div class="card border">
+                    <h3 class="no-margin info padding">Welcome to the club.</h3>
                     <p>Don't forget to validate parking!</p>
                   </div>
 
                   <pre class="small aside-width margin-auto white-space">&lt;div class="card"&gt;
-  &lt;h3 class="info"&gt;Welcome to the club.&lt;/h3&gt;
+  &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
   &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-                  <p>Cards support the other composables, so you can make them into a matte or well:</p>
+                  <p>Cards have an undecorated default look, but classes like <strong>inset</strong>, <strong>box-shadow</strong> and <strong>border</strong> can rectify that:</p>
 
                   <div class="two-column">
                     <div>
-                      <div class="card well">
+                      <div class="card dark inset">
                         <h3>Welcome to the club.</h3>
                         <p>Don't forget to validate parking!</p>
                       </div>
                     </div>
                     <div>
-                      <div class="card matte">
+                      <div class="card box-shadow border">
                         <h3>Welcome to the club.</h3>
                         <p>Don't forget to validate parking!</p>
                       </div>
@@ -116,13 +138,13 @@
 
                   <div class="two-column">
                     <div>
-                      <pre class="small aside-width margin-auto white-space">&lt;div class="card well"&gt;
+                      <pre class="small aside-width margin-auto white-space">&lt;div class="card dark inset"&gt;
   &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
   &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
 &lt;/div&gt;</pre>
                     </div>
                     <div>
-                      <pre class="small aside-width margin-auto white-space">&lt;div class="card matte"&gt;
+                      <pre class="small aside-width margin-auto white-space">&lt;div class="card box-shadow border"&gt;
   &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
   &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
 &lt;/div&gt;</pre>
@@ -136,7 +158,7 @@
                   <p>In general, cards stack their child elements. But Decent's layout composables can be used to achieve more complicated layouts:</p>
 
                   <div id="mouser" class="card">
-                  <h4 class="action light">The Mouser</h4>
+                  <h4 class="action light no-margin margin-bottom padding">The Mouser</h4>
                   <div class="golden-column">
                     <div>
                       <img src="http://placekitten.com/400/400">
@@ -149,6 +171,8 @@
                     <button class="button action">Hire</button> <button class="button info">Save</button>
                   </footer>
               </div>
+
+              <p>Since the card uses an all-margins paradigm, the <strong>no-margin</strong> class can be used to make elements bleed to the edge, like the headline above.</p>
 
               <div class="card matte">
                 <h2 class="color-failure">Fuzzy Mittens</h2>

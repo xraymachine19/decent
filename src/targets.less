@@ -63,7 +63,7 @@
 // these parametric mixins allow you to target a specific size viewport
 
 .on-mobile(@rules) {
-    @media screen and (max-width: ~"calc(@{text-width} - 1px)") { @rules();}
+    @media screen and (max-width: ~"calc(@{text-width} + @{gutter} - 1px)") { @rules();}
     // TODO: test this
  }
  

@@ -1,4 +1,3 @@
-@warning: contrast(@base-color, @orange, @violet, 80%);
+@warning: @orange;
 
-.warning when (@warning = @orange) { &:extend(.orange);}
-.warning when (@warning = @violet) { &:extend(.violet);}
+.warning { &:extend(.orange);}

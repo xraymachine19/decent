@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The .golden-column composable | Decent CSS</title>
-  <meta name="description" content="The golden-column composable for the Decent CSS framework">
+  <title>The .desktop composable | Decent CSS</title>
+  <meta name="description" content="The desktop composable for the Decent CSS framework">
   <meta name="author" content="Rex Riepe">
 
   <link rel="stylesheet" href="../../css/index.css?v=1.0">
@@ -25,8 +25,8 @@
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
     <header class="feature graphite page-width margin-auto">
-        <h1>.golden-column</h1>
-        <p>Organize child elements into two columns, apportioned to the golden ratio.</p>
+        <h1>.desktop</h1>
+        <p>Makes layout behavior only occur on desktop and above.</p>
     </header>
     <main>
         
@@ -91,8 +91,8 @@
                     <h2>Details</h2>
                     <div id="arguments">
                         <ul>
-                            <li><strong>class</strong>: <em>golden-column</em></li>
-                            <li><strong>settings</strong>: @golden-column-gap</li>
+                            <li><strong>class</strong>: <em>desktop</em></li>
+                            <li><strong>settings</strong>: none</li>
                             <li><strong>defaults</strong>: none</li>
                         </ul>
                     </div>
@@ -102,58 +102,79 @@
 
                 </section>
                 <section id="examples">
-                    <h2>Examples</h2>
+                  <h2>Examples</h2>
+                  <p>The <em>.desktop</em> composable works with other layout composables. It causes them to only work at the desktop breakpoint and above.</p>
+                  
+                  <h3>.two-column</h3>
 
-                    <h4>Normal golden column</h4>
-                    <div class="golden-column">
-                        <div class="info placeholder">
+                  <p>This is only two columns on desktop and above:</p>
 
-                        </div>
-                        <div class="info placeholder">
-                            
-                        </div>
+                  <div class="two-column desktop">
+                    <div class="info placeholder">
+
                     </div>
+                    <div class="info placeholder">
 
-                    <h4>Only golden on mobile</h4>
-                    <div class="golden-column mobile">
-                        <div class="info placeholder">
-
-                        </div>
-                        <div class="info placeholder">
-                            
-                        </div>
                     </div>
-
-                    <h4>Only golden on tablet and above</h4>
-                    <div class="golden-column tablet">
-                        <div class="info placeholder">
-
-                        </div>
-                        <div class="info placeholder">
-                            
-                        </div>
-                    </div>
-
-                    <h4>Only golden on desktop and above</h4>
-                    <div class="golden-column desktop">
-                        <div class="info placeholder">
-
-                        </div>
-                        <div class="info placeholder">
-                            
-                        </div>
-                    </div>
-
-                    <h3>Reverse</h3>
-                    <p>The golden column supports the .reverse class, to switch which column represents which part of the ratio.</p>
-                    <div class="golden-column reverse">
-                      <div class="info placeholder">
-
-                      </div>
-                      <div class="info placeholder">
-                          
-                      </div>
                   </div>
+
+                  <h3>.three-column</h3>
+
+                  <p>Three columns on desktop and above:</p>
+
+                  <div class="three-column desktop">
+                    <div class="info placeholder">
+
+                    </div>
+                    <div class="info placeholder">
+
+                    </div>
+                    <div class="info placeholder">
+
+                    </div>
+                  </div>
+                  
+                  <h3>.golden-column</h3>
+
+                  <p>Golden columns on desktop and above:</p>
+
+                  <div class="golden-column desktop">
+                    <div class="info placeholder">
+
+                    </div>
+                    <div class="info placeholder">
+
+                    </div>
+                  </div>
+                  
+                  <h2>Responsiveness</h2>
+                  <p>Layout composables with this class will follow this responsiveness scheme:</p>
+                  
+                  <div class="grid grid-gap-padding no-margin-bottom small">
+                    <div class="grid-width-three">
+                      mobile
+                    </div>
+                    <div class="grid-width-four">
+                      tablet
+                    </div>
+                    <div class="grid-width-five">
+                      desktop
+                    </div>
+                  </div>
+                  <div class="grid grid-gap-padding text-align-center big">
+                    <div class="grid-width-three failure border-radius">
+                      &cross;
+                    </div>
+                    <div class="grid-width-four failure border-radius">
+                      &cross;
+                    </div>
+                    <div class="grid-width-five light success border-radius">
+                      &check;
+                    </div>
+                  </div>
+
+                  <p>The tablet breakpoint is based on <strong>@page-width</strong>. Desktop rules apply for all resolutions past this breakpoint.</p>
+                    
                 </section>
             </div>
         </div>

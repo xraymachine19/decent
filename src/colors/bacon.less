@@ -1,7 +1,4 @@
-.set-bacon() {
-    @base: #a51303;
-    .set-color(bacon, @base, 1/2, 1.1);
-    @bacon: @color;
-}
+@set-bacon: .set-color(bacon, #a51303, 1/2, 1.1)[];
+@bacon: e(@set-bacon);
 
-.set-bacon();
+.set-color(bacon, #a51303, 1/2, 1.1, @outputs: true);
