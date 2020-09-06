@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The .well composable | Decent CSS</title>
-  <meta name="description" content="The well composable for the Decent CSS framework">
+  <title>The .modal composable | Decent CSS</title>
+  <meta name="description" content="The modal composable for the Decent CSS framework">
   <meta name="author" content="Rex Riepe">
 
   <link rel="stylesheet" href="../../css/index.css?v=1.0">
@@ -24,12 +24,14 @@
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
-    <section class="graphite feature">
-        <h1>.dark</h1>
-        <p>Makes the background perceptibly darker.</p>
-    </section>
+    <header class="feature skyblue page-width margin-auto">
+        <h1>.modal</h1>
+        <p>Focus a user's attention with modal content.</p>
+    </header>
     <main>
+        
         <div class="grid inner-page-width desktop">
+            
             <div class="grid-width-three">
                 <nav class="small two-column mobile">
                     <div>
@@ -72,7 +74,7 @@
                       <ul class="group no-margin-bottom">
                         <li><a href="../badge">badge</a></li>
                         <li><a href="../overlay">overlay</a></li>
-<li><a href="../modal">modal</a></li>
+        <li><a href="../modal">modal</a></li>
                       </ul>
           
                       <h6>HTML</h6>
@@ -91,62 +93,73 @@
                     <h2>Details</h2>
                     <div id="arguments">
                         <ul>
-                            <li><strong>class</strong>: <em>dark</em></li>
-                            <li><strong>settings</strong>: fill-opacity, pattern-base, output-darker</li>
+                            <li><strong>filename</strong>: /composables/modal.less</li>
+                            <li><strong>settings</strong>: none</li>
                             <li><strong>defaults</strong>: none</li>
                         </ul>
                     </div>
                     <div class="margin-auto gutter text-align-center">
-                        <span class="badge info">composable</span> &middot; <span class="badge action">works with colors</span>
+                        <span class="badge info">composable</span> &middot; <span class="badge success">supports colors</span>
                     </div>
                 </section>
                 <section id="examples">
                     <h2>Examples</h2>
-                    <p>The <strong>.dark</strong> composable makes an element darker. It works well with color classes, for easy-to-use class pairings like "dark green":</p>
-
-                    <p class="green padding">The only acceptable form of wrestling is gator wrestling.</p>
-
-                    <pre class="white-space">&lt;p class="green padding"&gt;The only acceptable form of wrestling is gator wrestling.&lt;/p&gt;</pre>
-
-                    <p>With the <strong>.dark</strong> class, the paragraph becomes darker.</p>
-                    <p class="dark green padding">The only acceptable form of wrestling is gator wrestling.</p>
-
-                    <pre class="white-space">&lt;p class="dark green padding"&gt;The only acceptable form of wrestling is gator wrestling.&lt;/p&gt;</pre>
-
-                    <p>This composable sets the background-image property, so it may have problems with elements that use a background image.</p>
-
-                    <h2>Color examples</h2>
-
-                    <div class="two-column">
-                        <ul class="group">
-                            <li class="crimson light">crimson light</li>
-                            <li class="crimson">crimson</li>
-                            <li class="crimson dark">crimson dark</li>
-                        </ul>
-                        <ul class="group">
-                            <li class="graphite light">graphite light</li>
-                            <li class="graphite">graphite</li>
-                            <li class="graphite dark">graphite dark</li>
-                        </ul>
-                    </div>
-
-                    <div class="two-column">
-                        <ul class="group">
-                            <li class="teal light">teal light</li>
-                            <li class="teal">teal</li>
-                            <li class="teal dark">teal dark</li>
-                        </ul>
-                        <ul class="group">
-                            <li class="purple light">purple light</li>
-                            <li class="purple">purple</li>
-                            <li class="purple dark">purple dark</li>
-                        </ul>
-                    </div>
+                    <p>
+                    <button onclick="document.getElementById('id01').style.display='flex'">Open modal</button>
+                    </p>
+    
+                    <p>
+                    <button onclick="document.getElementById('id02').style.display='flex'">Open other modal</button>
+                    </p>
                 </section>
             </div>
         </div>
     </main>
     
+
+    <div id="id01" class="modal">
+        <div>
+          <header class="text-align-right float-right">
+                <span onclick="document.getElementById('id01').style.display='none'" class="button default" title="Close Modal">&times;</span>
+          </header>
+          <div class="golden-column desktop">
+            <div>
+              
+              <form>
+                
+                <h3>Delete Account</h3>
+                <p>Are you sure you want to delete your account?</p>
+                
+                <div class="bar text-align-right no-margin-bottom">
+                  <button class="button action border">Cancel</button>
+                  <button class="button red border border-width">Delete</button>
+                </div>        
+              </form>
+            </div>
+            <div>
+              <form class="small">
+                <h3>Change account name</h3>
+                <p>Change your username and lay low instead</p>
+                
+                <div class="bar text-align-right no-margin-bottom">
+                  <button class="button success border border-width">Go</button>
+                </div>        
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div> 
+      
+      <div id="id02" class="modal">
+        <div class="text-width margin-auto">
+          <h2>The other modal!</h2>
+          <p>How did you find it!?</p>
+          <footer class="margin-bottom">
+            <button onclick="document.getElementById('id02').style.display='none'" class="huge button reaction block full-width" title="I'm awesome">I'm awesome</button>
+          </footer>
+        </div> 
 
 </body>
 </html>

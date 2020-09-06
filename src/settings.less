@@ -12,9 +12,9 @@
 
 // @base-color: rgb(83, 94, 74);
 
-@border-image: 10 round url("data:image/svg+xml,@{border-image-base}");
+// @border-image: 10 round url("data:image/svg+xml,@{border-image-base}");
 
-@border-image-base: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
+// @border-image-base: "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.646%202.646%22%20height%3D%2210%22%20width%3D%2210%22%3E%3Cpath%20fill%3D%22@{fg}%22%20fill-opacity%3D%22@{fill-opacity}%22%20d%3D%22M0%200h2.646v2.646H0z%22%2F%3E%3C%2Fsvg%3E";
 
 // basics
 // @base-color: #83a9dd;
@@ -41,9 +41,22 @@
 @text-contrast: 3; // 4.5 is level II, 7 is level III per WCAG standards for body text
 @golden-ratio: 1.618;
 @shadow-color: fade(mix(@black, spin(@ambient, 180), 80%), 100%);
-@shadow-color: fade(mix(@black, difference(@ambient, @white)), 50%);
-@shadow-position: 0 1px;
-@shadow-blur: 2px;
+@shadow-color: fade(mix(@black, difference(@ambient, white)), 50%);
+@shadow-position: @shadow-positions[top];
+@shadow-blur: sqrt(2)*1px;
+
+@shadow-positions: { 
+    top left: 1px 1px;
+    left top: 1px 1px;
+    top right: -1px 1px;
+    right top: -1px 1px;
+    top center: 0 1px;
+    center top: 0 1px;
+    top: 0 1px;
+    top left: 1px 0;
+    left top: 1px 0;
+    left: 1px 0;
+}
 
 // color mixing settings
 @color-strength: 75% + 15%*(unit(luma(@base-color))/100);

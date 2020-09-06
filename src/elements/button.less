@@ -10,12 +10,13 @@ button, .button {
     
     // .button-color(@default);
     @lumafix: .set-lumafix(@default, @gray)[];
-    border-width: 0;
-    border-color: @lumafix;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
     line-height: @golden-ratio;
     text-align: center;
     vertical-align: middle;
-    background-image: none;
+    // background-color: inherit;
     outline: none;
     white-space: nowrap;
     text-decoration: none;
@@ -31,7 +32,9 @@ button, .button {
     }
 
     &.border {
-      border-width: @border-width;
+      &:extend(.border-width);
+      &:extend(.border-style);
+      .default(border-image);
     }
 
     // button-color handles all the button color rules
