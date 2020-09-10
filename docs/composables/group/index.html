@@ -18,7 +18,7 @@
         <ul class="bar top right">
             <li><a href="../../composables/">Composables</a></li>
 <li><a href="../../utilities/">Utilities</a></li>
-            <li><a href="../../mixins/">Mixins</a></li>
+            <li><a href="../../less/">Less</a></li>
             
             <li><a href="../../how-to/">How-to</a></li>
         </ul>
@@ -31,7 +31,7 @@
     </header>
     <main>
         
-        <div class="grid inner-page-width desktop">
+        <div class="grid inner-page-width tablet">
             <div class="grid-width-three">
                 <nav class="small two-column mobile">
                     <div>
@@ -74,15 +74,10 @@
                       <ul class="group no-margin-bottom">
                         <li><a href="../badge">badge</a></li>
                         <li><a href="../overlay">overlay</a></li>
-<li><a href="../modal">modal</a></li>
+<li><a href="../modal">modal</a></li><li><a href="../hide">hide</a></li>
                       </ul>
           
-                      <h6>HTML</h6>
-                      <ul class="group no-margin-bottom">
-                        
-                        <li><a href="../elements">elements</a></li>
-          
-                      </ul>
+                      
                     </div>
                     
                   </nav>
@@ -113,7 +108,7 @@
                         <li>Kiwis</li>
                     </ul>
 
-                    <pre>&lt;ul class="group"&gt;
+                    <pre class="white-space">&lt;ul class="group"&gt;
     &lt;li&gt;Apples&lt;/li&gt;
     &lt;li&gt;Oranges&lt;/li&gt;
     &lt;li&gt;Apricots&lt;/li&gt;
@@ -152,31 +147,51 @@
                         <button class="button">Balance</button>
                     </div>
 
-                    <pre>&lt;div class="group"&gt;
+                    <pre class="white-space">&lt;div class="group"&gt;
     &lt;button&gt;Mince&lt;/button&gt;
     &lt;button&gt;Rinse&lt;/button&gt;
     &lt;button&gt;Balance&lt;/button&gt;
 &lt;/div&gt;</pre>
 
                     <div class="group border-radius border">
-                    <button class="button action">Action</button>
-                    <button class="button reaction">Reaction</button>
+                    <button class="action">Action</button>
+                    <button class="reaction">Reaction</button>
                     </div>
+
+                    <pre class="white-space">&lt;div class="group border-radius border"&gt;
+    &lt;button class="action"&gt;Action&lt;/button&gt;
+    &lt;button class="reaction"&gt;Reaction&lt;/button&gt;
+&lt;/div&gt;</pre>
 
                     <div class="two-column">
-                    <div class="group border-radius border">
-                        <button class="button action">Deploy Fuzzy</button>
-                        <button class="button action">Deploy Scratches</button>
-                        <button class="button action">Deploy Mouser</button>
+                      <div class="group border-radius border">
+                          <button class="action">Deploy Fuzzy</button>
+                          <button class="action">Deploy Scratches</button>
+                          <button class="action">Deploy Mouser</button>
+                      </div>
+
+                      <div class="group border">
+                          <button class="info">Menus</button>
+                          <button class="info">Journals</button>
+                          <button class="info">Diaries</button>
+                      </div>
                     </div>
 
-                    <div class="group border">
-                        <button class="button info">Menus</button>
-                        <button class="button info">Journals</button>
-                        <button class="button info">Diaries</button>
-                    </div>
+                    <pre class="white-space">&lt;div class="two-column"&gt;
+    &lt;div class="group border-radius border"&gt;
+        &lt;button class="action"&gt;Deploy Fuzzy&lt;/button&gt;
+        &lt;button class="action"&gt;Deploy Scratches&lt;/button&gt;
+        &lt;button class="action"&gt;Deploy Mouser&lt;/button&gt;
+    &lt;/div&gt;
 
-                    </div>
+    &lt;div class="group border"&gt;
+        &lt;button class="info"&gt;Menus&lt;/button&gt;
+        &lt;button class="info"&gt;Journals&lt;/button&gt;
+        &lt;button class="info"&gt;Diaries&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+                    </pre>
 
                     <aside>
                     <p class="info text-padding"><strong>Note:</strong> The border class works because <em>any CSS property</em> works as a class name, outputting the default value from <strong>properties.less</strong>.</p>

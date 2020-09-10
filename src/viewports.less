@@ -1,0 +1,12 @@
+.on-mobile(@rules) {
+    @media screen and (max-width: ~"calc(@{text-width} + @{gutter} - 1px)") { @rules();}
+    // TODO: test this
+ }
+ 
+ .on-tablet(@rules) {
+    @media screen and (min-width: ~"calc(@{text-width} + @{gutter})") { @rules();}
+ }
+ 
+ .on-desktop(@rules) {
+    @media screen and (min-width: ~"calc(@{page-width} + @{gutter})") { @rules();}
+ }

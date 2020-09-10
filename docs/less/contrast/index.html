@@ -1,0 +1,180 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Composables | Decent CSS</title>
+  <meta name="description" content="Composable classes for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="top bar dark action fixed inner-page-width full-width">
+        <h4><a href="../../">Decent CSS</a></h4>
+        <ul class="bar top right">
+            <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
+            <li><a href="../../less/">Less</a></li>
+            
+            <li><a href="../../how-to/">How-to</a></li>
+        </ul>
+    </nav>
+    <div class="top bar dark action full-width margin-bottom placeholder"></div>
+    <main>
+        <section class="hero darker feature graphite">
+            <h1>.contrast()</h1>
+            <p class="gutter-bottom">Finds a contrastful color. Outputs it to the given property as a rule, usually <strong>color</strong> (the default), <strong>border-color</strong> or <strong>background-color</strong>.</p>
+        </section>
+        <div class="grid inner-page-width tablet">
+            <div class="grid-width-three">
+                <nav>
+                    <ul class="group padding action dark">
+                        <li><a href="../contrast">contrast</a></li>
+                        <li><a href="../default">default</a></li>
+                        <li><a href="../colorize">colorize</a></li>
+                        <li><a href="../color-text">color-text</a></li>
+                        <li><a href="../set-average">set-average</a></li>
+                        <li><a href="../set-closer-farther">set-closer-farther</a></li>
+                        <li><a href="../set-contrast">set-contrast</a></li>
+                        <li><a href="../set-contrast-ceiling">set-contrast-ceiling</a></li>
+                        <li><a href="../set-contrast-floor">set-contrast-floor</a></li>
+                        <li><a href="../set-contrast-ratio">set-contrast-ratio</a></li>
+                        <li><a href="../set-distance">set-distance</a></li>
+                        <li><a href="../set-lumafix">set-lumafix</a></li>
+                        <li><a href="../set-rep-color">set-rep-color</a></li>
+                        <li><a href="../set-tone">set-tone</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="grid-width-nine inner-text-width">
+                <section id="reference">
+                    <h2>Arguments</h2>
+                    <div id="arguments">
+                        <ul>
+                            <li><strong>@property</strong>: The name of a CSS property</li>
+                            <li><strong>@background-color</strong>: A color to contrast against</li>
+                            <li><strong>@standard</strong>: The contrast ratio standard to meet</li>
+                            <li><strong>@mode</strong>: Which contrast method to use
+                                <ul>
+                                    <li>
+                                        <em>tint</em>: Add white to find contrast 
+                                    </li>
+                                    <li>
+                                        <em>shade</em>: Add black to find contrast 
+                                    </li>
+                                    <li>
+                                        <em>auto:</em> (default) Add whichever has more contrast potential
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="margin-auto gutter text-align-center">
+                        <span class="badge info">mixin</span> &middot; <span class="badge default">outputs a CSS rule</span>
+                    </div>
+                
+                </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+
+                    <h3>Basic usage</h3>
+                    
+                    <p>By default, contrast sets the color property to a contrastful value against @content-background.</p>
+
+                    <pre>p {
+    .contrast();                        
+}</pre>
+
+<pre>&lt;p&gt;A paragraph with default text contrast.&lt;/p&gt;</pre>
+                    <p>Output:</p>
+                    
+                    <p>A paragraph with default text contrast.</p>
+
+                    <h3>Different background colors</h3>
+
+                    <p>Sometimes background colors will be an awkward color, like this CSS color blue, where our text color doesn't work as well:</p>
+
+                    <pre>&lt;p style="background:blue;"&gt;This is text on blue&lt;/p&gt;</pre>
+
+                    <p style="background:blue;">This is text on blue</p>
+
+                    <p>We can use <strong>.contrast()</strong> to make the text meet our project's contrast standards with this <em>.text-on-blue</em> class :</p>
+
+                    <pre>p.text-on-blue {
+    .contrast(color, blue);                        
+}</pre>
+
+                    <pre class="word-wrap word-break">&lt;p style="background:blue;" class="text-on-blue"&gt;This is text on blue&lt;/p&gt;</pre>
+
+                    <p style="background:blue;" class="text-on-blue">This is text on blue</p>
+                    
+                    <p>Now the text is more readable and meets the project's standards.</p>
+
+                    <p>Of course, the official Decent way of making something blue is to simply add the <strong>blue</strong> class. Instead of CSS's take on blue, it uses your project's take on blue.</p>
+
+                    <p class="blue text-padding">This is a blue paragraph with <strong>text-padding</strong> too.</p>
+
+                    <p>To set both the text color and background color, use <a href="../colorize/">.colorize()</a>.</p>
+
+                    <h3>Using different contrast standards</h3>
+                    <p>All contrasting is done according to a standard, a contrast ratio which is usually 4.5 or 7 for text, according to WCAG standards.</p>
+
+                    <p>WCAG standards are lower for large text, like headlines. In your project, you may wish to set headline text contrast to a lower standard (WCAG suggests at least 3) so that your headlines are more colorful:</p>
+
+                    <pre>.headline-elements({
+    .contrast(color, blue, 3); 
+});</pre>
+                    <p>This targets all headlines using the headline ruleset mixin, applyin the same contrast algorithm as before but stopping when a contrast ratio of 3 is met. Not how the headline here is less contrastful than the body text from before:</p>
+
+                    <div id="blue_headline_example" style="background:blue;" class="text-on-blue">
+                        <h3>A softer-contrasted headline</h3>
+                        <p class="text-on-blue">This is text on blue</p>
+                    </div>
+
+                    <h3>Outputting different properties</h3>
+                    <p>Suppose we want to give a border to the paragraph in this new blue-backgrounded element.</p>
+
+                    <p>To do this, we give <strong>.contrast()</strong> the border-color property, along with a higher contrast standard to stand out more:</p>
+
+                    <pre>p {
+    .contrast(border-color, blue, 7); 
+}</pre>
+
+                    <p>This gives us:</p>
+
+                    <div id="blue_headline_example2" style="background:blue;" class="text-on-blue">
+                        <h3>A softer-contrasted headline</h3>
+                        <p class="text-on-blue">This is text on blue</p>
+                    </div>
+
+                    <h3>Forcing a contrast mode</h3>
+
+                    <p>We may find that the automatic contrasting doesn't pick the color we had in mind. If we want to force the border-color in the prior example to use black to find contrast, we can set the @mode argument to <em>shade</em>.</p>
+
+                    <pre>p {
+    .contrast(border-color, blue, 7, shade); 
+}</pre>
+
+                    <div id="blue_headline_example3" style="background:blue;" class="text-on-blue">
+                        <h3>A softer-contrasted headline</h3>
+                        <p class="text-on-blue">This is text on blue</p>
+                    </div>
+
+                    <p>Now the border around the paragraph will always tend to be darker.</p>
+                        
+                    <p>It's important to keep in mind that this may reduce contrast possibilities. Forcing a very light color to use the <em>tint</em> mode, for example, will never produce contrastful text.</p>
+
+                    <p>For more on this concept, read about <a href="../set-contrast-floor">.set-contrast-floor()</a> and <a href="../set-contrast-ceiling">.set-contrast-ceiling()</a>, which find how much room there is available for either tinting or shading operations.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+</body>
+</html>

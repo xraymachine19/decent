@@ -1,34 +1,26 @@
 .two-column {
-    .two-column();
-
-    > * {
-        margin-bottom: @margin;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: @padding;
 
     &.mobile {
         & { display: initial;}
         .on-mobile({
-            .two-column;
+            display: grid;
         });
     }
 
     &.tablet {
         & { display: initial;}
         .on-tablet({
-            .two-column;
+            display: grid;
         });
     }
 
     &.desktop {
         & { display: initial;}
         .on-desktop({
-            .two-column;
+            display: grid;
         });
     }
-}
-
-.two-column() {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: @padding;
 }

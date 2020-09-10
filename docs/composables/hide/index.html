@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The .hide composable | Decent CSS</title>
+  <meta name="description" content="The hide composable for the Decent CSS framework">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="top bar dark action fixed inner-page-width full-width">
+        <h4><a href="../../">Decent CSS</a></h4>
+        <ul class="bar top right">
+            <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
+            <li><a href="../../less/">Less</a></li>
+            
+            <li><a href="../../how-to/">How-to</a></li>
+        </ul>
+    </nav>
+    <div class="bar full-width margin-bottom placeholder"></div>
+    <header class="feature graphite page-width margin-auto">
+        <h1>.hide</h1>
+        <p>Hides an element at different breakpoints.</p>
+    </header>
+    <main>
+        
+        <div class="grid inner-page-width tablet">
+            
+            <div class="grid-width-three">
+                <nav class="small two-column mobile">
+                    <div>
+                      <h6>Emphasis</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../colors">color</a></li>
+                        <li><a href="../light">light</a></li>
+                        <li><a href="../dark">dark</a></li>
+                        <li><a href="../feature">feature</a></li>
+                      </ul>
+                    </div>
+                    <div>
+          
+                      <h6>Format</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../card">card</a></li>
+                        <li><a href="../group">group</a></li>
+                        <li><a href="../bar">bar</a></li>
+                        <li><a href="../button">button</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h6>Layout</h6>
+                      <ul class="group no-margin-bottom">
+                        
+                        <li><a href="../grid">grid</a></li>
+                        <li><a href="../two-column">two-column</a></li>
+                        <li><a href="../three-column">three-column</a></li>
+                        <li><a href="../golden-column">golden-column</a></li>
+                        <li><a href="../mobile">mobile</a></li>
+                        <li><a href="../tablet">tablet</a></li>
+                        <li><a href="../desktop">desktop</a></li>
+                        
+                      </ul>
+          
+                    </div>
+                    <div>
+                      <h6>Decoration</h6>
+                      <ul class="group no-margin-bottom">
+                        <li><a href="../badge">badge</a></li>
+                        <li><a href="../overlay">overlay</a></li>
+        <li><a href="../modal">modal</a></li><li><a href="../hide">hide</a></li>
+                      </ul>
+          
+                      
+                    </div>
+                    
+                  </nav>
+            </div>
+            
+            <div class="grid-width-nine inner-text-width">
+                <section id="reference">
+                    <h2>Details</h2>
+                    <div id="arguments">
+                        <ul>
+                            <li><strong>filename</strong>: /composables/hide.less</li>
+                            <li><strong>settings</strong>: none</li>
+                            <li><strong>defaults</strong>: none</li>
+                        </ul>
+                    </div>
+                    <div class="margin-auto gutter text-align-center">
+                        <span class="badge info">composable</span> &middot; <span class="badge action">supports breakpoints</span>
+                    </div>
+                </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+                    
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+    <div id="id01" class="modal">
+        <div>
+          <header class="text-align-right float-right">
+                <span onclick="document.getElementById('id01').style.display='none'" class="button default" title="Close Modal">&times;</span>
+          </header>
+          <div class="golden-column desktop">
+            <div>
+              
+              <form>
+                
+                <h3>Delete Account</h3>
+                <p>Are you sure you want to delete your account?</p>
+                
+                <div class="bar text-align-right no-margin-bottom">
+                  <button class="button action border">Cancel</button>
+                  <button class="button red border border-width">Delete</button>
+                </div>        
+              </form>
+            </div>
+            <div>
+              <form class="small">
+                <h3>Change account name</h3>
+                <p>Change your username and lay low instead</p>
+                
+                <div class="bar text-align-right no-margin-bottom">
+                  <button class="button success border border-width">Go</button>
+                </div>        
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div> 
+      
+      <div id="id02" class="modal">
+        <div class="text-width margin-auto">
+          <h2>The other modal!</h2>
+          <p>How did you find it!?</p>
+          <footer class="margin-bottom">
+            <button onclick="document.getElementById('id02').style.display='none'" class="huge button reaction block full-width" title="I'm awesome">I'm awesome</button>
+          </footer>
+        </div> 
+
+</body>
+</html>

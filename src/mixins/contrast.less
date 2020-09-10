@@ -70,6 +70,6 @@
         @standard: @text-contrast;        
         @mode: auto;
         ) {
-            .set-contrast(@compare, @standard, @mode);
+            @contrast: .set-contrast(@compare, @standard, @mode)[];
             @{property}: @contrast;
 }

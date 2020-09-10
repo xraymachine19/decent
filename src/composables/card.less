@@ -2,38 +2,8 @@
     position: relative;
     max-width: @aside-width;
     overflow: hidden;
-    line-height: @golden-ratio;
-
-    > * {
-        margin: @padding;
-        // margin-top: 0;
-    }
-
-    .block-level-elements({
-        margin-bottom: 0;
-    });
-
-    .full-width {
-        @card-gutter: @padding*2;
-        width: ~"calc(100% - @{card-gutter})";
-    }
-
-    p {
-        margin-bottom: 1em;
-    }
-
-    .no-margin {
-        margin: 0;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        margin-top: .4em;
-        margin-bottom: .6em;
-        // &:first-child {
-        //     margin: 0;
-        //     margin-bottom: @padding;
-        //     padding-top: @text-padding-top;
-        //     .default(padding);
-        // }
-    }
+    .default(padding);
+    .default(border);
+    .default(border-radius);
+    .default(box-shadow);
 }

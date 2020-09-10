@@ -19,16 +19,16 @@
         <ul class="bar top right">
           <li><a href="composables/">Composables</a></li>
           <li><a href="utilities/">Utilities</a></li>
-          <li><a href="mixins/">Mixins</a></li>
+          <li><a href="less/">Less</a></li>
           <li><a href="how-to/">How-to</a></li>
         </ul>
     </nav>
     <div class="bar full-width margin-bottom placeholder"></div>
     <header class="feature page-width margin-auto">
-      <h1 class="text-align-center">The CSS singularity has arrived</h1>
+      <h1 class="text-align-center">Hit your CSS over the head with a club</h1>
       
       <div class="text-width margin-auto">
-        <p class="feature">Built for the <strong>decent</strong>ralized web, Decent makes your CSS codebase <em>awesome</em>.</p>
+        <p class="big">Built for the <strong>decent</strong>ralized web, Decent makes your CSS codebase <em>awesome</em>.</p>
 
         <div class="text-align-center">
           Start your UI revolution here:
@@ -45,129 +45,40 @@
       </div>
       
     </header>
+
     <main>
-      <section>
-        <div class="inner-text-width">
-          <h1>From <em>a</em> to <em>z-index</em>, Decent supports all HTML elements and all CSS properties.</h1>
-        <p>You might not have known about the <code>kbd</code> HTML element, but your Decent project does.</p>
-        <p>It's even got a dedicated <strong>kbd.less</strong> file:</p>
-        <pre>kbd {
-    .default(border-radius);
-    .colorize(@black, 9);
-    padding: @text-padding;
-}</pre>
+      <div class="three-column desktop">
+        <div class="big">
+          <h3>Simple, mid-weight and ultra-practical</h3>
+          <p>The most straightforward 50kb of CSS possible.</p>
         </div>
-        
-      <p>In Decent, <em>every</em> HTML element has its own file, meaning all of HTML is fully supported right out of the box. Each element is handily organized into its own file, quickly accessible with <kbd>Ctrl + P</kbd> (That's the kbd element, by the way).</p>
-      <p>CSS properties are fully supported by way of Less variables in <strong>properties.less</strong> and the <strong>.default()</strong> mix-in, seen above in <code>kbd</code>.</p>
-      <p>The .default() mix-in takes any CSS property and outputs it as a CSS custom variable, meaning everyone on your project can use the framework-like features of Decent, even if they write only CSS and not Less.</p>
-      <pre>border-radius: var(--border-radius);</pre>
-      <p>The <strong>:root</strong> element will contain your project's reference to a default border-radius value.</p>
-      <p>To reuse "border-radius" yet again, your project will also have out-of-the-box support for using any CSS property as a class name, again applying the default value.</p>
-      <p>This makes it easy for other sites&mdash; or other parts of your own site&mdash; to use your prescribed defaults and values.</p>
-      </section>
-
-
-      <div class="golden-column reverse inner-page-width desktop">
-        <div class="justify-content flex flex-direction">
-          <h2>From <em>a</em> to <em>z-index</em>, Decent supports all HTML elements and all CSS properties.</h2>
+        <div class="big">
+          <h3>Fun to read and write</h3>
+          <p>It sounds like caveman talk. This is inside a "big" div.</p>
         </div>
-        <div>
-          <section>
-          <p>You might not have known about the <code>kbd</code> HTML element, but your Decent project does.</p>
-        <p>It's even got a dedicated <strong>kbd.less</strong> file:</p>
-        <pre>kbd {
-    .default(border-radius);
-    .colorize(@black, 9);
-    padding: @text-padding;
-}</pre>
-      <p>In Decent, <em>every</em> HTML element has its own file, meaning all of HTML is fully supported right out of the box. Each element is handily organized into its own file, quickly accessible with <kbd>Ctrl + P</kbd> (That's the kbd element, by the way).</p>
-      <p>CSS properties are fully supported by way of Less variables in <strong>properties.less</strong> and the <strong>.default()</strong> mix-in, seen above in <code>kbd</code>.</p>
-      <p>The .default() mix-in takes any CSS property and outputs it as a CSS custom variable, meaning everyone on your project can use the framework-like features of Decent, even if they write only CSS and not Less.</p>
-      <pre>border-radius: var(--border-radius);</pre>
-      <p>The <strong>:root</strong> element will contain your project's reference to a default border-radius value.</p>
-      <p>To reuse "border-radius" yet again, your project will also have out-of-the-box support for using any CSS property as a class name, again applying the default value.</p>
-      <p>This makes it easy for other sites&mdash; or other parts of your own site&mdash; to use your prescribed defaults and values.</p>
-      </section>
+        <div class="big">
+          <h3>Nothing to remember</h3>
+          <p>Almost all class names are taken from HTML or CSS.</p>
         </div>
-        
-        
       </div>
-        
-        <section class="text-width">
-          <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="decentless_0"></a>decent.less</h1>
-<p class="has-line-data" data-line-start="2" data-line-end="3">A Less library for smarter component styling</p>
-<h2 class="code-line" data-line-start=5 data-line-end=6 ><a id="Setup_and_testing_5"></a>Setup and testing</h2>
-<ol>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Run <kbd>python -m SimpleHTTPServer</kbd> in the decent directory.</li>
-<li class="has-line-data" data-line-start="8" data-line-end="9">Follow the directions there (or just go to localhost:8000)</li>
-<li class="has-line-data" data-line-start="9" data-line-end="10">Edit index.html or the less, then refresh to test stuff.</li>
-<li class="has-line-data" data-line-start="10" data-line-end="11">index.html isn’t the public splash page for github but you can put that kinda content there if you’d like. It’s really just a scratchpad. Test-style setups (gray-scale contrasting table for example) are good here too.</li>
-</ol>
-<h2 class="code-line" data-line-start=13 data-line-end=14 ><a id="Compiling_the_Less_13"></a>Compiling the Less</h2>
-<ol>
-<li class="has-line-data" data-line-start="15" data-line-end="17">Run ‘lessc index.less css/index.css’.</li>
-</ol>
-<hr>
-<h1 class="code-line" data-line-start=19 data-line-end=20 ><a id="Core_ideas_19"></a>Core ideas</h1>
-<h2 class="code-line" data-line-start=21 data-line-end=22 ><a id="Accessibility_21"></a>Accessibility</h2>
-<p class="has-line-data" data-line-start="23" data-line-end="24">Decent aims to preserve and emphasize accessibility.</p>
-<h3 class="code-line" data-line-start=25 data-line-end=26 ><a id="Color_contrast_25"></a>Color contrast</h3>
-<ul>
-<li class="has-line-data" data-line-start="26" data-line-end="27">Mixins ensure developers meet WCAG standards</li>
-<li class="has-line-data" data-line-start="27" data-line-end="29">Mixins ensure design consistency</li>
-</ul>
-<h3 class="code-line" data-line-start=29 data-line-end=30 ><a id="Lean_performance_29"></a>Lean performance</h3>
-<ul>
-<li class="has-line-data" data-line-start="30" data-line-end="31">Decent allows for a leaner DOM, which makes everything (CSS, JS) faster</li>
-<li class="has-line-data" data-line-start="31" data-line-end="33">Decent itself compiles quickly, picking the right colors out of millions in seconds</li>
-</ul>
-<div class="matte">
-  <h2 class="code-line" data-line-start=33 data-line-end=34 ><a id="Environment_33"></a>Environment</h2>
-<p class="has-line-data" data-line-start="35" data-line-end="36">Decent is a fuller coding environment for Less.</p>
-<h3 class="code-line" data-line-start=37 data-line-end=38 ><a id="HTML__CSS_concepts_37"></a>HTML &amp; CSS concepts</h3>
-<ul>
-<li class="has-line-data" data-line-start="38" data-line-end="39">All HTML elements have a file</li>
-<li class="has-line-data" data-line-start="39" data-line-end="41">All CSS properties have a variable</li>
-</ul>
-<h3 class="code-line" data-line-start=41 data-line-end=42 ><a id="Richer_mixins_41"></a>Richer mixins</h3>
-<ul>
-<li class="has-line-data" data-line-start="42" data-line-end="43">Each mixin has its own file</li>
-<li class="has-line-data" data-line-start="43" data-line-end="45">Mixins use import statements to list dependencies</li>
-</ul>
-</div>
-<h2 class="code-line" data-line-start=45 data-line-end=46 ><a id="Design_fundamentals_45"></a>Design fundamentals</h2>
-<p class="has-line-data" data-line-start="47" data-line-end="48">Decent gives designers fundamental tools for building UIs.</p>
-<h3 class="code-line" data-line-start=49 data-line-end=50 ><a id="Typography_49"></a>Typography</h3>
-<h3 class="code-line" data-line-start=51 data-line-end=52 ><a id="Color_51"></a>Color</h3>
-<h3 class="code-line" data-line-start=53 data-line-end=54 ><a id="Patterns_53"></a>Patterns</h3>
-<h2 class="code-line" data-line-start=55 data-line-end=56 ><a id="Semantic_colors_55"></a>Semantic colors</h2>
-<p class="has-line-data" data-line-start="57" data-line-end="58">Decent uses very few classes. Semantic classes, one of the few exceptions, come with an inherent color association.</p>
-<p class="has-line-data" data-line-start="59" data-line-end="60">Palette colors</p>
-<ul>
-<li class="has-line-data" data-line-start="60" data-line-end="61"><strong>action</strong>: A version of the base color</li>
-<li class="has-line-data" data-line-start="61" data-line-end="62"><strong>reaction</strong>: A complement to action</li>
-</ul>
-<p class="has-line-data" data-line-start="64" data-line-end="65">Informational colors</p>
-<ul>
-<li class="has-line-data" data-line-start="65" data-line-end="66"><strong>info</strong>: An info-conveying highlight</li>
-<li class="has-line-data" data-line-start="66" data-line-end="67"><strong>warning</strong>: An urgent info-conveying orange</li>
-
-</ul>
-<p class="has-line-data" data-line-start="69" data-line-end="70">Transactional colors</p>
-<ul>
-<li class="has-line-data" data-line-start="70" data-line-end="71"><strong>success</strong>: A reassuring green</li>
-<li class="has-line-data" data-line-start="71" data-line-end="72"><strong>failure</strong>: An alarming red</li>
-</ul>
-        </section>
-        
-        
-        
-      <footer class="bar darker margin-auto page-width text-align-center">
-        <img src="decent-logo.svg" class="avatar-width margin-auto">
-      </footer>
+      <div class="three-column desktop">
+        <div class="big padding border dashed">
+          <h3>Get the CSS version</h3>
+          <p>Download the CSS file you're looking at here.</p>
+        </div>
+        <div class="small padding border dashed">
+          <h3>Get the Less version</h3>
+          <p>Grab the more fully-featured Less version from Github.</p>
+        </div>
+        <div class=" padding border dashed">
+          <h3>Other options</h3>
+        </div>
+      </div>
     </main>
-    
 
+    <div class="small padding text-align-center page-width margin-auto">
+      <h3>Decent gives you these CSS classes:</h3>
+      .button, .grid, .grid-width-two, .grid-width-three, .grid-width-four, .grid-width-five, .grid-width-six, .grid-width-seven, .grid-width-eight, .grid-width-nine, .grid-width-ten, .grid-width-eleven, .grid-width-twelve, .two-column, .three-column, .golden-column, .group, .bar, .card, .light, .dark, .modal, .feature, .overlay, .badge, .failure, .warning, .success, .info, .action, .reaction, .default, .no-padding, .no-padding-top, .no-padding-right, .no-padding-bottom, .no-padding-left, .no-margin, .no-margin-top, .no-margin-right, .no-margin-bottom, .no-margin-left, .no-box-shadow, .no-shadow, .no-shadows, .no-text-shadow, .no-border, .no-borders, .no-background, .no-text-indent, .no-text-align, .no-user-select, .background, .background-color, .border, .border-radius, .border-bottom, .border-left, .border-right, .border-style, .border-top, .border-width, .max-width, .min-width, .align-content, .align-items, .align-self, .flex, .flex-basis, .flex-direction, .flex-flow, .flex-grow, .flex-shrink, .flex-wrap, .justify-content, .font-family, .font-size, .list-style, .list-style-type, .margin, .margin-bottom, .margin-left, .margin-right, .margin-top, .column-gap, .column-rule, .padding, .padding-bottom, .padding-left, .padding-right, .padding-top, .table-layout, .text-align, .text-align-last, .text-indent, .text-justify, .text-overflow, .text-shadow, .text-transform, .line-height, .vertical-align, .letter-spacing, .word-spacing, .white-space, .word-break, .word-wrap, .transform, .transition, .display, .position, .top, .right, .bottom, .left, .float, .z-index, .overflow, .overflow-x, .cursor, .box-shadow, .box-sizing, .gutter, .gutter-top, .gutter-right, .gutter-bottom, .gutter-left, .inner-aside-width, .inner-text-width, .inner-page-width, .aside-width, .text-width, .page-width, .full-width, .inner-gutter, .reset, .big, .small, .huge, .text-padding, .block, .inline, .initial, .table, .flex, .text-outline, .grid-gap, .grid-gap-padding, .grid-gap-margin, .grid-gap-gutter, .inline-block, .static, .absolute, .relative, .fixed, .float-right, .float-left, .margin-auto, .inset, .viewport-height, .overflow-hidden, .fade, .serif, .font-family-serif, .monospace, .font-family-monospace, .sans-serif, .font-family-sans-serif, .placeholder, .texture, .ascii, .text-align-center, .text-align-left, .text-align-right, .text-align-justify, .hidden, .clearfix, .clear
+    </div>
 </body>
 </html>

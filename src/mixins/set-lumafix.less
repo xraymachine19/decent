@@ -28,3 +28,55 @@
 
     .lumafix(@color, @compare, 1);
 }
+
+
+// sets @lumafix to a version of @color with luma similar to @compare
+
+// .set-lumafix(@color; @compare: @base-color; @strength: 100%;) {
+
+//     @iterations: 50;
+
+//     @tint: white;
+//     @shade: black;
+
+//     .set-tone(@color, @compare);
+
+//     @ceiling: .set-contrast-ratio(@color, @tint)[];
+//     @floor: .set-contrast-ratio(@color, @shade)[];
+
+//     @target: if((luma(@tone) > 50%), @ceiling, @floor);
+
+//     @lumafix-base: .find-lumafix(@target-range)[@lumafix-maybe];
+
+//     @lumafix: @lumafix-base;
+
+//     @target-range: range(1, @ceiling, .1);
+
+//     .find-lumafix(@range) {
+        
+//         @lumafix-maybe: black;
+//     }
+
+
+//     // // tinting
+//     // .lumafix(@color-to-fix, @compare, @index) when (@index <= @iterations)
+//     //                                     and (luma(@color-to-fix) < luma(@compare))
+//     //                                     and (@tone = white) {
+//     //     @new-color: lighten(@color-to-fix, .25%*@index);
+//     //     .lumafix(@new-color, @compare, @index + 1);
+//     // }
+
+//     // // shading
+//     // .lumafix(@color-to-fix, @compare, @index) when (@index <= @iterations)
+//     //                                     and (luma(@color-to-fix) > luma(@compare))
+//     //                                     and (@tone = black) {
+//     //     @new-color: darken(@color-to-fix, .25%*@index);
+//     //     .lumafix(@new-color, @compare, @index + 1);
+//     // }
+
+//     // .lumafix(@color-to-fix, @compare, @index) when (default()) {
+//     //     @lumafix: mix(@color, @color-to-fix, (100% - @strength));
+//     // }
+
+//     // .lumafix(@color, @compare, 1);
+// }

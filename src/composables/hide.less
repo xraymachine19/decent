@@ -1,0 +1,19 @@
+.hide {
+    &:extend(.hidden);
+  
+    &.mobile { & { display: initial;}}
+    &.tablet { & { display: initial;}}
+    &.desktop { & { display: initial;}}
+  
+    .on-mobile({
+      &.mobile { .hidden;};
+    });
+  
+    .on-tablet({
+      &.tablet { .hidden;};
+    });
+  
+    .on-desktop({
+      &.desktop { .hidden;};
+    });
+  }

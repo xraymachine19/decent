@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>.set-contrast() | Decent CSS</title>
+  <meta name="description" content="The .set-contrast() mixin for Decent CSS">
+  <meta name="author" content="Rex Riepe">
+
+  <link rel="stylesheet" href="../../css/index.css?v=1.0">
+
+</head>
+
+<body>
+    <nav class="top bar dark action fixed inner-page-width full-width">
+        <h4><a href="../../">Decent CSS</a></h4>
+        <ul class="bar top right">
+            <li><a href="../../composables/">Composables</a></li>
+<li><a href="../../utilities/">Utilities</a></li>
+            <li><a href="../../less/">Less</a></li>
+            
+            <li><a href="../../how-to/">How-to</a></li>
+        </ul>
+    </nav>
+    <div class="top bar dark action full-width margin-bottom placeholder"></div>
+    <main>
+        <section class="hero darker feature graphite">
+            <h1>.set-contrast()</h1>
+            <p class="gutter-bottom">Finds a contrastful color, which is set to the variable <strong>@contrast</strong>.</p>
+        </section>
+        <div class="grid inner-page-width tablet">
+            <div class="grid-width-three">
+                <nav>
+                    <ul class="group action padding dark">
+                        <li><a href="../contrast">contrast</a></li>
+                        <li><a href="../default">default</a></li>
+                        <li><a href="../colorize">colorize</a></li>
+                        <li><a href="../color-text">color-text</a></li>
+                        <li><a href="../set-average">set-average</a></li>
+                        <li><a href="../set-closer-farther">set-closer-farther</a></li>
+                        <li><a href="../set-contrast">set-contrast</a></li>
+                        <li><a href="../set-contrast-ceiling">set-contrast-ceiling</a></li>
+                        <li><a href="../set-contrast-floor">set-contrast-floor</a></li>
+                        <li><a href="../set-contrast-ratio">set-contrast-ratio</a></li>
+                        <li><a href="../set-distance">set-distance</a></li>
+                        <li><a href="../set-lumafix">set-lumafix</a></li>
+                        <li><a href="../set-rep-color">set-rep-color</a></li>
+                        <li><a href="../set-tone">set-tone</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="grid-width-nine inner-text-width">
+                <section id="reference">
+                    <h2>Arguments</h2>
+                    <div id="arguments">
+                        <ul>
+                            <li><strong>@background-color</strong>: A color to contrast against</li>
+                            <li><strong>@standard</strong>: The contrast ratio standard to meet</li>
+                            <li><strong>@mode</strong>: Which contrast method to use
+                                <ul>
+                                    <li>
+                                        <em>tint</em>: Add white to find contrast 
+                                    </li>
+                                    <li>
+                                        <em>shade</em>: Add black to find contrast 
+                                    </li>
+                                    <li>
+                                        <em>auto:</em> (default) Add whichever has more contrast potential
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="margin-auto gutter text-align-center">
+                        <span class="badge info">mixin</span> &middot; <span class="badge default">sets a Less variable</span>
+                    </div>
+                
+                </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+
+                    <h3>Basic usage</h3>
+                    <p>This mixin works just like <a href="../contrast">.contrast()</a>, except it sets the variable <strong>@contrast</strong> instead of outputting a property.</p>
+                    <p>Since it only sets a variable, this mixin doesn't add to the CSS file:</p>
+
+                    <pre>.signup-form {
+    border: 1px solid red;
+    .set-contrast(red);
+}</pre>
+                    <p>In the CSS, this doesn't output anything except the border rule that's already there:</p>
+
+                    <pre>.signup-form {
+    border: 1px solid red;
+}</pre>
+
+                    <p>We can overwrite the border-color with @contrast, which is available anywhere in-scope after we use .set-contrast():</p>
+
+                    <pre>.signup-form {
+    border: 1px solid red;
+    .set-contrast(red);
+    border-color: @contrast;
+}</pre>
+
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+</body>
+</html>

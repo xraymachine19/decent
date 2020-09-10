@@ -2,18 +2,19 @@
 
 @import "properties";
 @import "settings";
-
-@import "colors/colors";
 @import "mixins/mixins";
-@import "patterns"; 
+
+@import "patterns";
 
 @import "targets";
+@import "viewports";
 
 @import "random"; // dev only
 
 // css output
 
 @import "css-variables";
+@import "property-classes";
 @import "reset";
 
 @import "elements/body";
@@ -30,6 +31,7 @@
 @import "elements/fieldset";
 @import "elements/ol";
 @import "elements/ul";
+@import "elements/li";
 @import "elements/span";
 @import "elements/mark";
 @import "elements/kbd";
@@ -55,9 +57,9 @@
 @import "composables/badge";
 @import "composables/modal";
 
-@import "property-classes";
-@import "utilities";
+@import "colors/colors";
 @import "nullifiers";
+@import "utilities";
 @import "debug";
 @import "print";
 
@@ -98,7 +100,7 @@
     }
 }
 
-.color-palette .color {
+.docs-color {
 
     margin-bottom: @padding/2;
 

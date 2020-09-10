@@ -1,15 +1,14 @@
 // averages a list of colors
 // sets result to @average
 
-.set-average(@colors) {
-  @length: length(@colors);
-  @average: red;
-  
-  & when (@length = 1) {
-    @average: @colors;
-  }
+.set-average(@color) when (iscolor(@color)) {
+  @average: @color;
+}
 
-  & when (@length = 2) {
-    @average: average(extract(@colors, 1), extract(@colors, 2));
-  }
+.set-average(@color) when (islist(@color)) {
+  @average: red;
+}
+
+.set-average(@color1, @color2) {
+  @average: average(@color1, @color2);
 }

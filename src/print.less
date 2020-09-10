@@ -5,3 +5,7 @@
     .page-width, .text-width { all: unset;}
     .inner-page-width, .inner-text-width, .inner-aside-width { all: unset;}
 });
+
+.in-print(@rules) {
+    @media print { @rules();}
+}

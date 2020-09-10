@@ -195,10 +195,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.grid-gap, .grid-gap-padding { grid-gap: @padding;}
-.grid-gap-margin { grid-gap: @margin;}
-.grid-gap-gutter { grid-gap: @gutter;}
-
 .inline-block {
   display: inline-block;
 }
@@ -217,11 +213,6 @@
 
 .fixed {
   position: fixed;
-}
-
-.transparent {
-  color: inherit;
-  background: transparent;
 }
 
 .float-right {
@@ -247,6 +238,14 @@
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.border.dashed {
+  border-style: dashed;
+}
+
+.border.dotted {
+  border-style: dotted;
 }
 
 .inverted {}
@@ -343,7 +342,7 @@
   text-align: justify;
 }
 
-.hide, .hidden { display: none !important;}
+.hidden { display: none !important;}
 
 .clearfix, .clear {
   clear: both;

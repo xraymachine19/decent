@@ -18,7 +18,7 @@
         <ul class="bar top right">
             <li><a href="../../composables/">Composables</a></li>
 <li><a href="../../utilities/">Utilities</a></li>
-            <li><a href="../../mixins/">Mixins</a></li>
+            <li><a href="../../less/">Less</a></li>
             
             <li><a href="../../how-to/">How-to</a></li>
         </ul>
@@ -30,7 +30,7 @@
       <p>A card with an all-margins paradigm, a look that stands out from the rest of the page, and relative positioning.</p>
     </header>
     <main>
-        <div class="grid inner-page-width desktop">
+        <div class="grid inner-page-width tablet">
           <div class="grid-width-three">
             <nav class="small">
                 <h6>Emphasis</h6>
@@ -67,15 +67,10 @@
                   
                   <li><a href="../badge">badge</a></li>
                   <li><a href="../overlay">overlay</a></li>
-<li><a href="../modal">modal</a></li>
+<li><a href="../modal">modal</a></li><li><a href="../hide">hide</a></li>
                 </ul>
       
-                <h6>HTML</h6>
-                <ul class="group no-margin-bottom">
-                  
-                  <li><a href="../elements">elements</a></li>
-      
-                </ul>
+                
               </nav>
             </div>
             
@@ -98,7 +93,7 @@
                 <section id="examples">
                   <h2>Examples</h2>
                   <h3>Basic cards</h3>
-                  <p>Cards give children elements uniform spacing and have a default max-width of an aside:</p>
+                  <p>Cards are a set of defaults for making content look like a card on the page:</p>
                   <div class="card">
                     <h3>Welcome to the club.</h3>
                     <p>Don't forget to validate parking!</p>
@@ -111,16 +106,16 @@
 &lt;/div&gt;</pre>
 
                   <div class="card border">
-                    <h3 class="no-margin info padding">Welcome to the club.</h3>
+                    <h3 class="info padding no-margin margin-bottom">Welcome to the club.</h3>
                     <p>Don't forget to validate parking!</p>
                   </div>
 
                   <pre class="white-space">&lt;div class="card"&gt;
-  &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
+  &lt;h3 class="info padding no-margin margin-bottom"&gt;Welcome to the club.&lt;/h3&gt;
   &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-                  <p>Cards have an undecorated default look, but classes like <strong>inset</strong>, <strong>box-shadow</strong> and <strong>border</strong> can rectify that:</p>
+                  <p>Cards have an undecorated default look, but classes like <strong>inset</strong>, <strong>dark</strong> and <strong>no-border</strong> can rectify that:</p>
 
                   <div class="two-column">
                     <div>
@@ -130,7 +125,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="card box-shadow border">
+                      <div class="card no-border">
                         <h3>Welcome to the club.</h3>
                         <p>Don't forget to validate parking!</p>
                       </div>
@@ -145,7 +140,7 @@
 &lt;/div&gt;</pre>
                     </div>
                     <div>
-                      <pre class="white-space">&lt;div class="card box-shadow border"&gt;
+                      <pre class="white-space">&lt;div class="card no-border"&gt;
   &lt;h3&gt;Welcome to the club.&lt;/h3&gt;
   &lt;p&gt;Don't forget to validate parking!&lt;/p&gt;
 &lt;/div&gt;</pre>

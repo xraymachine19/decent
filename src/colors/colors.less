@@ -62,6 +62,7 @@
         .@{color-name} { 
 			color: black; 
 			background-color: @color;
+			border-color: darken(@color, 17%);
 
 			.l();
 			.d();
@@ -75,6 +76,7 @@
         .@{color-name} { 
 			color: white; 
 			background-color: @color;
+			border-color: darken(@color, 17%);
 
 			.l();
 			.d();
@@ -93,7 +95,7 @@
 .black {.contrast(color, @black); background-color: @black;}
 
 @action: blue;
-@gray: gray;
+// @gray: gray;
 @reaction: red;
 @default: average(blue, gray);
 @info: skyblue;
@@ -119,7 +121,7 @@
 @import "core";
 
 // // default colors
-// @import "gray";
+@import "gray";
 // @import "brown";
 // @import "magenta";
 // @import "lavender";
@@ -128,7 +130,7 @@
 // @import "crimson";
 // @import "clover";
 // @import "cobalt";
-// @import "graphite";
+@import "graphite";
 // @import "ruby";
 // @import "onyx";
 // @import "pewter";

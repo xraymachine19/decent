@@ -1,9 +1,4 @@
-.set-graphite() {
-    .set-average(black, black, navy, gray, darkslategray, dimgray;);
-    @base: @average;
-    @modifier: 1/6;
-    .set-color(graphite, @base, @modifier, 1.1);
-    @graphite: @color;
-}
+@graphite-base: average(average(black, navy), average(darkslategray, dimgray));
+@graphite: .set-color(graphite, @graphite-base, 1/6, 1.1)[];
 
-.set-graphite();
+.set-color(graphite, @graphite-base, 1/6, 1.1, @outputs: true);

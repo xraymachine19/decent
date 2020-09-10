@@ -12,16 +12,13 @@ background-color,
 border,
 border-radius,
 border-bottom,
-border-image,
 border-left,
 border-right,
 border-style,
 border-top,
 border-width,
-opacity,
 max-width,
 min-width,
-quotes,
 align-content,
 align-items,
 align-self,
@@ -45,21 +42,17 @@ margin-right,
 margin-top,
 column-gap,
 column-rule,
-outline,
 padding,
 padding-bottom,
 padding-left,
 padding-right,
 padding-top,
-table-layout,
 text-align,
 text-align-last,
-text-decoration,
 text-indent,
 text-justify,
 text-overflow,
 text-shadow,
-text-transform,
 line-height,
 vertical-align,
 letter-spacing,
@@ -99,7 +92,7 @@ box-sizing;
 @background: @background-color; // Defines a variety of background properties within one declaration.
 @background-attachment: scroll; // Specify whether the background image is fixed in the viewport or scrolls.
 @background-clip: border-box; // Specifies the painting area of the background.
-@background-color: overlay(@gray, @action); // Defines an element's background color.
+@background-color: @ambient; // Defines an element's background color.
 @background-image: none; // Defines an element's background image.
 @background-origin: padding-box; // Specifies the positioning area of the background images.
 @background-position: top center; // Defines the origin of a background image.
@@ -114,7 +107,7 @@ box-sizing;
 @border-bottom-right-radius: @border-radius; // Defines the shape of the bottom-right border corner of an element.
 @border-bottom-style: @border-style; // Sets the style of the bottom border of an element.
 @border-bottom-width: @border-width; // Sets the width of the bottom border of an element.
-@border-color: darken(@default, 16.6%); // Sets the color of the border on all the four sides of an element.
+@border-color: currentColor; // Sets the color of the border on all the four sides of an element.
 @border-image: @border-image-source @border-image-slice @border-image-repeat; // Specifies how an image is to be used in place of the border styles.
 @border-image-outset: none; // Specifies the amount by which the border image area extends beyond the border box.
 @border-image-repeat: round; // Specifies whether the image-border should be repeated, rounded or stretched.
@@ -143,7 +136,7 @@ box-sizing;
 
 // Color Properties
 
-@color: @gray; // Specify the color of the text of an element.
+@color: #494949; // Specify the color of the text of an element.
 @opacity: 1; // Specifies the transparency of an element.
 
 // Dimension Properties
